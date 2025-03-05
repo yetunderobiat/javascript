@@ -1,0 +1,159 @@
+body{
+    margin: 7px 50px;
+    padding: 10px;
+    background-image: linear-gradient(rgb(145, 145, 145), rgb(236, 33, 236), orange);
+}
+/* navbar section  */
+.navbar{
+    margin-bottom: 40px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.content a{
+    text-decoration: none;
+    color: brown;
+    font-weight: 700;
+    font-size: 17px;
+    transition: transform 0.4s ease-in-out;
+}
+.content a:hover{
+    cursor: pointer;
+    color: black;
+    transform:scale(0.80)
+}
+
+/* information section  */
+.information h1{
+    font-size: 45px;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: rgb(255, 228, 178);
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: transform .0.2s ease-in-out;
+}
+.information h1:hover{
+    color: brown;
+    transform: scale(1.1);
+}
+.information .text{
+    font-size: large;
+    color: rgb(255, 228, 178);
+    font-weight: 400;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pictures{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.pictures img{
+    width: 100%;
+}
+.pic{
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+}
+.pic img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+.pic img:hover{
+    opacity: 0.4;
+}
+#one p{
+    text-align: center;
+    width: 20%;
+    font-weight: 900;
+    background-color: brown;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibilty 0s 0.3s;
+}
+.pictures:hover #one p{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
+}
+#two p{
+    text-align: center;
+    width: 20%;
+    font-weight: 900;
+    background-color: brown;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibilty 0s 0.3s;
+}
+.pictures:hover #two p{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
+}
+#three p{
+    text-align: center;
+    width: 20%;
+    font-weight: 900;
+    background-color: brown;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 35%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibilty 0s 0.3s;
+}
+.pictures:hover #three p{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
+}
+.pic button{
+    margin: 15px 120px ;
+    padding: 15px 30px;
+    background-color: brown;
+    color: rgb(255, 228, 178);
+    border: none;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 900;
+    transition: transform 0.4s ease-in-out
+}
+.pic button:hover{
+    background-color: black;
+    cursor: pointer;
+    transform:scale(0.80)
+}
+
+/* type of cars section  */
+.type h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: rgb(255, 228, 178);
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: transform 0.5s;
+}
+.type h1:hover{
+    color: brown;
+    transform: translate(20px, 40px);
+}

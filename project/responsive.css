@@ -1,0 +1,884 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --black: #000000;
+    --grey: #8f8f8f53;
+    --white: #ffffff;
+    --primary: #40e368;
+    --primary-2: #237d31;
+    --primary-3: #a7e4ac;
+}
+
+
+/* navbar section  */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 70px;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    width: 30px;
+}
+.logo a{
+    font-size: 25px;
+    margin-left: 4px;
+    font-weight: 900;
+    color: var(--black);
+}
+.navbar li{
+    display: inline-block;
+    padding: 10px;
+}
+.navbar a{
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--black);
+}
+ul .register{
+    border-radius: 2px;
+    padding:8px 25px;
+    background-color: rgb(20, 184, 20);
+}
+ul .register a{
+    color: var(--white);
+}
+
+
+/* insight section  */
+.insight-section {
+    max-width: 1440px;
+    margin: 20px 70px 0 0;
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 60vh;
+}
+.insight-section  .text{
+    margin: 60px;  
+}
+.insight-section  .text h1{
+    width: 50%;
+    line-height: 1.5;
+    font-size: 40px;
+}
+.insight-section  .text p{
+    margin: 20px 0;
+    color: grey;
+}
+.text h1 span{
+    color: var(--primary);
+    font-weight: 900;
+}
+.insight-section .picture img{
+    width: 80%;
+    margin: 30px;
+} 
+.insight-section  .text button{
+    margin-top: 10px;
+    border-radius: 2px;
+    border: none;
+    padding:10px 25px;
+    background-color: rgb(20, 184, 20);
+    color: white;
+}
+
+
+/* client section  */
+.client-section{
+    max-width: 1440px;
+    margin: 20px 70px 0 0;
+}
+.client-section h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.client-section p{
+    text-align: center;
+    color: grey;
+    margin-bottom: 20px;
+}
+.client-section ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 40px 0 60px 100px;
+}
+.client-section ul img{
+    width: 15%;
+}
+.client-section li {
+    list-style-type: none;
+}
+.client-section h3{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.client-section .community{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-left: 50px;
+    margin-top:30px ;
+}
+.client-section .membership{
+
+    border: 2px solid white;
+    background-color: whitesmoke;
+}
+.client-section .membership img{
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+.client-section .membership h3{
+    margin-top: 10px;
+    font-weight: 900;
+}
+.client-section .membership p{
+    color: #161616;
+    font-size: 15px;
+}
+.client-section .pixelgrade{
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 50vh;
+    margin: 60px 0;
+}
+.client-section .pixelgrade img{
+    width: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.client-section .pixelgrade{
+    margin-right: 100px;
+}
+.client-section .pixelgrade .text h2{
+    font-size: 30px;
+    text-align: left;
+}
+.client-section .pixelgrade .text p{
+    text-align: left;
+}
+.client-section .pixelgrade .text  button{
+    margin-top: 10px;
+    border-radius: 2px;
+    border: none;
+    padding:10px 25px;
+    background-color: rgb(20, 184, 20);
+    color: white;
+}
+
+/* business section  */
+.business-section {
+    max-width: 100%;
+    max-height: 250px;
+    margin: 20px 70px 0 0;
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 60vh;
+  }
+.business-section .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.business-section .text h1{
+    font-size: 35px;
+}
+.business-section .text p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+.business-section .community{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    margin-left: 50px;
+    margin-top:30px ;
+}
+.business-section .community{
+    height:60%;
+    width: 400px;
+    margin-right: 100px;
+    margin-top: 50px ;
+}
+.business-section .members img{
+    margin-right: 20px;
+    width: 20%;
+}
+.business-section .members .text{
+    display: inline-block;
+    margin: 0 0 10px 0;
+}
+.business-section .members .text p{
+    font-size: 11px;
+    color: grey;
+}
+
+/* site section */
+.site-section .site{
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 50vh;
+    margin: 60px 0;
+}
+.site-section .site img{
+    width: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site-section .site{
+    margin-right: 100px;
+}
+.site-section .site .text h2{
+    font-size: 30px;
+    text-align: left;
+}
+.site-section .site .text p{
+    margin-top: 25px;
+    text-align: left;
+}
+.site-section .site .text  button{
+    margin-top: 25px;
+    border-radius: 2px;
+    border: none;
+    padding:10px 25px;
+    background-color: rgb(20, 184, 20);
+    color: white;
+}
+
+/* meeting section  */
+.meeting-section .picture{
+    max-width: 100%;
+    margin: 20px 70px 0 0;
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 50vh;
+}
+.meeting-section .picture .tim img{
+    width: 75%;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+}
+.meeting-section .text{
+    margin-right: 70px;
+    width: 700px;
+}
+.meeting-section .text .lorem{
+    color: grey;
+    font-size: 15px;
+    margin: 20px 0;
+}
+.meeting-section .text .tim{
+    color: rgb(20, 184, 20);
+    font-weight: 900;
+}
+.meeting-section .text ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.meeting-section .text ul img{
+    width: 25%;
+}
+.meeting-section .text li {
+    list-style-type: none;
+}
+.meeting-section .text ul .name {
+    font-weight: 900;
+    margin-right: 20px;
+    color: rgb(20, 184, 20);
+    width: 170px;
+}
+.meeting-section .text ul .name img{
+     width: 12%;
+}
+.meeting-section .text  img{
+    color: var(--primary);
+}
+
+/* care section  */
+.care-section h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 30px 0 10px 0;
+}
+.care-section p{
+    text-align: center;
+    font-size: 15px;
+    margin: 10px 0;
+    line-height: 1.5;
+    color: grey;
+}
+.care-section .community{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 50px;
+    margin-top:30px ;
+    margin: 20px 70px 0 0;
+}
+.care-section .member img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 4px;
+}
+.care-section .member{
+    position: relative;
+}
+.care-section .member .create{
+    background-color: rgba(255, 255, 255, 0.956);
+    width: 50%;
+    position: absolute;
+    top: 150px ;
+    left: 80px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-style: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.care-section .member .create a{
+    display: block;
+    text-decoration: none;
+    margin: 10px 0;
+    color: rgb(20, 184, 20);
+}
+.care-section .member .create img{
+    display: inline;
+}
+.care-section .member .create img{
+    width: 10%;
+    background-color: #000000;
+}
+
+/* big section  */
+.big-section {
+    max-width: 100%;
+    margin: 120px 70px 0 0;
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 40vh;
+  }
+
+.big-section .big h1{
+    margin: 40px 0;
+    text-align: right;
+    font-size: 50px;
+}
+.big-section .big  button{
+    margin: 0 0 0 550px;
+    border-radius: 2px;
+    padding:8px 25px;
+    color: var(--white);
+    background-color: rgb(20, 184, 20);
+    border: none;
+}
+
+/* footer section  */
+.footer-section .footer {
+    max-width: 1440px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    height: 30vh;
+    margin: 0 70px 60px 0;
+    background-color: #161616ea;
+    padding: 30px 80px;
+    color: white;
+  }
+  .footer-section .footer .logo a{
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 4px;
+    font-weight: 900;
+    color: white;
+  }
+  .footer-section .footer .copyright p{
+    margin: 25px 0;
+    background-origin: 2px solid var(--black);
+  }
+  .footer-section .footer .icon img{
+    width: 10%;
+    padding: 0 15px 0 0;
+  }
+  .footer-section .footer .company ul{
+    list-style-type: none;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  .footer-section .footer .support ul{
+    list-style-type: none;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  .footer-section .footer .date{
+    line-height: 2;
+  }
+  .footer-section .footer .date button{
+    padding: 7px 30px ;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+  }
+
+
+
+/* Responsiveness  */
+@media screen and (max-width: 768px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 10px;
+    }
+    .logo{
+        display: flex;
+    }
+    .logo img{
+        width: 20px;
+    }
+    .logo a{
+        font-size: 20px;
+        margin-left: 4px;
+        font-weight: 600;
+        color: var(--black);
+    }
+    .navbar li{
+        display: inline-block;
+        padding: 0 5px;
+        font-size: smaller;
+    }
+    ul .register{
+        border-radius: 2px;
+        padding:5px 8px;
+        background-color: rgb(209, 30, 173);
+    }
+    ul .register a{
+        color: var(--white);
+    }
+
+    /* insight section  */
+    .insight-section {
+        max-width: 1000px;
+        background-color: var(--grey);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 40vh;
+    }
+    .insight-section  .text{
+        margin: 45px;  
+    }
+    .insight-section  .text h1{
+        width: 80%;
+        line-height: 1.3;
+        font-size: 30px;
+    }
+    .insight-section  .text p{
+        margin: 10px 0;
+        font-size: 13px;
+        color: grey;
+    }
+    .text h1 span{
+        color: rgb(209, 30, 173);
+        font-weight: 900;
+    }
+    .insight-section .picture img{
+        width: 70%;
+        margin: 30px;
+    } 
+    .insight-section  .text button{
+        margin-top: 8px;
+        border-radius: 2px;
+        border: none;
+        padding:5px 8px;
+        background-color: rgb(209, 30, 173);
+        color: white;
+        font-size: 10px;
+    }
+    
+    /* client section  */
+    .client-section{
+        max-width: 1000px;
+        margin: 20px 70px 0 0;
+    }
+    .client-section h2{
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .client-section p{
+        text-align: center;
+        color: grey;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .client-section ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 20px 0 30px 120px;
+    }
+    .client-section ul img{
+        width: 13%;
+    }
+    .client-section li {
+        list-style-type: none;
+    }
+    .client-section h3{
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+    .client-section .community{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-left: 50px;
+        margin-top:30px ;
+    }
+    .client-section .membership{
+        border: 2px solid white;
+        background-color: whitesmoke;
+    }
+    .client-section .membership img{
+        margin: 20px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 8%;
+    }
+    .client-section .membership h3{
+        margin-top: 8px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .client-section .membership p{
+        color: #161616;
+        font-size: 10px;
+    }
+    .client-section .pixelgrade{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 40vh;
+        margin: 30px 0;
+    }
+    .client-section .pixelgrade img{
+        width: 35%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .client-section .pixelgrade .text h2{
+        font-size: 20px;
+        text-align: left;
+        width: 110%;
+    }
+    .client-section .pixelgrade .text p{
+        text-align: left;
+        font-size: 10px;
+    }
+    .client-section .pixelgrade .text  button{
+        margin-top: 8px;
+        border-radius: 2px;
+        border: none;
+        padding:5px 8px;
+        background-color: rgb(209, 30, 173);
+        color: white;
+        font-size: 10px;
+    }
+
+    /* business section  */
+    .business-section {
+        max-width: 1000px;
+        margin: 20px 70px 0 0;
+        background-color: var(--grey);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 40vh;
+    }
+    .business-section .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .business-section .text h1{
+        font-size: 25px;
+    }
+    .business-section .text p{
+        margin-top: 6px;
+        font-size: 10px;
+    }
+    .business-section .community{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        margin-left: 40px;
+        margin-top:30px ;
+    }
+    .business-section .community{
+        height:60%;
+        width: 400px;
+        margin-right: 10px;
+        margin-top: 50px ;
+    }
+    .business-section .members img{
+        margin-right: 20px;
+        width: 13%;
+    }
+    .business-section .members .text{
+        display: inline-block;
+        margin: 0 0 8px 0;
+    }
+    .business-section .members .text h1{
+        font-size: 10px;
+    }
+    .business-section .members .text p{
+        font-size: 8px;
+        color: grey;
+    }
+
+        /* site section */
+    .site-section .site{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 40vh;
+        margin: 40px 0;
+    }
+    .site-section .site img{
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .site-section .site{
+        margin-right: 130px;
+    }
+    .site-section .site .text h2{
+        font-size: 23px;
+        text-align: left;
+    }
+    .site-section .site .text p{
+        margin-top: 10px;
+        font-size: smaller;
+        text-align: left;
+    }
+    .site-section .site .text  button{
+        margin-top: 10px;
+        border-radius: 2px;
+        border: none;
+        padding:5px 8px;
+        background-color: rgb(209, 30, 173);
+        color: white;
+        font-size: 10px;
+    }
+
+        /* meeting section  */
+    .meeting-section .picture{
+        max-width: 1000px;
+        margin: 20px 70px 0 0;
+        background-color: var(--grey);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 50vh;
+    }
+    .meeting-section .picture .tim img{
+        width: 100%;
+        border-radius: 5px;
+        display: block;
+        margin: 60px auto;
+    }
+    .meeting-section .text{
+        margin-right: 50px;
+        width: 500px;
+    }
+    .meeting-section .text .lorem{
+        color: grey;
+        font-size: 11px;
+   
+    }
+    .meeting-section .text .tim{
+        color:  rgb(209, 30, 173);
+        font-weight: 900;
+        font-size: small;
+    }
+    .meeting-section .text ul{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .meeting-section .text ul img{
+        width: 18%;
+
+    }
+    .meeting-section .text li {
+        list-style-type: none;
+    }
+    .meeting-section .text ul .name {
+        font-weight: 900;
+        margin-right: 20px;
+        color:  rgb(209, 30, 173);
+        width: 170px;
+    }
+    .meeting-section .text ul .name img{
+        width: 12%;
+    }
+    .meeting-section .text  img{
+        color: var(--primary);
+    }
+
+        /* care section  */
+    .care-section h1{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 800;
+        margin: 30px 0 10px 0;
+    }
+    .care-section p{
+        text-align: center;
+        font-size: 10px;
+        margin: 10px 0;
+        line-height: 1.5;
+        color: grey;
+    }
+    .care-section .community{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 50px;
+        margin-top:30px ;
+        margin: 20px 70px 0 0;
+    }
+    .care-section .member img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border-radius: 4px;
+    }
+    .care-section .member{
+        position: relative;
+    }
+    .care-section .member .create{
+        background-color: rgba(255, 255, 255, 0.956);
+        width: 50%;
+        position: absolute;
+        top: 70px ;
+        left: 45px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 10px;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    .care-section .member .create a{
+        display: block;
+        text-decoration: none;
+        margin: 8px 0;
+        color: rgb(209, 30, 173);
+    }
+    .care-section .member .create img{
+        display: inline;
+    }
+    .care-section .member .create img{
+        width: 8%;
+        background-color: #000000;
+    }
+
+    .big-section{
+        max-width: 1000px;
+        margin: 120px 70px 0 0;
+        background-color: var(--grey);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 40vh;
+    }
+    .big-section .big h1{
+        margin: 30px 0;
+        text-align: right;
+        font-size: 40px;
+    }
+    .big-section .big  button{
+        margin: 0 0 0 250px;
+        border-radius: 2px;
+        padding:5px 8px;
+        background-color: rgb(209, 30, 173);
+        color: white;
+        font-size: 10px;
+        border: none;
+    }
+
+    /* footer section  */
+.footer-section .footer {
+    max-width: 1000px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    height: 30vh;
+    margin: 0 70px 60px 0;
+    background-color: #161616ea;
+    padding: 30px 80px;
+    color: white;
+  }
+  .footer-section .footer .logo a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 4px;
+    font-weight: 900;
+    color: white;
+  }
+  .footer-section .footer .copyright p{
+    margin: 25px 0;
+    background-origin: 2px solid var(--black);
+    font-size: 10px;
+  }
+  .footer-section .footer .icon img{
+    width: 10%;
+    padding: 0 15px 0 0;
+  }
+  .footer-section .footer .company ul{
+    list-style-type: none;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  .footer-section .footer .support ul{
+    font-size: 12px;
+    list-style-type: none;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  .footer-section .footer .date{
+    line-height: 2;
+  }
+  .footer-section .footer .date button{
+    padding: 7px 15px ;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,9 @@
+body{
+    background:conic-gradient(palevioletred ,rgba(255, 217, 0, 0.804));
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}

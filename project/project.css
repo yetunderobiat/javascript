@@ -1,0 +1,668 @@
+body{
+    max-height: 100vh;
+}
+.playground{
+    /* max-width:60% ;
+    margin: 0 auto;
+    padding: 0 16px; */
+    background:linear-gradient( rgb(207, 201, 201), rgb(164, 98, 164));
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+.play{
+    font-size: 40px;
+    font-weight: 900;
+    padding-left: 15px;
+    font-family: Neuton;
+    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.play:hover{
+    transform: translateX(100px);
+}
+.content a{
+    font-family: Lobster Two;
+    text-decoration: none;
+    display:inline-block; 
+    color: black;
+    font-size: 18px;
+    padding: 0 10px;
+    transition: transform 0.4s ease-in-out;
+}
+.content .home:hover{
+    transform:scale(0.80) ;
+    color: rgb(24, 24, 216);
+}
+.content .shop:hover{
+    transform:scale(0.80) ;
+    color: rgb(69, 216, 24);
+}
+.content .about:hover{
+    transform:scale(0.80) ;
+    color: rgb(216, 24, 94);
+}
+.content .Contact:hover{
+    transform:scale(0.80) ;
+    color: rgb(123, 24, 216);
+}
+.box{
+    display: grid;
+    grid-template-areas: 
+    "one one two"
+    "six six three"
+    "four five five";
+    gap:10px ;
+    width: 100%;
+    margin: 0 auto;
+}
+.box img{
+    width: 100%;
+}
+.box .thing{
+    border: 2px ridge black;
+}
+#one{
+    grid-area: one;
+    position: relative; 
+}
+.box #one{
+    background-color: rgb(184, 52, 184);
+}
+.box #one:hover{
+    background:repeating-linear-gradient( rgb(0, 255, 221) , yellow, rgb(220, 109, 163)); 
+}
+#one .on{
+    width: 70px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+}
+#one .tw{
+    width: 50px;
+    position: absolute;
+    top: 190px;
+    left: 720px;
+}
+#one .fou{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#one .fiv{
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+#one .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.9;
+    
+}
+#one h1{
+    color:black;
+    width: 40%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#one h1:hover{
+    color:white ;
+    transform: translateX(20px);
+}
+#one p{
+    color:black;
+    width: 50%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 2px;
+    transition: transform 0.4s ease-in-out
+}
+#one p:hover{
+    transform:scale(1.1) ;
+}
+#one a{
+    padding: 7px 25px;
+    border-radius: 30px;
+    background-color: violet;
+    color: black;
+    text-decoration: none;
+    transition: transform 1s ease-in-out;
+}
+#one a:hover{
+    background-color:black;
+    color: white;
+    transform: scale(1.2);
+}
+#two{
+    grid-area: two;
+    position: relative;
+}
+#two .on{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+#two .tw{
+    width: 80px;
+    position: absolute;
+    top: 190px;
+    left: 380px;
+}
+#two .fou{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#two .fiv{
+    width: 100px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+.box #two{
+    background-color: rgb(54, 52, 184);
+}
+.box #two:hover{
+    background:repeating-linear-gradient( rgb(222, 92, 17) , rgb(181, 56, 160), rgb(97, 234, 101)); 
+}
+#two .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#two h1{
+    color:black;
+    width: 40%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 900;
+    font-size: 35px;
+    margin: 70px auto;
+    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#two h1:hover{
+    color:white ;
+    transform: translateY(20px);
+}
+#two a{
+    margin: 20px auto;
+    padding: 5px 25px;
+    border-radius: 30px;
+    background-color: rgb(55, 132, 225);
+    color: black;
+    text-decoration: none;
+    transition: transform 1s ease-in-out;
+}
+#two a:hover{
+    background-color:black;
+    color: white;
+    transform: scale(1.2);
+}
+#three{
+    grid-area: three;
+    position: relative;
+}
+#three .on{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+#three .tw{
+    width: 80px;
+    position: absolute;
+    top: 190px;
+    left: 380px;
+}
+#three .fou{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#three .fiv{
+    width: 100px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+.box #three{
+    background-color: green;
+}
+.box #three:hover{
+    background:repeating-linear-gradient( rgb(222, 92, 17) , rgb(213, 61, 144), rgba(0, 0, 0, 0.367)); 
+}
+#three .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.9;
+}
+#three h1{
+    color:black;
+    width: 40%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#three h1:hover{
+    color:white ;
+    transform: translateX(20px);
+}
+#three a{
+    padding: 7px 25px;
+    border-radius: 30px;
+    background-color:limegreen;
+    color: black;
+    text-decoration: none;
+    transition: transform 1s ease-in-out;
+}
+#three a:hover{
+    background-color:black;
+    color: white;
+    transform: scale(1.2);
+}
+#four{
+    grid-area: four;
+    position: relative;
+}
+#four .on{
+    width: 70px;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+#four .tw{
+    width: 140px;
+    position: absolute;
+    top: 130px;
+    left: 300px;
+}
+#four .fou{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#four .fiv{
+    width: 100px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+.box #four{
+    background-color: rgb(0, 242, 255);
+}
+.box #four:hover{
+    background:repeating-linear-gradient( rgb(242, 232, 40) , rgb(181, 54, 103), rgb(45, 176, 78)); 
+}
+#four .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.9;
+}
+#four h1{
+    color:black;
+    width: 40%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    line-height: 1.8;
+}
+#four h1:hover{
+    color:white ;
+    transform: translateY(20px);
+}
+#five{
+    grid-area: five;
+    position: relative;
+}
+#five .on{
+    width: 70px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+}
+#five .tw{
+    width: 140px;
+    position: absolute;
+    top: 130px;
+    left: 680px;
+}
+#five .fou{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#five .fiv{
+    width: 100px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+.box #five{
+    background-color:red;
+}
+.box #five:hover{
+    background:repeating-linear-gradient( rgb(255, 255, 255) , rgb(89, 44, 192), rgb(165, 154, 154)); 
+}
+#five .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.9;
+    
+}
+#five h1{
+    color:black;
+    width: 40%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#five h1:hover{
+    color:white ;
+    transform: translateX(20px);
+}
+#five p{
+    color:black;
+    width: 50%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 2px;
+    transition: transform 0.4s ease-in-out
+}
+#five p:hover{
+    transform:scale(1.1) ;
+}
+#five a{
+    padding: 7px 25px;
+    border-radius: 30px;
+    background-color: rgb(237, 66, 66);
+    color: black;
+    text-decoration: none;
+    transition: transform 1s ease-in-out;
+}
+#five a:hover{
+    background-color:black;
+    color: white;
+    transform: scale(1.2);
+}
+
+#six{
+    grid-area: six;
+    position: relative;
+}
+#six .on{
+    width: 70px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+}
+#six .tw{
+    width: 140px;
+    position: absolute;
+    top: 130px;
+    left: 640px;
+}
+#six .fou{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#six .fiv{
+    width: 100px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+.box #six{
+    background-color: yellow;
+}
+.box #six:hover{
+    background:repeating-linear-gradient( rgb(24, 17, 222) , rgb(208, 199, 199), rgb(176, 45, 45)); 
+}
+#six .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.9;
+}
+#six h1{
+    color:black;
+    width: 40%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#six h1:hover{
+    color:white ;
+    transform: translateY(20px);
+}
+#six p{
+    color:black;
+    width: 50%;
+    font-family: Grandstander;
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 2px;
+    transition: transform 0.4s ease-in-out
+}
+#six p:hover{
+    transform:scale(1.1) ;
+}
+#six a{
+    padding: 7px 25px;
+    border-radius: 30px;
+    background-color:goldenrod;
+    color: black;
+    text-decoration: none;
+    transition: transform 1s ease-in-out;
+}
+#six a:hover{
+    background-color:black;
+    color: white;
+    transform: scale(1.2);
+}
+.box .thing{
+    height: 300px;
+}
+.a{
+    color: greenyellow;
+}
+.n{
+    color: darkblue;
+}
+.r{
+    color: red;
+}
+.t{
+    color:gold;
+}
+.s{
+    color: green;
+}
+.k{
+    color: white;
+}
+.o{
+    color: orange;
+}
+.c{
+    color: black;
+}
+.l{
+    color: purple;
+}
+.rob{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 40px 100px;
+    font-size: 90px;
+    font-weight: 900;
+    font-family: Matemasie;
+    letter-spacing: 10px;
+    border: 6px dotted black;
+    transition: transform 1s ease-in-out;
+}
+.rob:hover{
+    transform: scale(1.1);
+    background:repeating-linear-gradient( rgb(0, 255, 221) , grey, rgb(235, 119, 175)); 
+}
+.rob .rl{
+    font-size: 140px;
+    color:rgb(238, 50, 109) ;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+}
+.spinner{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   font-size: 50px;
+   font-family: Gluten;
+   font-weight: 900;
+   background: conic-gradient(cyan, yellow, magenta, cyan);
+   box-shadow: inset 0px 0px 110px -70px black;
+   position: relative;
+   animation: spin 1.5s linear infinite;
+}
+.spinner:hover{
+   animation: spin 0s linear infinite;
+}
+.spinner::after{
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes spin {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.images img{
+    width: 25%;
+    transition: transform 0.7s ease-in-out;
+}
+.images img:hover{
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+.images{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 10px;
+}
+.car img{
+    width: 25%;
+    transition: transform 0.7s ease-in-out;
+}
+.car img:hover{
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+.car p{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    color: black;
+    transition: transform 0.7s ease-in-out;
+}
+.car p:hover{
+
+    transform: scale(1.2);
+}
+.car{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 10px;
+}
+.toy img{
+    width: 25%;
+    transition: transform 0.7s ease-in-out;
+}
+.toy img:hover{
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+.toy{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-family:Barlow Condensed ;
+}
+.col h2{
+    text-align: center;
+}
+.col li{
+    list-style: none;
+}
+.col a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    line-height: 2;
+}
+.foot .fooot{
+    font-weight: 900;
+    text-align: center;
+    margin: 30px 0;
+}

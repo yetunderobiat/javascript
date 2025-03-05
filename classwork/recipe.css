@@ -1,0 +1,115 @@
+body{
+    margin: 70px 0 0 0;
+    background-color: hsl(27, 34%, 90%);
+    font-family: Outfit;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}   
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 65%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 60px;
+}
+li{
+    line-height: 2;
+}
+hr {
+    border: 1px solid rgb(230, 230, 230);
+    width: 100%;
+}
+/* image section */
+.picture img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* write-up section  */
+h1{
+    font-size: 40px;
+    font-family: 'Young Serif';
+    font-weight: 400;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 40px;
+    line-height: 2.2;
+}
+
+/* Preparation time section  */
+.preparation{
+    background-color:hsl(300, 60%, 97%) ;
+    border-radius: 15px ;
+    padding: 10px 30px;
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.preparation h2{
+    color: hsl(320, 100%, 27%);
+    
+}
+.preparation li{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* ingredient section */
+.ingredient{
+    margin-top: 20px;
+}
+.ingredient h2{
+    color: hsl(13, 73%, 32%);
+    font-family: 'Young Serif';
+    font-weight: 300;
+}
+.ingredient li{
+    line-height: 2.7;
+    font-weight: 300;
+}
+
+/* instruction section  */
+.instruction{
+    margin-top: 20px;
+}
+.instruction h2{
+    color: hsl(13, 73%, 32%);
+    font-family: 'Young Serif';
+    font-weight: 300;
+}
+.instruction li{
+    font-weight: 300;
+    line-height: 2;
+    margin-top: 10px;
+}
+
+/* nutrition section  */
+.nutrition h2{
+    color: hsl(13, 73%, 32%);
+    font-family: 'Young Serif';
+    font-weight: 300;
+}
+.nutrition p{
+    font-weight: 300;
+}
+.num{
+    color: hsl(13, 73%, 32%);
+    font-weight: 800;
+    padding-left: 300px;
+}
+
+/* footer */
+.footer{
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: 200;
+}
