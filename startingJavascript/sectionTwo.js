@@ -75,7 +75,28 @@
 // console.log(age * 10, ageJonas / 2, myYear - 1000, myAge + 2000)
 
 // fourth example -- concatenating string with the use of '+'
-const myFirstName = 'Robiat';
-const mySecondName = ' Yetunde';
+// const myFirstName = 'Robiat';
+// const mySecondName = 'Yetunde';
 
-console.log(myFirstName + mySecondName)
+// console.log(myFirstName + ' ' + mySecondName);
+
+const myFirstName = 'Robiat';
+const mySecondName = 'Yetunde';
+const myAge = 25;
+
+console.log('My first name is' + ' ' + myFirstName  + ', my second name is' + ' ' + mySecondName + ' ' + 'and i am' + ' ' + myAge + ' ' + 'years old')
+
+console.log(typeof myAge)
+console.log(typeof myFirstName)
+
+// using assignment operator -- fifth example
+let x = 10 + 5;
+x += 110; // x = x + 10
+console.log(x);
+
+let y = 10 + 10;
+y *= 10; // x = x * 10
+y *= 2;
+y++; //y = y + 1;
+y--; //y = y - 1;
+console.log(y)
