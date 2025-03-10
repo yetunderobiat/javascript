@@ -24,3 +24,15 @@ console.log('Mark BMI is:', markBmi + 'kg')
 
 const johnBmi = johnMass / johnHeight * johnHeight;
 console.log('John BMI is:', johnBmi + 'kg')
+
+const markHigherBmi = markBmi > johnBmi;
+console.log(markHigherBmi)
+
+// Coding Challenge #2
+console.log('Who has the higher BMI:')
+if (markBmi > johnBmi){
+    console.log("Mark's BMI is higher than John's! Mark BMI is " + markBmi + 'kg')
+}
+else{
+    console.log("John's BMI is higher than Mark's! John BMI is " + johnBmi + 'kg')
+}
