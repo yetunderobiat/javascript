@@ -56,6 +56,20 @@
 
 
 //BASIC OPERATORS
-const myAge = 2025 - 2006;
+// first example
+const age = 2025 - 2006;
 const ageJonas = 2040 - 2000;
-console.log(myAge, ageJonas);
+console.log(age, ageJonas);
+
+//second example
+const year = 2025;
+const myYear = year - 2006;
+console.log(myYear);
+
+//third example
+const currentYear = 2025;
+const currentAge = 2011;
+const myAge = currentYear - currentAge;
+console.log(myAge);
+
+console.log(age * 10, ageJonas / 2, myYear - 1000, myAge + 2000)
