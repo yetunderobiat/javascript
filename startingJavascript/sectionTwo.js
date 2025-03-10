@@ -36,8 +36,26 @@
 
 // three different ways of declaring a vriable
 //let
-let age = 30;
-age = 31; //reassigning a value to a variable or we are mutating the age variable. you mutate a variable using let
+// let age = 30;
+// age = 31; //reassigning a value to a variable or we are mutating the age variable. you mutate a variable using let
 
-// const - used to change variables that are not supposed to change at any point in the future. a value in a const  variable cannot be changed.
+// const 
+//  used to change variables that are not supposed to change at any point in the future. a value in a const  variable cannot be changed.
+//you cannot mutate a variable using const. it is immutable
+// const birthYear = 1991;
+// birthYear = 1991;  //it will throw up an error
 
+// const job; //it will throw up an error
+
+// var 
+// it is similar to let
+//it is an old way off declaring a variable
+// var job = 'programmer';
+// job = 'teacher';
+// console.log(job);
+
+
+//BASIC OPERATORS
+const myAge = 2025 - 2006;
+const ageJonas = 2040 - 2000;
+console.log(myAge, ageJonas);
