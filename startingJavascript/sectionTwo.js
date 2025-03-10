@@ -56,17 +56,17 @@
 
 
 //BASIC OPERATORS
-// // first example
+// example 1
 // const age = 2025 - 2006;
 // const ageJonas = 2040 - 2000;
 // console.log(age, ageJonas);
 
-// //second example
+// example 2
 // const year = 2025;
 // const myYear = year - 2006;
 // console.log(myYear);
 
-// //third example
+// example 3
 // const currentYear = 2025;
 // const currentAge = 2011;
 // const myAge = currentYear - currentAge;
@@ -74,29 +74,51 @@
 
 // console.log(age * 10, ageJonas / 2, myYear - 1000, myAge + 2000)
 
-// fourth example -- concatenating string with the use of '+'
+// example 4 -- concatenating string with the use of '+'
 // const myFirstName = 'Robiat';
 // const mySecondName = 'Yetunde';
 
 // console.log(myFirstName + ' ' + mySecondName);
 
-const myFirstName = 'Robiat';
-const mySecondName = 'Yetunde';
-const myAge = 25;
+// const myFirstName = 'Robiat';
+// const mySecondName = 'Yetunde';
+// const myAge = 25;
 
-console.log('My first name is' + ' ' + myFirstName  + ', my second name is' + ' ' + mySecondName + ' ' + 'and i am' + ' ' + myAge + ' ' + 'years old')
+// console.log('My first name is' + ' ' + myFirstName  + ', my second name is' + ' ' + mySecondName + ' ' + 'and i am' + ' ' + myAge + ' ' + 'years old')
 
-console.log(typeof myAge)
-console.log(typeof myFirstName)
+// console.log(typeof myAge)
+// console.log(typeof myFirstName)
 
-// using assignment operator -- fifth example
-let x = 10 + 5;
-x += 110; // x = x + 10
-console.log(x);
+// example 5 - using assignment operator 
+// let x = 10 + 5;
+// x += 110; // x = x + 10
+// console.log(x);
 
-let y = 10 + 10;
-y *= 10; // x = x * 10
-y *= 2;
-y++; //y = y + 1;
-y--; //y = y - 1;
-console.log(y)
+// let y = 10 + 10; 
+// y *= 10; // x = x * 10
+// y *= 2;
+// y++; //y = y + 1;
+// y--; //y = y - 1;
+// console.log(y)
+
+// example  6 - comparison operator
+// const age = 2025 - 2006;
+// const ageJonas = 2040 - 2000;
+// console.log(age > ageJonas);
+
+// const ageRobiat = 2025 - 2007;
+// console.log(age <= 20);
+
+// const ageRobi = 2025 - 2007;
+// console.log(age >= 20);
+
+// example 7 - operator predence
+let x, y;
+x = y = 25 - 18 - 5;
+console.log(x, y);
+
+const ageRobby = 20;
+const ageRobi = 40;
+
+console.log(ageRobby + ageRobi / 2);
+console.log((ageRobby + ageRobi) / 2);
