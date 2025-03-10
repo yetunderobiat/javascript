@@ -56,20 +56,26 @@
 
 
 //BASIC OPERATORS
-// first example
-const age = 2025 - 2006;
-const ageJonas = 2040 - 2000;
-console.log(age, ageJonas);
+// // first example
+// const age = 2025 - 2006;
+// const ageJonas = 2040 - 2000;
+// console.log(age, ageJonas);
 
-//second example
-const year = 2025;
-const myYear = year - 2006;
-console.log(myYear);
+// //second example
+// const year = 2025;
+// const myYear = year - 2006;
+// console.log(myYear);
 
-//third example
-const currentYear = 2025;
-const currentAge = 2011;
-const myAge = currentYear - currentAge;
-console.log(myAge);
+// //third example
+// const currentYear = 2025;
+// const currentAge = 2011;
+// const myAge = currentYear - currentAge;
+// console.log(myAge);
 
-console.log(age * 10, ageJonas / 2, myYear - 1000, myAge + 2000)
+// console.log(age * 10, ageJonas / 2, myYear - 1000, myAge + 2000)
+
+// fourth example -- concatenating string with the use of '+'
+const myFirstName = 'Robiat';
+const mySecondName = ' Yetunde';
+
+console.log(myFirstName + mySecondName)
