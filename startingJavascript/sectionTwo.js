@@ -175,3 +175,17 @@ if (height){
 else{
     console.log('Noo!')
 }
+
+// == vs ===
+// === it only returns  true when both values are true 
+const favorite = Number (prompt('what is your favorite number'));
+console.log (favorite);
+if (favorite === 23){
+    console.log('cool 23 is an amazing number');
+}
+else if (favorite === 6){
+    console.log('cool 6 is an amazing number');
+}
+else{
+    console.log('try again');
+}
