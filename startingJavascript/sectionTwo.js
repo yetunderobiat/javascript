@@ -178,14 +178,45 @@ else{
 
 // == vs ===
 // === it only returns  true when both values are true 
-const favorite = Number (prompt('what is your favorite number'));
-console.log (favorite);
-if (favorite === 23){
-    console.log('cool 23 is an amazing number');
-}
-else if (favorite === 6){
-    console.log('cool 6 is an amazing number');
+// const favorite = Number (prompt('what is your favorite number'));
+// console.log (favorite);
+// if (favorite === 23){
+//     console.log('cool 23 is an amazing number');
+// }
+// else if (favorite === 6){
+//     console.log('cool 6 is an amazing number');
+// }
+// else{
+//     console.log('try again');
+// }
+
+// boolean logic
+
+const hasDriversLicense = true;
+const hasGoodVisions = true;
+
+console.log(hasDriversLicense && hasGoodVisions); // it is only true if both are true
+console.log(hasDriversLicense || hasGoodVisions); // it is true if one or both are true
+console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVisions;
+
+// if(shouldDrive){
+//     console.log ('Sarah should drive');
+// }
+// else{
+//     console.log ('Someone else should drive....');
+// }
+
+const isTired = true;
+console.log(hasDriversLicense || hasGoodVisions || isTired);
+
+
+const shouldDrive = hasDriversLicense && hasGoodVisions;
+
+if(shouldDrive){
+    console.log ('Sarah should drive');
 }
 else{
-    console.log('try again');
+    console.log ('Someone else should drive....');
 }
