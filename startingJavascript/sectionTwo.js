@@ -113,12 +113,33 @@
 // console.log(age >= 20);
 
 // example 7 - operator predence
-let x, y;
-x = y = 25 - 18 - 5;
-console.log(x, y);
+// let x, y;
+// x = y = 25 - 18 - 5;
+// console.log(x, y);
 
-const ageRobby = 20;
-const ageRobi = 40;
+// const ageRobby = 20;
+// const ageRobi = 40;
 
-console.log(ageRobby + ageRobi / 2);
-console.log((ageRobby + ageRobi) / 2);
+// console.log(ageRobby + ageRobi / 2);
+// console.log((ageRobby + ageRobi) / 2);
+
+// example 8 - template literals 
+const myFirstName = 'Robiat';
+const mySecondName = 'Yetunde';
+const currentYear = 2025;
+const initialYear = 2006;
+
+console.log('My first name is' + ' ' + myFirstName  + ', my second name is' + ' ' + mySecondName + ' ' + 'and i am' + ' ' + (currentYear - initialYear) + ' ' + 'years old')
+
+// type convertion
+const inputYear = '2025';
+console.log(Number(inputYear),  inputYear)
+console.log(Number(inputYear) + 18);
+
+console.log(String(23), 23)
+
+// type coercion
+console.log('I  am ' + 23 + '  years old') // the '+' operator is converting a number to string. string + number = string
+console.log(3 + '23' + '10' - 3); // the '-'operator converts a string to number. it does not convert it to string. string - number = number
+console.log('23' * '2'); // string * string = number
+console.log('23' / '2'); // string / string = number
