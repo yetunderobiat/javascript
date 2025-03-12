@@ -270,3 +270,18 @@ console.log(oddNum);
 
 const evenNum = number.filter((y) => y % 2 === 0);
 console.log(evenNum);
+
+
+
+// 1. print number 1 to 10
+// multiply each number in an array by 10
+// sum number 1 to 5
+
+for (let n = 1; n <= 10; n++){
+    console.log(n);
+}
+
+const arrayNum = [2, 4, 6, 8]
+for (let i = 0; i < number.length; i++){
+    console.log(arrayNum[i] * 2);
+}
