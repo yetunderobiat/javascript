@@ -220,3 +220,53 @@ if(shouldDrive){
 else{
     console.log ('Someone else should drive....');
 }
+
+
+// the switch statement 
+const day = 'thursday';
+switch(day){
+    case 'monday':
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+        case 'tuesday':
+            console.log('Prepare theory videos');
+            break;
+        case 'wednesday':
+            console.log('write code');
+            break;
+        case 'thursday':
+            console.log('Prepare videos');
+            break;
+        case 'friday':
+            console.log('record vidoes');
+            break;
+        case 'saturday':
+        case 'sunday':
+            console.log('enjoy weekend');
+            break;
+            default:
+                console.log('not a valid day')
+}
+
+const age = 23;
+age >= 18 ? console.log('i like to drink wine'):
+console.log('i like to drink water');
+
+
+const friend = ["biodun", "t bazz", "coach"]
+console.log(friend);
+
+const number = [1, 2, 3, 4, 5, 6];
+
+const tripleNum = number.map(el => el *  3);
+console.log(tripleNum);
+
+const halfNum = number.map(el => el / 2);
+console.log(halfNum);
+
+const oddNum =number.filter((x) => x % 2);
+console.log(oddNum);
+
+const evenNum = number.filter((y) => y % 2 === 0);
+console.log(evenNum);
