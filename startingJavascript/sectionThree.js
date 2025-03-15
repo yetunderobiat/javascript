@@ -112,24 +112,52 @@ console.log(foodProcessor(2, 4))
 
 //Array -- it is  data structure
 
-// const friends = ['Robiat', 'Yetunde', 'ibrahim'];
-// console.log(friends);
-// console.log(friends[0]);
-// console.log(friends.length);
-// console.log(friends[friends.length - 1])
+const friends = ['Robiat', 'Yetunde', 'ibrahim'];
+console.log(friends);
+console.log(friends[0]);
+console.log(friends.length);
+console.log(friends[friends.length - 1])
 
-// friends[2] = 'jay'
-// console.log(friends)
+friends[2] = 'jay'
+console.log(friends)
 
-// const myName = 'bob'
-// const friendss = [myName, 'Robiat', 'Yetunde', 'ibrahim', 22 - 33, 'Alice'];
-// console.log(friendss);
-// console.log(friendss.length)
+const myName = 'bob'
+const friendss = [myName, 'Robiat', 'Yetunde', 'ibrahim', 22 - 33, 'Alice'];
+console.log(friendss);
+console.log(friendss.length)
 
-// const calcAge = function (birthYear){
-//     return 2025 -birthYear
-// }
-// const years = [1990, 1991, 1992, 1993, 1994, 1995]
-// const age4 = (calcAge(years[0]))
-// console.log(age4)
+const calcAge = function (birthYear){
+    return 2025 -birthYear
+}
+const years = [1990, 1991, 1992, 1993, 1994, 1995]
+const age4 = (calcAge(years[0]))
+console.log(age4)
+
+const animals = ['Dog', 'Cat', 'Birds', 'Snake'];
+const newLengh = animals.push('Rabbit');
+console.log(animals);
+console.log(newLengh);
+
+animals.unshift('Rat');
+console.log(animals);
+
+animals.pop();
+console.log(animals);
+
+animals.shift();
+console.log(animals);
+
+console.log(animals.indexOf('Cat'));
+console.log(animals.indexOf('Snake'));
+console.log(animals.includes(22));
+console.log(animals.includes('Dog'));
+
+if (animals.includes('Birds')){
+    console.log("This is a bird");
+} else {
+    console.log("Not part of the list")
+}
+
+
+
 
