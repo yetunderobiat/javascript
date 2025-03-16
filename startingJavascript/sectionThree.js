@@ -256,4 +256,24 @@ for (let i = 0; i < robiat.length; i++){
     console.log(robiat[i], typeof robiat[i]);
 }
 
+// looping backwords 
+const yetunde = ['Robiat', 
+    'Ibrahim',
+    2025 - 2006,
+    'student', 
+    ['michael', 'rob', 'joe'],
+ ];
+
+ for (let i = yetunde.length - 1; i >= 0; i--){
+    console.log(i, yetunde[i])
+ }
+
+// creating a loop inside another loop
+for (let exercise = 1; exercise <= 4; exercise++){
+    console.log(`--------- starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 10; rep++){
+        console.log(`Lifting weight repetition ${rep}`);
+    }
+}
 
