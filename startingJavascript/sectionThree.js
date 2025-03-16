@@ -159,29 +159,54 @@ if (animals.includes('Birds')){
 }
 
 //  Objects
-const jonas = {
-    firstName: 'Joans',
-    lastName: 'Ibrahim',
-    age: 2033 - 2000,
-    job : 'teacher',
-    friends: ['michael', 'rob', 'joe']
-}
-console.log(jonas)
+// const jonas = {
+//     firstName: 'Joans',
+//     lastName: 'Ibrahim',
+//     age: 2033 - 2000,
+//     job : 'teacher',
+//     friends: ['michael', 'rob', 'joe']
+// }
+// console.log(jonas)
 
 // the first way of getting a property from an object is using the dot notation
 // dot notation
-console.log(jonas.age);
-// bracket notation
-console.log(jonas['age']);
-const interestedIn = prompt('What do you want to know');
+// console.log(jonas.age);
+// // bracket notation
+// console.log(jonas['age']);
+// const interestedIn = prompt('What do you want to know');
 
-if (jonas[interestedIn]){
-    console.log(jonas[interestedIn]);
-} else {
-    console.log('Wrong request');
-}
+// if (jonas[interestedIn]){
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log('Wrong request');
+// }
 
-console.log(`${jonas.firstName} has friends ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`)
+// console.log(`${jonas.firstName} has friends ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`)
+
+// Object Method
+const robiat = {
+    firstName: 'Robiat',
+    lastName: 'Ibrahim',
+    birthYear: 2006,
+    job : 'student',
+    friends: ['michael', 'rob', 'joe'],
+    hasDriversLicense: true,
+
+    calcAge: function (){
+        return 2025 - this.birthYear; 
+    }
+
+    getSummary: function(){
+        return `${this.firstName} is a ${this.calcAge()} year old ${jonas.job}, and has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
+};
+console.log(robiat.getSummary());
+console.log(robiat.calcAge(2006)); // dot notation
+console.log(robiat['calcAge'](2006)); //bracket notation
+
+
+
+
 
 
 
