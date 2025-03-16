@@ -158,6 +158,30 @@ if (animals.includes('Birds')){
     console.log("Not part of the list")
 }
 
+//  Objects
+const jonas = {
+    firstName: 'Joans',
+    lastName: 'Ibrahim',
+    age: 2033 - 2000,
+    job : 'teacher',
+    friends: ['michael', 'rob', 'joe']
+}
+console.log(jonas)
+
+// the first way of getting a property from an object is using the dot notation
+// dot notation
+console.log(jonas.age);
+// bracket notation
+console.log(jonas['age']);
+const interestedIn = prompt('What do you want to know');
+
+if (jonas[interestedIn]){
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request');
+}
+
+console.log(`${jonas.firstName} has friends ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`)
 
 
 
