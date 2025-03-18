@@ -15,20 +15,29 @@
 // console.log(document.querySelector(".guess").value);
 
 // handling the click element
+//implementing the game logic
+// manipulating css style
+
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 3;
 document.querySelector(".number").textContent = secretNumber;
 
-//implementing the game logic
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
-  let score = 20;
-
+  // when there is no input
   if (!guess) {
     document.querySelector(".message").textContent =
       "Wrong input, not a number";
+
+    // when player wins
   } else if (guess === secretNumber) {
     document.querySelector(".message").textContent =
       "Yayy, you guessed the number correctly";
+    document.querySelector("body").style.backgroundColor = "#60b347";
+    document.querySelector(".number").style.width = "30rem";
+
+
+    // when guess is too high
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector(".message").textContent = "Your guess is too high";
@@ -38,8 +47,12 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".message").textContent = "You lost the  game";
       document.querySelector(".score").textContent = 0;
     }
+    document.querySelector("body").style.backgroundColor = 'yellow';
+    // document.querySelector(".number").style.width = "30rem";
+
+    // when guess is too low
   } else if (guess < secretNumber) {
-    if (score < 1) {
+    if (score > 1) {
       document.querySelector(".message").textContent = "Your guess is too low";
       score--;
       document.querySelector(".score").textContent = score;
@@ -47,5 +60,6 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".message").textContent = "You lost the  game";
       document.querySelector(".score").textContent = 0;
     }
+    document.querySelector("body").style.backgroundColor = 'red';
   }
 });
