@@ -63,3 +63,33 @@ body {
   color: white;
   text-decoration: none;
 }
+
+.intro-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    line-height: 0.6;
+}
+.intro-section img{
+    width: 16%;
+    transition: transform 1.5s ease-in-out;
+}
+.intro-section img:hover{
+    transform: rotate(360deg);
+}
+.intro-section h1{
+    font-weight: 700;
+    font-size: 3rem;
+    font-family:Prompt ;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+    color: yellow;
+}
+.intro-section p{
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: 600;
+    
+}
