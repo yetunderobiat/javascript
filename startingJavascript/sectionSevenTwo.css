@@ -16,19 +16,19 @@
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    background: linear-gradient(to top left, #c9298c, #0a7fce);
+    background: linear-gradient(to top left, #28b45b, #7dd56f);
   }
   
   .show-modal {
     font-size: 2rem;
     font-weight: 600;
-    padding: 2rem 10rem;
+    padding: 1.75rem 3.5rem;
     margin: 5rem 2rem;
     border: none;
-    background-color: #22cdb9;
-    color: #db0e74;
+    background-color: #fff;
+    color: #444;
     border-radius: 10rem;
     cursor: pointer;
   }
@@ -38,7 +38,7 @@
     top: 1.2rem;
     right: 2rem;
     font-size: 5rem;
-    color: #db0e74;
+    color: #333;
     cursor: pointer;
     border: none;
     background: none;
