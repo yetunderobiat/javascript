@@ -16,9 +16,9 @@
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    background: linear-gradient(to top left, #28b45b, #7dd56f);
+    background: linear-gradient(to top left, #bf73e2, #e224cc);
   }
   
   .show-modal {
@@ -27,8 +27,8 @@
     padding: 1.75rem 3.5rem;
     margin: 5rem 2rem;
     border: none;
-    background-color: #fff;
-    color: #444;
+    background-color: #6be07f;
+    color: #333;
     border-radius: 10rem;
     cursor: pointer;
   }
@@ -38,7 +38,7 @@
     top: 1.2rem;
     right: 2rem;
     font-size: 5rem;
-    color: #333;
+    color: #cacaca;
     cursor: pointer;
     border: none;
     background: none;
@@ -66,7 +66,8 @@
     transform: translate(-50%, -50%);
     width: 70%;
   
-    background-color: white;
+    background-color: rgb(0, 0, 0);
+    color: #cacaca;
     padding: 6rem;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
