@@ -1,0 +1,65 @@
+body {
+  background-color: black;
+  margin: 3rem;
+}
+.project {
+  background-color: rgb(40, 40, 40);
+  border-radius: 1rem;
+  border: 1px ridge black;
+  height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem;
+  font-size: larger;
+  font-weight: bolder;
+}
+.navbar .details {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .details img {
+  width: 2rem;
+  transition: transform 1s ease-in-out;
+}
+.navbar .details img:hover{
+    transform: rotateY(360deg);
+}
+.navbar .details a {
+  margin-left: 3rem;
+  transition: all 0.15s ease;
+}
+.navbar .details a:hover{
+    color: yellow;
+    transform: scaleX(0.9);
+}
+.navbar .sideimg {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-right: 2rem;
+  transition: all 0.15s ease;
+}
+.navbar .sideimg:hover{
+    color: yellow;
+    transform: scaleX(0.9);
+}
+.navbar .sideimg img {
+  margin-right: 1rem;
+  gap: 1rem;
+  width: 2rem;
+  transition: transform 1s ease-in-out;
+}
+.navbar .sideimg img:hover{
+    transform: rotateY(360deg);
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
