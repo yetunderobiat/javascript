@@ -6,7 +6,7 @@ body {
   background-color: rgb(40, 40, 40);
   border-radius: 1rem;
   border: 1px ridge black;
-  height: 600vh;
+  height: 450vh;
   padding: 2rem 4rem;
 }
 
@@ -133,13 +133,13 @@ body {
   border-radius: 1.5rem;
   margin-left: 10rem;
 }
-.selecting-random-number .game  button {
+.selecting-random-number .game button {
   position: absolute;
   top: 50%;
   left: 45%;
   transform: translate(-50%, -50%);
   padding: 1rem 2rem;
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(20, 20, 20);
   color: white;
   border: none;
   cursor: pointer;
@@ -150,7 +150,114 @@ body {
   visibility: hidden;
   transition: opacity 0.1s ease-in, visibility 0.1s ease-in;
 }
-.selecting-random-number .game:hover  button{
+.selecting-random-number .game:hover button {
   opacity: 1;
   visibility: visible;
+}
+
+/* show madl section  */
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 7rem 0;
+}
+.show-modal h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: Prompt;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: yellow;
+}
+.show-modal p {
+  width: 60%;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: Montserrat Alternates;
+  color: white;
+}
+.show-modal .round .show-moda {
+  position: relative;
+  background-color: rgb(207, 207, 66);
+  padding: 5rem 2.5rem;
+  border: 2px ridge black;
+  color: white;
+  font-family: Montserrat Alternates;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+.show-modal a button {
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-family: Montserrat Alternates;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+.show-modal a button:hover {
+  transform: scaleX(0.9);
+}
+
+/* pig game section  */
+.pig-game  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.pig-game  h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: Prompt;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: yellow;
+}
+.pig-game  p {
+  text-align: center;
+  width: 60%;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: Montserrat Alternates;
+  color: white;
+}
+.pig-game img{
+  width: 15%;
+  border-radius: 100%;
+  transition: transform 1.5s ease-in-out;
+}
+.pig-game img:hover{
+  transform: rotate(360deg);
+}
+.pig-game  a button {
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-family: Montserrat Alternates;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+.pig-game a button:hover {
+  transform: scaleX(0.9);
+}
+footer{
+  font-weight: 500;
+  font-family: Montserrat Alternates;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
 }
