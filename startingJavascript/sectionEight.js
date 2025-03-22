@@ -119,33 +119,68 @@ const year = 1991;
 // console.log(z === window.z);
 
 // the this  keyword practice
-console.log(this);
-const calcAge = function (birthYear) {
-  console.log(2025 - birthYear);
-  console.log(this);
-};
-calcAge(1991);
+// console.log(this);
+// const calcAge = function (birthYear) {
+//   console.log(2025 - birthYear);
+//   console.log(this);
+// };
+// calcAge(1991);
 
-const calcAgeArrow = (birthYear) => {
-  console.log(2025 - birthYear);
-  console.log(this);
-};
-calcAge(1990);
+// const calcAgeArrow = (birthYear) => {
+//   console.log(2025 - birthYear);
+//   console.log(this);
+// };
+// calcAge(1990);
 
+// const jonas = {
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+// };
+// jonas.calcAge();
+
+// const robiat = {
+//   year: 2017,
+// };
+// robiat.calcAge = jonas.calcAge;
+// robiat.calcAge();
+
+// const f = robiat.calcAge;
+// f();
+
+// Regular Functions vs. Arrow Functions
+var firstName = "Robiat";
 const jonas = {
+  firstName: "Robiat",
   year: 1991,
   calcAge: function () {
-    console.log(this);
     console.log(2037 - this.year);
+
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
   },
 };
+jonas.greet();
 jonas.calcAge();
 
-const robiat = {
-  year: 2017,
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
 };
-robiat.calcAge = jonas.calcAge;
-robiat.calcAge();
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
 
-const f = robiat.calcAge;
-f();
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5, 8);
