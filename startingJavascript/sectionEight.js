@@ -102,14 +102,50 @@ const year = 1991;
 // const addArrow = (a, b) => a + b;
 
 //example
-console.log(numProducts);
-if (!numProducts) deleteShoppingCart();
+// console.log(numProducts);
+// if (!numProducts) deleteShoppingCart();
 
-var numProducts = 10;
-function deleteShoppingCart() {
-  console.log("all products deleted");
-}
+// var numProducts = 10;
+// function deleteShoppingCart() {
+//   console.log("all products deleted");
+// }
 
-var x = 1;
-let y = 2;
-const z = 3;
+// var x = 1;
+// let y = 2;
+// const z = 3;
+
+// console.log(x === window.x);
+// console.log(y === window.y);
+// console.log(z === window.z);
+
+// the this  keyword practice
+console.log(this);
+const calcAge = function (birthYear) {
+  console.log(2025 - birthYear);
+  console.log(this);
+};
+calcAge(1991);
+
+const calcAgeArrow = (birthYear) => {
+  console.log(2025 - birthYear);
+  console.log(this);
+};
+calcAge(1990);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+jonas.calcAge();
+
+const robiat = {
+  year: 2017,
+};
+robiat.calcAge = jonas.calcAge;
+robiat.calcAge();
+
+const f = robiat.calcAge;
+f();
