@@ -48,3 +48,30 @@
 //   const d = "Hey!";
 //   console.log(d + c + b + a);
 // }
+
+// scoping in practice
+function calcAge(birthYear) {
+  const age = 2025 - birthYear;
+
+  function printAge() {
+    const output = `${firstName}you are ${age}, born in ${birthYear}`;
+    console.log(output);
+
+    if (birthYear >= 1991 && birthYear <= 1996) {
+      const str = `oh, and i am a millenial, ${firstName}`;
+      console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
+    }
+      console.log(millenial);
+    }
+    printAge();
+    return age;
+  }
+
+  //global variable
+  const firstName = "Robiat";
+  calcAge(1999);
+
