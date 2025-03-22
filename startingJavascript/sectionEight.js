@@ -75,3 +75,9 @@ function calcAge(birthYear) {
   const firstName = "Robiat";
   calcAge(1999);
 
+
+// Hoisting and the TDZ
+// hoisting makes some type of variable accessible/usable in the code before they are actually declared 
+// TDZ - Temporal Dead Zone - makes it easier to avoid and catch error
+
+
