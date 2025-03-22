@@ -50,34 +50,66 @@
 // }
 
 // scoping in practice
-function calcAge(birthYear) {
-  const age = 2025 - birthYear;
+// function calcAge(birthYear) {
+//   const age = 2025 - birthYear;
 
-  function printAge() {
-    const output = `${firstName}you are ${age}, born in ${birthYear}`;
-    console.log(output);
+//   function printAge() {
+//     const output = `${firstName}, you are ${age}, born in ${birthYear}`;
+//     console.log(output);
 
-    if (birthYear >= 1991 && birthYear <= 1996) {
-      const str = `oh, and i am a millenial, ${firstName}`;
-      console.log(str);
+//     if (birthYear >= 1991 && birthYear <= 1996) {
+//       const str = `oh, and i am a millenial, ${firstName}`;
+//       console.log(str);
 
-      function add(a, b) {
-        return a + b;
-      }
-    }
-      console.log(millenial);
-    }
-    printAge();
-    return age;
-  }
+//       function add(a, b) {
+//         return a + b;
+//       }
+//     }
+//     // console.log(millenial);
+//   }
+//   printAge();
+//   return age;
+// }
 
-  //global variable
-  const firstName = "Robiat";
-  calcAge(1999);
-
+//global variable
+// const firstName = "Robiat";
+// calcAge(1999);
 
 // Hoisting and the TDZ
-// hoisting makes some type of variable accessible/usable in the code before they are actually declared 
+// hoisting makes some type of variable accessible/usable in the code before they are actually declared
 // TDZ - Temporal Dead Zone - makes it easier to avoid and catch error
 
+// Hoisting and the TDZ in practice
+// variables
+console.log(me);
 
+var me = "Robiat";
+let job = "Teacher";
+const year = 1991;
+
+// function
+// console.log(addDecl(2, 3));
+// console.log(addExpr(2, 3));
+// console.log(addArrow(2, 3));
+
+// function addDecl(a, b) {
+//   return a + b;
+// }
+
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
+// const addArrow = (a, b) => a + b;
+
+//example
+console.log(numProducts);
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+function deleteShoppingCart() {
+  console.log("all products deleted");
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
