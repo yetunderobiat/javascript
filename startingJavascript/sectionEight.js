@@ -151,36 +151,81 @@ const year = 1991;
 // f();
 
 // Regular Functions vs. Arrow Functions
-var firstName = "Robiat";
-const jonas = {
+// var firstName = "Robiat";
+// const jonas = {
+//   firstName: "Robiat",
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(2037 - this.year);
+
+//     const isMillenial = () => {
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+//   greet: () => {
+//     console.log(this);
+//     console.log(`Hey ${this.firstName}`);
+//   },
+// };
+// jonas.greet();
+// jonas.calcAge();
+
+// const addExpr = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addExpr(2, 5);
+// addExpr(2, 5, 8, 12);
+
+// var addArrow = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addExpr(2, 5, 8);
+
+// memory management: primitives vs objects
+// shallow vs. deepcopy
+const robiat = {
   firstName: "Robiat",
-  year: 1991,
-  calcAge: function () {
-    console.log(2037 - this.year);
-
-    const isMillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-    isMillenial();
-  },
-  greet: () => {
-    console.log(this);
-    console.log(`Hey ${this.firstName}`);
-  },
+  lastName: "Ibrahim",
+  age: 10,
 };
-jonas.greet();
-jonas.calcAge();
+function marriedPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+const marriedRobiat = marriedPerson(robiat, "Davis");
 
-const addExpr = function (a, b) {
-  console.log(arguments);
-  return a + b;
-};
-addExpr(2, 5);
-addExpr(2, 5, 8, 12);
+// const marriedRobiat = 'ibrahim';
+// marriedRobiat.lastName = "Yetunde";
 
-var addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
+// console.log("Before:", robiat);
+// console.log("After:", marriedRobiat);
+
+const jessica = {
+  firstName: "Jessica",
+  lastName: "Chukuemeka",
+  age: 10,
+  friends: ["Lota", "Robiat(she is obssesed with me)"],
 };
-addExpr(2, 5, 8);
+
+//shallow copy
+const jessicaCopy = { ...jessica };
+jessicaCopy.lastName = "John";
+
+jessicaCopy.friends.push("Jennifer");
+jessicaCopy.friends.push("Jane");
+
+console.log(jessica, jessicaCopy);
+console.log("Before:", jessica);
+console.log("After:", jessicaCopy);
+
+// deep copy
+const jessicaClone=structuredClone(jessica)
+jessicaClone.friends.push("Jennifer");
+jessicaClone.friends.push("Jane");
+
+console.log("Before clone:", jessica);
+console.log("After clone:", jessicaClone);
