@@ -221,3 +221,19 @@ const x = [23, 5, 7];
 add(...x);
 
 restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
+
+// SHORT CIRCUITING(&& and ||)
+// use any data type, return any data type, short-circuiting
+// restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log("---AND---");
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("mushrooms", "spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
