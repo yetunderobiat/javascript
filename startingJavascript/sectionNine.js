@@ -96,6 +96,12 @@ const restaurant = {
       }will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `here is your delicious pasta with${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 restaurant.orderDelivery[
   {
@@ -133,3 +139,50 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+
+// The spead operator
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+const newArr = [1, 2, ...arr];
+console.log(badNewArr);
+console.log(newArr);
+
+console.log(...newArr);
+console.log(1, 2, 7, 8, 9);
+
+const newMenu = [...restaurant.mainMenu, "gnocci"];
+console.log(newMenu);
+
+const newMenu2 = [...restaurant.staterMenu, "food"];
+console.log(newMenu2);
+
+// copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+const joinMenu = [...restaurant.mainMenu, ...restaurant.staterMenu];
+console.log(joinMenu);
+
+// iterables: arrays, strings, maps, sets, not objects
+const str = "Jonas";
+console.log(...str);
+
+const letters = [...str, "", "s."];
+console.log(letters);
+
+const ingredients = [
+  // prompt("let's make pasta! Ingredient 1?"),
+  // prompt("Ingredient 2?"),
+  // prompt("Ingredient 3"),
+];
+console.log(ingredients);
+restaurant.orderPasta(...ingredients);
+
+// objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guisepe" };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.names = "Ristorante Roma";
+console.log(restaurantCopy.names);
+console.log(restaurant.names);
