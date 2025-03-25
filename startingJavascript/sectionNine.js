@@ -224,7 +224,7 @@ restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
 
 // SHORT CIRCUITING(&& and ||)
 // use any data type, return any data type, short-circuiting
-// restaurant.numGuests = 23;
+// restaurant.numGuests = 0;
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guests1);
 
@@ -237,3 +237,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+
+// THE NULLISH COALESCING OPERATOR(??)
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
