@@ -102,6 +102,11 @@ const restaurant = {
       `here is your delicious pasta with${ing1}, ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredient) {
+    console.log(mainIngredient);
+    console.log(otherIngredient);
+  },
 };
 restaurant.orderDelivery[
   {
@@ -128,11 +133,11 @@ const { menu = [], staterMenu: stater = [] } = restaurant;
 console.log(menu, stater);
 
 // mutating a variable
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-console.log(a, b);
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
+// ({ a, b } = obj);
+// console.log(a, b);
 
 // nested objects
 const {
@@ -140,7 +145,7 @@ const {
 } = openingHours;
 console.log(o, c);
 
-// The spead operator
+// The spread operator
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 const newArr = [1, 2, ...arr];
@@ -186,3 +191,33 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.names = "Ristorante Roma";
 console.log(restaurantCopy.names);
 console.log(restaurant.names);
+
+// The rest pattern and parameter
+// Rest
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.staterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+// objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+const add = function (...numbers) {
+  console.log(numbers);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+add(3, 4);
+add(3, 2, 5, 7);
+add(1, 2, 3, 4, 5, 6);
+
+const x = [23, 5, 7];
+add(...x);
+
+restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
