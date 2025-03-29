@@ -88,3 +88,4 @@ function checkInput(myName) {
   );
 }
 console.log(checkInput("biodun"));
+console.log(checkInput("robiat"));
