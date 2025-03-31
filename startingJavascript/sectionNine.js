@@ -271,3 +271,6 @@ rest2.owner &&= "<ANONYMOUS>";
 
 console.log(rest1);
 console.log(rest2);
+
+// for-of loop
+const menuu = [...restaurant.staterMenu, ...restaurant.mainMenu];
