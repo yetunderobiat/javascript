@@ -274,3 +274,12 @@ console.log(rest2);
 
 // for-of loop
 const menuu = [...restaurant.staterMenu, ...restaurant.mainMenu];
+for (const item of menuu) console.log(item);
+
+for (const item of menuu.entries()) {
+  console.log(item);
+}
+
+for (const [i, el] of menuu.entries()) {
+  console.log(`${i + 1}:${el}`);
+}
