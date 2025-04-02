@@ -60,26 +60,42 @@
 
 // Destructing objects
 // we use the curly braces to desctructure
+const openingHours: {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0,
+    close: 24,
+  },
+};
+
 const restaurant = {
   names: "ibrahim robiat",
   location: "ikorodu, lasgos, nigeria",
   categories: ["italian", "pizzaria", "vegetarian", "organic"],
   staterMenu: ["rice", "chicken", "salad", "spaghetti", "bread"],
   mainMenu: ["pizza", "pasta", "risotto"],
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0,
-      close: 24,
-    },
-  },
+  openingHours: openingHours,
+  // openingHours: {
+  //   thu: {
+  //     open: 12,
+  //     close: 22,
+  //   },
+  //   fri: {
+  //     open: 11,
+  //     close: 23,
+  //   },
+  //   sat: {
+  //     open: 0,
+  //     close: 24,
+  //   },
+  // },
   order: function (staterIndex, mainIndex) {
     return [this.staterMenu(staterIndex), this.mainMenu(mainIndex)];
   },
@@ -108,29 +124,29 @@ const restaurant = {
     console.log(otherIngredient);
   },
 };
-restaurant.orderDelivery[
-  {
-    time: "22:33",
-    address: "via del sole, 21",
-    mainIndex: 2,
-    staterIndex: 2,
-  }
-];
-restaurant.orderDelivery[{ address: "via del sole, 21", staterIndex: 1 }];
+// restaurant.orderDelivery[
+//   {
+//     time: "22:33",
+//     address: "via del sole, 21",
+//     mainIndex: 2,
+//     staterIndex: 2,
+//   }
+// ];
+// restaurant.orderDelivery[{ address: "via del sole, 21", staterIndex: 1 }];
 
-const { names, openingHours, categories } = restaurant;
-console.log(names, openingHours, categories);
+// const { names, openingHours, categories } = restaurant;
+// console.log(names, openingHours, categories);
 
-const {
-  names: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// const {
+//   names: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
 
 // default values
-const { menu = [], staterMenu: stater = [] } = restaurant;
-console.log(menu, stater);
+// const { menu = [], staterMenu: stater = [] } = restaurant;
+// console.log(menu, stater);
 
 // mutating a variable
 // let a = 111;
@@ -140,10 +156,10 @@ console.log(menu, stater);
 // console.log(a, b);
 
 // nested objects
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(o, c);
 
 // The spread operator
 const arr = [7, 8, 9];
@@ -283,3 +299,5 @@ for (const item of menuu.entries()) {
 for (const [i, el] of menuu.entries()) {
   console.log(`${i + 1}:${el}`);
 }
+
+// enhanced object literals

@@ -62,30 +62,41 @@
 //   console.log(`this is number ${i}`);
 // }
 
-function checkClass(check) {
-  const myCheck = check.slice(-2);
-  if (myCheck === "ng") {
-    console.log("You are a nigerian");
-  } else if (myCheck === "gh") {
-    console.log("you are a ghanian");
-  } else if (myCheck === "us") {
-    console.log("you are an american");
-  } else {
-    console.log("country not determined");
-  }
-}
-checkClass("123yu");
-checkClass("12918us");
-checkClass("98129gh");
+// function checkClass(check) {
+//   const myCheck = check.slice(-2);
+//   if (myCheck === "ng") {
+//     console.log("You are a nigerian");
+//   } else if (myCheck === "gh") {
+//     console.log("you are a ghanian");
+//   } else if (myCheck === "us") {
+//     console.log("you are an american");
+//   } else {
+//     console.log("country not determined");
+//   }
+// }
+// checkClass("123yu");
+// checkClass("12918us");
+// checkClass("98129gh");
 
-// a function that capitalize the input
-function checkInput(myName) {
-  const correctName = myName.trim().toLowerCase();
-  return (
-    correctName[0].toUpperCase() +
-    correctName.slice(1, -1) +
-    correctName[myName.length - 1].toUpperCase()
-  );
-}
-console.log(checkInput("biodun"));
-console.log(checkInput("robiat"));
+// // a function that capitalize the input
+// function checkInput(myName) {
+//   const correctName = myName.trim().toLowerCase();
+//   return (
+//     correctName[0].toUpperCase() +
+//     correctName.slice(1, -1) +
+//     correctName[myName.length - 1].toUpperCase()
+//   );
+// }
+// console.log(checkInput("biodun"));
+// console.log(checkInput("robiat"));
+
+const numbers = [1, 3, 4, 5, 6, 10, 12];
+const evenNum = numbers.filter((x) => {
+  return x > 4 && x % 2 === 0;
+});
+console.log(evenNum);
+
+const multiplyNum = numbers.reduce((a, b) => {
+  return a * b;
+}, 1);
+console.log(multiplyNum);
