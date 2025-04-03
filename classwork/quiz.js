@@ -100,3 +100,30 @@ const multiplyNum = numbers.reduce((a, b) => {
   return a * b;
 }, 1);
 console.log(multiplyNum);
+
+console.log("*****reverse an array*****");
+const arrNum = [1, 2, 3, 4, 5, 6];
+console.log(arrNum);
+console.log(arrNum.reverse());
+
+console.log("***reverse a string***");
+const myName = "Yetunde";
+console.log(myName);
+console.log(myName.split("").reverse().join(""));
+
+console.log("***join 2 strings in different ways***");
+const joinArr = [2, 3, 4];
+const addArr = [7, 5, 6];
+const moreArr = [9, 3, 4];
+console.log([...joinArr, ...addArr]);
+console.log(joinArr.concat(addArr, moreArr));
+console.log(joinArr.concat(addArr).concat(moreArr));
+
+// palindrome
+function checkPalindrome(word){
+  const cleanWord = word.toLowerCase()
+  const reverseWord = cleanWord.split("").reverse().join("")
+  return cleanWord === reverseWord
+}
+console.log(checkPalindrome("hello"));
+console.log(checkPalindrome("Dad"));
