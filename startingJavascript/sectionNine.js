@@ -60,42 +60,26 @@
 
 // Destructing objects
 // we use the curly braces to desctructure
-const openingHours: {
-  thu: {
-    open: 12,
-    close: 22,
-  },
-  fri: {
-    open: 11,
-    close: 23,
-  },
-  sat: {
-    open: 0,
-    close: 24,
-  },
-};
-
 const restaurant = {
   names: "ibrahim robiat",
   location: "ikorodu, lasgos, nigeria",
   categories: ["italian", "pizzaria", "vegetarian", "organic"],
   staterMenu: ["rice", "chicken", "salad", "spaghetti", "bread"],
   mainMenu: ["pizza", "pasta", "risotto"],
-  openingHours: openingHours,
-  // openingHours: {
-  //   thu: {
-  //     open: 12,
-  //     close: 22,
-  //   },
-  //   fri: {
-  //     open: 11,
-  //     close: 23,
-  //   },
-  //   sat: {
-  //     open: 0,
-  //     close: 24,
-  //   },
-  // },
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
   order: function (staterIndex, mainIndex) {
     return [this.staterMenu(staterIndex), this.mainMenu(mainIndex)];
   },
@@ -162,142 +146,161 @@ const restaurant = {
 // console.log(o, c);
 
 // The spread operator
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-const newArr = [1, 2, ...arr];
-console.log(badNewArr);
-console.log(newArr);
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// const newArr = [1, 2, ...arr];
+// console.log(badNewArr);
+// console.log(newArr);
 
-console.log(...newArr);
-console.log(1, 2, 7, 8, 9);
+// console.log(...newArr);
+// console.log(1, 2, 7, 8, 9);
 
-const newMenu = [...restaurant.mainMenu, "gnocci"];
-console.log(newMenu);
+// const newMenu = [...restaurant.mainMenu, "gnocci"];
+// console.log(newMenu);
 
-const newMenu2 = [...restaurant.staterMenu, "food"];
-console.log(newMenu2);
+// const newMenu2 = [...restaurant.staterMenu, "food"];
+// console.log(newMenu2);
 
 // copy array
-const mainMenuCopy = [...restaurant.mainMenu];
-console.log(mainMenuCopy);
+// const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
 
-const joinMenu = [...restaurant.mainMenu, ...restaurant.staterMenu];
-console.log(joinMenu);
+// const joinMenu = [...restaurant.mainMenu, ...restaurant.staterMenu];
+// console.log(joinMenu);
 
 // iterables: arrays, strings, maps, sets, not objects
-const str = "Jonas";
-console.log(...str);
+// const str = "Jonas";
+// console.log(...str);
 
-const letters = [...str, "", "s."];
-console.log(letters);
+// const letters = [...str, "", "s."];
+// console.log(letters);
 
-const ingredients = [
-  // prompt("let's make pasta! Ingredient 1?"),
-  // prompt("Ingredient 2?"),
-  // prompt("Ingredient 3"),
-];
-console.log(ingredients);
-restaurant.orderPasta(...ingredients);
+// const ingredients = [
+//   // prompt("let's make pasta! Ingredient 1?"),
+//   // prompt("Ingredient 2?"),
+//   // prompt("Ingredient 3"),
+// ];
+// console.log(ingredients);
+// restaurant.orderPasta(...ingredients);
 
 // objects
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guisepe" };
-console.log(newRestaurant);
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guisepe" };
+// console.log(newRestaurant);
 
-const restaurantCopy = { ...restaurant };
-restaurantCopy.names = "Ristorante Roma";
-console.log(restaurantCopy.names);
-console.log(restaurant.names);
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.names = "Ristorante Roma";
+// console.log(restaurantCopy.names);
+// console.log(restaurant.names);
 
 // The rest pattern and parameter
 // Rest
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.staterMenu,
-];
-console.log(pizza, risotto, otherFood);
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.staterMenu,
+// ];
+// console.log(pizza, risotto, otherFood);
 
 // objects
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
 
-const add = function (...numbers) {
-  console.log(numbers);
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-  console.log(sum);
-};
-add(3, 4);
-add(3, 2, 5, 7);
-add(1, 2, 3, 4, 5, 6);
+// const add = function (...numbers) {
+//   console.log(numbers);
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// };
+// add(3, 4);
+// add(3, 2, 5, 7);
+// add(1, 2, 3, 4, 5, 6);
 
-const x = [23, 5, 7];
-add(...x);
+// const x = [23, 5, 7];
+// add(...x);
 
-restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
+// restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
 
 // SHORT CIRCUITING(&& and ||)
 // use any data type, return any data type, short-circuiting
 // restaurant.numGuests = 0;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
 
-const guests2 = restaurant.numGuests || 10;
-console.log(guests2);
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
 
-console.log("---AND---");
-if (restaurant.orderPizza) {
-  restaurant.orderPizza("mushrooms", "spinach");
-}
+// console.log("---AND---");
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza("mushrooms", "spinach");
+// }
 
-restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+// restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
 
-// THE NULLISH COALESCING OPERATOR(??)
-const guestCorrect = restaurant.numGuests ?? 10;
-console.log(guestCorrect);
+// // THE NULLISH COALESCING OPERATOR(??)
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
 
-// LOGICAL ASSIGNMENT OPERATORS
-const rest1 = {
-  myName: "robby",
-  numGuests: 20,
-};
-const rest2 = {
-  myName: "yetunde",
-  owner: "Giovanni Rossi",
-};
-// OR assignment operator
-rest1.numGuests = rest1.numGuests || 10;
-rest2.numGuests = rest2.numGuests || 10;
+// // LOGICAL ASSIGNMENT OPERATORS
+// const rest1 = {
+//   myName: "robby",
+//   numGuests: 20,
+// };
+// const rest2 = {
+//   myName: "yetunde",
+//   owner: "Giovanni Rossi",
+// };
+// // OR assignment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
 
-rest1.numGuests || 10;
-rest2.numGuests || 10;
+// rest1.numGuests || 10;
+// rest2.numGuests || 10;
 
 // nullish assignment operator
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
 
 // AND assignment operator
-rest1.owner = rest1.owner && "<ANONYMOUS>";
-rest2.owner = rest2.owner && "<ANONYMOUS>";
+// rest1.owner = rest1.owner && "<ANONYMOUS>";
+// rest2.owner = rest2.owner && "<ANONYMOUS>";
 
-rest1.owner &&= "<ANONYMOUS>";
-rest2.owner &&= "<ANONYMOUS>";
+// rest1.owner &&= "<ANONYMOUS>";
+// rest2.owner &&= "<ANONYMOUS>";
 
-console.log(rest1);
-console.log(rest2);
+// console.log(rest1);
+// console.log(rest2);
 
 // for-of loop
-const menuu = [...restaurant.staterMenu, ...restaurant.mainMenu];
-for (const item of menuu) console.log(item);
+// const menuu = [...restaurant.staterMenu, ...restaurant.mainMenu];
+// for (const item of menuu) console.log(item);
 
-for (const item of menuu.entries()) {
-  console.log(item);
-}
+// for (const item of menuu.entries()) {
+//   console.log(item);
+// }
 
-for (const [i, el] of menuu.entries()) {
-  console.log(`${i + 1}:${el}`);
-}
+// for (const [i, el] of menuu.entries()) {
+//   console.log(`${i + 1}:${el}`);
+// }
 
-// enhanced object literals
+// Sets
+// a collection of unique values
+const orderSet = new Set([
+  "pasta",
+  "pizza",
+  "pizza",
+  "risotto",
+  "pasta",
+  "pizza",
+]);
+console.log(orderSet);
+
+console.log(new Set("robiat"));
+console.log(orderSet.size);
+console.log(orderSet.has("pasta"));
+console.log(orderSet.has("Bread"));
+orderSet.add("bread");
+orderSet.add("bread");
+orderSet.delete('risotto')
+console.log(orderSet);
