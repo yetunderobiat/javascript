@@ -204,6 +204,18 @@ console.log(calTicketPrice());
 console.log(
   "5. Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0"
 );
+function discountPrice(price) {
+  if (price >= 100) {
+    console.log(`Price ${price} have a discount of 20`);
+  } else if (price >= 50) {
+    console.log(`Price ${price} have a discount of 10`);
+  } else {
+    console.log(`Discount is 0`);
+  }
+}
+discountPrice(60);
+discountPrice(190);
+discountPrice(-80);
 
 // // Write a simple number guessing function.
 // console.log("6. Write a simple number guessing function.");
@@ -212,15 +224,13 @@ function checkingNum(guessNum, secretNum) {
     console.log(`${guessNum} is lower than ${secretNum}`);
   } else if (guessNum > secretNum) {
     console.log(`${guessNum} is higher than ${secretNum}`);
-  }else if (guessNum === secretNum){
+  } else if (guessNum === secretNum) {
     console.log(`${guessNum} is equals to ${secretNum}`);
-  }else{
+  } else {
     console.log("Guess is wrong");
   }
 }
-checkingNum(8,1)
-checkingNum(-1,1)
-checkingNum(1)
-checkingNum(3,3)
-
-
+checkingNum(8, 1);
+checkingNum(-1, 1);
+checkingNum(1);
+checkingNum(3, 3);
