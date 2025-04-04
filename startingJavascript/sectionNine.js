@@ -302,17 +302,41 @@ console.log(orderSet.has("pasta"));
 console.log(orderSet.has("Bread"));
 orderSet.add("bread");
 orderSet.add("bread");
-orderSet.delete('risotto')
+orderSet.delete("risotto");
 // orderSet.clear();
 console.log(orderSet);
 
-for(const order of orderSet) console.log(order);
+for (const order of orderSet) console.log(order);
 
-const staff =['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter']
-const staffUnique = [...new Set(staff)]
+const staff = ["waiter", "chef", "waiter", "manager", "chef", "waiter"];
+const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 
 console.log(
-  new Set(['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter']).size
+  new Set(["waiter", "chef", "waiter", "manager", "chef", "waiter"]).size
 );
-console.log(new Set('robiatyetunde').size);
+console.log(new Set("robiatyetunde").size);
+
+// New Operations to Make Sets Useful
+const italianFood = new Set([
+  "pasta",
+  "gnocchi",
+  "tomatoes",
+  "olive oil",
+  "garlic",
+  "basil",
+]);
+const mexicanFood = new Set([
+  "tortillas",
+  "beans",
+  "rice",
+  "tomatoes",
+  "avocado",
+  "garlic",
+]);
+const commonFood = italianFood.intersection(mexicanFood);
+console.log("intersection:", commonFood);
+console.log([...commonFood]);
+
+const italianMexicanFusion=italianFood.union(mexicanFood)
+console.log('union:', italianMexicanFusion);
