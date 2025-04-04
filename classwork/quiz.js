@@ -157,7 +157,6 @@ function checkNum(y) {
 checkNum(4);
 checkNum(7);
 
-
 // ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”).
 console.log(
   "3. ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”)."
@@ -181,7 +180,6 @@ transformNum(61);
 transformNum(39);
 transformNum(200);
 
-
 // Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15
 console.log(
   "4. Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15."
@@ -197,19 +195,32 @@ function calTicketPrice(age) {
     return "15";
   }
 }
-console.log(calTicketPrice(10)); 
-console.log(calTicketPrice(15)); 
-console.log(calTicketPrice(55)); 
-console.log(calTicketPrice()); 
-
-
-
+console.log(calTicketPrice(10));
+console.log(calTicketPrice(15));
+console.log(calTicketPrice(55));
+console.log(calTicketPrice());
 
 // Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0
 console.log(
   "5. Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0"
 );
 
-
 // // Write a simple number guessing function.
 // console.log("6. Write a simple number guessing function.");
+function checkingNum(guessNum, secretNum) {
+  if (guessNum < secretNum) {
+    console.log(`${guessNum} is lower than ${secretNum}`);
+  } else if (guessNum > secretNum) {
+    console.log(`${guessNum} is higher than ${secretNum}`);
+  }else if (guessNum === secretNum){
+    console.log(`${guessNum} is equals to ${secretNum}`);
+  }else{
+    console.log("Guess is wrong");
+  }
+}
+checkingNum(8,1)
+checkingNum(-1,1)
+checkingNum(1)
+checkingNum(3,3)
+
+
