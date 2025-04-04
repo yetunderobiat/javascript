@@ -90,40 +90,126 @@
 // console.log(checkInput("biodun"));
 // console.log(checkInput("robiat"));
 
-const numbers = [1, 3, 4, 5, 6, 10, 12];
-const evenNum = numbers.filter((x) => {
-  return x > 4 && x % 2 === 0;
-});
-console.log(evenNum);
+// const numbers = [1, 3, 4, 5, 6, 10, 12];
+// const evenNum = numbers.filter((x) => {
+//   return x > 4 && x % 2 === 0;
+// });
+// console.log(evenNum);
 
-const multiplyNum = numbers.reduce((a, b) => {
-  return a * b;
-}, 1);
-console.log(multiplyNum);
+// const multiplyNum = numbers.reduce((a, b) => {
+//   return a * b;
+// }, 1);
+// console.log(multiplyNum);
 
-console.log("*****reverse an array*****");
-const arrNum = [1, 2, 3, 4, 5, 6];
-console.log(arrNum);
-console.log(arrNum.reverse());
+// console.log("***reverse an array***");
+// const arrNum = [1, 2, 3, 4, 5, 6];
+// console.log(arrNum);
+// console.log(arrNum.reverse());
 
-console.log("***reverse a string***");
-const myName = "Yetunde";
-console.log(myName);
-console.log(myName.split("").reverse().join(""));
+// console.log("***reverse a string***");
+// const myName = "Yetunde";
+// console.log(myName);
+// console.log(myName.split("").reverse().join(""));
 
-console.log("***join 2 strings in different ways***");
-const joinArr = [2, 3, 4];
-const addArr = [7, 5, 6];
-const moreArr = [9, 3, 4];
-console.log([...joinArr, ...addArr]);
-console.log(joinArr.concat(addArr, moreArr));
-console.log(joinArr.concat(addArr).concat(moreArr));
+// console.log("***join 2 strings in different ways***");
+// const joinArr = [2, 3, 4];
+// const addArr = [7, 5, 6];
+// const moreArr = [9, 3, 4];
+// console.log([...joinArr, ...addArr]);
+// console.log(joinArr.concat(addArr, moreArr));
+// console.log(joinArr.concat(addArr).concat(moreArr));
 
-// palindrome
-function checkPalindrome(word){
-  const cleanWord = word.toLowerCase()
-  const reverseWord = cleanWord.split("").reverse().join("")
-  return cleanWord === reverseWord
+// // palindrome
+// function checkPalindrome(word){
+//   const cleanWord = word.toLowerCase()
+//   const reverseWord = cleanWord.split("").reverse().join("")
+//   return cleanWord === reverseWord
+// }
+// console.log(checkPalindrome("hello"));
+// console.log(checkPalindrome("Dad"));
+
+// Write a function that determines whether a given number is positive or negative
+console.log(
+  "Write a function that determines whether a given number is positive or negative."
+);
+function originalNum(x) {
+  if (x > 0) {
+    console.log(`${x} is a positive number`);
+  } else if (x < 0) {
+    console.log(`${x} is a negative number`);
+  } else {
+    console.log(`${x} is just a number`);
+  }
 }
-console.log(checkPalindrome("hello"));
-console.log(checkPalindrome("Dad"));
+originalNum(0);
+originalNum(-1);
+originalNum(1);
+
+// Write a function that checks if a number is even or odd
+console.log("2. Write a function that checks if a number is even or odd");
+function checkNum(y) {
+  if (y % 2 === 0) {
+    console.log(`${y} is an even number`);
+  } else {
+    console.log(`${y} is an odd number`);
+  }
+}
+checkNum(4);
+checkNum(7);
+
+
+// ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”).
+console.log(
+  "3. ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”)."
+);
+function transformNum(a) {
+  if (a >= 80 && a < 100) {
+    console.log(`Your grade is A = ${a} `);
+  } else if (a >= 60 && a <= 79) {
+    console.log(`Your grade is B = ${a} `);
+  } else if (a >= 40 && a <= 59) {
+    console.log(`Your grade is C = ${a} `);
+  } else if (a >= 30 && a <= 39) {
+    console.log(`Your grade is D = ${a} `);
+  } else if (a >= 0 && a <= 29) {
+    console.log(`You failed! Your grade is F = ${a} `);
+  } else {
+    console.log(`${a} does not have a grade`);
+  }
+}
+transformNum(61);
+transformNum(39);
+transformNum(200);
+
+
+// Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15
+console.log(
+  "4. Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15."
+);
+function calTicketPrice(age) {
+  if (age < 12) {
+    return "5";
+  } else if (age < 18) {
+    return "10";
+  } else if (age < 60) {
+    return "20";
+  } else {
+    return "15";
+  }
+}
+console.log(calTicketPrice(10)); 
+console.log(calTicketPrice(15)); 
+console.log(calTicketPrice(55)); 
+console.log(calTicketPrice()); 
+
+
+
+
+// Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0
+console.log(
+  "5. Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0"
+);
+
+
+// // Write a simple number guessing function.
+// console.log("6. Write a simple number guessing function.");
