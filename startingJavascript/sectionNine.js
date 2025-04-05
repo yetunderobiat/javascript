@@ -394,3 +394,17 @@ rest.set(document.querySelector("h1"), "Heading");
 console.log(rest);
 console.log(rest.size);
 console.log(rest.get(arr));
+
+// Maps: Iterations
+const question = new Map([
+  ["question", "What is the best programming language in the world?"],
+  [1, "c"],
+  [2, "java"],
+  [3, "javascript"],
+  ["correct", 3],
+  [true, "correct"],
+  [false, "try again!"],
+]);
+console.log(question);
+
+
