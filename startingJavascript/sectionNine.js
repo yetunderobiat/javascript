@@ -381,3 +381,16 @@ console.log(rest.get(2));
 
 const time = 21;
 console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+const time1 = 8;
+console.log(rest.get(time1 > rest.get("open") && time1 < rest.get("close")));
+
+console.log(rest.has("open"));
+console.log(rest.has("categories"));
+rest.delete(2);
+// rest.clear()
+const arr = [1, 2];
+rest.set(arr, "test");
+rest.set(document.querySelector("h1"), "Heading");
+console.log(rest);
+console.log(rest.size);
+console.log(rest.get(arr));
