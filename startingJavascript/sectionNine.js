@@ -338,5 +338,16 @@ const commonFood = italianFood.intersection(mexicanFood);
 console.log("intersection:", commonFood);
 console.log([...commonFood]);
 
-const italianMexicanFusion=italianFood.union(mexicanFood)
-console.log('union:', italianMexicanFusion);
+const italianMexicanFusion = italianFood.union(mexicanFood);
+console.log("union:", italianMexicanFusion);
+
+const uniqueItalianFoods = italianFood.difference(mexicanFood);
+console.log("Difference italian", uniqueItalianFoods);
+
+const uniqueMexicanFoods = mexicanFood.difference(italianFood);
+console.log("Difference mexian", uniqueMexicanFoods);
+
+// const uniqueItalianMexicanFoods = italianFood.symetricDifference(mexicanFood);
+// console.log(uniqueItalianMexicanFoods);
+
+console.log(italianFood.isDisjointFrom(mexicanFood));
