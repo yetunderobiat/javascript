@@ -286,68 +286,95 @@ const restaurant = {
 
 // Sets
 // a collection of unique values
-const orderSet = new Set([
-  "pasta",
-  "pizza",
-  "pizza",
-  "risotto",
-  "pasta",
-  "pizza",
-]);
-console.log(orderSet);
+// const orderSet = new Set([
+//   "pasta",
+//   "pizza",
+//   "pizza",
+//   "risotto",
+//   "pasta",
+//   "pizza",
+// ]);
+// console.log(orderSet);
 
-console.log(new Set("robiat"));
-console.log(orderSet.size);
-console.log(orderSet.has("pasta"));
-console.log(orderSet.has("Bread"));
-orderSet.add("bread");
-orderSet.add("bread");
-orderSet.delete("risotto");
-// orderSet.clear();
-console.log(orderSet);
+// console.log(new Set("robiat"));
+// console.log(orderSet.size);
+// console.log(orderSet.has("pasta"));
+// console.log(orderSet.has("Bread"));
+// orderSet.add("bread");
+// orderSet.add("bread");
+// orderSet.delete("risotto");
+// // orderSet.clear();
+// console.log(orderSet);
 
-for (const order of orderSet) console.log(order);
+// for (const order of orderSet) console.log(order);
 
-const staff = ["waiter", "chef", "waiter", "manager", "chef", "waiter"];
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
+// const staff = ["waiter", "chef", "waiter", "manager", "chef", "waiter"];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
 
-console.log(
-  new Set(["waiter", "chef", "waiter", "manager", "chef", "waiter"]).size
-);
-console.log(new Set("robiatyetunde").size);
+// console.log(
+//   new Set(["waiter", "chef", "waiter", "manager", "chef", "waiter"]).size
+// );
+// console.log(new Set("robiatyetunde").size);
 
-// New Operations to Make Sets Useful
-const italianFood = new Set([
-  "pasta",
-  "gnocchi",
-  "tomatoes",
-  "olive oil",
-  "garlic",
-  "basil",
-]);
-const mexicanFood = new Set([
-  "tortillas",
-  "beans",
-  "rice",
-  "tomatoes",
-  "avocado",
-  "garlic",
-]);
-const commonFood = italianFood.intersection(mexicanFood);
-console.log("intersection:", commonFood);
-console.log([...commonFood]);
+// // New Operations to Make Sets Useful
+// const italianFood = new Set([
+// "pasta",
+// "gnocchi",
+// "tomatoes",
+// "olive oil",
+// "garlic",
+// "basil",
+// ]);
+// const mexicanFood = new Set([
+//   "tortillas",
+//   "beans",
+//   "rice",
+//   "tomatoes",
+//   "avocado",
+//   "garlic",
+// ]);
+// const commonFood = italianFood.intersection(mexicanFood);
+// console.log("intersection:", commonFood);
+// console.log([...commonFood]);
 
-const italianMexicanFusion = italianFood.union(mexicanFood);
-console.log("union:", italianMexicanFusion);
+// const italianMexicanFusion = italianFood.union(mexicanFood);
+// console.log("union:", italianMexicanFusion);
 
-const uniqueItalianFoods = italianFood.difference(mexicanFood);
-console.log("Difference italian", uniqueItalianFoods);
+// const uniqueItalianFoods = italianFood.difference(mexicanFood);
+// console.log("Difference italian", uniqueItalianFoods);
 
-const uniqueMexicanFoods = mexicanFood.difference(italianFood);
-console.log("Difference mexian", uniqueMexicanFoods);
+// const uniqueMexicanFoods = mexicanFood.difference(italianFood);
+// console.log("Difference mexian", uniqueMexicanFoods);
 
 // const uniqueItalianMexicanFoods = italianFood.symetricDifference(mexicanFood);
 // console.log(uniqueItalianMexicanFoods);
 
-console.log(italianFood.isDisjointFrom(mexicanFood));
+// console.log(italianFood.isDisjointFrom(mexicanFood));
+
+// Maps: Fundamentals
+const rest = new Map();
+rest.set("name", "Yetunde Robiat");
+rest.set(1, "Nigeria, Lagos");
+console.log(rest.set(2, "Lagos, Ikorodu"));
+
+rest
+  .set("categories", [
+    "pasta",
+    "gnocchi",
+    "tomatoes",
+    "olive oil",
+    "garlic",
+    "basil",
+  ])
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "we are open :D")
+  .set(false, "we are closed :(");
+
+console.log(rest.get("name"));
+console.log(rest.get(true));
+console.log(rest.get(false));
+console.log(rest.get(1));
+console.log(rest.get(2));
+
