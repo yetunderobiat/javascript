@@ -375,6 +375,9 @@ rest
 console.log(rest.get("name"));
 console.log(rest.get(true));
 console.log(rest.get(false));
+console.log(rest.get("close"));
 console.log(rest.get(1));
 console.log(rest.get(2));
 
+const time = 21;
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
