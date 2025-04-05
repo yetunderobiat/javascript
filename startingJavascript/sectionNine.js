@@ -407,4 +407,14 @@ const question = new Map([
 ]);
 console.log(question);
 
+// quiz app
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+  if (typeof key === "string") console.log(`Answer ${key}: ${value}`);
+  if (typeof key === "boolean") console.log(`Answer ${key}: ${value}`);
+}
 
+const answer = Number(prompt("Your answer"));
+console.log(answer);
+console.log(question.get(question.get("correct") === answer));
