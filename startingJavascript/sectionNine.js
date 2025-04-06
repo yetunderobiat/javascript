@@ -502,9 +502,23 @@ const priceUS = priceGB.replace("%", "$").replace(",", ".");
 console.log(priceGB);
 console.log(priceUS);
 
-const announcement='All passengers come to boarding door 23. Boarding door  23.'
-console.log(announcement.replace('door','gate'));
-console.log(announcement.replaceAll('door','gate'));
-console.log(announcement.replaceAll('o', 'O'));
+const announcement =
+  "All passengers come to boarding door 23. Boarding door  23.";
+console.log(announcement.replace("door", "gate"));
+console.log(announcement.replaceAll("door", "gate"));
+console.log(announcement.replace(/door/g, "gate"));
+
+console.log(announcement.replaceAll("o", "O"));
+
+// booleans
+const plane='A320neo'
+console.log(plane.includes('A320'));
+console.log(plane.includes('booing'));
+console.log(plane.startsWith('Airb'));
+console.log(plane.endsWith('eo'));
+
+
+
+
 
 
