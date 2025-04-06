@@ -478,4 +478,11 @@ const gadget = "OPPO samsung";
 console.log(gadget.toLowerCase());
 console.log(gadget.toUpperCase());
 
-
+// fix capitalization in name
+const color = "pUrPLe";
+const colorLower = color.toLowerCase();
+const colorCorrect = colorLower[0].toUpperCase() + colorLower.slice(1);
+console.log(gadget.toLowerCase());
+console.log(color);
+console.log(colorLower);
+console.log(colorCorrect);
