@@ -495,3 +495,16 @@ const checkingEmail = loginEmail.toLowerCase().trim();
 console.log(checkingEmail);
 console.log(email === checkingEmail);
 console.log(email === loginEmail);
+
+// replacing
+const priceGB = "288,97%";
+const priceUS = priceGB.replace("%", "$").replace(",", ".");
+console.log(priceGB);
+console.log(priceUS);
+
+const announcement='All passengers come to boarding door 23. Boarding door  23.'
+console.log(announcement.replace('door','gate'));
+console.log(announcement.replaceAll('door','gate'));
+console.log(announcement.replaceAll('o', 'O'));
+
+
