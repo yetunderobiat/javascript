@@ -430,4 +430,12 @@ console.log('B737'[0]);
 console.log(airline.length);
 console.log('B737'.length);
 
+//  Working With Strings - Part 1:methods
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('nigeria'));
+
+
+
+
 
