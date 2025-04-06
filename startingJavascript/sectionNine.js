@@ -353,74 +353,81 @@ const restaurant = {
 // console.log(italianFood.isDisjointFrom(mexicanFood));
 
 // Maps: Fundamentals
-const rest = new Map();
-rest.set("name", "Yetunde Robiat");
-rest.set(1, "Nigeria, Lagos");
-console.log(rest.set(2, "Lagos, Ikorodu"));
+// const rest = new Map();
+// rest.set("name", "Yetunde Robiat");
+// rest.set(1, "Nigeria, Lagos");
+// console.log(rest.set(2, "Lagos, Ikorodu"));
 
-rest
-  .set("categories", [
-    "pasta",
-    "gnocchi",
-    "tomatoes",
-    "olive oil",
-    "garlic",
-    "basil",
-  ])
-  .set("open", 11)
-  .set("close", 23)
-  .set(true, "we are open :D")
-  .set(false, "we are closed :(");
+// rest
+//   .set("categories", [
+//     "pasta",
+//     "gnocchi",
+//     "tomatoes",
+//     "olive oil",
+//     "garlic",
+//     "basil",
+//   ])
+//   .set("open", 11)
+//   .set("close", 23)
+//   .set(true, "we are open :D")
+//   .set(false, "we are closed :(");
 
-console.log(rest.get("name"));
-console.log(rest.get(true));
-console.log(rest.get(false));
-console.log(rest.get("close"));
-console.log(rest.get(1));
-console.log(rest.get(2));
+// console.log(rest.get("name"));
+// console.log(rest.get(true));
+// console.log(rest.get(false));
+// console.log(rest.get("close"));
+// console.log(rest.get(1));
+// console.log(rest.get(2));
 
-const time = 21;
-console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
-const time1 = 8;
-console.log(rest.get(time1 > rest.get("open") && time1 < rest.get("close")));
+// const time = 21;
+// console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+// const time1 = 8;
+// console.log(rest.get(time1 > rest.get("open") && time1 < rest.get("close")));
 
-console.log(rest.has("open"));
-console.log(rest.has("categories"));
-rest.delete(2);
-// rest.clear()
-const arr = [1, 2];
-rest.set(arr, "test");
-rest.set(document.querySelector("h1"), "Heading");
-console.log(rest);
-console.log(rest.size);
-console.log(rest.get(arr));
+// console.log(rest.has("open"));
+// console.log(rest.has("categories"));
+// rest.delete(2);
+// // rest.clear()
+// const arr = [1, 2];
+// rest.set(arr, "test");
+// rest.set(document.querySelector("h1"), "Heading");
+// console.log(rest);
+// console.log(rest.size);
+// console.log(rest.get(arr));
 
-// Maps: Iterations
-const question = new Map([
-  ["question", "What is the best programming language in the world?"],
-  [1, "c"],
-  [2, "java"],
-  [3, "javascript"],
-  ["correct", 3],
-  [true, "correct"],
-  [false, "try again!"],
-]);
-console.log(question);
+// // Maps: Iterations
+// const question = new Map([
+//   ["question", "What is the best programming language in the world?"],
+//   [1, "c"],
+//   [2, "java"],
+//   [3, "javascript"],
+//   ["correct", 3],
+//   [true, "correct"],
+//   [false, "try again!"],
+// ]);
+// console.log(question);
 
-// quiz app
-console.log(question.get("question"));
-for (const [key, value] of question) {
-  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
-  if (typeof key === "string") console.log(`Answer ${key}: ${value}`);
-  if (typeof key === "boolean") console.log(`Answer ${key}: ${value}`);
-}
+// // quiz app
+// console.log(question.get("question"));
+// for (const [key, value] of question) {
+//   if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+//   if (typeof key === "string") console.log(`Answer ${key}: ${value}`);
+//   if (typeof key === "boolean") console.log(`Answer ${key}: ${value}`);
+// }
 
-const answer = Number(prompt("Your answer"));
-console.log(answer);
-console.log(question.get(question.get("correct") === answer));
+// const answer = Number(prompt("Your answer"));
+// console.log(answer);
+// console.log(question.get(question.get("correct") === answer));
 
-// Convert map to array
-console.log([...question]);
-// console.log(question.entries());
-console.log([...question.keys()]);
-console.log([...question.values()]);
+
+//  Working With Strings - Part 1
+const airline='Tap air nigeria'
+const plane='A234'
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+console.log(airline.length);
+console.log('B737'.length);
+
+
