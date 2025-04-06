@@ -444,3 +444,35 @@ console.log(airline.slice(airline.lastIndexOf(" ") + 1));
 console.log(airline.slice(-2));
 console.log(airline.slice(1, -2));
 
+//  Working With Strings - Part 1:slicing function method
+function checkMiddleSeat(seat) {
+  //  B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === "B" || s === "E") {
+    console.log("You got the middle seat 😬");
+  } else {
+    console.log("You got lucky 😎");
+  }
+}
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+
+function checkPassword(pass) {
+  const p = pass.slice(0, 3);
+  if (p === "pwd") {
+    console.log("Correct password");
+  } else {
+    console.log("Incorrect password");
+  }
+}
+checkPassword('pwd')
+checkPassword('pd888')
+
+console.log(new String('jonas'));
+console.log(typeof new String('jonas'));
+console.log(typeof new String('jonas').slice(0));
+
+
+
+
