@@ -419,23 +419,28 @@ const restaurant = {
 // console.log(answer);
 // console.log(question.get(question.get("correct") === answer));
 
-
 //  Working With Strings - Part 1
-const airline='Tap air nigeria'
-const plane='A234'
+const airline = "Tap air nigeria";
+const plane = "A234";
 console.log(plane[0]);
 console.log(plane[1]);
 console.log(plane[2]);
-console.log('B737'[0]);
+console.log("B737"[0]);
 console.log(airline.length);
-console.log('B737'.length);
+console.log("B737".length);
 
-//  Working With Strings - Part 1:methods
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('nigeria'));
+//  Working With Strings - Part 1:index of methods
+console.log(airline.indexOf("r"));
+console.log(airline.lastIndexOf("r"));
+console.log(airline.indexOf("nigeria"));
 
-
-
-
+//  Working With Strings - Part 1:slicing method
+console.log(airline.slice(4));
+console.log(airline.slice(5));
+console.log(airline.slice(4, 7));
+console.log(airline.slice(4, 9));
+console.log(airline.slice(0, airline.indexOf(" ")));
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -2));
 
