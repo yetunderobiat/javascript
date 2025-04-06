@@ -486,3 +486,12 @@ console.log(gadget.toLowerCase());
 console.log(color);
 console.log(colorLower);
 console.log(colorCorrect);
+
+// comparing emails
+const email = "robiatyetunde18@gmail.com";
+const loginEmail = " Robiatyetunde18@gmail.com";
+
+const checkingEmail = loginEmail.toLowerCase().trim();
+console.log(checkingEmail);
+console.log(email === checkingEmail);
+console.log(email === loginEmail);
