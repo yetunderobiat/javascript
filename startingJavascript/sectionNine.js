@@ -533,15 +533,23 @@ function capitalizeName(name) {
   for (const n of names) {
     namesUpper.push(n[0].toUpperCase() + n.slice(1));
   }
-  console.log(namesUpper.join(' '));
-  
+  console.log(namesUpper.join(" "));
 }
 capitalizeName("jessica and robiat ibrahim");
 capitalizeName("robiat ibrahim");
 
 // padding a string
-const message='go to gate 23'
-console.log(message.padStart(20,'+').padEnd(30,'+'));
-console.log('robiat'.padStart(10, '£').padEnd(20,'_'));
+const message = "go to gate 23";
+console.log(message.padStart(20, "+").padEnd(30, "+"));
+console.log("robiat".padStart(10, "£").padEnd(20, "_"));
 
+//repeat
+const message2 = "Bad weather... All departures delayed...";
+console.log(message2.repeat(5));
 
+const planesInLine = function (n) {
+  console.log(`there are ${n} planes in line ${"$".repeat(n)}`);
+};
+planesInLine(4);
+planesInLine(14);
+planesInLine(7);
