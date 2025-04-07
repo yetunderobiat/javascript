@@ -474,51 +474,67 @@ const restaurant = {
 // console.log(typeof new String('jonas').slice(0));
 
 //  Working With Strings - Part 2
-const gadget = "OPPO samsung";
-console.log(gadget.toLowerCase());
-console.log(gadget.toUpperCase());
+// const gadget = "OPPO samsung";
+// console.log(gadget.toLowerCase());
+// console.log(gadget.toUpperCase());
 
-// fix capitalization in name
-const color = "pUrPLe";
-const colorLower = color.toLowerCase();
-const colorCorrect = colorLower[0].toUpperCase() + colorLower.slice(1);
-console.log(gadget.toLowerCase());
-console.log(color);
-console.log(colorLower);
-console.log(colorCorrect);
+// // fix capitalization in name
+// const color = "pUrPLe";
+// const colorLower = color.toLowerCase();
+// const colorCorrect = colorLower[0].toUpperCase() + colorLower.slice(1);
+// console.log(gadget.toLowerCase());
+// console.log(color);
+// console.log(colorLower);
+// console.log(colorCorrect);
 
-// comparing emails
-const email = "robiatyetunde18@gmail.com";
-const loginEmail = " Robiatyetunde18@gmail.com";
+// // comparing emails
+// const email = "robiatyetunde18@gmail.com";
+// const loginEmail = " Robiatyetunde18@gmail.com";
 
-const checkingEmail = loginEmail.toLowerCase().trim();
-console.log(checkingEmail);
-console.log(email === checkingEmail);
-console.log(email === loginEmail);
+// const checkingEmail = loginEmail.toLowerCase().trim();
+// console.log(checkingEmail);
+// console.log(email === checkingEmail);
+// console.log(email === loginEmail);
 
-// replacing
-const priceGB = "288,97%";
-const priceUS = priceGB.replace("%", "$").replace(",", ".");
-console.log(priceGB);
-console.log(priceUS);
+// // replacing
+// const priceGB = "288,97%";
+// const priceUS = priceGB.replace("%", "$").replace(",", ".");
+// console.log(priceGB);
+// console.log(priceUS);
 
-const announcement =
-  "All passengers come to boarding door 23. Boarding door  23.";
-console.log(announcement.replace("door", "gate"));
-console.log(announcement.replaceAll("door", "gate"));
-console.log(announcement.replace(/door/g, "gate"));
+// const announcement =
+//   "All passengers come to boarding door 23. Boarding door  23.";
+// console.log(announcement.replace("door", "gate"));
+// console.log(announcement.replaceAll("door", "gate"));
+// console.log(announcement.replace(/door/g, "gate"));
 
-console.log(announcement.replaceAll("o", "O"));
+// console.log(announcement.replaceAll("o", "O"));
 
-// booleans
-const plane='A320neo'
-console.log(plane.includes('A320'));
-console.log(plane.includes('booing'));
-console.log(plane.startsWith('Airb'));
-console.log(plane.endsWith('eo'));
+// // booleans
+// const plane='A320neo'
+// console.log(plane.includes('A320'));
+// console.log(plane.includes('booing'));
+// console.log(plane.startsWith('Airb'));
+// console.log(plane.endsWith('eo'));
 
+//  Working With Strings - Part 3
+// split and join
+console.log("my+name+is+robiat".split("+"));
+console.log("my name is robiat".split(" "));
 
+const [firstName, lastName] = "robiat ibrahim".split(" ");
+const newName = ["Miss", firstName, lastName.toUpperCase()].join(" ");
+console.log(newName);
 
+function capitalizeName(name) {
+  const names = name.split(" ");
+  const namesUpper = [];
 
-
-
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+  
+}
+capitalizeName("jessica and robiat ibrahim");
+capitalizeName("robiat ibrahim");
