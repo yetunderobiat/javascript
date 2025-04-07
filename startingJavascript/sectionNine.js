@@ -538,3 +538,10 @@ function capitalizeName(name) {
 }
 capitalizeName("jessica and robiat ibrahim");
 capitalizeName("robiat ibrahim");
+
+// padding a string
+const message='go to gate 23'
+console.log(message.padStart(20,'+').padEnd(30,'+'));
+console.log('robiat'.padStart(10, '£').padEnd(20,'_'));
+
+
