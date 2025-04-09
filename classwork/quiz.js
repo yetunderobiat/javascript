@@ -129,108 +129,127 @@
 // console.log(checkPalindrome("Dad"));
 
 // Write a function that determines whether a given number is positive or negative
-console.log(
-  "Write a function that determines whether a given number is positive or negative."
-);
-function originalNum(x) {
-  if (x > 0) {
-    console.log(`${x} is a positive number`);
-  } else if (x < 0) {
-    console.log(`${x} is a negative number`);
-  } else {
-    console.log(`${x} is just a number`);
-  }
-}
-originalNum(0);
-originalNum(-1);
-originalNum(1);
+// console.log(
+//   "Write a function that determines whether a given number is positive or negative."
+// );
+// function originalNum(x) {
+//   if (x > 0) {
+//     console.log(`${x} is a positive number`);
+//   } else if (x < 0) {
+//     console.log(`${x} is a negative number`);
+//   } else {
+//     console.log(`${x} is just a number`);
+//   }
+// }
+// originalNum(0);
+// originalNum(-1);
+// originalNum(1);
 
-// Write a function that checks if a number is even or odd
-console.log("2. Write a function that checks if a number is even or odd");
-function checkNum(y) {
-  if (y % 2 === 0) {
-    console.log(`${y} is an even number`);
-  } else {
-    console.log(`${y} is an odd number`);
-  }
-}
-checkNum(4);
-checkNum(7);
+// // Write a function that checks if a number is even or odd
+// console.log("2. Write a function that checks if a number is even or odd");
+// function checkNum(y) {
+//   if (y % 2 === 0) {
+//     console.log(`${y} is an even number`);
+//   } else {
+//     console.log(`${y} is an odd number`);
+//   }
+// }
+// checkNum(4);
+// checkNum(7);
 
-// ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”).
-console.log(
-  "3. ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”)."
-);
-function transformNum(a) {
-  if (a >= 80 && a < 100) {
-    console.log(`Your grade is A = ${a} `);
-  } else if (a >= 60 && a <= 79) {
-    console.log(`Your grade is B = ${a} `);
-  } else if (a >= 40 && a <= 59) {
-    console.log(`Your grade is C = ${a} `);
-  } else if (a >= 30 && a <= 39) {
-    console.log(`Your grade is D = ${a} `);
-  } else if (a >= 0 && a <= 29) {
-    console.log(`You failed! Your grade is F = ${a} `);
-  } else {
-    console.log(`${a} does not have a grade`);
-  }
-}
-transformNum(61);
-transformNum(39);
-transformNum(200);
+// // ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”).
+// console.log(
+//   "3. ⁠Write a function that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”)."
+// );
+// function transformNum(a) {
+//   if (a >= 80 && a < 100) {
+//     console.log(`Your grade is A = ${a} `);
+//   } else if (a >= 60 && a <= 79) {
+//     console.log(`Your grade is B = ${a} `);
+//   } else if (a >= 40 && a <= 59) {
+//     console.log(`Your grade is C = ${a} `);
+//   } else if (a >= 30 && a <= 39) {
+//     console.log(`Your grade is D = ${a} `);
+//   } else if (a >= 0 && a <= 29) {
+//     console.log(`You failed! Your grade is F = ${a} `);
+//   } else {
+//     console.log(`${a} does not have a grade`);
+//   }
+// }
+// transformNum(61);
+// transformNum(39);
+// transformNum(200);
 
-// Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15
-console.log(
-  "4. Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15."
-);
-function calTicketPrice(age) {
-  if (age < 12) {
-    return "5";
-  } else if (age < 18) {
-    return "10";
-  } else if (age < 60) {
-    return "20";
-  } else {
-    return "15";
-  }
-}
-console.log(calTicketPrice(10));
-console.log(calTicketPrice(15));
-console.log(calTicketPrice(55));
-console.log(calTicketPrice());
+// // Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15
+// console.log(
+//   "4. Write a function that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15."
+// );
+// function calTicketPrice(age) {
+//   if (age < 12) {
+//     return "5";
+//   } else if (age < 18) {
+//     return "10";
+//   } else if (age < 60) {
+//     return "20";
+//   } else {
+//     return "15";
+//   }
+// }
+// console.log(calTicketPrice(10));
+// console.log(calTicketPrice(15));
+// console.log(calTicketPrice(55));
+// console.log(calTicketPrice());
 
-// Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0
-console.log(
-  "5. Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0"
-);
-function discountPrice(price) {
-  if (price >= 100) {
-    console.log(`Price ${price} have a discount of 20`);
-  } else if (price >= 50) {
-    console.log(`Price ${price} have a discount of 10`);
-  } else {
-    console.log(`Discount is 0`);
-  }
-}
-discountPrice(60);
-discountPrice(190);
-discountPrice(-80);
+// // Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0
+// console.log(
+//   "5. Write a function that calculates a discount based on the purchase amount.Prices equal or over 100 discount have a discount of 20. Prices equal or over 50 have a discount of 10. Otherwise discount is 0"
+// );
+// function discountPrice(price) {
+//   if (price >= 100) {
+//     console.log(`Price ${price} have a discount of 20`);
+//   } else if (price >= 50) {
+//     console.log(`Price ${price} have a discount of 10`);
+//   } else {
+//     console.log(`Discount is 0`);
+//   }
+// }
+// discountPrice(60);
+// discountPrice(190);
+// discountPrice(-80);
 
-// // Write a simple number guessing function.
-// console.log("6. Write a simple number guessing function.");
-function checkingNum(guessNum, secretNum) {
-  if (guessNum < secretNum) {
-    console.log(`${guessNum} is lower than ${secretNum}`);
-  } else if (guessNum > secretNum) {
-    console.log(`${guessNum} is higher than ${secretNum}`);
-  } else if (guessNum === secretNum) {
-    console.log(`${guessNum} is equals to ${secretNum}`);
-  } else {
-    console.log("Guess is wrong");
-  }
+// // // Write a simple number guessing function.
+// // console.log("6. Write a simple number guessing function.");
+// function checkingNum(guessNum, secretNum) {
+//   if (guessNum < secretNum) {
+//     console.log(`${guessNum} is lower than ${secretNum}`);
+//   } else if (guessNum > secretNum) {
+//     console.log(`${guessNum} is higher than ${secretNum}`);
+//   } else if (guessNum === secretNum) {
+//     console.log(`${guessNum} is equals to ${secretNum}`);
+//   } else {
+//     console.log("Guess is wrong");
+//   }
+// }
+// checkingNum(8, 1);
+// checkingNum(-1, 1);
+// checkingNum(1);
+// checkingNum(3, 3);
+
+// A call back function
+
+function getSoap(addWater){
+  console.log('Get your detergent');
+  addWater()
+} 
+function addWater(startWashing){
+  console.log('Add water to the cloths');
+  startWashing()
 }
-checkingNum(8, 1);
-checkingNum(-1, 1);
-checkingNum(1);
-checkingNum(3, 3);
+function rinseClothe(streadCloth){
+  console.log('Start washing your cloth');
+  streadCloth()
+}
+function dryCloth(){
+  console.log('Rinse cloth');
+}
+getSoap(()=>addWater(()=>rinseClothe((dryCloth))))
