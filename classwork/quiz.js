@@ -327,3 +327,15 @@ function prepareFood(soup_select, stain_select, drink_select) {
 }
 
 placeOrder(prepareFood, 1, 1, 2, 0);
+
+const items = {
+  selectItems:['cloths','shoes','markup','bag', 'jewerly'],
+  cloths: ["Nike", "Channel", "Gucci", "Dior"],
+  shoes: ["Puma", "Adidas", "Crocs", "Skechers"],
+  markup: ["Mac", "Fenty", "Maybelline"],
+  bag:[],
+  jewerly:[],
+};
+
+function 
+
