@@ -329,7 +329,17 @@
 // placeOrder(prepareFood, 1, 1, 2, 0);
 
 const items = {
-  location: ['Ikeja', 'Maryland', 'Ikorodu', 'Oshodi', 'Lekki', 'Surulere', 'Ikeja', 'Ikoyi', 'Iyanapaja'],
+  location: [
+    "Ikeja",
+    "Maryland",
+    "Ikorodu",
+    "Oshodi",
+    "Lekki",
+    "Surulere",
+    "Ikeja",
+    "Ikoyi",
+    "Iyanapaja",
+  ],
   cloths: ["Nike", "Channel", "Gucci", "Dior"],
   shoes: ["Puma", "Adidas", "Crocs", "Skechers"],
   markup: ["Mac", "Fenty", "Maybelline"],
@@ -337,4 +347,18 @@ const items = {
   jewerly: ["Mejuri", "Cartier", "Van Cleef"],
 };
 
+function selectedItems(pickItems, bestChoice) {
+  setTimeout(() => {
+    console.log(
+      `I would love to place my orders from ${items.location[bestChoice]}`
+    );
+    pickItems();
+  }, 1000);
+}
+function orderItems() {
+  setTimeout(() => {
+    console.log();
+  });
+}
+selectedItems(orderItems, 1);
 
