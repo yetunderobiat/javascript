@@ -216,6 +216,21 @@
 // discountPrice(60);
 // discountPrice(190);
 // discountPrice(-80);
+function calculateDiscount(amount) {
+  let discount = 0;
+
+  if (amount >= 100) {
+    discount = 20;
+  } else if (amount >= 50) {
+    discount = 10;
+  }
+
+  return discount;
+}
+
+let purchaseAmount = 85;
+let discount = calculateDiscount(purchaseAmount);
+console.log(`Discount for ₦${purchaseAmount} is ₦${discount}`);
 
 // // // Write a simple number guessing function.
 // // console.log("6. Write a simple number guessing function.");
@@ -237,19 +252,19 @@
 
 // A call back function
 
-function getSoap(addWater){
-  console.log('Get your detergent');
-  addWater()
-} 
-function addWater(startWashing){
-  console.log('Add water to the cloths');
-  startWashing()
+function getSoap(addWater) {
+  console.log("Get your detergent");
+  addWater();
 }
-function rinseClothe(streadCloth){
-  console.log('Start washing your cloth');
-  streadCloth()
+function pourWater(startWashing) {
+  console.log("Add water to the cloths");
+  startWashing();
 }
-function dryCloth(){
-  console.log('Rinse cloth');
+function rinseClothe(streadCloth) {
+  console.log("Start washing your cloth");
+  streadCloth();
 }
-getSoap(()=>addWater(()=>rinseClothe((dryCloth))))
+function dryCloth() {
+  console.log("Rinse cloth");
+}
+getSoap(() => pourWater(() => rinseClothe(dryCloth)));
