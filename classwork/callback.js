@@ -5,9 +5,9 @@ const cake = {
     "Yefepere",
     "Cake lagos",
     "Zuzu Cakes",
-    "Yetunde's delight",
     "Heavenly cakes",
     "Take and want more",
+    "Yetunde's delight",
   ],
   flavour: ["vanilla", "banana", "strawberry", "chocolate", "redvelcet"],
   size: ["10", "12", "14", "16", "18", "20"],
@@ -88,7 +88,7 @@ function receiveOrder(
                           console.log(
                             `A ${cake.flavour[select_flavour]} cake of ${cake.size[select_size]} inches in size, ${cake.layers[select_layers]} layers, ${cake.shape[select_shape]} in shape, ${cake.color[select_color]} in color, ${cake.icing[select_icing]} icing on top, a sprinkle of ${cake.toppings[select_topping]}, a text of ${cake.text[select_text]} written on it, and a ${cake.extra[select_extra]} reward to the celebrant. HAPPY BIRTHDAY`
                           );
-                        }, 3000);
+                        }, 4000);
                       }, 1000);
                     }, 1000);
                   }, 1000);
