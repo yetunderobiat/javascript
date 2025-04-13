@@ -41,11 +41,11 @@ const buildingHouse = {
   exteriorFeatures: ["garden", "fence", "driveway", "patio", "balcony"],
 };
 
-function houseConstruction(){
+function houseConstruction(home,stepOne){
     setTimeout(() => {
-        console.log();
-        
-    }, timeout);
+        console.log(`${buildingHouse.materials[stepOne]}`);     
+        home() 
+    }, 2000);
 }
 function houseBuilding(){
     setTimeout(() => {
