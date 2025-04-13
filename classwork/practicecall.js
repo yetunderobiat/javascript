@@ -41,28 +41,46 @@ const buildingHouse = {
   exteriorFeatures: ["garden", "fence", "driveway", "patio", "balcony"],
 };
 
-function houseConstruction(home,stepOne,stepTwo,stepThree,stepFour,stepFive,stepSix,){
-    setTimeout(() => {
-        console.log(`${buildingHouse.materials[stepOne]}`);     
-        home(stepTwo,stepThree,stepFour,stepFive,stepSix,) 
-    }, 2000);
+function houseConstruction(
+  home,
+  stepOne,
+  stepTwo,
+  stepThree,
+  stepFour,
+  stepFive,
+  stepSix,
+  stepSeven
+) {
+  setTimeout(() => {
+    console.log(`${buildingHouse.materials[stepOne]}`);
+    home(stepTwo, stepThree, stepFour, stepFive, stepSix, stepSeven);
+  }, 2000);
 }
-function houseBuilding(stepTwo,stepThree,stepFour,stepFive,stepSix,){
+function houseBuilding(
+  stepTwo,
+  stepThree,
+  stepFour,
+  stepFive,
+  stepSix,
+  stepSeven
+) {
+  setTimeout(() => {
+    console.log(`${buildingHouse.rooms[stepTwo]}`);
     setTimeout(() => {
-        console.log(`${buildingHouse.rooms[stepTwo]}`);
+      console.log(`${buildingHouse.workers[stepThree]}`);
+      setTimeout(() => {
+        console.log(`${buildingHouse.tools[stepFour]}`);
         setTimeout(() => {
-            console.log(`${buildingHouse.workers[stepThree]}`);
+          console.log(`${buildingHouse.constructionSteps[stepFive]}`);
+          setTimeout(() => {
+            console.log(`${buildingHouse.utilities[stepSix]}`);
             setTimeout(() => {
-                console.log(`${buildingHouse.tools[stepFour]}`);
-                setTimeout(() => {
-                    console.log(`${buildingHouse.constructionSteps[stepFive]}`);
-                    setTimeout(() => {
-                        console.log(`${buildingHouse.utilities[stepSix]}`);
-                        
-                    }, 1000);
-                }, 1000);
-            },1000);
-        },1000);
+              console.log(`${buildingHouse.exteriorFeatures[stepSeven]}`);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
     }, 1000);
+  }, 1000);
 }
-houseConstruction(houseBuilding, 6,0,5,4,1,2)
+houseConstruction(houseBuilding, 6, 0, 5, 3, 1, 2, 4);
