@@ -41,16 +41,16 @@ const buildingHouse = {
   exteriorFeatures: ["garden", "fence", "driveway", "patio", "balcony"],
 };
 
-function houseConstruction(home,stepOne){
+function houseConstruction(home,stepOne,stepTwo,){
     setTimeout(() => {
         console.log(`${buildingHouse.materials[stepOne]}`);     
-        home() 
+        home(stepTwo) 
     }, 2000);
 }
-function houseBuilding(){
+function houseBuilding(stepTwo){
     setTimeout(() => {
-        console.log();
+        console.log(`${buildingHouse.rooms[stepTwo]}`);
         
     }, 2000);
 }
-houseConstruction(houseBuilding, 2)
+houseConstruction(houseBuilding, 6,0)
