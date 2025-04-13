@@ -41,13 +41,13 @@ const buildingHouse = {
   exteriorFeatures: ["garden", "fence", "driveway", "patio", "balcony"],
 };
 
-function houseConstruction(home,stepOne,stepTwo,stepThree,stepFour,stepFive,){
+function houseConstruction(home,stepOne,stepTwo,stepThree,stepFour,stepFive,stepSix,){
     setTimeout(() => {
         console.log(`${buildingHouse.materials[stepOne]}`);     
-        home(stepTwo,stepThree,stepFour,stepFive,) 
+        home(stepTwo,stepThree,stepFour,stepFive,stepSix,) 
     }, 2000);
 }
-function houseBuilding(stepTwo,stepThree,stepFour,stepFive,){
+function houseBuilding(stepTwo,stepThree,stepFour,stepFive,stepSix,){
     setTimeout(() => {
         console.log(`${buildingHouse.rooms[stepTwo]}`);
         setTimeout(() => {
@@ -56,10 +56,13 @@ function houseBuilding(stepTwo,stepThree,stepFour,stepFive,){
                 console.log(`${buildingHouse.tools[stepFour]}`);
                 setTimeout(() => {
                     console.log(`${buildingHouse.constructionSteps[stepFive]}`);
-                    
+                    setTimeout(() => {
+                        console.log(`${buildingHouse.utilities[stepSix]}`);
+                        
+                    }, 1000);
                 }, 1000);
             },1000);
         },1000);
     }, 1000);
 }
-houseConstruction(houseBuilding, 6,0,2,4,1)
+houseConstruction(houseBuilding, 6,0,5,4,1,2)
