@@ -41,16 +41,19 @@ const buildingHouse = {
   exteriorFeatures: ["garden", "fence", "driveway", "patio", "balcony"],
 };
 
-function houseConstruction(home,stepOne,stepTwo,){
+function houseConstruction(home,stepOne,stepTwo,stepThree){
     setTimeout(() => {
         console.log(`${buildingHouse.materials[stepOne]}`);     
-        home(stepTwo) 
+        home(stepTwo,stepThree) 
     }, 2000);
 }
-function houseBuilding(stepTwo){
+function houseBuilding(stepTwo,stepThree){
     setTimeout(() => {
         console.log(`${buildingHouse.rooms[stepTwo]}`);
-        
+        setTimeout(() => {
+            console.log(`${buildingHouse.workers[stepThree]}`);
+            
+        },1000);
     }, 2000);
 }
-houseConstruction(houseBuilding, 6,0)
+houseConstruction(houseBuilding, 6,0,2)
