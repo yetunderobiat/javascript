@@ -40,3 +40,16 @@ const buildingHouse = {
   utilities: ["electricity", "water", "gas", "internet", "sewage"],
   exteriorFeatures: ["garden", "fence", "driveway", "patio", "balcony"],
 };
+
+function houseConstruction(){
+    setTimeout(() => {
+        console.log();
+        
+    }, timeout);
+}
+function houseBuilding(){
+    setTimeout(() => {
+        console.log();
+        
+    }, timeout);
+}
