@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0.5rem 4rem;
+}
+.navlinks{
+    display: flex;
+}
+li{
+    padding-right: 1.5rem;
+    list-style: none;
+}

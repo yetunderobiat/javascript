@@ -328,73 +328,73 @@
 
 // placeOrder(prepareFood, 1, 1, 2, 0);
 
-const items = {
-  location: [
-    "Ikeja",
-    "Maryland",
-    "Ikorodu",
-    "Oshodi",
-    "Lekki",
-    "Surulere",
-    "Ikoyi",
-    "Iyanapaja",
-  ],
-  cloths: ["Nike", "Channel", "Gucci", "Dior"],
-  shoes: ["Puma", "Adidas", "Crocs", "Skechers"],
-  markup: ["Mac", "Fenty", "Maybelline"],
-  bag: ["Prada", "Gucci", "Hermes"],
-  jewerly: ["Mejuri", "Cartier", "Van Cleef"],
-};
+// const items = {
+//   location: [
+//     "Ikeja",
+//     "Maryland",
+//     "Ikorodu",
+//     "Oshodi",
+//     "Lekki",
+//     "Surulere",
+//     "Ikoyi",
+//     "Iyanapaja",
+//   ],
+//   cloths: ["Nike", "Channel", "Gucci", "Dior"],
+//   shoes: ["Puma", "Adidas", "Crocs", "Skechers"],
+//   markup: ["Mac", "Fenty", "Maybelline"],
+//   bag: ["Prada", "Gucci", "Hermes"],
+//   jewerly: ["Mejuri", "Cartier", "Van Cleef"],
+// };
 
-function selectedItems(
-  pickItems,
-  bestChoice,
-  select_cloth,
-  select_shoes,
-  select_markup,
-  select_bag,
-  select_jewelry
-) {
-  setTimeout(() => {
-    console.log(
-      `I would love to place my orders from ${items.location[bestChoice]}`
-    );
-    pickItems(
-      select_cloth,
-      select_shoes,
-      select_markup,
-      select_bag,
-      select_jewelry
-    );
-  }, 1000);
-}
-function orderItems(
-  select_cloth,
-  select_shoes,
-  select_markup,
-  select_bag,
-  select_jewelry
-) {
-  setTimeout(() => {
-    console.log("Processing order");
-    setTimeout(() => {
-      console.log("You have selected");
-      setTimeout(() => {
-        console.log(`A ${items.cloths[select_cloth]} for cloths`);
-        setTimeout(() => {
-          console.log(`A ${items.shoes[select_shoes]} for shoes`);
-          setTimeout(() => {
-            console.log(`A ${items.markup[select_markup]} for markup`);
-            setTimeout(() => {
-              console.log(`A ${items.bag[select_bag]} for bag`);
-              setTimeout(() => {
-                console.log(`A ${items.jewerly[select_jewelry]} for jewelries`);
-              }, 2000);
-            }, 2000);
-          }, 2000);
-        }, 2000);
-      }, 2000);
-    }, 1000);
-  }, 1000);
-}
-selectedItems(orderItems, 6, 3, 0, 1, 0, 2);
+// function selectedItems(
+//   pickItems,
+//   bestChoice,
+//   select_cloth,
+//   select_shoes,
+//   select_markup,
+//   select_bag,
+//   select_jewelry
+// ) {
+//   setTimeout(() => {
+//     console.log(
+//       `I would love to place my orders from ${items.location[bestChoice]}`
+//     );
+//     pickItems(
+//       select_cloth,
+//       select_shoes,
+//       select_markup,
+//       select_bag,
+//       select_jewelry
+//     );
+//   }, 1000);
+// }
+// function orderItems(
+//   select_cloth,
+//   select_shoes,
+//   select_markup,
+//   select_bag,
+//   select_jewelry
+// ) {
+//   setTimeout(() => {
+//     console.log("Processing order");
+//     setTimeout(() => {
+//       console.log("You have selected");
+//       setTimeout(() => {
+//         console.log(`A ${items.cloths[select_cloth]} for cloths`);
+//         setTimeout(() => {
+//           console.log(`A ${items.shoes[select_shoes]} for shoes`);
+//           setTimeout(() => {
+//             console.log(`A ${items.markup[select_markup]} for markup`);
+//             setTimeout(() => {
+//               console.log(`A ${items.bag[select_bag]} for bag`);
+//               setTimeout(() => {
+//                 console.log(`A ${items.jewerly[select_jewelry]} for jewelries`);
+//               }, 2000);
+//             }, 2000);
+//           }, 2000);
+//         }, 2000);
+//       }, 2000);
+//     }, 1000);
+//   }, 1000);
+// }
+// selectedItems(orderItems, 6, 3, 0, 1, 0, 2);
