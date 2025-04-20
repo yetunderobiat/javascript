@@ -6,35 +6,53 @@
     <title>Document</title>
   </head>
   <style>
-    body {
+    /* body { */
       /* display: grid;
       align-items: center;
       height: 100dvh;
       width: 100%; */
-    }
+    /* } */
     .container {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-    .box {
+    .box{
       width: 500px;
       height: 500px;
-      background-color: #800000;
+      border-radius: 10px;
+      border: 2px solid black;
+      padding: 20px;
+      background-color: #808000;
       color: white;
+      /* text-align: center; */
+    }
+    .box h1, h2{
       text-align: center;
     }
   </style>
   <body> 
     <div class="container">
         <div class="box">
-
             <h1>Javascript sprint</h1>
             <h2>Promise</h2>
             <p>A promise is an assuarance or guarantee that something will happen in the future</p>
             <p>A promise is an object that holds the future value of an async operation
             </p>
+            <h2>States of a promise</h2>
+            <ol>
+              <li>Rejected</li>
+              <li>Pending</li>
+              <li>Fulfilled</li>
+            </ol>
+            <h2>Promise API</h2>
+            <ol>
+              <li>Promise.all</li>
+              <li>Promise.allSettled</li>
+              <li>Promise.race</li>
+              <li>Promise.any</li>
+            </ol>
         </div>
     </div>
     <script src="promise.js"></script>
