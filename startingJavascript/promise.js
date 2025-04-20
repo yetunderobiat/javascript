@@ -11,16 +11,17 @@ const promise = new Promise((resolve, reject) => {
 });
 console.log(promise);
 
-// const practicePromise = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     if (number > 4) {
-//       resolve("Correct");
-//     } else {
-//       reject("Wrong");
-//     }
-//   }, 2000);
-// });
-// console.log(practicePromise);
+const practicePromise = new Promise((resolve, reject) => {
+  const addNumber = 3 + 7;
+  setTimeout(() => {
+    if (addNumber === 10) {
+      resolve("Correct");
+    } else {
+      reject("Wrong");
+    }
+  }, 2000);
+});
+console.log(practicePromise);
 
 // https://catfact.ninja/fact
 // https://api.genderize.io?name=temitope
