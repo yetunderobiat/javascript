@@ -7,7 +7,7 @@
   </head>
   <style>
     /* body { */
-      /* display: grid;
+    /* display: grid;
       align-items: center;
       height: 100dvh;
       width: 100%; */
@@ -16,44 +16,98 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 250vh;
     }
-    .box{
-      width: 500px;
-      height: 500px;
+    .box {
+      width: 600px;
+      height: 1200px;
       border-radius: 10px;
       border: 2px solid black;
       padding: 20px;
       background-color: #808000;
       color: white;
+
       /* text-align: center; */
     }
-    .box h1, h2{
+    .box h1,
+    h2 {
       text-align: center;
     }
+    .box p, ul{
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
   </style>
-  <body> 
+  <body>
     <div class="container">
-        <div class="box">
-            <h1>Javascript sprint</h1>
-            <h2>Promise</h2>
-            <p>A promise is an assuarance or guarantee that something will happen in the future</p>
-            <p>A promise is an object that holds the future value of an async operation
-            </p>
-            <h2>States of a promise</h2>
-            <ol>
-              <li>Rejected</li>
-              <li>Pending</li>
-              <li>Fulfilled</li>
-            </ol>
-            <h2>Promise API</h2>
-            <ol>
-              <li>Promise.all</li>
-              <li>Promise.allSettled</li>
-              <li>Promise.race</li>
-              <li>Promise.any</li>
-            </ol>
-        </div>
+      <div class="box">
+        <h1>Javascript sprint</h1>
+        <h2>Promise</h2>
+        <p>
+          A promise is an assuarance or guarantee that something will happen in
+          the future
+        </p>
+        <p>
+          A promise is an object that holds the future value of an async
+          operation
+        </p>
+        <h2>States of a promise</h2>
+        <ol>
+          <li>Rejected</li>
+          <li>Pending</li>
+          <li>Fulfilled</li>
+        </ol>
+        <h2>Promise API</h2>
+        <ol>
+          <li>Promise.all</li>
+          <li>Promise.allSettled</li>
+          <li>Promise.race</li>
+          <li>Promise.any</li>
+        </ol>
+        <h2>Why should we use async await when we can fetch with promise</h2>
+        <p>
+          When working with asynchronous operations in JavaScript—especially
+          things like API calls, developers often use fetch() to retrieve data.
+          Initially, JavaScript handled these kinds of tasks using promises,
+          with .then() and .catch() methods to deal with the results and any
+          potential errors. This approach works just fine, and for simple cases,
+          it's more than enough. <br />fetch('https://api.example.com/data')
+          <br />
+          .then(response => response.json()) <br />
+          .then(data => console.log(data)) <br />
+          .catch(error => console.error(error)); <br />
+          This code successfully retrieves the data and logs it, but when things
+          get more complex—like chaining multiple asynchronous tasks or handling
+          errors at different stages—it can quickly become messy and harder to
+          follow. This is sometimes referred to as "promise chaining hell." To
+          address this and improve the developer experience, JavaScript
+          introduced async and await. These are essentially syntactic sugar over
+          promises, meaning they don’t change how JavaScript handles
+          asynchronous tasks under the hood,<em><b> but they provide a cleaner and more
+          readable way to write asynchronous code. </b></em> This version is easier to
+          read, especially for those who are used to writing synchronous code.
+          It reads top to bottom, like a regular sequence of operations, which
+          makes it much easier to understand what's going on. When you're
+          dealing with multiple asynchronous calls, nested logic, or loops, this
+          clarity becomes a huge benefit. Another major advantage is error
+          handling. <em><b> With promises, you often need to use .catch() at the end,
+          and it can get complicated if you want to catch errors at different
+          points. With async/await, you can use try/catch blocks just like in
+          regular synchronous code, making it more intuitive to handle
+          exceptions</b></em>. So, while there's nothing wrong with using promises
+          directly, async/await makes your code cleaner, easier to manage, and
+          generally more readable—especially as your codebase grows. That’s why
+          many developers prefer it when building real-world applications.
+        </p>
+        <ul>
+          <li>They provide a cleaner and more
+            readable way to write asynchronous code.</li>
+            <li>Makes it more intuitive to handle
+              exceptions</li>
+              <li>Async/await makes your code cleaner, easier to manage, and
+                generally more readable especially as your codebase grows.</li>
+        </ul>
+      </div>
     </div>
     <script src="promise.js"></script>
   </body>
