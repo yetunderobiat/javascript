@@ -62,27 +62,44 @@
 //     console.error(error);
 //   });
 
-// async function checkName() {
-//   const result = await fetch("https://api.genderize.io?name=yetunde")
-//   const data = await result.json()
-//   console.log(data);
-//   console.log(data.name);
-//   console.log(`My  name is ${data.name} i am a ${data.gender}`);
-// }
-// checkName()
-
-async function nameCheck() {
-  try {
-    const result = await fetch("https://api.genderize.io?name=tunde");
-    if (!result.ok) {
-      throw new Error(`HTTP error! Status: ${result.status}`);
-    }
-    const data = await result.json();
-    console.log(data);
-    console.log(data.name);
-    console.log(`My  name is ${data.name} i am a ${data.gender}`);
-  } catch (error) {
-    console.error("There was a problem fetching the data:", error);
-  }
+async function checkName() {
+  const result = await fetch("https://api.genderize.io?name=yetunde")
+  const data = await result.json()
+  console.log(data);
+  console.log(data.name);
+  console.log(`My  name is ${data.name} i am a ${data.gender}`);
 }
-nameCheck()
+checkName()
+
+// async function nameCheck() {
+//   try {
+//     const result = await fetch("https://api.genderize.io?name=tunde");
+//     if (!result.ok) {
+//       throw new Error(`HTTP error! Status: ${result.status}`);
+//     }
+//     const data = await result.json();
+//     console.log(data);
+//     console.log(data.name);
+//     console.log(`My  name is ${data.name} i am a ${data.gender}`);
+//   } catch (error) {
+//     console.error("There was a problem fetching the data:", error);
+//   }
+// }
+// nameCheck()
+const
+catAPI = "https://catfact.ninja/fact";
+async function getCat () {
+try {
+CatFactElement. textContent = "loading..... I";
+const result = await fetch(catAPI);
+if (!result.ok) {
+throw new Error(${result.status});
+}
+}
+const data = await result.json();
+console. log(data);
+catFactElement.textContent = data.fact;
+catch (error) {
+console. log(Error);
+getCat ();
+newFactBtn.addEventListener("click", getCat);
