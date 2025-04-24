@@ -398,3 +398,17 @@
 //   }, 1000);
 // }
 // selectedItems(orderItems, 6, 3, 0, 1, 0, 2);
+
+// const number = [1, 2, 3, 4, 5];
+// const useFilter = number.filter((num) => num % 2 === 0);
+// console.log(useFilter);
+
+// const number = [1, 2, 3, 4];
+// const tripleNum = number.map((num) => num * 3);
+// console.log(tripleNum);
+
+const number = [20, 120, 30, 55];
+const maxNumber = number.reduce((old, current) => {
+  return old > current ? old : current;
+});
+console.log(maxNumber);
