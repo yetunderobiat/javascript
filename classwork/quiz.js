@@ -412,3 +412,7 @@ const maxNumber = number.reduce((old, current) => {
   return old > current ? old : current;
 });
 console.log(maxNumber);
+
+async function catFetch(params) {
+  
+}
