@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +16,7 @@ body {
   align-items: center;
 }
 
-/* Navbar */
+/* Navbar styles */
 .navbar {
   width: 100%;
   display: flex;
@@ -47,6 +53,38 @@ body {
   color: #ee9a4d;
 }
 
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+}
+
+/* Toggling active class to show links in hamburger menu */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #333;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  width: 200px;
+}
+
 /* About section */
 .about-section {
   background-color: #242323;
@@ -57,6 +95,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   animation: fadeIn 3.5s ease-in forwards;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -86,20 +125,7 @@ body {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .about-section {
-    margin: 20px;
-    padding: 25px;
-  }
-
-  .about-section h1 {
-    font-size: 28px;
-  }
-
-  .about-section p {
-    font-size: 16px;
-  }
-}
+/* Footer */
 .footer {
   margin-top: auto;
   width: 100%;
@@ -122,11 +148,6 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 600px) {
-  .footer p {
-    font-size: 13px;
-  }
-}
 /* RESPONSIVENESS */
 @media (max-width: 1024px) {
   .navbar {
@@ -140,38 +161,67 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    flex-wrap: nowrap; /* stay in one line */
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     height: auto;
   }
+
   .link {
     display: flex;
-    flex-direction: row; /* keep links horizontal */
+    flex-direction: row;
     gap: 10px;
   }
+
   .nav-link {
     padding: 8px 10px;
     font-size: 14px;
   }
+
   .navbar span {
     font-size: 24px;
   }
+
+  /* Hide the navbar links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    width: 200px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
   .about-section {
     margin: 20px;
     padding: 20px;
     max-width: 100%;
   }
+
   .about-section h1 {
     font-size: 30px;
   }
+
   .about-section p {
     font-size: 16px;
   }
+
   .footer {
     padding: 10px 0;
   }
+
   .footer p {
     font-size: 13px;
   }
@@ -201,6 +251,7 @@ body {
     font-size: 12px;
   }
 }
+
 @media (max-width: 250px) {
   .navbar {
     padding: 10px 15px;
