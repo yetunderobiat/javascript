@@ -104,6 +104,7 @@ body {
     scale: 100% 1;
   }
 }
+
 .search-form {
   padding: 10px 0;
   display: flex;
@@ -139,11 +140,13 @@ body {
   background-color: #d4af37;
   border-color: #d4af37;
 }
+
 .position .right {
   width: 60%;
   text-align: center;
   padding: 0 10px;
 }
+
 .footer {
   margin-top: auto;
   width: 100%;
@@ -155,17 +158,14 @@ body {
   position: relative;
   bottom: 0;
 }
-
 .footer-logo {
   color: #d4af37;
   font-weight: bold;
 }
-
 .footer p {
   margin: 5px 0;
   font-size: 14px;
 }
-
 @media (max-width: 600px) {
   .footer p {
     font-size: 13px;
@@ -200,10 +200,10 @@ body {
   }
 }
 
-/* RESPONSIVE: Mobile (max-width: 600px) */
-@media (max-width: 600px) {
+/* RESPONSIVE: Mobile (max-width: 768px) */
+@media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     height: auto;
   }
@@ -212,6 +212,52 @@ body {
   }
   .nav-link {
     font-size: 10px;
+  }
+  .click {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .click button {
+    padding: 4px 18px;
+    font-size: 11px;
+  }
+  .click button {
+    margin: 5px;
+  }
+  .position {
+    margin: 20px 10px;
+  }
+  .position .left h1 {
+    font-size: 30px;
+  }
+  .position .left p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .footer p {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .navbar span {
+    font-size: 25px;
+  }
+  .link {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+  }
+  .nav-link {
+    padding: 2px 0;
   }
 
   .click {
@@ -237,9 +283,47 @@ body {
     font-size: 14px;
     padding: 0 10px;
   }
-
   .footer p {
     font-size: 12px;
     padding: 0 10px;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: #d4af37;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #333;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links.active {
+    display: flex;
   }
 }
