@@ -26,7 +26,8 @@
     <!-- navbar section  -->
     <nav class="navbar">
       <span class="logo"> SheCodes </span>
-      <div class="link">
+      <div class="hamburger" onclick="toggleNavbar()">☰</div>
+      <div class="nav-links">
         <a class="nav-link" href="home.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="contact.html">Contact</a>
@@ -50,7 +51,7 @@
     <!-- service section  -->
     <div class="service-container">
       <div class="service">
-        <img src="{% static 'images/services.png' %}" alt="logo" />
+        <img src="images/services.png" alt="logo" />
         <p>OUR SERVICES</p>
       </div>
     </div>
@@ -80,7 +81,7 @@
     <!-- body section  -->
     <div class="container">
       <div class="box">
-        <img src="{% static 'images/logo2.png' %}" alt="logo" />
+        <img src="images/logo2.png" alt="logo" />
         <h2>GitHub</h2>
         <ul>
           <li>Backup your code online.</li>
@@ -91,7 +92,7 @@
         <button><a href="https://github.com/yetunderobiat">GITHUB</a></button>
       </div>
       <div class="box">
-        <img src="{% static 'images/logo1.png' %}" alt="logo" />
+        <img src="images/logo1.png" alt="logo" />
         <h2>Python</h2>
         <ul>
           <li>store information</li>
@@ -103,7 +104,7 @@
         <button><a href="https://www.python.org/">PYTHON</a></button>
       </div>
       <div class="box">
-        <img src="{% static 'images/logo3.png' %}" alt="logo" />
+        <img src="images/logo3.png" alt="logo" />
         <h2>html</h2>
         <ul>
           <li>HyperText Markup Language.</li>
@@ -113,7 +114,7 @@
         <button><a href="https://www.w3schools.com/Html/">HTML</a></button>
       </div>
       <div class="box">
-        <img src="{% static 'images/logo4.png' %}" alt="logo" />
+        <img src="images/logo4.png" alt="logo" />
         <h2>css</h2>
         <ul>
           <li>
@@ -127,7 +128,7 @@
         <button><a href="https://www.w3schools.com/css/">CSS</a></button>
       </div>
       <div class="box">
-        <img src="{% static 'images/logo6.png' %}" alt="logo" />
+        <img src="images/logo6.png" alt="logo" />
         <h2>Javascript</h2>
         <ul>
           <li>Dynamic Typing.</li>
@@ -140,7 +141,7 @@
         <button><a href="https://www.w3schools.com/js/">JAVASCRIPT</a></button>
       </div>
       <div class="box">
-        <img src="{% static 'images/logo7.png' %}" alt="logo" />
+        <img src="images/logo7.png" alt="logo" />
         <h2>php</h2>
         <ul>
           <li>Simplicity.</li>
@@ -203,5 +204,11 @@
         <p>Empowering girls through code, line at a time.</p>
       </div>
     </footer>
+    <script>
+      function toggleNavbar() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>

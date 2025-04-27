@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  height: 2rem;
+  height: 3.5rem;
   margin-bottom: 30px;
   position: sticky;
   top: 0;
@@ -152,7 +152,7 @@ body {
   padding: 10px;
   margin-bottom: 50px;
   border: none;
-  background-color: #8279ff;
+  background-color: #31943b72;
   font-family: Karla;
   font-weight: 600;
   font-size: 16px;
@@ -223,7 +223,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: auto;
+    /* height: aut; */
   }
 
   .nav-link {
@@ -283,6 +283,9 @@ body {
 
   .hamburger {
     display: flex;
+  }
+  .hamburger div{
+    background-color: #ee9a4d;
   }
 
   .nav-links.active {
