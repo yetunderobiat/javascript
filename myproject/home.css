@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(circle, #2f4f4f 0%, #1e3d3d 60%, #0e3232 100%);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  height: 3.9rem;
+  position: sticky;
+  top: 0;
+  background-color: #202020;
+  z-index: 1000;
+}
+.navbar span {
+  font-family: Pacifico;
+  font-size: 30px;
+  color: #d4af37;
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: Karla;
+  padding: 0 20px;
+  transition: all 0.2s ease-in-out;
+}
+.nav-link:hover {
+  border: 2px solid;
+  padding: 6px 20px;
+  color: #d4af37;
+}
+.click button {
+  margin-right: 20px;
+  color: white;
+  padding: 6px 20px;
+  background-color: #d4af37;
+  border-radius: 4px;
+  border: none;
+  font-weight: 600;
+  font-family: Karla;
+  font-size: 15px;
+}
+.click button:hover {
+  animation: bounce 1s infinite;
+  cursor: pointer;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-out;
+  }
+}
+
+.position {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px;
+}
+.position .left {
+  width: 60%;
+  text-align: center;
+  padding: 0 10px;
+}
+.position .left h1 {
+  padding: 10px 0;
+  font-size: 50px;
+  font-family: Pacifico;
+  color: #d4af37;
+}
+.position .left p {
+  padding: 15px 0;
+  color: white;
+  font-family: Karla;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+.position .left p {
+  animation-duration: 3s;
+  animation-name: slide-in;
+}
+@keyframes slide-in {
+  from {
+    translate: 0 0 150vw 0;
+    scale: 200% 1;
+  }
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+.search-form {
+  padding: 10px 0;
+  display: flex;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.search-input {
+  flex: 1;
+  padding: 7px 13px;
+  font-size: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus {
+  border-color: #d4af37;
+}
+.search-button {
+  padding: 0.5em 1em;
+  margin-left: 5px;
+  font-size: 0.8rem;
+  font-family: Karla;
+  border: 2px solid #d4af37;
+  background-color: #d4af37;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.search-button:hover,
+.search-button:focus {
+  background-color: #d4af37;
+  border-color: #d4af37;
+}
+.position .right {
+  width: 60%;
+  text-align: center;
+  padding: 0 10px;
+}
+.footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: #202020;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  color: #eee;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-logo {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .footer p {
+    font-size: 13px;
+  }
+}
+
+/* RESPONSIVE: Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .position {
+    flex-direction: column;
+    margin: 30px 20px;
+  }
+  .position .left,
+  .position .right {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .position .left h1 {
+    font-size: 40px;
+  }
+  .position .left p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .navbar {
+    padding: 8px 20px;
+    flex-direction: column;
+    height: auto;
+  }
+  .click {
+    margin: 15px 0;
+  }
+}
+
+/* RESPONSIVE: Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .navbar span {
+    font-size: 25px;
+  }
+  .nav-link {
+    font-size: 10px;
+  }
+
+  .click {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .click button {
+    padding: 4px 18px;
+    font-size: 11px;
+  }
+  .click button {
+    margin: 5px;
+  }
+  .position {
+    margin: 20px 10px;
+  }
+  .position .left h1 {
+    font-size: 30px;
+  }
+  .position .left p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .footer p {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
