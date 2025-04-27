@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <span class="logo"> SheCodes </span>
+      <!-- Navbar Links (initially hidden on small screens) -->
+      <div class="link" id="navbar-links">
+        <a class="nav-link" href="home.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="services.html">Services</a>
+      </div>
+      <div class="click">
+        <button>Sign in</button>
+        <button>Start for free</button>
+      </div>
+    </nav>
+
+    <!-- body section  -->
+    <div class="position">
+      <div class="left">
+        <h1>SheCodes Project</h1>
+        <p>
+          My name is Ibrahim Robiat Yetunde, and I am currently learning Python
+          programming at Aptech Ikorodu. For me, programming isn't just about
+          writing code it's about crafting possibilities and building solutions
+          that make an impact. Every line of HTML I write and every Python
+          function I create is a meaningful step forward in my journey as a
+          developer. I'm not just learning to program I’m shaping my future
+          through technology. I build with passion, not just pixels. While some
+          may use brushes and canvases to express their creativity, my tools of
+          choice are VS Code, GitHub, and Django. These platforms empower me to
+          bring ideas to life, solve real-world problems, and continuously grow
+          as a developer. Whether I’m designing user interfaces or writing
+          backend logic, I approach each project with curiosity, creativity, and
+          a commitment to excellence. My journey in tech is just beginning, and
+          I’m excited for every challenge and opportunity ahead.
+        </p>
+        <form action="/search" method="get" class="search-form">
+          <input
+            type="search"
+            name="q"
+            placeholder="Search..."
+            class="search-input"
+            aria-label="Search" />
+          <button type="submit" class="search-button">Go</button>
+        </form>
+      </div>
+      <div class="right"></div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>
+          &copy; 2025 <span class="footer-logo">SheCodes</span>. All rights
+          reserved.
+        </p>
+        <p>Empowering girls through code, line at a time.</p>
+      </div>
+    </footer>
+  </body>
+</html>
