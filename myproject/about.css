@@ -56,7 +56,7 @@ body {
 .hamburger div {
   width: 30px;
   height: 4px;
-  background-color: white;
+  background-color: #ee9a4d;
 }
 .nav-links {
   display: flex;

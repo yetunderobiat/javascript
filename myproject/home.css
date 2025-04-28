@@ -26,7 +26,6 @@ body {
 .nav-link {
   text-decoration: none;
   color: white;
-  font-size: 15px;
   font-weight: 700;
   font-family: Karla;
   padding: 0 20px;
@@ -105,9 +104,9 @@ body {
     scale: 100% 1;
   }
 }
-.position .right img{
-  width: 50%;
-  border-radius: 5%;
+.position .right img {
+  width: 70%;
+  border-radius: 3%;
 }
 .search-form {
   padding: 10px 0;
@@ -215,7 +214,7 @@ body {
     font-size: 25px;
   }
   .nav-link {
-    font-size: 10px;
+    font-size: 13px;
   }
   .click {
     margin-top: 10px;
@@ -253,7 +252,7 @@ body {
     height: auto;
   }
   .navbar span {
-    font-size: 25px;
+    font-size: 20px;
   }
   .link {
     display: flex;
@@ -311,13 +310,15 @@ body {
 .nav-links.active {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  padding-top: 20px;
+  gap: 25px;
   background-color: #333;
   position: absolute;
   top: 60px;
   right: 20px;
-  padding: 20px;
   width: 200px;
+  text-align: center;
+  height: 250px;
 }
 
 @media (max-width: 768px) {
