@@ -3,19 +3,17 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 0;
   height: 140vh;
   background: linear-gradient(#363636, #34282c);
-  font-family: "Karla", sans-serif;
+  font-family: "Karla";
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 /* Navbar styles */
 .navbar {
   width: 100%;
@@ -23,20 +21,18 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 20px 50px;
-  height: 2rem;
+  height: 3.5rem;
   margin-bottom: 50px;
   position: sticky;
   top: 0;
   background-color: #202020;
   z-index: 1000;
 }
-
 .navbar span {
   font-family: "Pacifico", cursive;
   font-size: 30px;
   color: #ee9a4d;
 }
-
 .nav-link {
   text-decoration: none;
   color: white;
@@ -46,33 +42,25 @@ body {
   padding: 0 30px;
   transition: all 0.2s ease-in-out;
 }
-
 .nav-link:hover {
   border: 2px solid;
   padding: 6px 20px;
   color: #ee9a4d;
 }
-
-/* Hamburger menu styles */
 .hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
 }
-
 .hamburger div {
   width: 30px;
   height: 4px;
   background-color: white;
 }
-
-/* Navbar Links */
 .nav-links {
   display: flex;
 }
-
-/* Toggling active class to show links in hamburger menu */
 .nav-links.active {
   display: flex;
   flex-direction: column;
@@ -92,10 +80,9 @@ body {
   border-radius: 16px;
   max-width: 850px;
   margin-top: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 3.5s ease-in forwards;
+  box-shadow: 0 10px 30px rgba(30, 25, 25, 0.3);
+  animation: fadeIn 2s ease-in forwards;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -104,7 +91,6 @@ body {
     opacity: 1;
   }
 }
-
 .about-section h1 {
   font-family: "Pacifico", cursive;
   font-size: 40px;
@@ -112,19 +98,16 @@ body {
   margin-bottom: 20px;
   text-align: center;
 }
-
 .about-section p {
   font-size: 17px;
   line-height: 1.7;
   color: #f5f5f5;
   text-align: justify;
 }
-
 .highlight {
   color: #ee9a4d;
   font-weight: bold;
 }
-
 /* Footer */
 .footer {
   margin-top: auto;
@@ -137,12 +120,10 @@ body {
   position: relative;
   bottom: 0;
 }
-
 .footer-logo {
   color: #ee9a4d;
   font-weight: bold;
 }
-
 .footer p {
   margin: 5px 0;
   font-size: 14px;
@@ -150,6 +131,9 @@ body {
 
 /* RESPONSIVENESS */
 @media (max-width: 1024px) {
+  body{
+    height: fit-content;
+  }
   .navbar {
     padding: 15px 30px;
   }
@@ -160,6 +144,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  body{
+    height: fit-content;
+  }
   .navbar {
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -167,23 +154,18 @@ body {
     padding: 10px 20px;
     height: auto;
   }
-
   .link {
     display: flex;
     flex-direction: row;
     gap: 10px;
   }
-
   .nav-link {
     padding: 8px 10px;
     font-size: 14px;
   }
-
   .navbar span {
     font-size: 24px;
   }
-
-  /* Hide the navbar links by default */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -195,44 +177,43 @@ body {
     padding: 20px;
     width: 200px;
   }
-
   .hamburger {
     display: flex;
   }
-
   .nav-links.active {
     display: flex;
   }
-
   .about-section {
     margin: 20px;
     padding: 20px;
     max-width: 100%;
   }
-
+  .about-section{
+    margin: 20px;
+  }
   .about-section h1 {
     font-size: 30px;
   }
-
   .about-section p {
     font-size: 16px;
   }
-
   .footer {
     padding: 10px 0;
   }
-
   .footer p {
     font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
+  body{
+    height: fit-content;
+  }
   .navbar {
     padding: 10px 15px;
   }
   .navbar span {
-    font-size: 42px;
+    font-size: 25px;
   }
   .link {
     gap: 5px;
@@ -240,6 +221,9 @@ body {
   .nav-link {
     font-size: 13px;
     padding: 6px 8px;
+  }
+  .about-section{
+    margin: 20px;
   }
   .about-section h1 {
     font-size: 26px;
@@ -251,13 +235,15 @@ body {
     font-size: 12px;
   }
 }
-
 @media (max-width: 250px) {
+  body{
+    height: fit-content;
+  }
   .navbar {
     padding: 10px 15px;
   }
   .navbar span {
-    font-size: 22px;
+    font-size: 20px;
   }
   .link {
     gap: 5px;
@@ -265,6 +251,9 @@ body {
   .nav-link {
     font-size: 13px;
     padding: 6px 8px;
+  }
+  .about-section{
+    margin: 20px;
   }
   .about-section h1 {
     font-size: 26px;

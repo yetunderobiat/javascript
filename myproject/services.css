@@ -5,6 +5,7 @@
 }
 body {
   background: radial-gradient(circle, #ffd1dc 0%, #ffb347 50%, #ff7e5f 100%);
+  height: fit-content;
 }
 
 /* navbar section */
@@ -76,7 +77,7 @@ body {
 }
 .service p {
   color: #ffffff;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-name: slide-in;
 }
 @keyframes slide-in {
@@ -155,7 +156,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1100px;
+  width: 90%;
   margin: 50px auto;
 }
 .box {
@@ -345,8 +346,7 @@ button:focus {
 
   .box button {
     padding: 6px 30px;
-}
-
+  }
 }
 /* Hamburger menu for smaller screens */
 .hamburger {
@@ -373,6 +373,5 @@ button:focus {
 
   .nav-links.active {
     display: flex;
-    
   }
 }

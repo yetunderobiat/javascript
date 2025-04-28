@@ -3,17 +3,15 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
-  height: 140vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: radial-gradient(circle, #2f4f4f 0%, #1e3d3d 60%, #0e2a2a 100%);
 }
-
 /* Navbar */
 .navbar {
   width: 100%;
@@ -28,13 +26,11 @@ body {
   background-color: #202020;
   z-index: 1000;
 }
-
 .navbar span {
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico";
   font-size: 30px;
   color: #ee9a4d;
 }
-
 .nav-link {
   text-decoration: none;
   color: white;
@@ -44,32 +40,27 @@ body {
   padding: 0 30px;
   transition: all 0.2s ease-in-out;
 }
-
 .nav-link:hover {
   border: 2px solid;
   padding: 6px 20px;
   color: #ee9a4d;
 }
 
-/* Hamburger menu styles */
+/* Hamburger styles */
 .hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
 }
-
 .hamburger div {
   width: 30px;
   height: 4px;
   background-color: white;
 }
-
 .nav-links {
   display: flex;
 }
-
-/* When active, show the nav links vertically */
 .nav-links.active {
   display: flex;
   flex-direction: column;
@@ -81,13 +72,11 @@ body {
   padding: 20px;
   width: 200px;
 }
-
 /* Form styles */
 .contact-form {
   border-radius: 12px;
   width: 550px;
 }
-
 .contact-form h1 {
   margin-bottom: 20px;
   text-align: center;
@@ -95,7 +84,6 @@ body {
   font-family: Pacifico;
   color: #ee9a4d;
 }
-
 .contact-form label {
   display: block;
   margin-bottom: 5px;
@@ -103,7 +91,6 @@ body {
   font-weight: bold;
   font-family: Karla;
 }
-
 .contact-form input,
 .contact-form textarea {
   background-color: #303030;
@@ -113,7 +100,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -123,7 +109,6 @@ body {
   font-family: Karla;
   font-weight: bold;
 }
-
 .contact-form input[type="checkbox"] {
   appearance: none;
   width: 25px;
@@ -132,11 +117,9 @@ body {
   border-radius: 4px;
   position: relative;
 }
-
 .contact-form input[type="checkbox"]:checked {
   background-color: #ee9a4d;
 }
-
 .contact-form input[type="checkbox"]:checked::after {
   font-family: Karla;
   content: "✔";
@@ -146,7 +129,6 @@ body {
   left: 4px;
   top: 0;
 }
-
 .contact-form button {
   width: 100%;
   padding: 10px;
@@ -159,7 +141,6 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-
 .contact-form button:hover {
   border: none;
   animation: bounce 1s infinite;
@@ -167,7 +148,6 @@ body {
   background: #ee9a4d;
   color: white;
 }
-
 @keyframes bounce {
   0%,
   100% {
@@ -179,7 +159,6 @@ body {
     animation-timing-function: ease-out;
   }
 }
-
 /* Footer */
 .footer {
   margin-top: auto;
@@ -203,7 +182,7 @@ body {
   font-size: 14px;
 }
 
-/* Media Queries for responsiveness */
+/* responsiveness */
 @media (max-width: 1024px) {
   .navbar {
     padding: 15px 30px;
@@ -223,18 +202,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    /* height: aut; */
+    height: auto;
   }
-
   .nav-link {
     padding: 8px 10px;
     font-size: 14px;
   }
-
   .navbar span {
     font-size: 24px;
   }
-
   .contact-form {
     width: 100%;
     margin: 0 15px;
