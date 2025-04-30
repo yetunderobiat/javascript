@@ -5,7 +5,7 @@
 }
 body {
   background: radial-gradient(circle, #2f4f4f 0%, #1e3d3d 60%, #0e3232 100%);
-  height: 140vh;
+  height: fit-content;
 }
 .navbar {
   display: flex;
@@ -35,6 +35,15 @@ body {
   border: 2px solid;
   padding: 6px 20px;
   color: #d4af37;
+}
+.nav-links,
+.click {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.click {
+  margin-left: 180px;
 }
 .click button {
   margin-right: 20px;
@@ -84,6 +93,7 @@ body {
   padding: 15px 0;
   color: white;
   font-family: Karla;
+  font-size: 18px;
   width: 100%;
   font-weight: 400;
   line-height: 1.3;
@@ -105,7 +115,7 @@ body {
   }
 }
 .position .right img {
-  width: 70%;
+  width: 55%;
   border-radius: 3%;
 }
 .search-form {

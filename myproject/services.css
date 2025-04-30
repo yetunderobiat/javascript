@@ -96,7 +96,7 @@ body {
   align-items: center;
 }
 .service img {
-  width: 35%;
+  width: 30%;
   animation: bounce 1s infinite;
 }
 @keyframes bounce {
