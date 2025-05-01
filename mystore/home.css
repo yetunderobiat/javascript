@@ -31,18 +31,18 @@ body {
   font-size: 35px;
   font-weight: 900;
   background: linear-gradient(
-    to right,
-    rgb(46, 45, 45),
+      to right,
+      rgb(46, 45, 45),
     rgb(69, 67, 67),
     silver
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .navbar-section .roll {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .navbar-section .roll .circle {
   margin: 0 20px;
@@ -61,30 +61,30 @@ body {
   animation-delay: 0.6s;
 }
 .navbar-section .roll .circle:nth-child(4) {
-  animation-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 @keyframes moveRow {
-  0% {
-    transform: translateX(0) rotate(0deg);
+    0% {
+        transform: translateX(0) rotate(0deg);
   }
   50% {
     transform: translateX(100px) rotate(180deg);
-  }
-  100% {
+}
+100% {
     transform: translateX(0) rotate(360deg);
   }
 }
 .navbar-section .roll #red {
-  background-color: red;
+    background-color: red;
 }
 .navbar-section .roll #blue {
   background-color: blue;
 }
 .navbar-section .roll #yellow {
-  background-color: yellow;
+    background-color: yellow;
 }
 .navbar-section .roll #green {
-  background-color: green;
+    background-color: green;
 }
 .navbar-section .nav-links {
   width: 40%;
@@ -93,26 +93,26 @@ body {
   align-items: center;
 }
 .navbar-section .nav-link {
-  transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 .navbar-section .nav-link:hover {
-  padding: 5px;
-  text-align: center;
-  border: 2px solid;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid;
 }
 .navbar-section .nav-link a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
 }
 .navbar-section .nav-link img {
   width: 17%;
   display: none;
 }
 .navbar-section .nav-link:hover img {
-  display: inline;
+    display: inline;
 }
 /* welcome section */
 .welcome-section {
@@ -121,17 +121,10 @@ body {
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
   height: 500px;
-  text-align: left;
-  position: relative;
-  z-index: 1;
+  padding: 100px;
+  font-family: Dancing Script;
 }
-.welcome-section .logo {
-    border: 2px solid red;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 20%;
-  /* height: 200px; */
+.welcome-section h1 {
 }
 /* grid section */
 .grid-section {
