@@ -18,31 +18,23 @@ body {
   top: 0;
   position: sticky;
   z-index: 1000;
-  height: 3.5rem;
-}
-.navbar-section .logo {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: 20px;
+  height: 3.9rem;
 }
 .navbar-section .logo .gradient-color {
   margin-left: 10px;
+  padding-right: 10px;
   font-size: 35px;
   font-weight: 900;
-  background: linear-gradient(
-      to right,
-      rgb(46, 45, 45),
-    rgb(69, 67, 67),
-    silver
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-family: Great Vibes;
+  background: linear-gradient(to right, #9534a6, #801354);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .navbar-section .roll {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar-section .roll .circle {
   margin: 0 20px;
@@ -61,30 +53,30 @@ body {
   animation-delay: 0.6s;
 }
 .navbar-section .roll .circle:nth-child(4) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 @keyframes moveRow {
-    0% {
-        transform: translateX(0) rotate(0deg);
+  0% {
+    transform: translateX(0) rotate(0deg);
   }
   50% {
     transform: translateX(100px) rotate(180deg);
-}
-100% {
+  }
+  100% {
     transform: translateX(0) rotate(360deg);
   }
 }
 .navbar-section .roll #red {
-    background-color: red;
+  background-color: red;
 }
 .navbar-section .roll #blue {
   background-color: blue;
 }
 .navbar-section .roll #yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
 .navbar-section .roll #green {
-    background-color: green;
+  background-color: green;
 }
 .navbar-section .nav-links {
   width: 40%;
@@ -93,26 +85,26 @@ body {
   align-items: center;
 }
 .navbar-section .nav-link {
-    transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .navbar-section .nav-link:hover {
-    padding: 5px;
-    text-align: center;
-    border: 2px solid;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid;
 }
 .navbar-section .nav-link a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    font-size: 18px;
-    text-transform: capitalize;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
 }
 .navbar-section .nav-link img {
   width: 17%;
   display: none;
 }
 .navbar-section .nav-link:hover img {
-    display: inline;
+  display: inline;
 }
 /* welcome section */
 .welcome-section {
@@ -122,9 +114,10 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
   height: 500px;
   padding: 100px;
-  font-family: Dancing Script;
 }
 .welcome-section h1 {
+  font-size: 70px;
+  font-family: Pacifico;
 }
 /* grid section */
 .grid-section {
