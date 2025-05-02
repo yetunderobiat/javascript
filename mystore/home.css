@@ -108,7 +108,8 @@ body {
 }
 .welcome-section h1 {
   font-size: 70px;
-  font-family: Pacifico;
+  margin-bottom: 30px;
+  /* font-family: Pacifico; */
   letter-spacing: 4px;
   animation: bounce 1.5s infinite;
 }
@@ -137,15 +138,38 @@ body {
   flex-direction: column;
 }
 .grid-section .logo h1 {
+  margin-left: 270px;
+  margin-bottom: 15px;
   font-size: 60px;
   font-family: Oleo Script;
   background: linear-gradient(to right, #ff0808, #d65252);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.grid-section .logo p li {
+.grid-section .logo ul {
+  margin-bottom: 30px;
+  display: flex;
+}
+.grid-section .logo li {
+  margin-left: 40px;
+  font-family: Croissant One;
+  font-size: 18px;
+}
+.grid-section .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 5px;
+  width: 1200px;
+  max-width: 1500px;
+}
+.grid-section .grid .box {
+  background-color: aqua;
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 }
+
 /* footer section */
