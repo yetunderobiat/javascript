@@ -27,7 +27,6 @@ body {
   padding-right: 10px;
   font-size: 50px;
   font-family: Oleo Script;
-  /* background: linear-gradient(to right, #9534a6, #801354); */
   background: linear-gradient(to right, #ff0808, #d65252);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,6 +131,21 @@ body {
 }
 /* grid section */
 .grid-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
+.grid-section .logo h1 {
+  font-size: 60px;
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #ff0808, #d65252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.grid-section .logo p li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* footer section */
