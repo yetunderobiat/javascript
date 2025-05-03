@@ -16,9 +16,11 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 5rem;
-  top: 0;
-  position: sticky;
   z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .navbar-section .logo .gradient-color {
   margin-left: 10px;
@@ -251,14 +253,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin: 50px 0;
 }
 .roll-section .roll .circle {
   margin: 0 40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  animation: moveRow 5s linear infinite;
+  animation: moveRowFooter 5s linear infinite;
 }
 .roll-section .roll .circle:nth-child(1) {
   animation-delay: 0.2s;
@@ -302,14 +304,13 @@ body {
   position: fixed;
   bottom: 100px;
   right: 20px;
-  background-color: red;
-  color: white;
-  font-size: 30px;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 50px;
   height: 50px;
+  font-size: 30px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 2000;
   animation: bounce 0.8s infinite;
