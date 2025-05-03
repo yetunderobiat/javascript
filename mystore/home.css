@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: bisque;
-  height: 500vh;
+  background-color: white;
+  height: fit-content;
   width: 100%;
 }
 
@@ -98,7 +98,7 @@ body {
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
-  height: 600px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +107,6 @@ body {
 .welcome-section h1 {
   font-size: 70px;
   margin-bottom: 30px;
-  /* font-family: Pacifico; */
   letter-spacing: 4px;
   animation: bounce 1.5s infinite;
 }
@@ -159,7 +158,7 @@ body {
   grid-template-rows: repeat(3, 200px);
   gap: 10px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 .grid-section .grid .box {
   display: flex;
@@ -185,31 +184,51 @@ body {
 .grid-section .grid .c {
   grid-column: 3/5;
   grid-row: 1/2;
+  border-radius: 10px;
+  background-image: url("images/shoes.avif");
+  background-size: cover;
+  background-position: center;
 }
 .grid-section .grid .d {
   grid-column: 2/3;
   grid-row: 2/3;
+  border-radius: 10px;
+  background-image: url("images/jewelries.avif");
+  background-size: cover;
+  background-position: center;
 }
 .grid-section .grid .e {
   grid-column: 3/5;
   grid-row: 2/3;
+  border-radius: 10px;
+  background-image: url("images/appliances.avif");
+  background-size: cover;
+  background-position: center;
 }
 .grid-section .grid .f {
   grid-column: 1/3;
   grid-row: 3/4;
+  border-radius: 10px;
+  background-image: url("images/gadgets.avif");
+  background-size: cover;
+  background-position: center;
 }
 .grid-section .grid .g {
   grid-column: 3/5;
   grid-row: 3/4;
+  border-radius: 10px;
+  background-image: url("images/skin.avif");
+  background-size: cover;
+  background-position: center;
 }
 .grid-section .grid .box button {
   padding: 10px 25px;
   font-family: "Croissant One";
   font-weight: 600;
   font-size: 14px;
-  background-color: transparent;
-  border: 2px solid #ff0808;
+  background-color: white;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
   color: black;
   transition: all 1s ease-in-out;
@@ -225,4 +244,81 @@ body {
 .grid-section .grid .box button a:hover {
   color: inherit;
 }
+
+/* ball section  */
+.roll-section .roll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.roll-section .roll .circle {
+  margin: 0 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: moveRow 5s linear infinite;
+}
+.roll-section .roll .circle:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.roll-section .roll .circle:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.roll-section .roll .circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.roll-section .roll .circle:nth-child(4) {
+  animation-delay: 0.8s;
+}
+@keyframes moveRow {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+.roll-section .roll #red {
+  background-color: red;
+}
+.roll-section .roll #blue {
+  background-color: #ff0808;
+}
+.roll-section .roll #yellow {
+  background-color: rgb(211, 58, 58);
+}
+.roll-section .roll #green {
+  background-color: rgb(218, 97, 97);
+}
+.roll-section .roll #white {
+  background-color: rgb(236, 156, 156);
+}
 /* footer section */
+.footer {
+  margin-top: 25px;
+  width: 100%;
+  background-color: black;
+  padding: 15px 0;
+  text-align: center;
+  font-family:"Croissant One" ;
+  color: #eee;  
+  position: relative;
+  bottom: 0;
+}
+.footer-logo {
+  color: red;
+  font-weight: bold;
+}
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .footer p {
+    font-size: 13px;
+  }
+}
