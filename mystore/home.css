@@ -15,9 +15,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  top: 0;
-  position: sticky;
-  z-index: 1000;
   height: 5rem;
 }
 .navbar-section .logo .gradient-color {
@@ -39,9 +36,9 @@ body {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  animation: moveRow 5s linear infinite;
+  animation: moveRowNav 5s linear infinite;
 }
-@keyframes moveRow {
+@keyframes moveRowNav {
   0% {
     transform: translateX(0) rotate(0deg);
   }
@@ -104,6 +101,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .welcome-section h1 {
   font-size: 70px;
   margin-bottom: 30px;
@@ -253,7 +251,7 @@ body {
   margin-top: 80px;
 }
 .roll-section .roll .circle {
-  margin: 0 30px;
+  margin: 0 40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -271,7 +269,7 @@ body {
 .roll-section .roll .circle:nth-child(4) {
   animation-delay: 0.8s;
 }
-@keyframes moveRow {
+@keyframes moveRowFooter {
   0% {
     transform: translateX(0) rotate(0deg);
   }
@@ -297,15 +295,19 @@ body {
 .roll-section .roll #white {
   background-color: rgb(236, 156, 156);
 }
+.top{
+  
+  background-color: black;
+  border: none;
+}
 /* footer section */
 .footer {
-  margin-top: 25px;
   width: 100%;
   background-color: black;
   padding: 15px 0;
   text-align: center;
-  font-family:"Croissant One" ;
-  color: #eee;  
+  font-family: "Croissant One";
+  color: #eee;
   position: relative;
   bottom: 0;
 }
