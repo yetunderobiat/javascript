@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-  scroll-behavior: smooth;
-}
 body {
   background-color: white;
   height: fit-content;
@@ -298,30 +295,37 @@ body {
 .roll-section .roll #white {
   background-color: rgb(236, 156, 156);
 }
-.scroll-up{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-.scroll-up:hover {
-  background-color: #d65252;
-}
 /* .top {
   background-color: black;
   border: none;
+  border-radius: 50%;
   height: 150px;
-  margin-bottom: 2px;
+  /* position: fixed; */
+  /* padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 .top img {
   animation: bounce 0.8s infinite;
+} */ .top {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
 }
+.top img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+.top:hover img {
+  transform: scale(1.1);
+}
+
 @keyframes bounce {
   0%,
   100% {
@@ -332,7 +336,7 @@ body {
     transform: translateY(-15px);
     animation-timing-function: ease-out;
   }
-} */
+}
 /* footer section */
 .footer {
   width: 100%;
