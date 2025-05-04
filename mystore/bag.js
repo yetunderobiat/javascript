@@ -4,12 +4,19 @@ function toggleMenu(button) {
   navLinks.classList.toggle("active");
 }
 
-function toggleForm(type){
-    const signinForm=document.querySelector('.signin-form');
-    const loginForm=document.querySelector('.login-form-box');
+function toggleForm(type) {
+  const signinForm = document.querySelector(".signin-form");
+  const loginForm = document.querySelector(".login-form-box");
 
-    if (type === 'signin'){
-        signinForm.computedStyleMap.display=signinForm.computedStyleMap.display==='block'?'none':'block';
-        loginForm.computedStyleMap.display='none';
-    }
+  if (type === "signin") {
+    signinForm.computedStyleMap.display =
+      signinForm.computedStyleMap.display === "block" ? "none" : "block";
+    loginForm.computedStyleMap.display = "none";
+  }
+
+  if (type === "login") {
+    loginForm.style.display =
+      loginForm.style.display === "block" ? "none" : "block";
+    signinForm.style.display = "none";
+  }
 }
