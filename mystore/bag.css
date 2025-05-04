@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  height: fit-content;
+  width: 100%;
+}
+
+/* navbar section */
+.navbar-section {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar-section .logo .gradient-color {
+  margin-left: 10px;
+  padding-right: 10px;
+  font-size: 50px;
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #ff0808, #d65252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
