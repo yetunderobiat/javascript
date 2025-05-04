@@ -38,18 +38,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  padding: 20px 50px;
+  flex-direction: column;
+  padding: 20px 0;
   background-color: black;
   position: absolute;
   top: 85px;
-  width: 100%;
+  right: 5px;
+  width: 300px;
+  height: 600px;
 }
 /* navbar section */
 .navbar-section {
   background-color: rgb(0, 0, 0);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: 5rem;
   z-index: 1000;
@@ -70,14 +72,13 @@ body {
 .navbar-section .nav-link a {
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   font-family: Croissant One;
   text-transform: capitalize;
 }
 .navbar-section .nav-link:hover a {
   transition: all 0.2s ease-in-out;
-  color: red;
-  padding: 5px 18px;
+  background-color: red;
+  padding: 5px 50px;
   border-radius: 5px;
-  border: 2px solid white;
 }
