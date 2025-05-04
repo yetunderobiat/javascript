@@ -18,23 +18,21 @@ body {
 .hamburger div {
   width: 30px;
   height: 4px;
-  background-color: #d4af37;
+  background-color: red;
 }
 .nav-links {
   display: none;
 }
 .nav-links.active {
   display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  gap: 25px;
-  background-color: red;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px 50px;
+  background-color: black;
   position: absolute;
-  top: 60px;
-  right: 20px;
-  width: 200px;
-  text-align: center;
-  height: 250px;
+  top: 85px;
+  width: 100%;
 }
 /* navbar section */
 .navbar-section {
@@ -57,4 +55,18 @@ body {
   background: linear-gradient(to right, #ff0808, #d65252);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.navbar-section .nav-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-family: Croissant One;
+  text-transform: capitalize;
+}
+.navbar-section .nav-link:hover a {
+  transition: all 0.2s ease-in-out;
+  color: red;
+  padding: 5px 18px;
+  border-radius: 5px;
+  border: 2px solid white;
 }
