@@ -300,32 +300,7 @@ body {
 .roll-section .roll #white {
   background-color: rgb(236, 156, 156);
 }
-.top {
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2000;
-  animation: bounce 0.8s infinite;
-}
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-in;
-  }
-  50% {
-    transform: translateY(-15px);
-    animation-timing-function: ease-out;
-  }
-}
+
 /* footer section */
 .footer {
   width: 100%;
