@@ -18,7 +18,7 @@ body {
 .hamburger div {
   width: 40px;
   height: 5px;
-  background-color: red;
+  background-color: rgb(240, 63, 122);
   border-radius: 5px;
   transition: all 0.8s ease;
 }
@@ -49,15 +49,11 @@ body {
 }
 /* navbar section */
 .navbar-section {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(39, 39, 39);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   height: 5rem;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
 }
 .navbar-section .logo .gradient-color {
@@ -65,41 +61,164 @@ body {
   padding-right: 10px;
   font-size: 50px;
   font-family: Oleo Script;
-  background: linear-gradient(to right, #ff0808, #d65252);
+  background: linear-gradient(to right, rgb(240, 63, 122), #a54f65);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .navbar-section .nav-link a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 20px;
   font-family: Croissant One;
   text-transform: capitalize;
 }
 .navbar-section .nav-link:hover a {
   transition: all 0.2s ease-in-out;
-  background-color: red;
+  background-color: rgb(240, 63, 122);
   padding: 5px 50px;
   border-radius: 5px;
 }
+.homepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(240, 63, 122);
+  border-radius: 8px;
+  padding: 5px 25px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Croissant One;
+  transition: all 0.4s ease;
+}
+.homepage:hover{
+    color: white;
+}
+.homepage img {
+  width: 19%;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .signin p,
 .login p {
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-family: Croissant One;
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
 }
+.login img {
+  width: 25%;
+  animation: bounceLogin 0.5s infinite;
+}
+@keyframes bounceLogin {
+  0%,
+  100% {
+    transform: translateX(-6px);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+}
+.signin img {
+  width: 25%;
+  animation: bounceSignin 0.5s infinite;
+}
+@keyframes bounceSignin {
+  0%,
+  100% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
 .signin,
 .login {
-  background-color: red;
-  border-radius: 5px;
-  padding: 10px 40px;
+  background-color: rgb(240, 63, 122);
+  border-radius: 8px;
+  padding: 7px 20px;
+}
+.login {
+  margin-left: 10px;
+}
+.login-form,
+.signin-form {
+  background-color: rgb(196, 112, 140);
+  position: absolute;
+  top: 85px;
+  right: 5px;
+  width: 400px;
+  height: fit-content;
+  display: none;
+  border-radius: 15px;
+  padding: 30px 25px;
+  color: black;
+  font-family: Croissant One;
+  transition: all 0.4s ease;
+}
+.login-form input,
+.signin-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(185, 183, 183);
+  color: black;
+  font-size: 14px;
+  font-family: Croissant One;
+  transition: background-color 0.3s ease;
 }
 
-.login-form {
-  display: none;
-  margin-top: 10px;
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 5px;
+.login-form input:focus,
+.signin-form input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+.login-form label,
+.signin-form label {
+  font-family: Croissant One;
+  font-weight: 500;
+  display: inline;
+}
+.login-form input[type="submit"],
+.signin-form input[type="submit"] {
+  background: linear-gradient(to right, rgb(240, 63, 122), #a54f65);
+  font-family: Croissant One;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.login-form input[type="submit"]:hover,
+.signin-form input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+.signin p,
+.login p {
+  color: black;
+  font-family: Croissant One;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.signin p:hover,
+.login p:hover {
+  transform: scale(1.05);
+  color: #ffdcdc;
 }

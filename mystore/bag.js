@@ -9,14 +9,20 @@ function toggleForm(type) {
   const loginForm = document.querySelector(".login-form-box");
 
   if (type === "signin") {
-    signinForm.computedStyleMap.display =
-      signinForm.computedStyleMap.display === "block" ? "none" : "block";
-    loginForm.computedStyleMap.display = "none";
+    if (signinForm.style.display === "block") {
+      signinForm.style.display = "none";
+    } else {
+      signinForm.style.display = "block";
+    }
+    loginForm.style.display = "none";
   }
 
   if (type === "login") {
-    loginForm.style.display =
-      loginForm.style.display === "block" ? "none" : "block";
+    if (loginForm.style.display === "block") {
+      loginForm.style.display = "none";
+    } else {
+      loginForm.style.display = "block";
+    }
     signinForm.style.display = "none";
   }
 }
