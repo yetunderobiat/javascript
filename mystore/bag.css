@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: white;
+  background: linear-gradient(#f0b9c7, pink
+  );
   height: fit-content;
   width: 100%;
 }
@@ -267,22 +268,15 @@ body {
   width: 280px;
   height: 400px;
   border: 1px solid black;
-  background-color: rgb(146, 146, 146);
+  /* background-color: rgb(146, 146, 146); */
 }
 .items .kids .kidbags img {
   width: 100%;
-  height: 70%;
+  height: 73%;
   object-fit: cover;
 }
-.items .kids .kidbags .tag {
-  font-size: 16px;
-  font-weight: 600;
-  font-family: Croissant One;
-  color: black;
-  text-align: center;
-  margin: 3px 0;
-}
 .items .kids .kidbags .price {
+  margin: 10px 0;
   font-size: 20px;
   font-weight: 600;
   text-align: center;
@@ -298,5 +292,5 @@ body {
   font-size: small;
   font-family: Croissant One;
   padding: 11px 80px;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
