@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  height: fit-content;
+  width: 100%;
+}
+
+/* navbar section */
+.navbar-section {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar-section .logo .gradient-color {
+  margin-left: 10px;
+  padding-right: 10px;
+  font-size: 50px;
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #5f0ee2, #528bd6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-section .roll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-section .roll .circle {
+  margin: 0 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  animation: moveRowNav 5s linear infinite;
+}
+@keyframes moveRowNav {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+.navbar-section .roll #red {
+  background-color: rgb(11, 11, 117);
+}
+.navbar-section .roll #blue {
+  background-color: #001cb8;
+}
+.navbar-section .roll #yellow {
+  background-color: rgb(44, 95, 235);
+}
+.navbar-section .roll #green {
+  background-color: rgb(101, 152, 230);
+}
+.navbar-section .roll #white {
+  background-color: rgb(189, 161, 255);
+}
+.navbar-section .nav-links {
+  gap: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-section .nav-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-family: Croissant One;
+  text-transform: capitalize;
+}
+.navbar-section .nav-link:hover a {
+  transition: all 0.2s ease-in-out;
+  padding: 5px 18px;
+  border-radius: 5px;
+  border: 2px solid blue;
+}
+.navbar-section #about a {
+  padding: 5px 18px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #5f0ee2, #528bd6);
+  color: black;
+}
+
+/* ball section  */
+.roll-section .roll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.roll-section .roll .circle {
+  margin: 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: moveRowFooter 5s linear infinite;
+}
+.roll-section .roll .circle:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.roll-section .roll .circle:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.roll-section .roll .circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.roll-section .roll .circle:nth-child(4) {
+  animation-delay: 0.8s;
+}
+@keyframes moveRowFooter {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+.roll-section .roll #red {
+  background-color: rgb(11, 11, 117);
+}
+.roll-section .roll #blue {
+  background-color: #001cb8;
+}
+.roll-section .roll #yellow {
+  background-color: rgb(44, 95, 235);
+}
+.roll-section .roll #green {
+  background-color: rgb(101, 152, 230);
+}
+.roll-section .roll #white {
+  background-color: rgb(189, 161, 255);
+}
+
+/* footer section */
+.footer {
+  width: 100%;
+  background-color: black;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Croissant One";
+  color: #eee;
+}
+.footer-logo {
+  color: red;
+  font-weight: bold;
+}
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .footer p {
+    font-size: 13px;
+  }
+}
