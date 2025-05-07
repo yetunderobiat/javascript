@@ -17,7 +17,7 @@ body {
   align-items: center;
   height: 5rem;
   z-index: 1000;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -162,7 +162,7 @@ body {
   background-image: url(images/mall.avif);
   background-size: contain;
   background-position: center;
-  height: 400px;
+  height: 500px;
   width: 100%;
   margin-bottom: 50px;
 }
@@ -187,13 +187,40 @@ body {
   color: blue;
   text-decoration: none;
 }
-.content-section h2{
+.content-section h2 {
   color: white;
   font-family: "Croissant One";
-  
 }
-.content-section img{
+.content-section img {
   margin: 20px 0;
+}
+.content-section .about {
+  margin-bottom: 30px;
+  background: linear-gradient(to right, blue, #5f0ee2, #528bd6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-family: "Croissant One";
+  /* width: 35%; */
+  text-align: center;
+  letter-spacing: 3px;
+}
+.content-section .text {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  width: 45%;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+.content-section .pic {
+  display:flex;
+}
+.content-section .pic img {
+  margin: 0 auto;
+  width: 30%;
 }
 /* footer section */
 .footer {
