@@ -17,7 +17,7 @@ body {
   align-items: center;
   height: 5rem;
   z-index: 1000;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -147,7 +147,39 @@ body {
 .roll-section .roll #white {
   background-color: rgb(189, 161, 255);
 }
-
+/* content section  */
+.content-section{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image:url(images/mall.avif) ;
+  background-size: contain;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+.content h1{
+  font-size: 70px;
+  font-weight: 800;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content .gradient-color{
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #5f0ee2, #528bd6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content a{
+  display: flex;
+  text-decoration: none;
+  color: #001cb8;
+}
 /* footer section */
 .footer {
   width: 100%;
