@@ -189,7 +189,7 @@ body {
   font-weight: 900;
   margin: 0 10px;
 }
-.content .content-link a:hover{
+.content .content-link a:hover {
   color: #001cb8;
 }
 .content-section h2 {
@@ -206,7 +206,6 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: 40px;
   font-family: "Croissant One";
-  /* width: 35%; */
   text-align: center;
   letter-spacing: 3px;
 }
@@ -311,6 +310,24 @@ body {
 }
 .scroll-container:hover {
   cursor: pointer;
+}
+.update-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0;
+}
+.update-section h2 {
+  color: white;
+  font-weight: 400;
+  font-family: "Croissant One";
+}
+.update-section img{
+  
+}
+.update-section h1{
+  color: #001cb8;
 }
 /* footer section */
 .footer {
