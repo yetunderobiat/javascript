@@ -1,14 +1,16 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  /* background: linear-gradient(#f0b9c7, pink); */
   background-color: rgb(126, 126, 126);
   height: fit-content;
   width: 100%;
 }
+
 /* Hamburger Menu */
 .hamburger {
   display: flex;
@@ -16,6 +18,7 @@ body {
   gap: 5px;
   cursor: pointer;
 }
+
 .hamburger div {
   width: 40px;
   height: 5px;
@@ -23,18 +26,23 @@ body {
   border-radius: 5px;
   transition: all 0.4s ease;
 }
+
 .hamburger.active div:nth-child(1) {
   transform: rotate(45deg) translate(5.5px, 6px);
 }
+
 .hamburger.active div:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active div:nth-child(3) {
   transform: rotate(-45deg) translate(8px, -8px);
 }
+
 .nav-links {
   display: none;
 }
+
 .nav-links.active {
   display: flex;
   justify-content: space-between;
@@ -46,9 +54,12 @@ body {
   top: 85px;
   right: 5px;
   width: 300px;
-  height: 600px;
+  height: auto;
+  max-height: 90vh;
+  overflow-y: auto;
 }
-/* navbar section */
+
+/* Navbar Section */
 .navbar-section {
   background-color: rgb(39, 39, 39);
   display: flex;
@@ -57,6 +68,7 @@ body {
   height: 5rem;
   width: 100%;
 }
+
 .navbar-section .logo .gradient-color {
   margin-left: 10px;
   padding-right: 10px;
@@ -66,6 +78,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .navbar-section .nav-link a {
   text-decoration: none;
   color: white;
@@ -73,12 +86,14 @@ body {
   font-family: Croissant One;
   text-transform: capitalize;
 }
+
 .navbar-section .nav-link:hover a {
   transition: all 0.2s ease-in-out;
   background-color: rgb(240, 63, 122);
   padding: 5px 50px;
   border-radius: 5px;
 }
+
 .homepage {
   display: flex;
   justify-content: space-between;
@@ -93,17 +108,21 @@ body {
   font-family: Croissant One;
   transition: all 0.4s ease;
 }
+
 .homepage:hover {
   color: white;
 }
+
 .homepage img {
   width: 19%;
 }
+
 .details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .signin p,
 .login p {
   display: flex;
@@ -113,11 +132,20 @@ body {
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.signin p:hover,
+.login p:hover {
+  transform: scale(1.05);
+  color: #ffdcdc;
+}
+
 .login img {
   width: 25%;
   animation: bounceLogin 0.5s infinite;
 }
+
 @keyframes bounceLogin {
   0%,
   100% {
@@ -129,10 +157,12 @@ body {
     animation-timing-function: ease-out;
   }
 }
+
 .signin img {
   width: 25%;
   animation: bounceSignin 0.5s infinite;
 }
+
 @keyframes bounceSignin {
   0%,
   100% {
@@ -144,15 +174,18 @@ body {
     animation-timing-function: ease-out;
   }
 }
+
 .signin,
 .login {
   background-color: rgb(240, 63, 122);
   border-radius: 8px;
   padding: 7px 20px;
 }
+
 .login {
   margin-left: 10px;
 }
+
 .login-form,
 .signin-form {
   background-color: rgb(196, 112, 140);
@@ -160,6 +193,7 @@ body {
   top: 85px;
   left: 10px;
   width: 400px;
+  max-width: 90%;
   height: fit-content;
   display: none;
   border-radius: 15px;
@@ -167,7 +201,9 @@ body {
   color: black;
   font-family: Croissant One;
   transition: all 0.4s ease;
+  z-index: 1000;
 }
+
 .login-form input,
 .signin-form input {
   width: 100%;
@@ -187,12 +223,14 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
+
 .login-form label,
 .signin-form label {
   font-family: Croissant One;
   font-weight: 500;
   display: inline;
 }
+
 .login-form input[type="submit"],
 .signin-form input[type="submit"] {
   background: linear-gradient(to right, rgb(240, 63, 122), #a54f65);
@@ -209,20 +247,7 @@ body {
 .signin-form input[type="submit"]:hover {
   transform: scale(1.05);
 }
-.signin p,
-.login p {
-  color: black;
-  font-family: Croissant One;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.signin p:hover,
-.login p:hover {
-  transform: scale(1.05);
-  color: #ffdcdc;
-}
+
 .items {
   display: flex;
   justify-content: center;
@@ -230,6 +255,7 @@ body {
   flex-direction: column;
   margin: 50px 0;
 }
+
 .items .info {
   position: relative;
   overflow: hidden;
@@ -244,6 +270,7 @@ body {
   cursor: pointer;
   z-index: 1;
 }
+
 .items .info::before {
   content: "";
   position: absolute;
@@ -256,70 +283,46 @@ body {
   transition: all 1s ease;
   z-index: -1;
 }
+
 .items .info:hover::before {
   left: 0;
 }
 
-/* kid bags  */
-.items .kids {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-}
-.items .kids .kidbags {
-  width: 280px;
-  height: 400px;
-  border: 1px solid black;
-}
-.items .kids .kidbags img {
-  width: 100%;
-  height: 73%;
-  object-fit: cover;
-}
-.items .kids .kidbags .price {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3px;
-  font-family: cursive;
-}
-.items .kids .kidbags button {
-  border: none;
-  border-radius: 8px;
-  background-color: rgb(240, 63, 122);
-  color: white;
-  font-weight: 600;
-  font-size: small;
-  font-family: Croissant One;
-  padding: 11px 80px;
-  margin: 10px 10px;
-}
-
-/* adult bags  */
+.items .kids,
 .items .adults {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: auto;
 }
+
+.items .kids .kidbags,
 .items .adults .adultbags {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   height: 400px;
   border: 1px solid black;
+  margin: auto;
 }
+
+.items .kids .kidbags img,
 .items .adults .adultbags img {
   width: 100%;
   height: 73%;
   object-fit: cover;
 }
+
+.items .kids .kidbags .price,
 .items .adults .adultbags .price {
-  margin: 10px 0;
+  margin: 10px 0 3px 0;
   font-size: 20px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 3px;
   font-family: cursive;
 }
+
+.items .kids .kidbags button,
 .items .adults .adultbags button {
   border: none;
   border-radius: 8px;
@@ -328,9 +331,12 @@ body {
   font-weight: 600;
   font-size: small;
   font-family: Croissant One;
-  padding: 11px 80px;
-  margin: 10px 10px;
+  padding: 10px 20px;
+  width: 90%;
+  margin: 10px auto;
+  display: block;
 }
+
 .top {
   position: fixed;
   bottom: 100px;
@@ -346,6 +352,7 @@ body {
   z-index: 2000;
   animation: bounce 0.8s infinite;
 }
+
 @keyframes bounce {
   0%,
   100% {
@@ -357,18 +364,21 @@ body {
     animation-timing-function: ease-out;
   }
 }
+
 .instagram {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
+
 .instagram p {
   font-size: 25px;
   font-weight: 500;
   font-family: Croissant One;
   margin-bottom: 20px;
 }
+
 .instagram a {
   display: flex;
   justify-content: space-between;
@@ -390,9 +400,11 @@ body {
   font-family: Croissant One;
   letter-spacing: 2px;
 }
+
 .instagram .a img {
   width: 4%;
 }
+
 .image-design {
   overflow: hidden;
   display: flex;
@@ -400,6 +412,7 @@ body {
   align-items: center;
   height: 60vh;
 }
+
 .scroll-container {
   white-space: nowrap;
   overflow-x: auto;
@@ -427,10 +440,16 @@ body {
   pointer-events: auto;
 }
 
+.scroll-container img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
 .scroll-container:hover {
   cursor: pointer;
 }
-/* footer section */
+
+/* Footer Section */
 .footer {
   width: 100%;
   background-color: black;
@@ -439,14 +458,17 @@ body {
   font-family: "Croissant One";
   color: #eee;
 }
+
 .footer-logo {
   color: rgb(240, 63, 122);
   font-weight: bold;
 }
+
 .footer p {
   margin: 5px 0;
   font-size: 14px;
 }
+
 @media (max-width: 600px) {
   .footer p {
     font-size: 13px;
