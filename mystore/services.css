@@ -164,7 +164,6 @@ body {
   background-position: center;
   height: 500px;
   width: 100%;
-  margin-bottom: 50px;
 }
 .content h1 {
   font-size: 70px;
@@ -193,11 +192,21 @@ body {
   color: #001cb8;
 }
 .content-section h2 {
+  margin-top: 100px;
   color: white;
   font-family: "Croissant One";
 }
-.content-section img {
-  margin: 20px 0;
+.content-section .serving {
+  font-size: 25px;
+  color: white;
+  font-family: "Croissant One";
+}
+.content-section hr {
+  width: 60px;
+  height: 3px;
+  background-color: sienna;
+  border: none;
+  margin: 15px 0;
 }
 .content-section .about {
   margin-bottom: 30px;
@@ -323,11 +332,41 @@ body {
   font-weight: 400;
   font-family: "Croissant One";
 }
-.update-section img{
-  
+.update-section .decor-line {
+  width: 60px;
+  height: 3px;
+  background-color: sienna;
+  border: none;
+  margin: 10px 0;
 }
-.update-section h1{
+.update-section h1 {
+  font-size: 35px;
+  font-family: "Croissant One";
   color: #001cb8;
+}
+.update-section p {
+  color: white;
+  font-family: "Croissant One";
+}
+.update-section .mail {
+  margin: 10px 0;
+}
+.update-section .mail input {
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #001cb8;
+}
+.update-section .mail button {
+  padding: 10px 20px;
+  background-color: #001cb8;
+  font-family: "Croissant One";
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.update-section .mail button:hover {
+  background-color: #528bd6;
 }
 /* footer section */
 .footer {
