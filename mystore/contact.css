@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: beige;
+  font-family: "Croissant One", sans-serif;
+  color: #054d1a;
+}
+
+/* navbar section */
+.navbar-section {
+  background-color: #054d1a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar-section .logo .gradient-color {
+  margin-left: 10px;
+  padding-right: 10px;
+  font-size: 50px;
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #1abc9c, #2ecc71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-section .roll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-section .roll .circle {
+  margin: 0 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  animation: moveRowNav 5s linear infinite;
+}
+@keyframes moveRowNav {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+.navbar-section .roll #red {
+  background-color: #1a531b;
+}
+.navbar-section .roll #blue {
+  background-color: #27ae60;
+}
+.navbar-section .roll #yellow {
+  background-color: #2ecc71;
+}
+.navbar-section .roll #green {
+  background-color: #58d68d;
+}
+.navbar-section .roll #white {
+  background-color: #a9dfbf;
+}
+.navbar-section .nav-links {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-section .nav-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.navbar-section .nav-link:hover a {
+  transition: all 0.2s ease-in-out;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid #2ecc71;
+}
+.navbar-section #services a {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #1abc9c, #2ecc71);
+  color: black;
+}
+
+/* Contact content styling */
+h1,
+h2 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 2.5rem;
+}
+h1.gradient-color {
+  font-size: 2.5rem;
+  font-family: Oleo Script;
+  color: #117a43;
+  
+}
+p {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 18px;
+  max-width: 600px;
+}
+.decor-line {
+  width: 60px;
+  height: 3px;
+  background-color: #1abc9c;
+  border: none;
+  margin: 20px auto;
+}
+
+/* Contact links */
+.address-link,
+.phone-link {
+  display: block;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 18px;
+  text-decoration: none;
+  color: #117a43;
+}
+.address-link:hover,
+.phone-link:hover {
+  color: #27ae60;
+}
+
+/* Social media icons */
+a img {
+  width: 40px;
+  height: 40px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+/* roll section */
+.roll-section .roll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.roll-section .roll .circle {
+  margin: 0 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: moveRowFooter 5s linear infinite;
+}
+@keyframes moveRowFooter {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+.roll-section .roll #red {
+  background-color: #1a531b;
+}
+.roll-section .roll #blue {
+  background-color: #27ae60;
+}
+.roll-section .roll #yellow {
+  background-color: #2ecc71;
+}
+.roll-section .roll #green {
+  background-color: #58d68d;
+}
+.roll-section .roll #white {
+  background-color: #a9dfbf;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #054d1a;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Croissant One";
+  color: #ecf0f1;
+  margin-top: 50px;
+}
+.footer-logo {
+  color: #2ecc71;
+  font-weight: bold;
+}
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .footer p {
+    font-size: 13px;
+  }
+}
