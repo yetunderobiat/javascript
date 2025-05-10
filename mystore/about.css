@@ -206,7 +206,7 @@ body {
   letter-spacing: 3px;
 }
 .content-section .text {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: white;
   font-size: 22px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -256,6 +256,43 @@ body {
 .content-section .page .button {
   border: 2px solid #4357cc;
   background-color: transparent;
+}
+/* photo gallery section   */
+.instagram .a img {
+  width: 4%;
+}
+.image-design {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.scroll-container {
+  white-space: nowrap;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  scroll-behavior: smooth;
+  cursor: pointer;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.scroll-container a {
+  display: inline-block;
+  text-decoration: none;
+}
+.scroll-container img {
+  height: 250px;
+  margin: 0 10px;
+  border-radius: 12px;
+  transition: transform 1s ease, filter 1s ease;
+  pointer-events: auto;
+}
+.scroll-container:hover {
+  cursor: pointer;
 }
 /* footer section */
 .footer {
