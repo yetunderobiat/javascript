@@ -6,7 +6,6 @@
 body {
   background-color: beige;
   font-family: "Croissant One", sans-serif;
-  color: #054d1a;
 }
 
 /* navbar section */
@@ -109,17 +108,52 @@ body {
   width: 90%;
   color: black;
 }
-.body-section .box .col1 .gradient-color{
-    font-size: 70px;
-    font-family: Oleo Script;
-    background: linear-gradient(to right, #7f5af0, #00c6ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.body-section .box .col1 .gradient-color {
+  font-size: 70px;
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #7f5af0, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.body-section .box .col1 p{
-    margin: 10px 0;
-    width: 50%;
-    font-size: 18px;
+.body-section .box .col1 p {
+  margin: 10px 0;
+  width: 50%;
+  font-size: 18px;
+}
+.body-section .box .col1 ul {
+  margin: 20px 0;
+  list-style-type: none;
+}
+.body-section .box .col1 li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+.body-section .box .col1 li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.body-section .box .col1 button {
+  border: none;
+  padding: 13px 40px;
+  background-color: #5e60ce;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: "Croissant One";
+}
+.body-section .box .social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 10px 0;
+}
+.body-section .box .social-icons a img {
+  width: 35px;
+  height: 35px;
 }
 /* Footer */
 .footer {
