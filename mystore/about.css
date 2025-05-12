@@ -4,21 +4,17 @@
   box-sizing: border-box;
 }
 body {
-  background-color: beige;
+  background-color: #fff8e1; 
   font-family: "Croissant One", sans-serif;
 }
 
 /* navbar section */
 .navbar-section {
-  background-color: #4d052f;
+  background-color: #f1c40f; 
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 5rem;
-  /* z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0; */
   width: 100%;
 }
 .navbar-section .logo .gradient-color {
@@ -26,7 +22,7 @@ body {
   padding-right: 10px;
   font-size: 50px;
   font-family: Oleo Script;
-  background: linear-gradient(to right, #ad1b70, #50263d);
+  background: linear-gradient(to right, #f39c12, #d35400);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -54,19 +50,19 @@ body {
   }
 }
 .navbar-section .roll #red {
-  background-color: #1a531b;
+  background-color: #f39c12;
 }
 .navbar-section .roll #blue {
-  background-color: #27ae60;
+  background-color: #f7dc6f;
 }
 .navbar-section .roll #yellow {
-  background-color: #2ecc71;
+  background-color: #f1c40f;
 }
 .navbar-section .roll #green {
-  background-color: #58d68d;
+  background-color: #f9e79f;
 }
 .navbar-section .roll #white {
-  background-color: #a9dfbf;
+  background-color: #fcf3cf;
 }
 .navbar-section .nav-links {
   gap: 20px;
@@ -76,7 +72,7 @@ body {
 }
 .navbar-section .nav-link a {
   text-decoration: none;
-  color: white;
+  color: #4d052f;
   font-size: 15px;
   text-transform: capitalize;
 }
@@ -84,40 +80,40 @@ body {
   transition: all 0.2s ease-in-out;
   padding: 5px 15px;
   border-radius: 5px;
-  border: 2px solid #2ecc71;
+  border: 2px solid #f39c12;
+  color: #4d052f;
 }
 .navbar-section #about a {
   padding: 5px 15px;
   border-radius: 5px;
-  background: linear-gradient(to right, #1abc9c, #2ecc71);
-  color: black;
+  background: linear-gradient(to right, #f9e79f, #f1c40f);
+  color: #4d052f;
 }
+
 /* body section  */
 .body-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  height: 75vh;
+  margin: 50px 50px;
 }
 .body-section .box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-  border: 2px solid #4d052f;
-  width: 90%;
-  color: black;
+  color: #4d052f;
 }
 .body-section .box .col1 .gradient-color {
   font-size: 70px;
   font-family: Oleo Script;
-  background: linear-gradient(to right, #7f5af0, #00c6ff);
+  background: linear-gradient(to right, #f39c12, #f1c40f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .body-section .box .col1 p {
   margin: 10px 0;
-  width: 50%;
+  width: 80%;
   font-size: 18px;
 }
 .body-section .box .col1 ul {
@@ -139,11 +135,16 @@ body {
 .body-section .box .col1 button {
   border: none;
   padding: 13px 40px;
-  background-color: #5e60ce;
-  color: white;
+  background-color: #f1c40f;
+  color: #4d052f;
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: "Croissant One";
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.body-section .box .col1 button:hover {
+  background-color: #f39c12;
 }
 .body-section .box .social-icons {
   display: flex;
@@ -155,20 +156,59 @@ body {
   width: 35px;
   height: 35px;
 }
+.body-section .box .col2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  gap: 0;
+  width: 150%;
+  max-width: 1200px;
+  margin: auto;
+}
+.body-section .box .col2 > div {
+  overflow: hidden;
+}
+.body-section .box .col2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.col2 .a {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.col2 .b {
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+.col2 .c {
+  grid-column: 3;
+  grid-row: 2 / span 2;
+}
+.col2 .d {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+.col2 .e {
+  grid-column: 4;
+  grid-row: 2 / span 2;
+}
+
 /* Footer */
 .footer {
   width: 100%;
-  background-color: #054d1a;
+  background-color: #f1c40f;
   padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Croissant One";
-  color: #ecf0f1;
+  color: #4d052f;
   margin-top: 50px;
 }
 .footer-logo {
-  color: #2ecc71;
+  color: #d35400;
   font-weight: bold;
 }
 .footer p {
