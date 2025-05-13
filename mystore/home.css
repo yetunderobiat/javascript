@@ -247,7 +247,15 @@ body {
 .grid-section .grid .box button a:hover {
   color: inherit;
 }
-
+.grid-section .pictures {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 50px;
+}
+.grid-section .pictures img {
+  width: 25%;
+}
 /* ball section  */
 .roll-section .roll {
   display: flex;
