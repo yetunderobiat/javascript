@@ -252,7 +252,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 90px ;
+  gap: 90px;
   margin: 80px 0;
 }
 .grid-section .pictures img {
@@ -267,6 +267,20 @@ body {
     transform: rotate(360deg);
   }
 }
+.grid-section .game {
+  padding: 2rem 15rem;
+  margin: 5rem 0;
+  background-color: #ff0808;
+  border: none;
+  border-radius: 8px;
+}
+.grid-section .game a{
+  text-decoration: none;
+  color: #eee;
+  font-family: Croissant One;
+  font-size: 2rem;
+}
+
 /* ball section  */
 .roll-section .roll {
   display: flex;

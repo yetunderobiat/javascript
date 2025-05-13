@@ -259,7 +259,36 @@ body {
 .items .info:hover::before {
   left: 0;
 }
-
+.items .inform {
+  position: relative;
+  overflow: hidden;
+  padding: 15px 100px;
+  margin-top:10rem ;
+  margin-bottom: 2rem;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(39, 39, 39);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+.items .info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 63, 122);
+  color: black;
+  transition: all 1s ease;
+  z-index: -1;
+}
+.items .info:hover::before {
+  left: 0;
+}
 /* kid bags  */
 .items .kids {
   display: grid;
