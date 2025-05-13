@@ -136,6 +136,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 20px;
 }
 .grid-section .logo h1 {
   margin-left: 270px;
@@ -249,12 +250,22 @@ body {
 }
 .grid-section .pictures {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 50px 50px;
+  gap: 90px ;
+  margin: 80px 0;
 }
 .grid-section .pictures img {
   width: 25%;
+  animation: roll-infinite 5s linear infinite;
+}
+@keyframes roll-infinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 /* ball section  */
 .roll-section .roll {
