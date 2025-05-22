@@ -1,14 +1,58 @@
-* {
+/* Reset and Base Styles */
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  /* background: linear-gradient(to right, #f0b9c7, #a076b0); */
   background-color: #2b2b2b;
   height: fit-content;
   width: 100%;
 }
+
+/* Navbar Section */
+.navbar-section {
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  padding: 0 5rem;
+}
+
+.navbar-section .gradient-color {
+  margin-left: 10px;
+  padding-right: 10px;
+  font-size: 50px;
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #f0b9c7, #a076b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-section .nav-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: Croissant One;
+  text-transform: capitalize;
+}
+
+.navbar-section .nav-link:hover a {
+  transition: all 0.2s ease-in-out;
+  background-color: #f1a8b6;
+  padding: 5px 50px;
+  border-radius: 5px;
+}
+
+#homepage {
+  margin-right: 10px;
+  text-align: center;
+  width: 16%;
+}
+
 /* Hamburger Menu */
 .hamburger {
   display: flex;
@@ -16,6 +60,7 @@ body {
   gap: 5px;
   cursor: pointer;
 }
+
 .hamburger div {
   width: 40px;
   height: 5px;
@@ -23,18 +68,23 @@ body {
   border-radius: 5px;
   transition: all 0.4s ease;
 }
+
 .hamburger.active div:nth-child(1) {
   transform: rotate(45deg) translate(5.5px, 6px);
 }
+
 .hamburger.active div:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active div:nth-child(3) {
   transform: rotate(-45deg) translate(8px, -8px);
 }
+
 .nav-links {
   display: none;
 }
+
 .nav-links.active {
   display: flex;
   justify-content: space-between;
@@ -48,55 +98,37 @@ body {
   width: 300px;
   height: 600px;
 }
-/* navbar section */
-.navbar-section {
-  background-color: #1d1d1d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-  width: 100%;
-  padding: 0 5rem;
-}
-.navbar-section .gradient-color {
-  margin-left: 10px;
-  padding-right: 10px;
-  font-size: 50px;
-  font-family: Oleo Script;
-  background: linear-gradient(to right, #f0b9c7, #a076b0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.navbar-section .nav-link a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Croissant One;
-  text-transform: capitalize;
-}
-.navbar-section .nav-link:hover a {
-  transition: all 0.2s ease-in-out;
-  background-color: #f1a8b6;
-  padding: 5px 50px;
-  border-radius: 5px;
-}
-#homepage {
-  margin-right: 10px;
-  text-align: center;
-  width: 16%;
-}
+
+/* Login and Signin Section */
 .details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.login,
+.signin {
+  background-color: #f1a8b6;
+  border-radius: 8px;
+  padding: 7px 5px;
+}
+
+.login {
+  margin-left: 10px;
+}
+
 .login img {
   width: 20%;
   animation: bounceLogin 0.5s infinite;
 }
+
+.signin img {
+  width: 20%;
+  animation: bounceSignin 0.5s infinite;
+}
+
 @keyframes bounceLogin {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(-6px);
     animation-timing-function: ease-in;
   }
@@ -105,13 +137,9 @@ body {
     animation-timing-function: ease-out;
   }
 }
-.signin img {
-  width: 20%;
-  animation: bounceSignin 0.5s infinite;
-}
+
 @keyframes bounceSignin {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(-6px);
     animation-timing-function: ease-in;
   }
@@ -120,15 +148,7 @@ body {
     animation-timing-function: ease-out;
   }
 }
-.signin,
-.login {
-  background-color: #f1a8b6;
-  border-radius: 8px;
-  padding: 7px 5px;
-}
-.login {
-  margin-left: 10px;
-}
+
 .login-form,
 .signin-form {
   background-color: #e0b4d3;
@@ -144,6 +164,7 @@ body {
   font-family: Croissant One;
   transition: all 0.4s ease;
 }
+
 .login-form input,
 .signin-form input {
   width: 100%;
@@ -157,17 +178,20 @@ body {
   font-family: Croissant One;
   transition: background-color 0.3s ease;
 }
+
 .login-form input:focus,
 .signin-form input:focus {
   background-color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
+
 .login-form label,
 .signin-form label {
   font-family: Croissant One;
   font-weight: 500;
   display: inline;
 }
+
 .login-form input[type="submit"],
 .signin-form input[type="submit"] {
   background: linear-gradient(to right, #f0b9c7, #a076b0);
@@ -179,10 +203,12 @@ body {
   cursor: pointer;
   transition: transform 0.5s ease;
 }
+
 .login-form input[type="submit"]:hover,
 .signin-form input[type="submit"]:hover {
   transform: scale(1.05);
 }
+
 .signin p,
 .login p {
   display: flex;
@@ -194,148 +220,184 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .signin p:hover,
 .login p:hover {
   transform: scale(1.05);
   color: #a35aa3;
 }
+
+/* Items and Bags Grid */
 .items {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h1.info,
+h1.inform {
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+  color: #ff9dcf;
+  text-shadow: 0 0 8px rgba(255, 157, 207, 0.3);
+}
+
+.kids,
+.adults {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.kidbags,
+.adultbags {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 157, 207, 0.2);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kidbags:hover,
+.adultbags:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 157, 207, 0.4);
+}
+
+.items img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffb6d6;
+  margin: 10px 0 5px;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #ffc4e1;
+  margin: 5px 0 10px;
+}
+
+.items button {
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.items button:hover {
+  background-color: #ff85c1;
+}
+
+/* Scroll Container for Images */
+.image-design {
+  overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.scroll-container {
+  white-space: nowrap;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  scroll-behavior: smooth;
+  cursor: pointer;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.scroll-container img {
+  height: 250px;
+  margin: 0 10px;
+  border-radius: 12px;
+  transition: transform 1s ease, filter 1s ease;
+  pointer-events: auto;
+}
+
+.scroll-container:hover {
+  cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+  width: 100%;
+  background-color: #2b2b2b;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Croissant One";
+  color: #eee;
+}
+
+.footer-logo {
+  color: #f1a8b6;
+  font-weight: bold;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Instagram Section */
+.instagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
-  margin: 50px ;
 }
-.items .info {
-  position: relative;
-  overflow: hidden;
-  padding: 15px 100px;
-  margin: 60px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  background-color: #2d2d2d;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1;
-}
-.items .info::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #f1a8b6;
-  color: black;
-  transition: all 1s ease;
-  z-index: -1;
-}
-.items .info:hover::before {
-  left: 0;
-}
-.items .inform {
-  position: relative;
-  overflow: hidden;
-  padding: 15px 100px;
-  margin-top: 10rem;
-  margin-bottom: 2rem;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  background-color: #2d2d2d;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1;
-}
-.items .inform::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #f1a8b6;
-  color: black;
-  transition: all 1s ease;
-  z-index: -1;
-}
-.items .inform:hover::before {
-  left: 0;
-}
-.items .kids {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-}
-.items .kids .kidbags {
-  width: 280px;
-  height: 400px;
-  background-color: #a35aa3;
-}
-.items .kids .kidbags img {
-  width: 100%;
-  height: 73%;
-  object-fit: cover;
-}
-.items .kids .kidbags .price {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3px;
-  font-family: cursive;
-}
-.items .kids .kidbags button {
-  border: none;
-  border-radius: 8px;
-  background-color: #f1a8b6;
-  color: black;
-  font-weight: 600;
-  font-size: small;
-  font-family: Croissant One;
-  padding: 11px 80px;
-  margin: 10px 10px;
-}
-.items .adults {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-}
-.items  .adultbags {
-  width: 80%;
-  
 
-}
-.items  .adultbags img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-}
-.items  .adultbags .price {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3px;
-  font-family: cursive;
-}
-.items .adults .adultbags button {
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  border: none;
-  border-radius: 8px;
-  background-color: #f1a8b6;
-  color: black;
-  font-weight: 600;
-  font-size: small;
+.instagram p {
+  font-size: 25px;
+  font-weight: 500;
   font-family: Croissant One;
-  padding: 11px 20px;
-  margin: 10px 10px;
+  margin-bottom: 20px;
 }
+
+.instagram a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f1a8b6;
+  padding: 5px 10px;
+  text-decoration: none;
+  background: linear-gradient(to right, #f1a8b6, #7f71b4, #f6d365, #a076b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: Croissant One;
+  letter-spacing: 2px;
+}
+
+.instagram .a img {
+  width: 4%;
+}
+
+/* Button to Top */
 .top {
   position: fixed;
   bottom: 100px;
@@ -351,9 +413,9 @@ body {
   z-index: 2000;
   animation: bounce 0.8s infinite;
 }
+
 @keyframes bounce {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
     animation-timing-function: ease-in;
   }
@@ -362,93 +424,18 @@ body {
     animation-timing-function: ease-out;
   }
 }
-.instagram {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-.instagram p {
-  font-size: 25px;
-  font-weight: 500;
-  font-family: Croissant One;
-  margin-bottom: 20px;
-}
-.instagram a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #f1a8b6;
-  padding: 5px 10px;
-  text-decoration: none;
-  background: linear-gradient(
-    to right,
-    #f1a8b6,
-    #7f71b4,
-    #f6d365,
-    #a076b0
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 500;
-  font-size: 17px;
-  font-family: Croissant One;
-  letter-spacing: 2px;
-}
-.instagram .a img {
-  width: 4%;
-}
-.image-design {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-}
-.scroll-container {
-  white-space: nowrap;
-  overflow-x: auto;
-  display: flex;
-  align-items: center;
-  height: 300px;
-  scroll-behavior: smooth;
-  cursor: pointer;
-}
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
-.scroll-container a {
-  display: inline-block;
-  text-decoration: none;
-}
-.scroll-container img {
-  height: 250px;
-  margin: 0 10px;
-  border-radius: 12px;
-  transition: transform 1s ease, filter 1s ease;
-  pointer-events: auto;
-}
-.scroll-container:hover {
-  cursor: pointer;
-}
-/* footer section */
-.footer {
-  width: 100%;
-  background-color: #2b2b2b;
-  padding: 15px 0;
-  text-align: center;
-  font-family: "Croissant One";
-  color: #eee;
-}
-.footer-logo {
-  color: #f1a8b6;
-  font-weight: bold;
-}
-.footer p {
-  margin: 5px 0;
-  font-size: 14px;
-}
+
+/* Responsive Styles */
 @media (max-width: 600px) {
+  img {
+    height: 160px;
+  }
+
+  h1.info,
+  h1.inform {
+    font-size: 1.5rem;
+  }
+
   .footer p {
     font-size: 13px;
   }
