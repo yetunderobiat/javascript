@@ -52,12 +52,13 @@
   .navbar-section {
     background-color: rgb(39, 39, 39);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 5rem;
     width: 100%;
+    padding: 0 5rem;
   }
-  .navbar-section .logo .gradient-color {
+  .navbar-section .gradient-color {
     margin-left: 10px;
     padding-right: 10px;
     font-size: 50px;
@@ -79,43 +80,19 @@
     padding: 5px 50px;
     border-radius: 5px;
   }
-  .homepage {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(113, 255, 100);
-    border-radius: 8px;
-    padding: 5px 25px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    font-family: Croissant One;
-    transition: all 0.4s ease;
-  }
-  .homepage:hover {
-    color: white;
-  }
-  .homepage img {
-    width: 19%;
+  #homepage {
+    margin-right: 10px;
+    text-align: center;
+    width: 16%;
   }
   .details {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .signin p,
-  .login p {
-    display: flex;
-    justify-content: space-between;
-    color: black;
-    font-family: Croissant One;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-  }
+
   .login img {
-    width: 25%;
+    width: 20%;
     animation: bounceLogin 0.5s infinite;
   }
   @keyframes bounceLogin {
@@ -130,7 +107,7 @@
     }
   }
   .signin img {
-    width: 25%;
+    width: 20%;
     animation: bounceSignin 0.5s infinite;
   }
   @keyframes bounceSignin {
@@ -148,7 +125,7 @@
   .login {
     background-color: rgb(113, 255, 100);
     border-radius: 8px;
-    padding: 7px 20px;
+    padding: 7px 5px;
   }
   .login {
     margin-left: 10px;
@@ -211,17 +188,19 @@
   }
   .signin p,
   .login p {
+    display: flex;
+    justify-content: space-around;
     color: black;
     font-family: Croissant One;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   .signin p:hover,
   .login p:hover {
     transform: scale(1.05);
-    color: #ffdcdc;
+    color: green;
   }
   .items {
     display: flex;
