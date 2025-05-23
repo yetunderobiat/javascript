@@ -1,5 +1,4 @@
-
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -128,7 +127,8 @@ body {
 }
 
 @keyframes bounceLogin {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-6px);
     animation-timing-function: ease-in;
   }
@@ -139,7 +139,8 @@ body {
 }
 
 @keyframes bounceSignin {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-6px);
     animation-timing-function: ease-in;
   }
@@ -345,7 +346,8 @@ h1.inform {
 /* Footer Section */
 .footer {
   width: 100%;
-  background-color: #2b2b2b;
+  background-color: #1d1d1d;
+
   padding: 15px 0;
   text-align: center;
   font-family: "Croissant One";
@@ -415,7 +417,8 @@ h1.inform {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
     animation-timing-function: ease-in;
   }
@@ -426,51 +429,151 @@ h1.inform {
 }
 
 /* Responsive Styles */
-@media (max-width: 480px) {
-  .hamburger div {
-    width: 30px;
-    height: 5px;
-  }
+@media (max-width: 768px) {
   .navbar-section {
+    padding: 1rem 2rem;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 1rem;
+    align-items: center;
     height: auto;
   }
 
   .navbar-section .gradient-color {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    margin: 0;
     padding: 0;
-    margin-left: 0;
-  }
-  .navbar-section .nav-link a {
-    font-size: 15px;
-    padding: 20px 0;
-  }
-  .nav-links.active {
-    width: 60vw;
-    height: auto;
-    right: 0.5rem;
-    top: 70px;
-    padding: 2rem;
   }
 
-  #homepage {
-    width: 20%;
-    margin: 0;
+  .navbar-section .nav-link a {
+    font-size: 15px;
+    gap: 20px;
+  }
+
+  .nav-links.active {
+    width: 50vw;
+    top: 75px;
+    right: 10px;
+    height: 20rem;
   }
 
   .details {
     flex-direction: row;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 10px;
   }
 
   .login img,
   .signin img {
-    width: 30px;
+    width: 25px;
   }
 
+  .login-form,
+  .signin-form {
+    width: 55vw;
+    left: 5vw;
+    padding: 1.5rem;
+  }
+
+  h1.info,
+  h1.inform {
+    font-size: 1.7rem;
+  }
+
+  .items img {
+    height: 300px;
+  }
+  .image-design {
+    height: 50vh;
+    margin: 60px 0;
+  }
+
+  .scroll-container img {
+    height: 300px;
+    margin: 20px 40px;
+  }
+
+  .instagram p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .instagram a {
+    font-size: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .instagram .a img {
+    width: 35px;
+  }
+
+  .footer p {
+    font-size: 13px;
+  }
+
+  .top {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger div {
+    text-align: center;
+    width: 30px;
+    height: 5px;
+  }
+  .navbar-section {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .navbar-section .gradient-color {
+    font-size: 2rem;
+    padding: 0;
+    margin-left: 0;
+  }
+  .navbar-section .nav-link a {
+    font-size: 15px;
+    gap: 20px;
+  }
+  .nav-links.active {
+    width: 60vw;
+    height: 20rem;
+    right: 0.5rem;
+    top: 70px;
+    padding: 1rem;
+  }
+  #homepage {
+    display: block;
+    width: 30%;
+    margin: 0 20px;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .login,
+  .signin {
+    padding: 5px 15px;
+  }
+  .login {
+    margin-left: 0;
+  }
+
+  .login img,
+  .signin img {
+    width: 18px;
+  }
+  .signin p,
+  .login p {
+    font-size: 10px;
+  }
   .login-form,
   .signin-form {
     width: 70vw;
@@ -483,7 +586,7 @@ h1.inform {
   }
 
   .items img {
-    height: 150px;
+    height: 350px;
   }
 
   h1.info,
@@ -503,14 +606,22 @@ h1.inform {
 
   .instagram a {
     font-size: 0.9rem;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
   }
 
   .instagram .a img {
-    width: 30px;
+    width: 25px;
+  }
+  .image-design {
+    height: 50vh;
+    margin: 60px 0;
   }
 
+  .scroll-container img {
+    height: 300px;
+    margin: 20px 40px;
+  }
   .footer p {
     font-size: 12px;
   }
@@ -522,5 +633,3 @@ h1.inform {
     bottom: 70px;
   }
 }
-
-
