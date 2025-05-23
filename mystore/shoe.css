@@ -440,3 +440,164 @@ h1.inform {
     font-size: 13px;
   }
 }
+
+@media (max-width: 320px){
+  .navbar-section {
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  
+  .navbar-section .gradient-color {
+    margin-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+  }
+  
+  .navbar-section .nav-link a {
+
+    font-size: 10px;
+  }
+  
+  .navbar-section .nav-link:hover a {
+    padding: 3px 20px;
+  } 
+  #homepage {
+    margin-right: 10px;
+    width: 5%;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 5px;
+  }
+  
+  .nav-links.active {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: absolute;
+    top: 95px;
+    right: 5px;
+    width: 200px;
+    height: 400px;
+  }
+  
+  /* Login and Signin Section */
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .login,
+  .signin {
+    background-color: #f1a8b6;
+    border-radius: 8px;
+    padding: 5px 3px;
+  }
+  
+  .login {
+    margin-left: 10px;
+  }
+  
+  .login img {
+    width: 10%;
+    animation: bounceLogin 0.5s infinite;
+  }
+  
+  .signin img {
+    width: 10%;
+    animation: bounceSignin 0.5s infinite;
+  }
+  
+  .login-form,
+  .signin-form {
+    background-color: #e0b4d3;
+    position: absolute;
+    top: 85px;
+    left: 10px;
+    width: 100px;
+    height: fit-content;
+    display: none;
+    border-radius: 15px;
+    /* padding: 30px 25px; */
+    color: black;
+    font-family: Croissant One;
+    transition: all 0.4s ease;
+  }
+  
+  .login-form input,
+  .signin-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #cbbacc;
+    color: black;
+    font-size: 14px;
+    font-family: Croissant One;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form input:focus,
+  .signin-form input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+  
+  .login-form label,
+  .signin-form label {
+    font-family: Croissant One;
+    font-weight: 500;
+    display: inline;
+  }
+  
+  .login-form input[type="submit"],
+  .signin-form input[type="submit"] {
+    background: linear-gradient(to right, #f0b9c7, #a076b0);
+    font-family: Croissant One;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  
+  .login-form input[type="submit"]:hover,
+  .signin-form input[type="submit"]:hover {
+    transform: scale(1.05);
+  }
+  
+  .signin p,
+  .login p {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    font-family: Croissant One;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .signin p:hover,
+  .login p:hover {
+    transform: scale(1.05);
+    color: #a35aa3;
+  }
+}
