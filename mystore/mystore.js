@@ -1,3 +1,8 @@
+var body = document.body;
+var change = function() {
+  body.classList.toggle('active');
+}
+
 function toggleMenu(button) {
   button.classList.toggle("active");
   const navLinks = document.querySelector(".nav-links");

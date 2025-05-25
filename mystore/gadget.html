@@ -45,85 +45,7 @@
     <!-- navbar section  -->
     <header>
       <nav class="navbar-section">
-        <div class="details">
-          <div class="signin">
-            <p class="toggle-signin" onclick="toggleForm('signin')">
-              <img src="images/signin.png" alt="" />Sign in
-            </p>
-            <form class="login-form signin-form">
-              <label for="first_name">First Name:</label>
-              <input
-                type="text"
-                id="first_name"
-                name="first_name"
-                placeholder="Robiat" />
-
-              <label for="last_name">Last Name:</label>
-              <input
-                type="text"
-                id="last_name"
-                name="last_name"
-                placeholder="Ibrahim" />
-
-              <label for="user_name">User Name:</label>
-              <input
-                type="text"
-                id="user_name"
-                name="user_name"
-                placeholder="username223" />
-
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="myemail@gmail.com" />
-
-              <label for="phonenumber">Phone Number:</label
-              ><input
-                type="number"
-                name="phone"
-                id="phone"
-                placeholder="+234 567 890" />
-
-              <label for="password">Password:</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="mypassword239!ytu$SS" />
-
-              <label for="submit"></label>
-              <input type="submit" value="submit" />
-            </form>
-          </div>
-          <div class="login">
-            <p class="toggle-login" onclick="toggleForm('login')">
-              <img src="images/login.png" alt="" />Log in
-            </p>
-            <form class="login-form login-form-box">
-              <label for="user_name">User Name:</label>
-              <input
-                type="text"
-                id="user_name"
-                name="user_name"
-                placeholder="username223" />
-
-              <label for="password">Password:</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="mypassword239!ytu$SS" />
-
-              <label for="submit"></label>
-              <input type="submit" value="submit" />
-            </form>
-          </div>
-        </div>
-        <a href="home.html" class="gradient-color"
-          ><img src="images/pinkhome.png" alt="" id="homepage" />myStore</a
-        >
+        <p class="gradient-color">myStore</p>
         <div class="hamburger" onclick="toggleMenu(this)">
           <div></div>
           <div></div>
@@ -154,6 +76,89 @@
         </div>
       </nav>
     </header>
+    <div class="sidebar">
+      <a href="home.html" id="homepage"><img src="images/pinkhome.png" id="homepage" /></a>
+
+      <button id="toggle" onclick="change()">
+        <span id="slider"></span>
+      </button>
+      <div class="details">
+        <div class="signin">
+          
+          <p class="toggle-signin" onclick="toggleForm('signin')"><img src="images/signin.png" alt="" />Sign in</p>
+          <form class="login-form signin-form">
+            <label for="first_name">First Name:</label>
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              placeholder="Robiat" />
+
+            <label for="last_name">Last Name:</label>
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              placeholder="Ibrahim" />
+
+            <label for="user_name">User Name:</label>
+            <input
+              type="text"
+              id="user_name"
+              name="user_name"
+              placeholder="username223" />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="myemail@gmail.com" />
+
+            <label for="phonenumber">Phone Number:</label
+            ><input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="+234 567 890" />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="mypassword239!ytu$SS" />
+
+            <label for="submit"></label>
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+        <div class="login">
+          <p class="toggle-login" onclick="toggleForm('login')">
+            <img src="images/login.png" alt="" />Log in
+          </p>
+          <form class="login-form login-form-box">
+            <label for="user_name">User Name:</label>
+            <input
+              type="text"
+              id="user_name"
+              name="user_name"
+              placeholder="username223" />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="mypassword239!ytu$SS" />
+
+            <label for="submit"></label>
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <button class="top">↑</button>
 
     <div class="items">
       <h1 class="info">GADGETS</h1>
@@ -1370,129 +1375,135 @@
       </div>
 
       <h2 class="label">vr headset</h2>
-      <div class="gadget"><div class="vr-headset">
-        <img src="images/meta-quest-3.jpg" alt="Meta Quest 3" />
-        <div class="product-name">Meta Quest 3</div>
-        <p class="price">$499</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/valve-index.jpg" alt="Valve Index" />
-        <div class="product-name">Valve Index</div>
-        <p class="price">$999</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/ps-vr2.jpg" alt="PlayStation VR2" />
-        <div class="product-name">PlayStation VR2</div>
-        <p class="price">$549</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/meta-quest-2.jpg" alt="Meta Quest 2" />
-        <div class="product-name">Meta Quest 2</div>
-        <p class="price">$299</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/pico-4.jpg" alt="Pico 4" />
-        <div class="product-name">Pico 4</div>
-        <p class="price">$379</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/htc-vive-pro-2.jpg" alt="HTC Vive Pro 2" />
-        <div class="product-name">HTC Vive Pro 2</div>
-        <p class="price">$799</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/samsung-odyssey-plus.jpg" alt="Samsung Odyssey+" />
-        <div class="product-name">Samsung Odyssey+</div>
-        <p class="price">$499</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/hp-reverb-g2.jpg" alt="HP Reverb G2" />
-        <div class="product-name">HP Reverb G2</div>
-        <p class="price">$599</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/lenovo-mirage.jpg" alt="Lenovo Mirage Solo" />
-        <div class="product-name">Lenovo Mirage Solo</div>
-        <p class="price">$399</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="vr-headset">
-        <img src="images/oculus-rift-s.jpg" alt="Oculus Rift S" />
-        <div class="product-name">Oculus Rift S</div>
-        <p class="price">$399</p>
-        <button>ADD TO CART</button>
-      </div>
+      <div class="gadget">
+        <div class="vr-headset">
+          <img src="images/meta-quest-3.jpg" alt="Meta Quest 3" />
+          <div class="product-name">Meta Quest 3</div>
+          <p class="price">$499</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/valve-index.jpg" alt="Valve Index" />
+          <div class="product-name">Valve Index</div>
+          <p class="price">$999</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/ps-vr2.jpg" alt="PlayStation VR2" />
+          <div class="product-name">PlayStation VR2</div>
+          <p class="price">$549</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/meta-quest-2.jpg" alt="Meta Quest 2" />
+          <div class="product-name">Meta Quest 2</div>
+          <p class="price">$299</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/pico-4.jpg" alt="Pico 4" />
+          <div class="product-name">Pico 4</div>
+          <p class="price">$379</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/htc-vive-pro-2.jpg" alt="HTC Vive Pro 2" />
+          <div class="product-name">HTC Vive Pro 2</div>
+          <p class="price">$799</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/samsung-odyssey-plus.jpg" alt="Samsung Odyssey+" />
+          <div class="product-name">Samsung Odyssey+</div>
+          <p class="price">$499</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/hp-reverb-g2.jpg" alt="HP Reverb G2" />
+          <div class="product-name">HP Reverb G2</div>
+          <p class="price">$599</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/lenovo-mirage.jpg" alt="Lenovo Mirage Solo" />
+          <div class="product-name">Lenovo Mirage Solo</div>
+          <p class="price">$399</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="vr-headset">
+          <img src="images/oculus-rift-s.jpg" alt="Oculus Rift S" />
+          <div class="product-name">Oculus Rift S</div>
+          <p class="price">$399</p>
+          <button>ADD TO CART</button>
+        </div>
       </div>
 
       <h2 class="label">external drive</h2>
-      <div class="gadget"><div class="external-drive">
-        <img src="images/samsung-t7.jpg" alt="Samsung T7 Portable SSD" />
-        <div class="product-name">Samsung T7 Portable SSD</div>
-        <p class="price">$119</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/wd-my-passport.jpg" alt="WD My Passport 2TB" />
-        <div class="product-name">WD My Passport 2TB</div>
-        <p class="price">$79</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/sandisk-extreme-ssd.jpg" alt="SanDisk Extreme Portable SSD" />
-        <div class="product-name">SanDisk Extreme SSD</div>
-        <p class="price">$139</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/seagate-expansion.jpg" alt="Seagate Expansion 4TB" />
-        <div class="product-name">Seagate Expansion 4TB</div>
-        <p class="price">$89</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/lacie-rugged.jpg" alt="LaCie Rugged Mini 2TB" />
-        <div class="product-name">LaCie Rugged Mini 2TB</div>
-        <p class="price">$109</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/adata-hd710.jpg" alt="ADATA HD710 Pro" />
-        <div class="product-name">ADATA HD710 Pro</div>
-        <p class="price">$65</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/plugable-1tb.jpg" alt="Plugable 1TB SSD" />
-        <div class="product-name">Plugable 1TB SSD</div>
-        <p class="price">$99</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/crucial-x6.jpg" alt="Crucial X6 Portable SSD" />
-        <div class="product-name">Crucial X6 Portable SSD</div>
-        <p class="price">$99</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/sabrent-rocket.jpg" alt="Sabrent Rocket Nano" />
-        <div class="product-name">Sabrent Rocket Nano</div>
-        <p class="price">$129</p>
-        <button>ADD TO CART</button>
-      </div>
-      <div class="external-drive">
-        <img src="images/toshiba-canvio.jpg" alt="Toshiba Canvio Basics 1TB" />
-        <div class="product-name">Toshiba Canvio Basics 1TB</div>
-        <p class="price">$49</p>
-        <button>ADD TO CART</button>
-      </div>
+      <div class="gadget">
+        <div class="external-drive">
+          <img src="images/samsung-t7.jpg" alt="Samsung T7 Portable SSD" />
+          <div class="product-name">Samsung T7 Portable SSD</div>
+          <p class="price">$119</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img src="images/wd-my-passport.jpg" alt="WD My Passport 2TB" />
+          <div class="product-name">WD My Passport 2TB</div>
+          <p class="price">$79</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img
+            src="images/sandisk-extreme-ssd.jpg"
+            alt="SanDisk Extreme Portable SSD" />
+          <div class="product-name">SanDisk Extreme SSD</div>
+          <p class="price">$139</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img src="images/seagate-expansion.jpg" alt="Seagate Expansion 4TB" />
+          <div class="product-name">Seagate Expansion 4TB</div>
+          <p class="price">$89</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img src="images/lacie-rugged.jpg" alt="LaCie Rugged Mini 2TB" />
+          <div class="product-name">LaCie Rugged Mini 2TB</div>
+          <p class="price">$109</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img src="images/adata-hd710.jpg" alt="ADATA HD710 Pro" />
+          <div class="product-name">ADATA HD710 Pro</div>
+          <p class="price">$65</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img src="images/plugable-1tb.jpg" alt="Plugable 1TB SSD" />
+          <div class="product-name">Plugable 1TB SSD</div>
+          <p class="price">$99</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img src="images/crucial-x6.jpg" alt="Crucial X6 Portable SSD" />
+          <div class="product-name">Crucial X6 Portable SSD</div>
+          <p class="price">$99</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img src="images/sabrent-rocket.jpg" alt="Sabrent Rocket Nano" />
+          <div class="product-name">Sabrent Rocket Nano</div>
+          <p class="price">$129</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="external-drive">
+          <img
+            src="images/toshiba-canvio.jpg"
+            alt="Toshiba Canvio Basics 1TB" />
+          <div class="product-name">Toshiba Canvio Basics 1TB</div>
+          <p class="price">$49</p>
+          <button>ADD TO CART</button>
+        </div>
       </div>
 
       <h2 class="label">e-reader</h2>
@@ -1557,10 +1568,7 @@
           <p class="price">$399</p>
           <button>ADD TO CART</button>
         </div>
-        
       </div>
-
-      
     </div>
 
     <div class="instagram">
@@ -1609,7 +1617,6 @@
         /></a>
       </div>
     </div>
-    <button class="top">↑</button>
     <!-- footer section -->
     <footer class="footer">
       <div class="footer-content">
