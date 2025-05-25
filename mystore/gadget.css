@@ -267,7 +267,11 @@ h2.label {
 .smartwatches,
 .earbuds,
 .bluetooth-speaker,
-.smart-tv {
+.smart-tv,
+.gaming-console,
+.portable-power-bank,
+.fitness-tracker,
+.digital-camera ,.smart-home-assistant,.vr-headset {
   background-color: #2a2a2a;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(255, 157, 207, 0.2);

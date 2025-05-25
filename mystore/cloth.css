@@ -235,17 +235,25 @@ body {
   padding: 30px 20px;
 }
 
-h1.info,
-h1.inform {
-  margin-top: 2.5rem;
+h1.info{
+  margin-top: 2.8rem;
   margin-bottom: 2rem;
+  letter-spacing: 6px;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.9rem;
+  font-weight: 900;
   color: #ff99cc;
   padding: 20px 0;
   border-bottom: 2px solid #444;
 }
-
+h2.label {
+  margin-top: 1.5rem;
+  font-family: Oleo Script;
+  font-size: 2rem;
+  color: #ff99cc;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
 .kids,
 .adults {
   display: grid;
@@ -475,11 +483,13 @@ h1.inform {
     padding: 1.5rem;
   }
 
-  h1.info,
-  h1.inform {
-    font-size: 1.7rem;
+  h1.info {
+    font-size: 2.3rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+  }
+  h2.label {
+    font-size: 1.9rem;
   }
 
   .items img {
@@ -593,11 +603,14 @@ h1.inform {
     height: 370px;
   }
 
-  h1.info,
-  h1.inform {
-    font-size: 1.3rem;
+  h1.info {
+    font-size: 2rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+  }
+
+  h2.label {
+    font-size: 1.6rem;
   }
 
   .scroll-container img {
