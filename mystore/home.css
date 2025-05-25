@@ -356,3 +356,76 @@ body {
     font-size: 13px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .navbar-section {
+    flex-wrap: wrap;
+  justify-content: space-around;
+    height: auto;
+  }
+  
+  .navbar-section .roll .circle {
+    margin: 0 10px;
+    width: 25px;
+    height: 25px;
+  }
+  .navbar-section .logo {
+    margin-bottom: 10px;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .navbar-section .nav-link a {
+    font-size: 12px;
+  }
+  .navbar-section .nav-link:hover a {
+    padding: 5px 12px;
+  }
+  .navbar-section #home a {
+    padding: 5px 12px;
+  }
+  .welcome-section {
+    height: auto;
+    padding: 100px 20px;
+    color:white;
+    text-align: center;
+  }
+  .welcome-section p {
+    width: 80%;
+    font-size: 16px;
+  }
+  .grid-section .logo h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .grid-section .logo ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .grid-section .logo li{
+    font-size: 15px;
+
+  }
+  .grid-section .grid {
+  grid-template-rows: repeat(3, 200px);
+  }
+  .grid-section .pictures {
+  margin-top: 10rem;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .grid-section .pictures img {
+    width: 60%;
+  }
+  .grid-section .game {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .roll-section .roll {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

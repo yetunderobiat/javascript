@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap"
+      rel="stylesheet" />
+    <title>Gadgets section</title>
+    <link rel="stylesheet" href="gadget.css" />
+  </head>
+  <body>
+    <!-- navbar section  -->
+    <header>
+      <nav class="navbar-section">
+        <div class="details">
+          <div class="signin">
+            <p class="toggle-signin" onclick="toggleForm('signin')">
+              <img src="images/signin.png" alt="" />Sign in
+            </p>
+            <form class="login-form signin-form">
+              <label for="first_name">First Name:</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="Robiat" />
+
+              <label for="last_name">Last Name:</label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Ibrahim" />
+
+              <label for="user_name">User Name:</label>
+              <input
+                type="text"
+                id="user_name"
+                name="user_name"
+                placeholder="username223" />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="myemail@gmail.com" />
+
+              <label for="phonenumber">Phone Number:</label
+              ><input
+                type="number"
+                name="phone"
+                id="phone"
+                placeholder="+234 567 890" />
+
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="mypassword239!ytu$SS" />
+
+              <label for="submit"></label>
+              <input type="submit" value="submit" />
+            </form>
+          </div>
+          <div class="login">
+            <p class="toggle-login" onclick="toggleForm('login')">
+              <img src="images/login.png" alt="" />Log in
+            </p>
+            <form class="login-form login-form-box">
+              <label for="user_name">User Name:</label>
+              <input
+                type="text"
+                id="user_name"
+                name="user_name"
+                placeholder="username223" />
+
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="mypassword239!ytu$SS" />
+
+              <label for="submit"></label>
+              <input type="submit" value="submit" />
+            </form>
+          </div>
+        </div>
+        <a href="home.html" class="gradient-color"
+          ><img src="images/pinkhome.png" alt="" id="homepage" />myStore</a
+        >
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav-links" id="navbar-links">
+          <div class="nav-link">
+            <a href="bag.html">Bags</a>
+          </div>
+          <div class="nav-link">
+            <a href="cloth.html">Cloths</a>
+          </div>
+          <div class="nav-link">
+            <a href="shoe.html">Shoes</a>
+          </div>
+          <div class="nav-link">
+            <a href="jewelries.html">Jewelries</a>
+          </div>
+          <div class="nav-link">
+            <a href="appliances.html">Home appliances</a>
+          </div>
+          <div class="nav-link">
+            <a href="gadget.html">Gadgets </a>
+          </div>
+          <div class="nav-link">
+            <a href="care.html">Skin care</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="items">
+      <h1 class="info">GADGETS</h1>
+      <h2 class="label">smartphones</h2>
+      <div class="gadget">
+        <div class="smartphones">
+          <img src="images/phone1.jpg" alt="iPhone 15 Pro Max" />
+          <div class="product-name">iPhone 15 Pro Max</div>
+          <p class="price">$1,199</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone2.jpg" alt="Samsung Galaxy S24 Ultra" />
+          <div class="product-name">Galaxy S24 Ultra</div>
+          <p class="price">$1,299</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone3.jpg" alt="Google Pixel 8 Pro" />
+          <div class="product-name">Pixel 8 Pro</div>
+          <p class="price">$999</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone4.jpg" alt="OnePlus 12" />
+          <div class="product-name">OnePlus 12</div>
+          <p class="price">$899</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone5.jpg" alt="Xiaomi 14 Pro" />
+          <div class="product-name">Xiaomi 14 Pro</div>
+          <p class="price">$799</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone6.jpg" alt="Motorola Edge+ 2023" />
+          <div class="product-name">Motorola Edge+ 2023</div>
+          <p class="price">$699</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone7.jpg" alt="Sony Xperia 1 V" />
+          <div class="product-name">Sony Xperia 1 V</div>
+          <p class="price">$1,199</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone8.jpg" alt="Asus ROG Phone 7" />
+          <div class="product-name">Asus ROG Phone 7</div>
+          <p class="price">$999</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone9.jpg" alt="Nothing Phone 2" />
+          <div class="product-name">Nothing Phone 2</div>
+          <p class="price">$599</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone10.jpg" alt="iPhone SE (2022)" />
+          <div class="product-name">iPhone SE (2022)</div>
+          <p class="price">$429</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone11.jpg" alt="Samsung Galaxy A54" />
+          <div class="product-name">Galaxy A54</div>
+          <p class="price">$449</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone12.jpg" alt="Google Pixel 7a" />
+          <div class="product-name">Pixel 7a</div>
+          <p class="price">$499</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone13.jpg" alt="OnePlus Nord 3" />
+          <div class="product-name">OnePlus Nord 3</div>
+          <p class="price">$449</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone14.jpg" alt="Xiaomi Redmi Note 13 Pro+" />
+          <div class="product-name">Redmi Note 13 Pro+</div>
+          <p class="price">$399</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone15.jpg" alt="Infinix Zero Ultra" />
+          <div class="product-name">Infinix Zero Ultra</div>
+          <p class="price">$499</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone16.jpg" alt="Realme GT5 Pro" />
+          <div class="product-name">Realme GT5 Pro</div>
+          <p class="price">$699</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone17.jpg" alt="Tecno Phantom X2 Pro" />
+          <div class="product-name">Tecno Phantom X2 Pro</div>
+          <p class="price">$459</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone18.jpg" alt="Vivo X100 Pro" />
+          <div class="product-name">Vivo X100 Pro</div>
+          <p class="price">$1,099</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone19.jpg" alt="Honor Magic5 Pro" />
+          <div class="product-name">Honor Magic5 Pro</div>
+          <p class="price">$899</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="smartphones">
+          <img src="images/phone20.jpg" alt="Samsung Galaxy Z Fold5" />
+          <div class="product-name">Galaxy Z Fold5</div>
+          <p class="price">$1,799</p>
+          <button>ADD TO CART</button>
+        </div>
+      </div>
+
+      <h2 class="label">laptops</h2>
+      <div class="gadget">
+        <div class="laptops">
+          <img src="images/laptop1.jpg" alt="MacBook Pro 16 M3" />
+          <div class="product-name">MacBook Pro 16 M3</div>
+          <p class="price">$2,499</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop2.jpg" alt="Dell XPS 15" />
+          <div class="product-name">Dell XPS 15</div>
+          <p class="price">$1,899</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop3.jpg" alt="HP Spectre x360" />
+          <div class="product-name">HP Spectre x360</div>
+          <p class="price">$1,299</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop4.jpg" alt="Asus ROG Zephyrus G14" />
+          <div class="product-name">ROG Zephyrus G14</div>
+          <p class="price">$1,699</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop5.jpg" alt="Lenovo Legion 7i" />
+          <div class="product-name">Lenovo Legion 7i</div>
+          <p class="price">$1,999</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop6.jpg" alt="Acer Predator Helios 16" />
+          <div class="product-name">Predator Helios 16</div>
+          <p class="price">$1,799</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop7.jpg" alt="MSI Raider GE78" />
+          <div class="product-name">MSI Raider GE78</div>
+          <p class="price">$2,299</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop8.jpg" alt="Apple MacBook Air M2" />
+          <div class="product-name">MacBook Air M2</div>
+          <p class="price">$1,099</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop9.jpg" alt="ASUS ZenBook 14 OLED" />
+          <div class="product-name">ZenBook 14 OLED</div>
+          <p class="price">$999</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop10.jpg" alt="Microsoft Surface Laptop 5" />
+          <div class="product-name">Surface Laptop 5</div>
+          <p class="price">$1,399</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop11.jpg" alt="Razer Blade 16" />
+          <div class="product-name">Razer Blade 16</div>
+          <p class="price">$2,699</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop12.jpg" alt="LG Gram 17" />
+          <div class="product-name">LG Gram 17</div>
+          <p class="price">$1,799</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop13.jpg" alt="Dell Inspiron 14" />
+          <div class="product-name">Dell Inspiron 14</div>
+          <p class="price">$699</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop14.jpg" alt="HP Envy 15" />
+          <div class="product-name">HP Envy 15</div>
+          <p class="price">$999</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop15.jpg" alt="Asus TUF Gaming A15" />
+          <div class="product-name">TUF Gaming A15</div>
+          <p class="price">$1,199</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop16.jpg" alt="Lenovo IdeaPad Flex 5" />
+          <div class="product-name">IdeaPad Flex 5</div>
+          <p class="price">$649</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop17.jpg" alt="Acer Swift X 14" />
+          <div class="product-name">Acer Swift X 14</div>
+          <p class="price">$799</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop18.jpg" alt="Samsung Galaxy Book3 Pro" />
+          <div class="product-name">Galaxy Book3 Pro</div>
+          <p class="price">$1,699</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop19.jpg" alt="Framework Laptop 13" />
+          <div class="product-name">Framework Laptop 13</div>
+          <p class="price">$1,049</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="laptops">
+          <img src="images/laptop20.jpg" alt="Alienware x16" />
+          <div class="product-name">Alienware x16</div>
+          <p class="price">$2,399</p>
+          <button>ADD TO CART</button>
+        </div>
+      </div>
+
+      <h2 class="label">tablet</h2>
+      <div class="gadget">
+        <div class="tablets">
+          <img src="images/tablet1.jpg" alt="iPad Pro 12.9 M2" />
+          <div class="product-name">iPad Pro 12.9 M2</div>
+          <p class="price">$1,199</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet2.jpg" alt="Samsung Galaxy Tab S9 Ultra" />
+          <div class="product-name">Galaxy Tab S9 Ultra</div>
+          <p class="price">$1,199</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet3.jpg" alt="Microsoft Surface Pro 9" />
+          <div class="product-name">Surface Pro 9</div>
+          <p class="price">$1,099</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet4.jpg" alt="iPad Air 5th Gen" />
+          <div class="product-name">iPad Air 5th Gen</div>
+          <p class="price">$599</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet5.jpg" alt="Lenovo Tab P12 Pro" />
+          <div class="product-name">Lenovo Tab P12 Pro</div>
+          <p class="price">$699</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet6.jpg" alt="Xiaomi Pad 6" />
+          <div class="product-name">Xiaomi Pad 6</div>
+          <p class="price">$449</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet7.jpg" alt="Samsung Galaxy Tab A8" />
+          <div class="product-name">Galaxy Tab A8</div>
+          <p class="price">$229</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet8.jpg" alt="Amazon Fire HD 10" />
+          <div class="product-name">Amazon Fire HD 10</div>
+          <p class="price">$149</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet9.jpg" alt="Realme Pad X" />
+          <div class="product-name">Realme Pad X</div>
+          <p class="price">$299</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet10.jpg" alt="TCL Tab Pro 5G" />
+          <div class="product-name">TCL Tab Pro 5G</div>
+          <p class="price">$399</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet11.jpg" alt="Huawei MatePad Pro 13.2" />
+          <div class="product-name">MatePad Pro 13.2</div>
+          <p class="price">$799</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet12.jpg" alt="iPad Mini 6th Gen" />
+          <div class="product-name">iPad Mini 6th Gen</div>
+          <p class="price">$499</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet13.jpg" alt="Google Pixel Tablet" />
+          <div class="product-name">Google Pixel Tablet</div>
+          <p class="price">$499</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet14.jpg" alt="OnePlus Pad" />
+          <div class="product-name">OnePlus Pad</div>
+          <p class="price">$479</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet15.jpg" alt="Chuwi HiPad Max" />
+          <div class="product-name">Chuwi HiPad Max</div>
+          <p class="price">$259</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet16.jpg" alt="Nokia T21" />
+          <div class="product-name">Nokia T21</div>
+          <p class="price">$229</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet17.jpg" alt="Teclast T50 Pro" />
+          <div class="product-name">Teclast T50 Pro</div>
+          <p class="price">$249</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet18.jpg" alt="Honor Pad 9" />
+          <div class="product-name">Honor Pad 9</div>
+          <p class="price">$349</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet19.jpg" alt="Samsung Galaxy Tab S6 Lite" />
+          <div class="product-name">Galaxy Tab S6 Lite</div>
+          <p class="price">$299</p>
+          <button>ADD TO CART</button>
+        </div>
+        <div class="tablets">
+          <img src="images/tablet20.jpg" alt="iPad 10th Gen" />
+          <div class="product-name">iPad 10th Gen</div>
+          <p class="price">$449</p>
+          <button>ADD TO CART</button>
+        </div>
+        
+      </div>
+      <h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div><h2 class="label">tablet</h2>
+      <div class="gadget">
+
+      </div>
+    </div>
+
+    <div class="instagram">
+      <p>Follow us on instagram</p>
+      <a href="https://www.instagram.com/" target="_blank"
+        ><img src="images/in.png" alt="" />mycollection</a
+      >
+    </div>
+    <div class="image-design">
+      <div class="scroll-container" id="scrollRow">
+        <a href="images/adult14.jpg" target="_blank"
+          ><img src="images/adult14.jpg"
+        /></a>
+        <a href="images/bag12.jpeg" target="_blank"
+          ><img src="images/bag12.jpeg"
+        /></a>
+        <a href="images/bag15.jpeg" target="_blank"
+          ><img src="images/bag15.jpeg"
+        /></a>
+        <a href="images/adult6.jpg" target="_blank"
+          ><img src="images/adult6.jpg"
+        /></a>
+        <a href="images/bag13.jpeg" target="_blank"
+          ><img src="images/bag13.jpeg"
+        /></a>
+        <a href="images/adult12.jpg" target="_blank"
+          ><img src="images/adult12.jpg"
+        /></a>
+        <a href="images/adult3.jpg" target="_blank"
+          ><img src="images/adult3.jpg"
+        /></a>
+        <a href="images/bag10.jpeg" target="_blank"
+          ><img src="images/bag10.jpeg"
+        /></a>
+        <a href="images/bag5.jpeg" target="_blank"
+          ><img src="images/bag5.jpeg"
+        /></a>
+        <a href="images/adult1jpg.jpg" target="_blank"
+          ><img src="images/adult1jpg.jpg"
+        /></a>
+        <a href="images/bag8.jpeg" target="_blank"
+          ><img src="images/bag8.jpeg"
+        /></a>
+        <a href="images/adult10.jpg" target="_blank"
+          ><img src="images/adult10.jpg"
+        /></a>
+      </div>
+    </div>
+    <button class="top">↑</button>
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>
+          &copy; 2025 <span class="footer-logo">myStore</span>. All rights
+          reserved.
+        </p>
+        <p>Empowering girls through code, line at a time.</p>
+      </div>
+    </footer>
+    <script src="mystore.js"></script>
+  </body>
+</html>
