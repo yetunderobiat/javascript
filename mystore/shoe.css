@@ -595,13 +595,17 @@ h2.label {
     left: 5vw;
     padding: 1rem;
   }
-
+  .kids,
+.adults {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
   .items {
     padding: 1rem;
   }
 
   .items img {
-    height: 370px;
+    height: 200px;
   }
 
   h1.info {

@@ -228,7 +228,6 @@ body {
   color: #a35aa3;
 }
 
-/* Items and Bags Grid */
 .items {
   max-width: 1200px;
   margin: 0 auto;
@@ -271,7 +270,11 @@ h2.label {
 .gaming-console,
 .portable-power-bank,
 .fitness-tracker,
-.digital-camera ,.smart-home-assistant,.vr-headset {
+.digital-camera,
+.smart-home-assistant,
+.vr-headset,
+.external-drive,
+.e-reader {
   background-color: #2a2a2a;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(255, 157, 207, 0.2);
@@ -279,9 +282,22 @@ h2.label {
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.kidbags:hover,
-.adultbags:hover {
+.smartphones:hover,
+.laptops:hover,
+.tablets:hover,
+.smartwatches:hover,
+.earbuds:hover,
+.bluetooth-speaker:hover,
+.smart-tv:hover,
+.gaming-console:hover,
+.portable-power-bank:hover,
+.fitness-tracker:hover,
+.digital-camera:hover,
+.smart-home-assistant:hover,
+.vr-headset:hover,
+.external-drive:hover,
+.e-reader:hover
+ {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(255, 157, 207, 0.4);
 }
@@ -601,7 +617,10 @@ h2.label {
     left: 5vw;
     padding: 1rem;
   }
-
+  .gadget {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
   .items {
     padding: 1rem;
   }

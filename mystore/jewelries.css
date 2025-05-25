@@ -573,13 +573,16 @@
       left: 5vw;
       padding: 1rem;
     }
-  
+    .jewelry-collection {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
     .items {
       padding: 1rem;
     }
   
     .items img {
-      height: 250px;
+      height: 200px;
     }
   
     h1.info {
