@@ -16,7 +16,7 @@ body.active {
 #toggle {
   width: 35px;
   height: 17px;
-  background-color: #f1a8b6;
+  background-color: #e05571;
   padding: 0;
   border: none;
   border-radius: 16px;
@@ -98,11 +98,19 @@ body.active {
   gap: 5px;
   cursor: pointer;
 }
-
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.search img {
+  width: 18%;
+}
 .hamburger div {
   width: 40px;
   height: 5px;
-  background-color: #f1a8b6;
+  background-color: #e05571;
   border-radius: 5px;
   transition: all 0.4s ease;
 }
@@ -146,7 +154,7 @@ body.active {
 
 .login,
 .signin {
-  background-color: #b98791;
+  background-color: #e05571;
   border-radius: 8px;
   font-size: small;
   margin: 0 5px;
@@ -281,7 +289,9 @@ h1.info {
   text-align: center;
   font-size: 2.9rem;
   font-weight: 900;
-  color: #ff99cc;
+  background: linear-gradient(to right, #f0b9c7, #a076b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 20px 0;
   border-bottom: 2px solid #444;
 }
@@ -456,7 +466,7 @@ h2.label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #f1a8b6;
+  border: 1px solid #e05571;
   padding: 5px 10px;
   text-decoration: none;
   background: linear-gradient(to right, #f1a8b6, #7f71b4, #f6d365, #a076b0);
@@ -480,7 +490,7 @@ h2.label {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  background-color: #f1a8b6;
+  background-color: #e05571;
   color: black;
   border: none;
   border-radius: 50%;

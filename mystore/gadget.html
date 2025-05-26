@@ -46,10 +46,14 @@
     <header>
       <nav class="navbar-section">
         <p class="gradient-color">myStore</p>
-        <div class="hamburger" onclick="toggleMenu(this)">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="search">
+          <img src="images/searchbutton.png" alt="">
+          <img src="images/cart.png" alt="">
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
         <div class="nav-links" id="navbar-links">
           <div class="nav-link">
@@ -77,15 +81,18 @@
       </nav>
     </header>
     <div class="sidebar">
-      <a href="home.html" id="homepage"><img src="images/pinkhome.png" id="homepage" /></a>
+      <a href="home.html" id="homepage"
+        ><img src="images/pinkhome.png" id="homepage"
+      /></a>
 
       <button id="toggle" onclick="change()">
         <span id="slider"></span>
       </button>
       <div class="details">
         <div class="signin">
-          
-          <p class="toggle-signin" onclick="toggleForm('signin')"><img src="images/signin.png" alt="" />Sign in</p>
+          <p class="toggle-signin" onclick="toggleForm('signin')">
+            <img src="images/signin.png" alt="" />Sign in
+          </p>
           <form class="login-form signin-form">
             <label for="first_name">First Name:</label>
             <input
