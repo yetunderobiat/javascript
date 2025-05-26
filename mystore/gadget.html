@@ -47,14 +47,42 @@
       <nav class="navbar-section">
         <p class="gradient-color">myStore</p>
         <div class="search">
-          <img src="images/searchbutton.png" alt="">
-          <img src="images/cart.png" alt="">
+          <img
+            src="images/searchbutton.png"
+            id="searchIcon"
+            onclick="toggleSearch()"
+            alt="Search" />
+
+          <div class="cart-container" onclick="showCart()">
+            <img src="images/cart.png" alt="Cart" />
+            <span id="cartCount">0</span>
+          </div>
+
+          <div id="cartPanel" class="cart-panel">
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice">Total: $0</p>
+            <button onclick="checkout()">Place Order</button>
+            <button onclick="closeCart()">Close</button>
+            <button onclick="window.location.href='checkout.html'">
+              Checkout
+            </button>
+          </div>
           <div class="hamburger" onclick="toggleMenu(this)">
             <div></div>
             <div></div>
             <div></div>
           </div>
+
+          <div class="search-field" id="searchField">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search..."
+              onkeydown="handleEnter(event)" />
+          </div>
         </div>
+
         <div class="nav-links" id="navbar-links">
           <div class="nav-link">
             <a href="bag.html">Bags</a>
@@ -175,7 +203,9 @@
           <img src="images/phone1.jpg" alt="iPhone 15 Pro Max" />
           <div class="product-name">iPhone 15 Pro Max</div>
           <p class="price">$1,199</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('iPhone 15 Pro Max', 1199)">
+            ADD TO CART
+          </button>
         </div>
         <div class="smartphones">
           <img src="images/phone2.jpg" alt="Samsung Galaxy S24 Ultra" />
@@ -1634,6 +1664,7 @@
         <p>Empowering girls through code, line at a time.</p>
       </div>
     </footer>
+
     <script src="mystore.js"></script>
   </body>
 </html>

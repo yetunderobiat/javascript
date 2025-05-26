@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Checkout - Nova's Shop</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .checkout-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #ff69b4;
+      }
+
+      .cart-item {
+        display: flex;
+        background: #222;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        align-items: center;
+      }
+
+      .cart-item img {
+        width: 100px;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+
+      .cart-details {
+        flex: 1;
+      }
+
+      .cart-details h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .cart-details p {
+        margin: 5px 0;
+      }
+
+      .total {
+        text-align: right;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .buttons {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .buttons button {
+        background-color: #ff69b4;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        margin: 0 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .buttons button:hover {
+        background-color: #ff85c1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="checkout-container">
+      <h1>Your Cart</h1>
+
+      <!-- Cart Item Example -->
+      <div class="cart-item">
+        <img src="images/phone1.jpg" alt="iPhone 15 Pro Max" />
+        <div class="cart-details">
+          <h3>iPhone 15 Pro Max</h3>
+          <p>Quantity: 1</p>
+          <p>$1199</p>
+          <p class="desc">
+            The latest Apple flagship with ultra-fast performance and stunning
+            camera quality.
+          </p>
+        </div>
+      </div>
+
+      <div class="total">Total: $1199</div>
+
+      <div class="buttons">
+        <button onclick="goBack()">Back to Shop</button>
+        <button onclick="payWithPaystack()">Proceed to Payment</button>
+      </div>
+    </div>
+
+    <!-- Paystack Payment Integration -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+      function goBack() {
+        window.location.href = "gadget.html";
+      }
+      function goBack() {
+        window.location.href = "gadget.html"; // Update if needed
+      }
+
+      function payWithPaystack() {
+        let handler = PaystackPop.setup({
+          key: "pk_test_xxxxxxxxxxxxxxxxxxxxxxxx", // Replace with your Paystack test public key
+          email: "customer@email.com",
+          amount: 119900, // Amount in kobo (1199 * 100)
+          currency: "USD",
+          ref: "nova" + Math.floor(Math.random() * 1000000000),
+          callback: function (response) {
+            alert("Payment complete! Reference: " + response.reference);
+          },
+          onClose: function () {
+            alert("Transaction was not completed.");
+          },
+        });
+        handler.openIframe();
+      }
+    </script>
+  </body>
+</html>
