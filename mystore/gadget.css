@@ -30,7 +30,7 @@ body.active {
   position: fixed;
   top: 0;
   left: -300px; /* Hidden initially */
-  width: 200px;
+  width: 100px;
   height: 100vh;
   background-color: #1d1d1d;
   padding: 10px;
@@ -48,8 +48,10 @@ body.active {
   pointer-events: auto;
 }
 #slider {
-  width: 10px;
-  height: 10px;
+  width: 13px;
+  height: 13px;
+  margin: 2px;
+  background-color: white;
   transition: margin 1s;
   border-radius: 50%;
   float: right;
@@ -62,7 +64,7 @@ body.active {
 
 #openSidebarBtn {
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 20px;
   z-index: 1100;
   cursor: pointer;
@@ -73,6 +75,10 @@ body.active {
   top: 10px;
   right: 10px;
   cursor: pointer;
+}
+#homepage img{
+  width: 50%;
+  margin: 0 15px;
 }
 /* Navbar Section */
 .navbar-section {
@@ -551,7 +557,7 @@ h2.label {
 .top {
   position: fixed;
   bottom: 20px;
-  left: 15px;
+  left: 27px;
   width: 40px;
   height: 40px;
   font-size: 30px;
@@ -835,7 +841,12 @@ h2.label {
 .cart-panel h2 {
   margin-top: 0;
   border-bottom: 1px solid #555;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
+  font-family: Croissant One;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .cart-panel ul {
@@ -853,6 +864,8 @@ h2.label {
 .cart-panel button {
   margin-top: 10px;
   background-color: #ff69b4;
+  font-family: Croissant One;
+
   color: #fff;
   border: none;
   padding: 8px 12px;
