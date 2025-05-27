@@ -1,3 +1,13 @@
+function openSidebar() {
+  document.getElementById("sidebar").classList.add("active");
+  document.getElementById("openSidebarBtn").style.display = "none";
+}
+
+function closeSidebar() {
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("openSidebarBtn").style.display = "block";
+}
+
 function goToCheckout() {
   window.location.href = "checkout.html";
 }
@@ -134,27 +144,16 @@ function toggleMenu(button) {
 }
 
 function toggleForm(type) {
-  const signinForm = document.querySelector(".signin-form");
-  const loginForm = document.querySelector(".login-form-box");
+  document.querySelector(".signin-form").style.display = "none";
+  document.querySelector(".login-form-box").style.display = "none";
 
   if (type === "signin") {
-    if (signinForm.style.display === "block") {
-      signinForm.style.display = "none";
-    } else {
-      signinForm.style.display = "block";
-    }
-    loginForm.style.display = "none";
-  }
-
-  if (type === "login") {
-    if (loginForm.style.display === "block") {
-      loginForm.style.display = "none";
-    } else {
-      loginForm.style.display = "block";
-    }
-    signinForm.style.display = "none";
+    document.querySelector(".signin-form").style.display = "block";
+  } else if (type === "login") {
+    document.querySelector(".login-form-box").style.display = "block";
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const topButton = document.querySelector(".top");
   const navbar = document.querySelector(".navbar-section");

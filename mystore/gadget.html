@@ -108,91 +108,73 @@
         </div>
       </nav>
     </header>
-    <div class="sidebar">
-      <a href="home.html" id="homepage"
-        ><img src="images/pinkhome.png" id="homepage"
-      /></a>
 
-      <button id="toggle" onclick="change()">
-        <span id="slider"></span>
-      </button>
-      <div class="details">
-        <div class="signin">
-          <p class="toggle-signin" onclick="toggleForm('signin')">
-            <img src="images/signin.png" alt="" />Sign in
-          </p>
-          <form class="login-form signin-form">
-            <label for="first_name">First Name:</label>
-            <input
-              type="text"
-              id="first_name"
-              name="first_name"
-              placeholder="Robiat" />
+<img src="images/opensidebar.png" id="openSidebarBtn" onclick="openSidebar()" style="cursor: pointer;" />
 
-            <label for="last_name">Last Name:</label>
-            <input
-              type="text"
-              id="last_name"
-              name="last_name"
-              placeholder="Ibrahim" />
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <!-- CLOSE BUTTON (visible inside sidebar) -->
+  <img src="images/closesidebar.png" id="closeSidebarBtn" onclick="closeSidebar()" style="cursor: pointer;" />
 
-            <label for="user_name">User Name:</label>
-            <input
-              type="text"
-              id="user_name"
-              name="user_name"
-              placeholder="username223" />
+  <!-- Your existing sidebar content -->
+  <a href="home.html" id="homepage">
+    <img src="images/pinkhome.png" />
+  </a>
+  <button id="toggle" onclick="change()">
+    <span id="slider"></span>
+  </button>
 
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="myemail@gmail.com" />
-
-            <label for="phonenumber">Phone Number:</label
-            ><input
-              type="number"
-              name="phone"
-              id="phone"
-              placeholder="+234 567 890" />
-
-            <label for="password">Password:</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="mypassword239!ytu$SS" />
-
-            <label for="submit"></label>
-            <input type="submit" value="submit" />
-          </form>
-        </div>
-        <div class="login">
-          <p class="toggle-login" onclick="toggleForm('login')">
-            <img src="images/login.png" alt="" />Log in
-          </p>
-          <form class="login-form login-form-box">
-            <label for="user_name">User Name:</label>
-            <input
-              type="text"
-              id="user_name"
-              name="user_name"
-              placeholder="username223" />
-
-            <label for="password">Password:</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="mypassword239!ytu$SS" />
-
-            <label for="submit"></label>
-            <input type="submit" value="submit" />
-          </form>
-        </div>
-      </div>
+  <div class="details">
+    <div class="signin">
+      <p class="toggle-signin" onclick="toggleForm('signin')">
+        <img src="images/signin.png" alt="" />Sign in
+      </p>
     </div>
+
+    <div class="login">
+      <p class="toggle-login" onclick="toggleForm('login')">
+        <img src="images/login.png" alt="" />Log in
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- SIGN IN FORM (Moved out of sidebar) -->
+<form class="login-form signin-form">
+  <label for="first_name">First Name:</label>
+  <input type="text" id="first_name" name="first_name" placeholder="Robiat" />
+
+  <label for="last_name">Last Name:</label>
+  <input type="text" id="last_name" name="last_name" placeholder="Ibrahim" />
+
+  <label for="user_name">User Name:</label>
+  <input type="text" id="user_name" name="user_name" placeholder="username223" />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="myemail@gmail.com" />
+
+  <label for="phonenumber">Phone Number:</label>
+  <input type="number" name="phone" id="phone" placeholder="+234 567 890" />
+
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" placeholder="mypassword239!ytu$SS" />
+
+  <input type="submit" value="submit" />
+</form>
+
+<!-- LOGIN FORM (Moved out of sidebar) -->
+<form class="login-form login-form-box">
+  <label for="user_name">User Name:</label>
+  <input type="text" id="user_name" name="user_name" placeholder="username223" />
+
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" placeholder="mypassword239!ytu$SS" />
+
+  <input type="submit" value="submit" />
+</form>
+
+
     <button class="top">↑</button>
 
     <div class="items">

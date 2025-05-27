@@ -22,34 +22,58 @@ body.active {
   border-radius: 16px;
 }
 
-#slider {
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  transition: margin 1s;
-  border-radius: 50%;
-  float: right;
-}
-.active #slider {
-  margin-right: calc(100% - 15px);
-}
-
 .sidebar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  width: 70px;
-  height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -300px; /* Hidden initially */
+  width: 200px;
+  height: 100vh;
   background-color: #1d1d1d;
-  padding-top: 20px;
+  padding: 10px;
   z-index: 1000;
   overflow-y: auto;
+  opacity: 0;
+  transition: left 0.4s ease, opacity 0.4s ease;
+  pointer-events: none; /* Prevent interaction while hidden */
 }
 
+/* Sidebar visible with fade-in */
+.sidebar.active {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+#slider {
+  width: 10px;
+  height: 10px;
+  transition: margin 1s;
+  border-radius: 50%;
+  float: right;
+}
+
+/* When active, slide it right */
+.sidebar.active #slider {
+  margin-right: calc(100% - 15px);
+}
+
+#openSidebarBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+#closeSidebarBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 /* Navbar Section */
 .navbar-section {
   background-color: #1d1d1d;
@@ -86,10 +110,7 @@ body.active {
   border-radius: 5px;
 }
 
-#homepage {
-  margin: 0 auto;
-  width: 75%;
-}
+
 
 /* Hamburger Menu */
 .hamburger {
@@ -246,7 +267,7 @@ mark {
   background-color: #e0b4d3;
   position: absolute;
   top: 85px;
-  right: 100px;
+  left: 100px;
   width: 400px;
   height: fit-content;
   display: none;
