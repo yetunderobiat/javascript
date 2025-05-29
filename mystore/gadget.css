@@ -855,12 +855,17 @@ h2.label {
 }
 
 .cart-panel ul li {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.cart-panel #totalPrice{
+  font-size: 28px;
+  font-weight: 900;
 
+}
 .cart-panel button {
   margin-top: 10px;
   background-color: #ff69b4;
