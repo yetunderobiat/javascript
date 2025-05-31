@@ -42,22 +42,39 @@
     <link rel="stylesheet" href="gadget.css" />
   </head>
   <body>
-    <!-- navbar section  -->
+    <!-- NAVBAR  -->
     <header>
       <nav class="navbar-section">
+        <!-- open side bar  -->
+        <img
+          src="images/opensidebar.png"
+          id="openSidebarBtn"
+          onclick="openSidebar()" />
+
+        <!-- logo  -->
         <p class="gradient-color">myStore</p>
-        <div class="search">
+        <div class="nav-content">
+          <!-- search section  -->
           <img
             src="images/searchbutton.png"
             id="searchIcon"
             onclick="toggleSearch()"
             alt="Search" />
+          <!-- search input section  -->
+          <div class="search-field" id="searchField">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search..."
+              onkeydown="handleEnter(event)" />
+          </div>
 
+          <!-- cart section  -->
           <div class="cart-container" onclick="showCart()">
             <img src="images/cart.png" alt="Cart" />
             <span id="cartCount">0</span>
           </div>
-
+          <!-- cart panel  -->
           <div id="cartPanel" class="cart-panel">
             <h2>Your Cart<button onclick="closeCart()">Close</button></h2>
             <ul id="cartItems"></ul>
@@ -66,21 +83,15 @@
               Checkout
             </button>
           </div>
+
+          <!-- hamburger section  -->
           <div class="hamburger" onclick="toggleMenu(this)">
             <div></div>
             <div></div>
             <div></div>
           </div>
-
-          <div class="search-field" id="searchField">
-            <input
-              type="text"
-              id="searchInput"
-              placeholder="Search..."
-              onkeydown="handleEnter(event)" />
-          </div>
         </div>
-
+        <!-- hamburger onclick section  -->
         <div class="nav-links" id="navbar-links">
           <div class="nav-link">
             <a href="bag.html">Bags</a>
@@ -107,29 +118,26 @@
       </nav>
     </header>
 
-    <img
-      src="images/opensidebar.png"
-      id="openSidebarBtn"
-      onclick="openSidebar()"
-      style="cursor: pointer" />
-
     <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
-      <!-- CLOSE BUTTON (visible inside sidebar) -->
+      <!-- sidebar content -->
+      <!-- close sidebar -->
       <img
         src="images/closesidebar.png"
         id="closeSidebarBtn"
-        onclick="closeSidebar()"
-        style="cursor: pointer" />
+        onclick="closeSidebar()" />
 
-      <!-- Your existing sidebar content -->
+      <!-- home  -->
       <a href="home.html" id="homepage">
         <img src="images/pinkhome.png" />
       </a>
+
+      <!-- slider  -->
       <button id="toggle" onclick="change()">
         <span id="slider"></span>
       </button>
 
+      <!-- sign and login form  -->
       <div class="details">
         <div class="signin">
           <p class="toggle-signin" onclick="toggleForm('signin')">
@@ -207,10 +215,13 @@
       <input type="submit" value="submit" />
     </form>
 
+    <!-- button to top  -->
     <button class="top">↑</button>
 
+    <!-- ITEMS SECTION  -->
     <div class="items">
       <h1 class="info">GADGETS</h1>
+      <!-- smartphone  -->
       <h2 class="label">smartphones</h2>
       <div class="gadget">
         <div class="smartphones">
@@ -369,6 +380,7 @@
         </div>
       </div>
 
+      <!-- laptop  -->
       <h2 class="label">laptops</h2>
       <div class="gadget">
         <div class="laptops">
@@ -527,6 +539,7 @@
         </div>
       </div>
 
+      <!-- tablet  -->
       <h2 class="label">tablet</h2>
       <div class="gadget">
         <div class="tablets">
@@ -677,6 +690,7 @@
         </div>
       </div>
 
+      <!-- smart watch  -->
       <h2 class="label">smart watch</h2>
       <div class="gadget">
         <div class="smartwatches">
@@ -830,6 +844,8 @@
           </button>
         </div>
       </div>
+
+      <!-- wireless earbuds  -->
       <h2 class="label">wireless earbuds</h2>
       <div class="gadget">
         <div class="earbuds">
@@ -992,6 +1008,7 @@
         </div>
       </div>
 
+      <!-- bluetooth-speaker  -->
       <h2 class="label">bluetooth speaker</h2>
       <div class="gadget">
         <div class="bluetooth-speaker">
@@ -1143,6 +1160,8 @@
           </button>
         </div>
       </div>
+
+      <!-- smart tv  -->
       <h2 class="label">smart tv</h2>
       <div class="gadget">
         <div class="smart-tv">
@@ -1305,6 +1324,7 @@
         </div>
       </div>
 
+      <!-- gaming console   -->
       <h2 class="label">gaming console</h2>
       <div class="gadget">
         <div class="gaming-console">
@@ -1383,6 +1403,7 @@
         </div>
       </div>
 
+      <!-- portable power bank  -->
       <h2 class="label">portable power bank</h2>
       <div class="gadget">
         <div class="power-bank">
@@ -1463,6 +1484,7 @@
         </div>
       </div>
 
+      <!-- digital-camera  -->
       <h2 class="label">digital camera</h2>
       <div class="gadget">
         <div class="digital-camera">
@@ -1539,6 +1561,7 @@
         </div>
       </div>
 
+      <!-- external-drive  -->
       <h2 class="label">external drive</h2>
       <div class="gadget">
         <div class="external-drive">
@@ -1628,12 +1651,15 @@
       </div>
     </div>
 
+    <!-- instgram link  -->
     <div class="instagram">
       <p>Follow us on instagram</p>
       <a href="https://www.instagram.com/" target="_blank"
         ><img src="images/in.png" alt="" />mycollection</a
       >
     </div>
+
+    <!-- image scroll scetion  -->
     <div class="image-design">
       <div class="scroll-container" id="scrollRow">
         <a href="images/adult14.jpg" target="_blank"
@@ -1674,6 +1700,7 @@
         /></a>
       </div>
     </div>
+
     <!-- footer section -->
     <footer class="footer">
       <div class="footer-content">
