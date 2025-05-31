@@ -3,27 +3,42 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #2b2b2b;
   height: fit-content;
   width: 100%;
+  transition: background-color 1s;
+}
+body.active {
+  background-color: #d3d3d3;
 }
 
-/* Navbar Section */
+/* NAVBAR */
+/* header  */
 .navbar-section {
   background-color: #1d1d1d;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 4.3rem;
   width: 100%;
   padding: 0 5rem;
 }
 
+/* open side bar  */
+#openSidebarBtn {
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* logo  */
 .navbar-section .gradient-color {
-  margin-left: 10px;
-  padding-right: 10px;
+  padding-left: 8rem;
   font-size: 50px;
   font-family: Oleo Script;
   background: linear-gradient(to right, #f0b9c7, #a076b0);
@@ -31,6 +46,169 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* search section  */
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  position: relative;
+}
+#searchIcon {
+  width: 15%;
+}
+/* search input section  */
+.search-field {
+  position: absolute;
+  top: 200%;
+  right: 60px;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+  z-index: 100;
+}
+.search-field.show {
+  transform: translateY(-50%) scaleX(1);
+}
+.search-field input {
+  padding: 6px 10px;
+  width: 240px;
+  height: 40px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 14px;
+}
+mark {
+  background-color: yellow;
+  font-weight: bold;
+  animation: popHighlight 0.6s ease-in-out;
+}
+@keyframes popHighlight {
+  0% {
+    background-color: transparent;
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+  50% {
+    background-color: yellow;
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* cart section  */
+.cart-container {
+  position: relative;
+  cursor: pointer;
+}
+.cart-container img {
+  width: 55%;
+}
+#cartCount {
+  position: absolute;
+  top: -5px;
+  right: 25px;
+  background-color: #e05571;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 50%;
+}
+/* Cart Panel */
+.cart-panel {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  transition: right 0.4s ease;
+  z-index: 999;
+  overflow-y: auto;
+  border-left: 3px solid #ff69b4;
+}
+.cart-panel.show {
+  right: 0;
+}
+.cart-panel h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #555;
+  padding-bottom: 8px;
+  font-family: Croissant One;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-panel ul {
+  list-style: none;
+  padding: 0;
+}
+.cart-panel ul li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-panel #totalPrice {
+  font-size: 28px;
+  font-weight: 900;
+}
+.cart-panel button {
+  margin-top: 10px;
+  background-color: #ff69b4;
+  font-family: Croissant One;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cart-panel button:hover {
+  background-color: transparent;
+}
+.remove-btn {
+  font-size: 12px;
+  margin-left: 10px;
+  padding: 4px 8px;
+}
+
+/* hamburger section  */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.hamburger div {
+  width: 33px;
+  height: 3.5px;
+  background-color: #e05571;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+  transform-origin: center;
+}
+.hamburger.active {
+  transform: rotate(270deg);
+}
+.hamburger.active div:nth-child(1) {
+  transform: scale(1.1) rotate(45deg) translate(5.5px, 5.5px);
+}
+.hamburger.active div:nth-child(2) {
+  transform: scale(0.3);
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  transform: scale(1.1) rotate(-45deg) translate(5.5px, -5.5px);
+}
+/* hamburger onclick section  */
 .navbar-section .nav-link a {
   text-decoration: none;
   color: white;
@@ -38,52 +216,15 @@ body {
   font-family: Croissant One;
   text-transform: capitalize;
 }
-
 .navbar-section .nav-link:hover a {
   transition: all 0.2s ease-in-out;
   background-color: #f1a8b6;
   padding: 5px 50px;
   border-radius: 5px;
 }
-
-#homepage {
-  margin-right: 10px;
-  text-align: center;
-  width: 16%;
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 40px;
-  height: 5px;
-  background-color: #f1a8b6;
-  border-radius: 5px;
-  transition: all 0.4s ease;
-}
-
-.hamburger.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5.5px, 6px);
-}
-
-.hamburger.active div:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -8px);
-}
-
 .nav-links {
   display: none;
 }
-
 .nav-links.active {
   display: flex;
   justify-content: space-between;
@@ -98,34 +239,92 @@ body {
   height: 600px;
 }
 
-/* Login and Signin Section */
+/* SIDEBAR  */
+.sidebar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 90px;
+  height: 100vh;
+  background-color: #1d1d1d;
+  padding: 10px;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: left 0.2s ease, opacity 0.4s ease;
+  pointer-events: none; /* Prevent interaction while hidden */
+}
+
+/* visiblity of sidebar */
+.sidebar.active {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto; /*responds to pointer events normally */
+}
+/* close sidebar  */
+#closeSidebarBtn {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+/* home  */
+#homepage img {
+  width: 50%;
+  margin: 0 15px;
+}
+/* slider  */
+#toggle {
+  width: 40px;
+  height: 17px;
+  background-color: #e05571;
+  border: none;
+  border-radius: 18px;
+}
+#slider {
+  width: 13px;
+  height: 13px;
+  margin: 2px;
+  background-color: white;
+  transition: margin 1s;
+  border-radius: 50%;
+  float: right;
+}
+/* When active, slide it right */
+.sidebar.active #slider {
+  margin-right: calc(100% - 15px);
+}
+/* signin and login form */
 .details {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 7px;
 }
-
 .login,
 .signin {
-  background-color: #f1a8b6;
+  background-color: #e05571;
   border-radius: 8px;
-  padding: 7px 5px;
+  font-size: small;
+  padding: 10px 7px;
 }
-
-.login {
-  margin-left: 10px;
-}
-
+/* login and signin icon  */
 .login img {
-  width: 20%;
+  margin: 0 auto;
+  width: 35%;
   animation: bounceLogin 0.5s infinite;
 }
-
 .signin img {
-  width: 20%;
+  margin: 0 auto;
+  width: 35%;
   animation: bounceSignin 0.5s infinite;
 }
 
+/* keyframe bounceLogin  */
 @keyframes bounceLogin {
   0%,
   100% {
@@ -137,7 +336,7 @@ body {
     animation-timing-function: ease-out;
   }
 }
-
+/* keyframe bounceSignin  */
 @keyframes bounceSignin {
   0%,
   100% {
@@ -150,12 +349,31 @@ body {
   }
 }
 
+.signin p,
+.login p {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: black;
+  font-family: Croissant One;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.signin p:hover,
+.login p:hover {
+  transform: scale(1.05);
+  color: white;
+  font-weight: 900;
+}
+
 .login-form,
 .signin-form {
   background-color: #e0b4d3;
   position: absolute;
   top: 85px;
-  left: 10px;
+  left: 100px;
   width: 400px;
   height: fit-content;
   display: none;
@@ -174,8 +392,8 @@ body {
   border: none;
   border-radius: 8px;
   background-color: #cbbacc;
-  color: black;
-  font-size: 14px;
+  color: #e05571;
+  font-size: 15px;
   font-family: Croissant One;
   transition: background-color 0.3s ease;
 }
@@ -209,33 +427,41 @@ body {
 .signin-form input[type="submit"]:hover {
   transform: scale(1.05);
 }
-
-.signin p,
-.login p {
-  display: flex;
-  justify-content: space-around;
+/* Button to Top */
+.top {
+  position: fixed;
+  bottom: 20px;
+  left: 27px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background-color: #e05571;
   color: black;
-  font-family: Croissant One;
-  font-weight: bold;
-  font-size: 15px;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
+  z-index: 2000;
+  animation: bounce 0.8s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(-15px);
+    animation-timing-function: ease-out;
+  }
 }
 
-.signin p:hover,
-.login p:hover {
-  transform: scale(1.05);
-  color: #a35aa3;
-}
-
-/* Items and Bags Grid */
+/* ITEMS SECTION  */
 .items {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 20px;
 }
 
-h1.info{
+h1.info {
   margin-top: 2.8rem;
   margin-bottom: 2rem;
   letter-spacing: 6px;
@@ -264,9 +490,6 @@ h2.label {
 
 .kidbags,
 .adultbags {
-  background-color: #2a2a2a;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255, 157, 207, 0.2);
   padding: 15px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -276,13 +499,13 @@ h2.label {
 .adultbags:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(255, 157, 207, 0.4);
+  border: 2px solid #e05571;
 }
 
 .items img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .product-name {
@@ -305,6 +528,7 @@ h2.label {
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 0.7rem;
+  font-family: Croissant One;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -353,27 +577,6 @@ h2.label {
   cursor: pointer;
 }
 
-/* Footer Section */
-.footer {
-  width: 100%;
-  background-color: #1d1d1d;
-
-  padding: 15px 0;
-  text-align: center;
-  font-family: "Croissant One";
-  color: #eee;
-}
-
-.footer-logo {
-  color: #f1a8b6;
-  font-weight: bold;
-}
-
-.footer p {
-  margin: 5px 0;
-  font-size: 14px;
-}
-
 /* Instagram Section */
 .instagram {
   display: flex;
@@ -408,34 +611,22 @@ h2.label {
 .instagram .a img {
   width: 4%;
 }
-
-/* Button to Top */
-.top {
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  background-color: #f1a8b6;
-  color: black;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2000;
-  animation: bounce 0.8s infinite;
+/* Footer Section */
+.footer {
+  width: 100%;
+  background-color: #1d1d1d;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Croissant One";
+  color: #eee;
 }
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-in;
-  }
-  50% {
-    transform: translateY(-15px);
-    animation-timing-function: ease-out;
-  }
+.footer-logo {
+  color: #f1a8b6;
+  font-weight: bold;
+}
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
 }
 
 /* Responsive Styles */
@@ -446,43 +637,81 @@ h2.label {
     align-items: center;
     height: auto;
   }
-
+  #openSidebarBtn {
+    top: 25px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+  }
   .navbar-section .gradient-color {
     font-size: 2.5rem;
-    margin: 0;
-    padding: 0;
   }
-
+  #searchIcon {
+    width: 18%;
+  }
+  .cart-container img {
+    width: 37px;
+    height: 37px;
+  }
+  .cart-container #cartCount {
+    position: absolute;
+    top: -5px;
+    right: -3px;
+  }
+  .hamburger div {
+    text-align: center;
+    width: 30px;
+    height: 4px;
+  }
   .navbar-section .nav-link a {
     font-size: 15px;
     gap: 20px;
   }
-
   .nav-links.active {
-    width: 50vw;
+    width: 40vw;
     top: 95px;
     right: 10px;
     height: 20rem;
   }
-
   .details {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-
+  #closeSidebarBtn {
+    top: 10px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+  }
+  #homepage img {
+    width: 35%;
+    margin: 0 25px;
+  }
+  .login,
+  .signin {
+    background-color: #e05571;
+    border-radius: 5px;
+    font-size: 5px;
+    margin: 5px 0;
+    padding: 2px 5px;
+  }
   .login img,
   .signin img {
-    width: 25px;
+    width: 18px;
   }
-
   .login-form,
   .signin-form {
     width: 55vw;
+    top: 15vw;
     left: 5vw;
     padding: 1.5rem;
   }
-
+  .top {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
   h1.info {
     font-size: 2.3rem;
     margin-top: 1.5rem;
@@ -490,96 +719,114 @@ h2.label {
   }
   h2.label {
     font-size: 1.9rem;
+    margin-left: 1rem;
   }
+  .kids, .adults{
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
 
+  }
   .items img {
     height: 300px;
   }
-  .image-design {
-    height: 50vh;
-    margin: 60px 0;
-  }
-
-  .scroll-container img {
-    height: 300px;
-    margin: 20px 40px;
-  }
-
   .instagram p {
     font-size: 1.5rem;
     text-align: center;
   }
-
   .instagram a {
     font-size: 1rem;
     flex-direction: row;
     justify-content: center;
     gap: 0.7rem;
   }
-
   .instagram .a img {
     width: 35px;
   }
-
+  .image-design {
+    height: 50vh;
+    margin: 60px 0;
+  }
+  .scroll-container img {
+    height: 300px;
+    margin: 20px 40px;
+  }
   .footer p {
     font-size: 13px;
-  }
-
-  .top {
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
+  .navbar-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+    height: auto;
+  }
+  #openSidebarBtn {
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+  }
+  .navbar-section .gradient-color {
+    font-size: 2.3rem;
+    padding: 0;
+    margin-left: 0;
+  }
+  #searchIcon {
+    width: 17%;
+  }
+  .cart-container {
+    width: 35px;
+    height: 35px;
+  }
+  .cart-container #cartCount {
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    background-color: #e05571;
+    color: white;
+    font-size: 10px;
+    padding: 4px 6px;
+  }
   .hamburger div {
     text-align: center;
     width: 30px;
-    height: 5px;
-  }
-  .navbar-section {
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem;
-    height: auto;
-  }
-
-  .navbar-section .gradient-color {
-    font-size: 2rem;
-    padding: 0;
-    margin-left: 0;
+    height: 3px;
   }
   .navbar-section .nav-link a {
     font-size: 15px;
     gap: 20px;
   }
   .nav-links.active {
-    width: 60vw;
+    width: 50vw;
     height: 20rem;
     right: 0.5rem;
-    top: 110px;
+    top: 120px;
     padding: 1rem;
   }
-  #homepage {
-    display: block;
-    width: 30%;
-    margin: 0 20px;
-  }
-
   .details {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
+  #closeSidebarBtn {
+    top: 10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+  }
+  #homepage {
+    width: 100%;
+    margin: 0 auto;
+  }
   .login,
   .signin {
     padding: 5px 15px;
   }
-  .login {
-    margin-left: 0;
-  }
-
   .login img,
   .signin img {
     width: 18px;
@@ -594,45 +841,39 @@ h2.label {
     left: 5vw;
     padding: 1rem;
   }
-  .kids,
-.adults {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+  .top {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    bottom: 20px;
   }
-  .items {
-    padding: 1rem;
-  }
-
-  .items img {
-    height: 200px;
-  }
-
   h1.info {
     font-size: 2rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
-
   h2.label {
     font-size: 1.6rem;
   }
-
-  .scroll-container img {
-    height: 180px;
-    margin: 0 5px;
+  .kids, .adults {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
   }
-
+  .items {
+    padding: 1rem;
+  }
+  .items img {
+    height: 200px;
+  }
   .instagram p {
     font-size: 1.2rem;
     text-align: center;
   }
-
   .instagram a {
     font-size: 0.9rem;
     flex-direction: row;
     gap: 0.5rem;
   }
-
   .instagram .a img {
     width: 25px;
   }
@@ -640,19 +881,11 @@ h2.label {
     height: 50vh;
     margin: 60px 0;
   }
-
   .scroll-container img {
     height: 300px;
     margin: 20px 40px;
   }
   .footer p {
     font-size: 12px;
-  }
-
-  .top {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    bottom: 70px;
   }
 }
