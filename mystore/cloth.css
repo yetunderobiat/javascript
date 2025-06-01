@@ -488,15 +488,15 @@ h2.label {
   margin-bottom: 50px;
 }
 
-.kidbags,
-.adultbags {
+.kidcloths,
+.adultcloths {
   padding: 15px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.kidbags:hover,
-.adultbags:hover {
+.kidcloths:hover,
+.adultcloths:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(255, 157, 207, 0.4);
   border: 2px solid #e05571;
