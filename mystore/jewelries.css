@@ -613,8 +613,6 @@ h1.info {
   font-size: 14px;
 }
 
-
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar-section {
@@ -623,41 +621,80 @@ h1.info {
     align-items: center;
     height: auto;
   }
-
+  #openSidebarBtn {
+    top: 25px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+  }
   .navbar-section .gradient-color {
     font-size: 2.5rem;
-    margin: 0;
-    padding: 0;
   }
-
+  #searchIcon {
+    width: 18%;
+  }
+  .cart-container img {
+    width: 37px;
+    height: 37px;
+  }
+  .cart-container #cartCount {
+    position: absolute;
+    top: -5px;
+    right: -3px;
+  }
+  .hamburger div {
+    text-align: center;
+    width: 30px;
+    height: 4px;
+  }
   .navbar-section .nav-link a {
     font-size: 15px;
     gap: 20px;
   }
-
   .nav-links.active {
-    width: 50vw;
-    top: 75px;
+    width: 40vw;
+    top: 95px;
     right: 10px;
     height: 20rem;
   }
-
   .details {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-
+  #closeSidebarBtn {
+    top: 10px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+  }
+  #homepage img {
+    width: 35%;
+    margin: 0 25px;
+  }
+  .login,
+  .signin {
+    background-color: #e05571;
+    border-radius: 5px;
+    font-size: 5px;
+    margin: 5px 0;
+    padding: 2px 5px;
+  }
   .login img,
   .signin img {
-    width: 25px;
+    width: 18px;
   }
-
   .login-form,
   .signin-form {
     width: 55vw;
-    left: 5vw;
+    top: 15vw;
+    left: 15vw;
     padding: 1.5rem;
+  }
+  .top {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
   }
 
   h1.info {
@@ -665,95 +702,111 @@ h1.info {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
-
+  .jewelry-collection {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px;
+  }
   .items img {
-    height: 250px;
-  }
-  .image-design {
-    height: 50vh;
-    margin: 60px 0;
-  }
-
-  .scroll-container img {
     height: 300px;
-    margin: 20px 40px;
   }
-
   .instagram p {
     font-size: 1.5rem;
     text-align: center;
   }
-
   .instagram a {
     font-size: 1rem;
     flex-direction: row;
     justify-content: center;
     gap: 0.7rem;
   }
-
   .instagram .a img {
     width: 35px;
   }
-
+  .image-design {
+    height: 50vh;
+    margin: 60px 0;
+  }
+  .scroll-container img {
+    height: 300px;
+    margin: 20px 40px;
+  }
   .footer p {
     font-size: 13px;
-  }
-
-  .top {
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
+  .navbar-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+    height: auto;
+  }
+  #openSidebarBtn {
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+  }
+  .navbar-section .gradient-color {
+    font-size: 2.3rem;
+    padding: 0;
+    margin-left: 0;
+  }
+  #searchIcon {
+    width: 17%;
+  }
+  .cart-container {
+    width: 35px;
+    height: 35px;
+  }
+  .cart-container #cartCount {
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    background-color: #e05571;
+    color: white;
+    font-size: 10px;
+    padding: 4px 6px;
+  }
   .hamburger div {
     text-align: center;
     width: 30px;
-    height: 5px;
-  }
-  .navbar-section {
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem;
-    height: auto;
-  }
-
-  .navbar-section .gradient-color {
-    font-size: 2rem;
-    padding: 0;
-    margin-left: 0;
+    height: 3px;
   }
   .navbar-section .nav-link a {
     font-size: 15px;
     gap: 20px;
   }
   .nav-links.active {
-    width: 60vw;
+    width: 50vw;
     height: 20rem;
     right: 0.5rem;
-    top: 70px;
+    top: 120px;
     padding: 1rem;
   }
-  #homepage {
-    display: block;
-    width: 30%;
-    margin: 0 20px;
-  }
-
   .details {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
+  #closeSidebarBtn {
+    top: 10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+  }
+  #homepage {
+    width: 100%;
+    margin: 0 auto;
+  }
   .login,
   .signin {
     padding: 5px 15px;
   }
-  .login {
-    margin-left: 0;
-  }
-
   .login img,
   .signin img {
     width: 18px;
@@ -768,40 +821,39 @@ h1.info {
     left: 5vw;
     padding: 1rem;
   }
-  .jewelry-collection {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+  .top {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    bottom: 20px;
   }
-  .items {
-    padding: 1rem;
-  }
-
-  .items img {
-    height: 200px;
-  }
-
   h1.info {
     font-size: 2rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
-
-  .scroll-container img {
-    height: 180px;
-    margin: 0 5px;
+  h2.label {
+    font-size: 1.6rem;
   }
-
+  .jewelry-collection {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+  }
+  .items {
+    padding: 1rem;
+  }
+  .items img {
+    height: 200px;
+  }
   .instagram p {
     font-size: 1.2rem;
     text-align: center;
   }
-
   .instagram a {
     font-size: 0.9rem;
     flex-direction: row;
     gap: 0.5rem;
   }
-
   .instagram .a img {
     width: 25px;
   }
@@ -809,19 +861,11 @@ h1.info {
     height: 50vh;
     margin: 60px 0;
   }
-
   .scroll-container img {
     height: 300px;
     margin: 20px 40px;
   }
   .footer p {
     font-size: 12px;
-  }
-
-  .top {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    bottom: 70px;
   }
 }
