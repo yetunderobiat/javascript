@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,93 +43,56 @@
     <link rel="stylesheet" href="jewelries.css" />
   </head>
   <body>
-    <!-- navbar section  -->
+    <!-- NAVBAR  -->
     <header>
       <nav class="navbar-section">
-        <div class="details">
-          <div class="signin">
-            <p class="toggle-signin" onclick="toggleForm('signin')">
-              <img src="images/signin.png" alt="" />Sign in
-            </p>
-            <form class="login-form signin-form">
-              <label for="first_name">First Name:</label>
-              <input
-                type="text"
-                id="first_name"
-                name="first_name"
-                placeholder="Robiat" />
+        <!-- open side bar  -->
+        <img
+          src="images/opensidebar.png"
+          id="openSidebarBtn"
+          onclick="openSidebar()" />
 
-              <label for="last_name">Last Name:</label>
-              <input
-                type="text"
-                id="last_name"
-                name="last_name"
-                placeholder="Ibrahim" />
-
-              <label for="user_name">User Name:</label>
-              <input
-                type="text"
-                id="user_name"
-                name="user_name"
-                placeholder="username223" />
-
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="myemail@gmail.com" />
-
-              <label for="phonenumber">Phone Number:</label
-              ><input
-                type="number"
-                name="phone"
-                id="phone"
-                placeholder="+234 567 890" />
-
-              <label for="password">Password:</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="mypassword239!ytu$SS" />
-
-              <label for="submit"></label>
-              <input type="submit" value="submit" />
-            </form>
+        <!-- logo  -->
+        <p class="gradient-color">myStore</p>
+        <div class="nav-content">
+          <!-- search section  -->
+          <img
+            src="images/searchbutton.png"
+            id="searchIcon"
+            onclick="toggleSearch()"
+            alt="Search" />
+          <!-- search input section  -->
+          <div class="search-field" id="searchField">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search..."
+              onkeydown="handleEnter(event)" />
           </div>
-          <div class="login">
-            <p class="toggle-login" onclick="toggleForm('login')">
-              <img src="images/login.png" alt="" />Log in
-            </p>
-            <form class="login-form login-form-box">
-              <label for="user_name">User Name:</label>
-              <input
-                type="text"
-                id="user_name"
-                name="user_name"
-                placeholder="username223" />
 
-              <label for="password">Password:</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="mypassword239!ytu$SS" />
+          <!-- cart section  -->
+          <div class="cart-container" onclick="showCart()">
+            <img src="images/cart.png" alt="Cart" />
+            <span id="cartCount">0</span>
+          </div>
+          <!-- cart panel  -->
+          <div id="cartPanel" class="cart-panel">
+            <h2>Your Cart<button onclick="closeCart()">Close</button></h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice">Total: $0</p>
+            <button onclick="window.location.href='checkout.html'">
+              Checkout
+            </button>
+          </div>
 
-              <label for="submit"></label>
-              <input type="submit" value="submit" />
-            </form>
+          <!-- hamburger section  -->
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-        <a href="home.html" class="gradient-color"
-          ><img src="images/pinkhome.png" alt="" id="homepage" />myStore</a
-        >
-        <div class="hamburger" onclick="toggleMenu(this)">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <!-- hamburger onclick section  -->
         <div class="nav-links" id="navbar-links">
           <div class="nav-link">
             <a href="bag.html">Bags</a>
@@ -155,99 +119,202 @@
       </nav>
     </header>
 
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+      <!-- sidebar content -->
+      <!-- close sidebar -->
+      <img
+        src="images/closesidebar.png"
+        id="closeSidebarBtn"
+        onclick="closeSidebar()" />
+
+      <!-- home  -->
+      <a href="home.html" id="homepage">
+        <img src="images/pinkhome.png" />
+      </a>
+
+      <!-- slider  -->
+      <button id="toggle" onclick="change()">
+        <span id="slider"></span>
+      </button>
+
+      <!-- sign and login form  -->
+      <div class="details">
+        <div class="signin">
+          <p class="toggle-signin" onclick="toggleForm('signin')">
+            <img src="images/signin.png" alt="" />Sign in
+          </p>
+        </div>
+
+        <div class="login">
+          <p class="toggle-login" onclick="toggleForm('login')">
+            <img src="images/login.png" alt="" />Log in
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN IN FORM (Moved out of sidebar) -->
+    <form class="login-form signin-form">
+      <label for="first_name">First Name:</label>
+      <input
+        type="text"
+        id="first_name"
+        name="first_name"
+        placeholder="Robiat" />
+
+      <label for="last_name">Last Name:</label>
+      <input
+        type="text"
+        id="last_name"
+        name="last_name"
+        placeholder="Ibrahim" />
+
+      <label for="user_name">User Name:</label>
+      <input
+        type="text"
+        id="user_name"
+        name="user_name"
+        placeholder="username223" />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="myemail@gmail.com" />
+
+      <label for="phonenumber">Phone Number:</label>
+      <input type="number" name="phone" id="phone" placeholder="+234 567 890" />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="mypassword239!ytu$SS" />
+
+      <input type="submit" value="submit" />
+    </form>
+
+    <!-- LOGIN FORM (Moved out of sidebar) -->
+    <form class="login-form login-form-box">
+      <label for="user_name">User Name:</label>
+      <input
+        type="text"
+        id="user_name"
+        name="user_name"
+        placeholder="username223" />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="mypassword239!ytu$SS" />
+
+      <input type="submit" value="submit" />
+    </form>
+
+    <!-- button to top  -->
+    <button class="top">↑</button>
+
+    <!-- ITEMS SECTION  -->
     <div class="items">
       <h1 class="info">JEWELRY</h1>
+      <!-- Jewelries -->
       <div class="jewelry-collection">
         <div class="jewelry-item">
-          <img src="images/goldencharmnecklace.jpg" alt="Golden Charm Necklace" />
+          <img
+            src="images/goldencharmnecklace.jpg"
+            alt="Golden Charm Necklace" />
           <div class="product-name">Golden Charm Necklace</div>
           <p class="price">$12,999</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry2.jpg" alt="Silver Moon Earrings" />
           <div class="product-name">Silver Moon Earrings</div>
           <p class="price">$9,499</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry3.jpg" alt="Rose Gold Bracelet" />
           <div class="product-name">Rose Gold Bracelet</div>
           <p class="price">$10,999</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry4.jpg" alt="Diamond Studs" />
           <div class="product-name">Diamond Studs</div>
           <p class="price">$24,999</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry5.jpg" alt="Pearl Cascade Necklace" />
           <div class="product-name">Pearl Cascade Necklace</div>
           <p class="price">$13,999</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry6.jpg" alt="Emerald Bloom Ring" />
           <div class="product-name">Emerald Bloom Ring</div>
           <p class="price">$8,999</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry7.jpg" alt="Topaz Teardrop Earrings" />
           <div class="product-name">Topaz Teardrop Earrings</div>
           <p class="price">$7,999</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry8.jpg" alt="Sapphire Sky Pendant" />
           <div class="product-name">Sapphire Sky Pendant</div>
           <p class="price">$11,499</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry.9.jpg" alt="Vintage Gold Bangle" />
           <div class="product-name">Vintage Gold Bangle</div>
           <p class="price">$14,299</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry10.jpg" alt="Crystal Heart Ring" />
           <div class="product-name">Crystal Heart Ring</div>
           <p class="price">$9,899</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
-
         <div class="jewelry-item">
           <img src="images/jewelry11.jpg" alt="Opal Light Studs" />
           <div class="product-name">Opal Light Studs</div>
           <p class="price">$10,399</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry12.jpg" alt="Ruby Rose Pendant" />
           <div class="product-name">Ruby Rose Pendant</div>
           <p class="price">$15,599</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry13.jpg" alt="Jade Serenity Bracelet" />
           <div class="product-name">Jade Serenity Bracelet</div>
           <p class="price">$6,499</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry14.jpg" alt="Diamond Curve Necklace" />
           <div class="product-name">Diamond Curve Necklace</div>
           <p class="price">$18,999</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry15.jpg" alt="Starshine Anklet" />
           <div class="product-name">Starshine Anklet</div>
           <p class="price">$5,299</p>
-          <button>ADD TO CART</button>
+          <button onclick="addToCart('',)">ADD TO CART</button>
         </div>
         <div class="jewelry-item">
           <img src="images/jewelry16.jpg" alt="Garnet Glow Ring" />
