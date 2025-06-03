@@ -333,7 +333,8 @@ body.active {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background:repeating-linear-gradient(to left, #ff0808, #a39f9f,#ff0808);
+  background:repeating-linear-gradient(to left, #ff0808, #db8e8e,#ff0808);
+  
 
 }
 
@@ -355,7 +356,7 @@ body.active {
   }
 }
 .welcome-section p {
-  width: 35%;
+  width: 50%;
   font-family: Croissant One;
   font-size: 18px;
   margin-bottom: 100px;
