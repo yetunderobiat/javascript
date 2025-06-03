@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  background-color: white;
+  background-color: #1d1d1d;
   height: fit-content;
   width: 100%;
 }
-
+body.active {
+  background-color: white;
+}
 /* navbar section */
 .navbar-section {
   background-color: rgb(0, 0, 0);
@@ -17,10 +19,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
 }
 .navbar-section .logo .gradient-color {
@@ -156,7 +154,7 @@ body {
 #toggle {
   width: 40px;
   height: 17px;
-  background-color: #e05571;
+  background-color:  rgb(211, 58, 58);
   border: none;
   border-radius: 18px;
 }
@@ -178,10 +176,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 7px;
+
 }
 .login,
 .signin {
-  background-color: #e05571;
+  background-color:  rgb(211, 58, 58);
   border-radius: 8px;
   font-size: small;
   padding: 10px 7px;
@@ -244,7 +243,7 @@ body {
 
 .login-form,
 .signin-form {
-  background-color: #e0b4d3;
+  background-color:  rgb(211, 58, 58);
   position: absolute;
   top: 85px;
   left: 100px;
@@ -266,7 +265,7 @@ body {
   border: none;
   border-radius: 8px;
   background-color: #cbbacc;
-  color: #e05571;
+  color:  rgb(211, 58, 58);
   font-size: 15px;
   font-family: Croissant One;
   transition: background-color 0.3s ease;
@@ -309,7 +308,7 @@ body {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  background-color: #e05571;
+  background-color: rgb(211, 58, 58);
   color: black;
   border: none;
   border-radius: 50%;
@@ -330,15 +329,12 @@ body {
 } 
 /* welcome section */
 .welcome-section {
-  background-image: url("images/cart4.jpg");
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
-  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background:repeating-linear-gradient(to left, #ff0808, #a39f9f,#ff0808);
+
 }
 
 .welcome-section h1 {

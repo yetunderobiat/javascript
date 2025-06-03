@@ -62,7 +62,7 @@ function showCart() {
 
   totalPrice.textContent = `Total: $${total}`;
 }
-
+    
 function closeCart() {
   document.getElementById("cartPanel").classList.remove("show");
 }
