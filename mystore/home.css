@@ -24,7 +24,7 @@ body.active {
 .navbar-section .logo .gradient-color {
   gap: 20px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   font-size: 50px;
   font-family: Oleo Script;
@@ -32,7 +32,7 @@ body.active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.navbar-section .logo .gradient-color img{
+.navbar-section .logo .gradient-color img {
   width: 17%;
   animation: bounceLogo 0.6s infinite;
 }
@@ -111,6 +111,8 @@ body.active {
   background: linear-gradient(to right, #ff0808, #d65252);
   color: black;
 }
+/* * hamburger section  */
+
 /* SIDEBAR  */
 .sidebar {
   display: flex;
@@ -154,7 +156,7 @@ body.active {
 #toggle {
   width: 40px;
   height: 17px;
-  background-color:  rgb(211, 58, 58);
+  background-color: rgb(211, 58, 58);
   border: none;
   border-radius: 18px;
 }
@@ -176,11 +178,10 @@ body.active {
   display: flex;
   flex-direction: column;
   gap: 7px;
-
 }
 .login,
 .signin {
-  background-color:  rgb(211, 58, 58);
+  background-color: rgb(211, 58, 58);
   border-radius: 8px;
   font-size: small;
   padding: 10px 7px;
@@ -243,7 +244,7 @@ body.active {
 
 .login-form,
 .signin-form {
-  background-color:  rgb(211, 58, 58);
+  background-color: rgb(211, 58, 58);
   position: absolute;
   top: 85px;
   left: 100px;
@@ -265,7 +266,7 @@ body.active {
   border: none;
   border-radius: 8px;
   background-color: #cbbacc;
-  color:  rgb(211, 58, 58);
+  color: rgb(211, 58, 58);
   font-size: 15px;
   font-family: Croissant One;
   transition: background-color 0.3s ease;
@@ -326,7 +327,7 @@ body.active {
     transform: translateY(-15px);
     animation-timing-function: ease-out;
   }
-} 
+}
 /* welcome section */
 .welcome-section {
   display: flex;
@@ -435,7 +436,7 @@ body.active {
   background-position: center;
 }
 .grid-section .grid .e {
-  grid-column:1/2;
+  grid-column: 1/2;
   grid-row: 3/3;
   border-radius: 10px;
   background-image: url("images/appliances.avif");
@@ -500,7 +501,7 @@ body.active {
   border: none;
   border-radius: 8px;
 }
-.grid-section .game a{
+.grid-section .game a {
   text-decoration: none;
   color: #eee;
   font-family: Croissant One;
@@ -583,40 +584,79 @@ body.active {
   }
 }
 
-
 @media (max-width: 768px) {
   .navbar-section {
-    flex-wrap: wrap;
-  justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
     height: auto;
   }
-  
-  .navbar-section .roll .circle {
-    margin: 0 10px;
-    width: 25px;
-    height: 25px;
+  .navbar-section .roll {
+    display: none;
   }
-  .navbar-section .logo {
-    margin-bottom: 10px;
+  .navbar-section .nav-links {
+    display: none;
   }
-  .nav-links {
-    flex-direction: row;
-    gap: 10px;
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
   }
+  .hamburger div {
+    width: 33px;
+    height: 3.8px;
+    background-color:#ff0808;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    transform-origin: center;
+  }
+  .hamburger.active {
+    transform: rotate(270deg);
+  }
+  .hamburger.active div:nth-child(1) {
+    transform: scale(1.1) rotate(45deg) translate(5.5px, 5.5px);
+  }
+  .hamburger.active div:nth-child(2) {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: scale(1.1) rotate(-45deg) translate(5.5px, -5.5px);
+  }
+  /* hamburger onclick section  */
   .navbar-section .nav-link a {
-    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Croissant One;
+    text-transform: capitalize;
   }
   .navbar-section .nav-link:hover a {
-    padding: 5px 12px;
+    transition: all 0.2s ease-in-out;
+    background-color: #ff0808;
+    padding: 5px 50px;
+    border-radius: 5px;
   }
-  .navbar-section #home a {
-    padding: 5px 12px;
+  .nav-links {
+    display: none;
   }
+  .nav-links.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 85px;
+    right: 5px;
+    width: 200px;
+    height: 300px;
+  }
+
+/* welcome section  */
   .welcome-section {
-    height: auto;
-    padding: 100px 20px;
-    color:white;
-    text-align: center;
+   text-align: left;
   }
   .welcome-section p {
     width: 80%;
@@ -631,15 +671,14 @@ body.active {
     align-items: center;
     gap: 10px;
   }
-  .grid-section .logo li{
+  .grid-section .logo li {
     font-size: 15px;
-
   }
   .grid-section .grid {
-  grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
   }
   .grid-section .pictures {
-  margin-top: 10rem;
+    margin-top: 10rem;
     flex-direction: column;
     gap: 40px;
   }
