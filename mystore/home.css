@@ -124,7 +124,7 @@ body.active {
   left: -300px;
   width: 90px;
   height: 100vh;
-  background-color: #1d1d1d;
+  background-color:  rgb(0, 0, 0);
   padding: 10px;
   z-index: 1000;
   overflow-y: auto;
@@ -332,23 +332,21 @@ body.active {
 .welcome-section {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   background: url(images/redandwhitebackground.jpg);
   background-size: cover;
   background-position: center;
   height: 35rem;
-  
-  padding-left: 10rem;
 }
 
 .welcome-section h1 {
   font-size: 70px;
   margin-bottom: 30px;
   letter-spacing: 4px;
-  animation: bounce 1.5s infinite;
+  /* animation: bounce 1.5s infinite; */
 }
-@keyframes bounce {
+/* @keyframes bounce {
   0%,
   100% {
     transform: translateY(0);
@@ -358,10 +356,10 @@ body.active {
     transform: translateY(-8px);
     animation-timing-function: ease-out;
   }
-}
+} */
 .welcome-section p {
   width: 50%;
-  line-height: 2;
+  line-height: 1.7;
   font-family: Croissant One;
   font-size: 22px;
   margin-bottom: 100px;
@@ -657,9 +655,7 @@ body.active {
   }
 
 /* welcome section  */
-  .welcome-section {
-   text-align: left;
-  }
+ 
   .welcome-section p {
     width: 80%;
     font-size: 16px;
@@ -675,6 +671,121 @@ body.active {
   }
   .grid-section .logo li {
     font-size: 15px;
+  }
+  .grid-section .grid {
+    grid-template-rows: repeat(3, 200px);
+  }
+  .grid-section .pictures {
+    margin-top: 10rem;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .grid-section .pictures img {
+    width: 60%;
+  }
+  .grid-section .game {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .roll-section .roll {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .sidebar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80px;
+    height: 110vh;
+    z-index: 1000;
+  }
+  .navbar-section {
+    padding: 0  1rem;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
+  .navbar-section .roll {
+    display: none;
+  }
+  .navbar-section .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hamburger div {
+    width: 33px;
+    height: 3.8px;
+    background-color:#ff0808;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    transform-origin: center;
+  }
+  .hamburger.active {
+    transform: rotate(270deg);
+  }
+  .hamburger.active div:nth-child(1) {
+    transform: scale(1.1) rotate(45deg) translate(5.5px, 5.5px);
+  }
+  .hamburger.active div:nth-child(2) {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: scale(1.1) rotate(-45deg) translate(5.5px, -5.5px);
+  }
+  /* hamburger onclick section  */
+  .navbar-section .nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Croissant One;
+    text-transform: capitalize;
+  }
+  .navbar-section .nav-link:hover a {
+    transition: all 0.2s ease-in-out;
+    background-color: #ff0808;
+    padding: 5px 50px;
+    border-radius: 5px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 85px;
+    right: 5px;
+    width: 200px;
+    height: 300px;
+  }
+
+/* welcome section  */
+  
+  .welcome-section p {
+    width: 80%;
+    font-size: 16px;
+  }
+  .grid-section .logo h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .grid-section .logo ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-section .logo li {
+    font-size: 17px;
   }
   .grid-section .grid {
     grid-template-rows: repeat(3, 200px);
