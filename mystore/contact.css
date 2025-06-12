@@ -22,9 +22,26 @@ body {
   left: 0;
   width: 100%;
 }
+.navbar-section .logo .gradient-color img {
+  width: 17%;
+  animation: bounceLogo 0.6s infinite;
+}
+@keyframes bounceLogo {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-out;
+  }
+}
 .navbar-section .logo .gradient-color {
-  margin-left: 10px;
-  padding-right: 10px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 50px;
   font-family: Oleo Script;
   background: linear-gradient(to right, #1abc9c, #2ecc71);
@@ -202,7 +219,7 @@ a img {
   margin-top: 50px;
 }
 .footer-logo {
-  color: #2ecc71;
+  color: #39fa89;
   font-weight: bold;
 }
 .footer p {
@@ -212,5 +229,76 @@ a img {
 @media (max-width: 600px) {
   .footer p {
     font-size: 13px;
+  }
+}
+@media (max-width: 425px) {
+  .navbar-section {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 0;
+  }
+  .navbar-section .roll {
+    display: none;
+  }
+  .navbar-section .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hamburger div {
+    width: 33px;
+    height: 3.8px;
+    background-color: #27ae60;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    transform-origin: center;
+  }
+  .hamburger.active {
+    transform: rotate(270deg);
+  }
+  .hamburger.active div:nth-child(1) {
+    transform: scale(1.1) rotate(45deg) translate(5.5px, 5.5px);
+  }
+  .hamburger.active div:nth-child(2) {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: scale(1.1) rotate(-45deg) translate(5.5px, -5.5px);
+  }
+  /* hamburger onclick section  */
+  .navbar-section .nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Croissant One;
+    text-transform: capitalize;
+  }
+  .navbar-section .nav-link:hover a {
+    transition: all 0.2s ease-in-out;
+    background-color:#27ae60;
+    padding: 5px 30px;
+    border-radius: 5px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 85px;
+    right: 5px;
+    width: 200px;
+    height: 300px;
   }
 }

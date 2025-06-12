@@ -51,18 +51,23 @@
     <header>
       <nav class="navbar-section">
         <!-- open side bar  -->
-
         <div class="logo">
-          <p class="gradient-color">myStore</p>
+          <p class="gradient-color">
+            <img src="images/homeicon.png" alt="" />myStore
+          </p>
         </div>
         <div class="roll">
           <div class="circle" id="red"></div>
           <div class="circle" id="blue"></div>
           <div class="circle" id="yellow"></div>
-          <div class="circle" id="green"></div>
-          <div class="circle" id="white"></div>
         </div>
-        <div class="nav-links">
+         <!-- hamburger section  -->
+         <div class="hamburger" onclick="toggleMenu(this)">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav-links" id="navbar-links">
           <div class="nav-link">
             <a href="home.html">home</a>
           </div>
@@ -108,16 +113,6 @@
     <p>Monday-Sunday</p>
     <p>9am - 10pm</p>
 
-    <!-- roll section  -->
-    <section class="roll-section">
-      <div class="roll">
-        <div class="circle" id="red"></div>
-        <div class="circle" id="blue"></div>
-        <div class="circle" id="yellow"></div>
-        <div class="circle" id="green"></div>
-        <div class="circle" id="white"></div>
-      </div>
-    </section>
     <!-- footer section  -->
     <footer class="footer">
       <div class="footer-content">
@@ -128,5 +123,6 @@
         <p>Empowering girls through code, line at a time.</p>
       </div>
     </footer>
+    <script src="mystore.js"></script>
   </body>
 </html>
