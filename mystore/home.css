@@ -610,8 +610,6 @@ body.active {
 }
 @media (max-width: 425px) {
   .sidebar {
-    display: flex;
-    justify-content: space-evenly;
     width: 80px;
     height: 110vh;
     z-index: 1000;

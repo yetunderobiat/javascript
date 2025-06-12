@@ -50,17 +50,29 @@
     <!-- navbar section  -->
     <header>
       <nav class="navbar-section">
+        <!-- open side bar  -->
+        <img
+          src="images/redsidebarclose.png"
+          id="openSidebarBtn"
+          onclick="openSidebar()" />
         <div class="logo">
-          <p class="gradient-color">myStore</p>
+          <p class="gradient-color">
+            <img src="images/homeicon.png" alt="" />myStore
+          </p>
         </div>
         <div class="roll">
           <div class="circle" id="red"></div>
           <div class="circle" id="blue"></div>
           <div class="circle" id="yellow"></div>
-          <div class="circle" id="green"></div>
-          <div class="circle" id="white"></div>
         </div>
-        <div class="nav-links">
+         <!-- hamburger section  -->
+         <div class="hamburger" onclick="toggleMenu(this)">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+        <div class="nav-links" id="navbar-links">
           <div class="nav-link">
             <a href="home.html">home</a>
           </div>
@@ -182,7 +194,7 @@
           <p>
             Our store is a one-stop shop where you can find everything you need
             in one place. From clothes, shoes, and bags to electronics,
-            groceries, toys, and home items we have it all.Shopping is easier
+            groceries, toys, and home items we have it all. Shopping is easier
             and more fun here because you don’t have to go from store to store.
             Enjoy a clean, comfortable space with great service and many choices
             for everyone!
@@ -231,5 +243,6 @@
         <p>Empowering girls through code, line at a time.</p>
       </div>
     </footer>
+    <script src="mystore.js"></script>
   </body>
 </html>
