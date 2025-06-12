@@ -337,7 +337,8 @@ body.active {
   background: url(images/redandwhitebackground.jpg);
   background-size: cover;
   background-position: center;
-  height: 30rem;
+  height: 35rem;
+  
   padding-left: 10rem;
 }
 
@@ -360,8 +361,9 @@ body.active {
 }
 .welcome-section p {
   width: 50%;
+  line-height: 2;
   font-family: Croissant One;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 100px;
 }
 /* grid section */
