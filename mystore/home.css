@@ -21,22 +21,10 @@ body.active {
   height: 5rem;
   width: 100%;
 }
-.navbar-section .logo .gradient-color {
-  gap: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-  font-family: Oleo Script;
-  background: linear-gradient(to right, #ff0808, #d65252);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .navbar-section .logo .gradient-color img {
   width: 17%;
   animation: bounceLogo 0.6s infinite;
 }
-
 @keyframes bounceLogo {
   0%,
   100% {
@@ -47,6 +35,17 @@ body.active {
     transform: translateY(-10px);
     animation-timing-function: ease-out;
   }
+}
+.navbar-section .logo .gradient-color {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: Oleo Script;
+  background: linear-gradient(to right, #ff0808, #d65252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .navbar-section .roll {
   display: flex;
@@ -111,8 +110,6 @@ body.active {
   background: linear-gradient(to right, #ff0808, #d65252);
   color: black;
 }
-/* * hamburger section  */
-
 /* SIDEBAR  */
 .sidebar {
   display: flex;
@@ -124,14 +121,13 @@ body.active {
   left: -300px;
   width: 90px;
   height: 100vh;
-  background-color:  rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   z-index: 1000;
   overflow-y: auto;
   transition: left 0.2s ease, opacity 0.4s ease;
   pointer-events: none; /* Prevent interaction while hidden */
 }
-
 /* visiblity of sidebar */
 .sidebar.active {
   left: 0;
@@ -197,7 +193,6 @@ body.active {
   width: 35%;
   animation: bounceSignin 0.5s infinite;
 }
-
 /* keyframe bounceLogin  */
 @keyframes bounceLogin {
   0%,
@@ -222,7 +217,6 @@ body.active {
     animation-timing-function: ease-out;
   }
 }
-
 .signin p,
 .login p {
   display: flex;
@@ -241,7 +235,6 @@ body.active {
   color: white;
   font-weight: 900;
 }
-
 .login-form,
 .signin-form {
   background-color: rgb(211, 58, 58);
@@ -257,7 +250,6 @@ body.active {
   font-family: Croissant One;
   transition: all 0.4s ease;
 }
-
 .login-form input,
 .signin-form input {
   width: 100%;
@@ -271,20 +263,17 @@ body.active {
   font-family: Croissant One;
   transition: background-color 0.3s ease;
 }
-
 .login-form input:focus,
 .signin-form input:focus {
   background-color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
-
 .login-form label,
 .signin-form label {
   font-family: Croissant One;
   font-weight: 500;
   display: inline;
 }
-
 .login-form input[type="submit"],
 .signin-form input[type="submit"] {
   background: linear-gradient(to right, #f0b9c7, #a076b0);
@@ -339,24 +328,11 @@ body.active {
   background-position: center;
   height: 35rem;
 }
-
 .welcome-section h1 {
   font-size: 70px;
   margin-bottom: 30px;
   letter-spacing: 4px;
-  /* animation: bounce 1.5s infinite; */
 }
-/* @keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-in;
-  }
-  50% {
-    transform: translateY(-8px);
-    animation-timing-function: ease-out;
-  }
-} */
 .welcome-section p {
   width: 50%;
   line-height: 1.7;
@@ -451,7 +427,6 @@ body.active {
   background-size: cover;
   background-position: center;
 }
-
 .grid-section .grid .box button {
   padding: 10px 25px;
   font-family: "Croissant One";
@@ -507,60 +482,6 @@ body.active {
   font-family: Croissant One;
   font-size: 2rem;
 }
-
-/* ball section  */
-.roll-section .roll {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-}
-.roll-section .roll .circle {
-  margin: 0 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  animation: moveRowFooter 5s linear infinite;
-}
-.roll-section .roll .circle:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.roll-section .roll .circle:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.roll-section .roll .circle:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.roll-section .roll .circle:nth-child(4) {
-  animation-delay: 0.8s;
-}
-@keyframes moveRowFooter {
-  0% {
-    transform: translateX(0) rotate(0deg);
-  }
-  50% {
-    transform: translateX(100px) rotate(180deg);
-  }
-  100% {
-    transform: translateX(0) rotate(360deg);
-  }
-}
-.roll-section .roll #red {
-  background-color: red;
-}
-.roll-section .roll #blue {
-  background-color: #ff0808;
-}
-.roll-section .roll #yellow {
-  background-color: rgb(211, 58, 58);
-}
-.roll-section .roll #green {
-  background-color: rgb(218, 97, 97);
-}
-.roll-section .roll #white {
-  background-color: rgb(236, 156, 156);
-}
-
 /* footer section */
 .footer {
   width: 100%;
@@ -583,7 +504,6 @@ body.active {
     font-size: 13px;
   }
 }
-
 @media (max-width: 768px) {
   .navbar-section {
     flex-direction: row;
@@ -606,7 +526,7 @@ body.active {
   .hamburger div {
     width: 33px;
     height: 3.8px;
-    background-color:#ff0808;
+    background-color: #ff0808;
     border-radius: 5px;
     transition: all 0.1s ease-in-out;
     transform-origin: center;
@@ -654,12 +574,12 @@ body.active {
     height: 300px;
   }
 
-/* welcome section  */
- 
+  /* welcome section  */
   .welcome-section p {
     width: 80%;
     font-size: 16px;
   }
+  /* grid section  */
   .grid-section .logo h1 {
     margin-left: 0;
     text-align: center;
@@ -687,10 +607,6 @@ body.active {
     padding: 1rem;
     font-size: 1rem;
   }
-  .roll-section .roll {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
 }
 @media (max-width: 425px) {
   .sidebar {
@@ -700,8 +616,35 @@ body.active {
     height: 110vh;
     z-index: 1000;
   }
+  .login-form,
+  .signin-form {
+    width: 300px;
+  }
+  .login,
+  .signin {
+    padding: 7px 5px;
+  }
+  /* login and signin icon  */
+  .login img {
+    width: 30%;
+  }
+  .signin img {
+    width: 30%;
+  }
+  .signin p,
+  .login p {
+    font-size: 12px;
+  }
+  .top {
+    bottom: 2px;
+    left: 22px;
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+  }
+  /* navbar section  */
   .navbar-section {
-    padding: 0  1rem;
+    padding: 0 1rem;
     flex-direction: row;
     align-items: center;
     height: auto;
@@ -722,7 +665,7 @@ body.active {
   .hamburger div {
     width: 33px;
     height: 3.8px;
-    background-color:#ff0808;
+    background-color: #ff0808;
     border-radius: 5px;
     transition: all 0.1s ease-in-out;
     transform-origin: center;
@@ -770,12 +713,12 @@ body.active {
     height: 300px;
   }
 
-/* welcome section  */
-  
+  /* welcome section  */
   .welcome-section p {
     width: 80%;
     font-size: 16px;
   }
+  /* grid section  */
   .grid-section .logo h1 {
     margin-left: 0;
     text-align: center;
@@ -793,7 +736,7 @@ body.active {
   .grid-section .pictures {
     margin-top: 10rem;
     flex-direction: column;
-    gap: 40px;
+    gap: 90px;
   }
   .grid-section .pictures img {
     width: 60%;
@@ -801,9 +744,5 @@ body.active {
   .grid-section .game {
     padding: 1rem;
     font-size: 1rem;
-  }
-  .roll-section .roll {
-    flex-wrap: wrap;
-    gap: 20px;
   }
 }
