@@ -1,3 +1,5 @@
+
+
 function openSidebar() {
   document.getElementById("sidebar").classList.add("active");
   document.getElementById("openSidebarBtn").style.display = "none";
