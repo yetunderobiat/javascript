@@ -79,12 +79,6 @@ body.active {
 .navbar-section .roll #yellow {
   background-color: rgb(211, 58, 58);
 }
-.navbar-section .roll #green {
-  background-color: rgb(163, 75, 75);
-}
-.navbar-section .roll #white {
-  background-color: rgb(236, 156, 156);
-}
 .navbar-section .nav-links {
   gap: 23px;
   display: flex;

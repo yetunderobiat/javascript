@@ -8,7 +8,9 @@ body {
   height: fit-content;
   width: 100%;
 }
-
+body.active {
+  background-color: white;
+}
 /* navbar section */
 .navbar-section {
   background-color: #1e1e2f;
@@ -22,9 +24,26 @@ body {
   left: 0;
   width: 100%;
 }
+.navbar-section .logo .gradient-color img {
+  width: 17%;
+  animation: bounceLogo 0.6s infinite;
+}
+@keyframes bounceLogo {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-out;
+  }
+}
 .navbar-section .logo .gradient-color {
-  margin-left: 10px;
-  padding-right: 10px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 50px;
   font-family: Oleo Script;
   background: linear-gradient(to right, #7f5af0, #00c6ff);
@@ -63,12 +82,6 @@ body {
 .navbar-section .roll #yellow {
   background-color: #48bfe3;
 }
-.navbar-section .roll #green {
-  background-color: #64dfdf;
-}
-.navbar-section .roll #white {
-  background-color: #c9f3ff;
-}
 .navbar-section .nav-links {
   gap: 23px;
   display: flex;
@@ -77,7 +90,7 @@ body {
 }
 .navbar-section .nav-link a {
   text-decoration: none;
-  color: #f5f5f5;
+  color: white;
   font-size: 15px;
   font-family: Croissant One;
   text-transform: capitalize;
@@ -94,58 +107,212 @@ body {
   background: linear-gradient(to right, #7f5af0, #00c6ff);
   color: #121212;
 }
-
-/* ball section  */
-.roll-section .roll {
+/* SIDEBAR  */
+.sidebar {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 50px 0;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 90px;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: left 0.2s ease, opacity 0.4s ease;
+  pointer-events: none; /* Prevent interaction while hidden */
 }
-.roll-section .roll .circle {
-  margin: 0 40px;
+/* visiblity of sidebar */
+.sidebar.active {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto; /*responds to pointer events normally */
+}
+/* close sidebar  */
+#closeSidebarBtn {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+/* home  */
+#homepage img {
+  width: 50%;
+  margin: 0 15px;
+}
+/* slider  */
+#toggle {
   width: 40px;
-  height: 40px;
+  height: 17px;
+  background-color: rgb(211, 58, 58);
+  border: none;
+  border-radius: 18px;
+}
+#slider {
+  width: 13px;
+  height: 13px;
+  margin: 2px;
+  background-color: white;
+  transition: margin 1s;
   border-radius: 50%;
-  animation: moveRowFooter 5s linear infinite;
+  float: right;
 }
-.roll-section .roll .circle:nth-child(1) {
-  animation-delay: 0.2s;
+/* When active, slide it right */
+.sidebar.active #slider {
+  margin-right: calc(100% - 15px);
 }
-.roll-section .roll .circle:nth-child(2) {
-  animation-delay: 0.4s;
+/* signin and login form */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
-.roll-section .roll .circle:nth-child(3) {
-  animation-delay: 0.6s;
+.login,
+.signin {
+  background-color: rgb(211, 58, 58);
+  border-radius: 8px;
+  font-size: small;
+  padding: 10px 7px;
 }
-.roll-section .roll .circle:nth-child(4) {
-  animation-delay: 0.8s;
+/* login and signin icon  */
+.login img {
+  margin: 0 auto;
+  width: 35%;
+  animation: bounceLogin 0.5s infinite;
 }
-@keyframes moveRowFooter {
-  0% {
-    transform: translateX(0) rotate(0deg);
+.signin img {
+  margin: 0 auto;
+  width: 35%;
+  animation: bounceSignin 0.5s infinite;
+}
+/* keyframe bounceLogin  */
+@keyframes bounceLogin {
+  0%,
+  100% {
+    transform: translateX(-6px);
+    animation-timing-function: ease-in;
   }
   50% {
-    transform: translateX(100px) rotate(180deg);
+    transform: translateX(0);
+    animation-timing-function: ease-out;
   }
+}
+/* keyframe bounceSignin  */
+@keyframes bounceSignin {
+  0%,
   100% {
-    transform: translateX(0) rotate(360deg);
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
   }
 }
-.roll-section .roll #red {
-  background-color: #4c4cff;
+.signin p,
+.login p {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: black;
+  font-family: Croissant One;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.roll-section .roll #blue {
-  background-color: #5e60ce;
+.signin p:hover,
+.login p:hover {
+  transform: scale(1.05);
+  color: white;
+  font-weight: 900;
 }
-.roll-section .roll #yellow {
-  background-color: #48bfe3;
+.login-form,
+.signin-form {
+  background-color: rgb(211, 58, 58);
+  position: absolute;
+  top: 85px;
+  left: 100px;
+  width: 400px;
+  height: fit-content;
+  display: none;
+  border-radius: 15px;
+  padding: 30px 25px;
+  color: black;
+  font-family: Croissant One;
+  transition: all 0.4s ease;
 }
-.roll-section .roll #green {
-  background-color: #64dfdf;
+.login-form input,
+.signin-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #cbbacc;
+  color: rgb(211, 58, 58);
+  font-size: 15px;
+  font-family: Croissant One;
+  transition: background-color 0.3s ease;
 }
-.roll-section .roll #white {
-  background-color: #c9f3ff;
+.login-form input:focus,
+.signin-form input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+.login-form label,
+.signin-form label {
+  font-family: Croissant One;
+  font-weight: 500;
+  display: inline;
+}
+.login-form input[type="submit"],
+.signin-form input[type="submit"] {
+  background: linear-gradient(to right, #f0b9c7, #a076b0);
+  font-family: Croissant One;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.login-form input[type="submit"]:hover,
+.signin-form input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+/* Button to Top */
+.top {
+  position: fixed;
+  bottom: 20px;
+  left: 27px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background-color: rgb(211, 58, 58);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2000;
+  animation: bounce 0.8s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(-15px);
+    animation-timing-function: ease-out;
+  }
 }
 
 /* content section  */
@@ -195,12 +362,12 @@ body {
 }
 .content-section h2 {
   margin-top: 100px;
-  color: #eeeeee;
+  color: #78a0d3;
   font-family: "Croissant One";
 }
 .content-section .serving {
   font-size: 25px;
-  color: #eeeeee;
+  color:  #78a0d3;
   font-family: "Croissant One";
 }
 .content-section hr {
@@ -222,7 +389,7 @@ body {
 }
 .content-section .text {
   margin-bottom: 50px;
-  color: #ddd;
+  color:  #78a0d3;
   font-size: 22px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   width: 45%;
@@ -240,7 +407,7 @@ body {
   padding: 40px;
   letter-spacing: 1px;
   line-height: 1.2;
-  color: #ddd;
+  color:  #78a0d3;
   font-size: 30px;
   font-weight: 700;
   font-family: Tangerine;
@@ -259,7 +426,7 @@ body {
   letter-spacing: 1px;
   line-height: 1.2;
   font-family: karla;
-  color: #ddd;
+  color:  #78a0d3;
   font-family: Tangerine;
   font-weight: 700;
   font-size: 30px;
@@ -286,7 +453,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  color: #eeeeee;
+  color:  #78a0d3;
   text-align: center;
   font-size: 20px;
   font-weight: 500;
@@ -304,7 +471,7 @@ body {
 }
 .content-section .page button a {
   text-decoration: none;
-  color: white;
+  color:  #78a0d3;
   font-weight: 400;
   font-family: "Croissant One";
   font-size: large;
@@ -326,7 +493,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .photo-section h1 {
-  color: #f5f5f5;
+  color:  #78a0d3;
   font-size: 50px;
   font-family: "Croissant One";
   margin: 20px 0;
@@ -372,7 +539,7 @@ body {
   margin: 100px 0;
 }
 .update-section h2 {
-  color: #f5f5f5;
+  color:  #78a0d3;
   font-weight: 400;
   font-family: "Croissant One";
 }
@@ -389,7 +556,7 @@ body {
   color: #00c6ff;
 }
 .update-section p {
-  color: #ddd;
+  color:  #78a0d3;
   font-family: "Croissant One";
 }
 .update-section .mail {
@@ -406,7 +573,7 @@ body {
   background-color: #5e60ce;
   font-family: "Croissant One";
   border: none;
-  color: white;
+  color:  #78a0d3;
   cursor: pointer;
 }
 .update-section .mail button:hover {
