@@ -118,7 +118,7 @@ body.active {
   left: -300px;
   width: 90px;
   height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: #1e1e2f;
   padding: 10px;
   z-index: 1000;
   overflow-y: auto;
@@ -149,7 +149,7 @@ body.active {
 #toggle {
   width: 40px;
   height: 17px;
-  background-color: rgb(211, 58, 58);
+  background-color: #007bff;
   border: none;
   border-radius: 18px;
 }
@@ -174,7 +174,7 @@ body.active {
 }
 .login,
 .signin {
-  background-color: rgb(211, 58, 58);
+  background-color: #007bff;
   border-radius: 8px;
   font-size: small;
   padding: 10px 7px;
@@ -234,7 +234,7 @@ body.active {
 }
 .login-form,
 .signin-form {
-  background-color: rgb(211, 58, 58);
+  background-color: #007bff;
   position: absolute;
   top: 85px;
   left: 100px;
@@ -255,7 +255,7 @@ body.active {
   border: none;
   border-radius: 8px;
   background-color: #cbbacc;
-  color: rgb(211, 58, 58);
+  color: black;
   font-size: 15px;
   font-family: Croissant One;
   transition: background-color 0.3s ease;
@@ -295,7 +295,7 @@ body.active {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  background-color: rgb(211, 58, 58);
+  background-color: #007bff;
   color: black;
   border: none;
   border-radius: 50%;
@@ -367,7 +367,7 @@ body.active {
 }
 .content-section .serving {
   font-size: 25px;
-  color:  #78a0d3;
+  color: #78a0d3;
   font-family: "Croissant One";
 }
 .content-section hr {
@@ -389,7 +389,7 @@ body.active {
 }
 .content-section .text {
   margin-bottom: 50px;
-  color:  #78a0d3;
+  color: #78a0d3;
   font-size: 22px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   width: 45%;
@@ -407,7 +407,7 @@ body.active {
   padding: 40px;
   letter-spacing: 1px;
   line-height: 1.2;
-  color:  #78a0d3;
+  color: #78a0d3;
   font-size: 30px;
   font-weight: 700;
   font-family: Tangerine;
@@ -426,7 +426,7 @@ body.active {
   letter-spacing: 1px;
   line-height: 1.2;
   font-family: karla;
-  color:  #78a0d3;
+  color: #78a0d3;
   font-family: Tangerine;
   font-weight: 700;
   font-size: 30px;
@@ -453,7 +453,7 @@ body.active {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  color:  #78a0d3;
+  color: #78a0d3;
   text-align: center;
   font-size: 20px;
   font-weight: 500;
@@ -471,7 +471,7 @@ body.active {
 }
 .content-section .page button a {
   text-decoration: none;
-  color:  #78a0d3;
+  color: #78a0d3;
   font-weight: 400;
   font-family: "Croissant One";
   font-size: large;
@@ -493,7 +493,7 @@ body.active {
   -webkit-text-fill-color: transparent;
 }
 .photo-section h1 {
-  color:  #78a0d3;
+  color: #78a0d3;
   font-size: 50px;
   font-family: "Croissant One";
   margin: 20px 0;
@@ -539,7 +539,7 @@ body.active {
   margin: 100px 0;
 }
 .update-section h2 {
-  color:  #78a0d3;
+  color: #78a0d3;
   font-weight: 400;
   font-family: "Croissant One";
 }
@@ -556,7 +556,7 @@ body.active {
   color: #00c6ff;
 }
 .update-section p {
-  color:  #78a0d3;
+  color: #78a0d3;
   font-family: "Croissant One";
 }
 .update-section .mail {
@@ -573,7 +573,7 @@ body.active {
   background-color: #5e60ce;
   font-family: "Croissant One";
   border: none;
-  color:  #78a0d3;
+  color: #78a0d3;
   cursor: pointer;
 }
 .update-section .mail button:hover {
@@ -600,4 +600,163 @@ body.active {
   .footer p {
     font-size: 13px;
   }
+}
+@media (max-width: 425px) {
+  .sidebar {
+    width: 80px;
+    height: 110vh;
+    z-index: 1000;
+  }
+  .login-form,
+  .signin-form {
+    width: 300px;
+  }
+  .login,
+  .signin {
+    padding: 7px 5px;
+  }
+  /* login and signin icon  */
+  .login img {
+    width: 30%;
+  }
+  .signin img {
+    width: 30%;
+  }
+  .signin p,
+  .login p {
+    font-size: 12px;
+  }
+  .top {
+    bottom: 2px;
+    left: 22px;
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+  }
+  /* navbar section  */
+  .navbar-section {
+    padding: 0 1rem;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
+  .navbar-section .roll {
+    display: none;
+  }
+  .navbar-section .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hamburger div {
+    width: 33px;
+    height: 3.8px;
+    background-color: #ff0808;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    transform-origin: center;
+  }
+  .hamburger.active {
+    transform: rotate(270deg);
+  }
+  .hamburger.active div:nth-child(1) {
+    transform: scale(1.1) rotate(45deg) translate(5.5px, 5.5px);
+  }
+  .hamburger.active div:nth-child(2) {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: scale(1.1) rotate(-45deg) translate(5.5px, -5.5px);
+  }
+  /* hamburger onclick section  */
+  .navbar-section .nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Croissant One;
+    text-transform: capitalize;
+  }
+  .navbar-section .nav-link:hover a {
+    transition: all 0.2s ease-in-out;
+    background-color: #ff0808;
+    padding: 5px 50px;
+    border-radius: 5px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 85px;
+    right: 5px;
+    width: 200px;
+    height: 300px;
+  }
+  .content-section .about {
+    font-size: 25px;
+  }
+  .content-section .text {
+    margin-bottom: 5px;
+    font-size: 15px;
+    width: 75%;
+  }
+  .services {
+    flex-direction: column;
+    margin: 10px 0px;
+  }
+  .services .left {
+    padding: 33px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .services .right {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 60px;
+  }
+
+  .content-section .pic {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-section .pic img {
+    margin:20px auto;
+    width: 60%;
+  }
+  .content-section .years {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin:60px 0 ;
+    color: #78a0d3;
+    font-family: "Croissant One";
+  }
+  .content-section .devices {
+    font-size: 15px;
+    margin: 0;
+  }
+  .content-section .page {
+    display: flex;
+  }
+  .content-section .page button {
+    border: none;
+    padding: 10px 10px;
+    margin: 10px ;
+  }
+ 
 }
