@@ -573,7 +573,7 @@ body.active {
   width: 250px;
   border: 1px solid #5e60ce;
 }
-.update-section .mail button {
+.update-section button {
   padding: 10px 20px;
   background-color: #5e60ce;
   font-family: "Croissant One";
@@ -581,7 +581,7 @@ body.active {
   color: #78a0d3;
   cursor: pointer;
 }
-.update-section .mail button:hover {
+.update-section button:hover {
   background-color: #00c6ff;
 }
 /* footer section */
@@ -604,6 +604,141 @@ body.active {
 @media (max-width: 600px) {
   .footer p {
     font-size: 13px;
+  }
+}
+@media (max-width: 768px){
+  .navbar-section .logo .gradient-color {
+    font-size: 50px;
+  }
+  .navbar-section .roll {
+    display: none;
+  }
+  .navbar-section .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hamburger div {
+    width: 33px;
+    height: 3.6px;
+    background-color: #00bfffb0;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    transform-origin: center;
+  }
+  .hamburger.active {
+    transform: rotate(270deg);
+  }
+  .hamburger.active div:nth-child(1) {
+    transform: scale(1.1) rotate(45deg) translate(5.5px, 5.5px);
+  }
+  .hamburger.active div:nth-child(2) {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: scale(1.1) rotate(-45deg) translate(5.5px, -5.5px);
+  }
+  /* hamburger onclick section  */
+  .navbar-section .nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Croissant One;
+    text-transform: capitalize;
+  }
+  .navbar-section .nav-link:hover a {
+    transition: all 0.2s ease-in-out;
+    background-color: #007bff;
+    padding: 5px 50px;
+    border-radius: 5px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 85px;
+    right: 5px;
+    width: 200px;
+    height: 300px;
+  }
+  .content-section .about {
+    font-size: 25px;
+  }
+  .content-section .text {
+    margin-bottom: 5px;
+    font-size: 15px;
+    width: 75%;
+  }
+  .services {
+    margin-bottom: 60px;
+    
+    margin: 10px 0px;
+  }
+  .services .left {
+    padding: 33px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .services .right {
+    padding: 33px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .content-section .pic {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .content-section .pic img {
+    margin: 20px auto;
+    width: 100%;
+  }
+  .content-section .years {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin: 60px 0;
+    color: #78a0d3;
+    font-family: "Croissant One";
+  }
+  .content-section .devices {
+    font-size: 15px;
+    margin: 0;
+  }
+  .content-section .page {
+    display: flex;
+  }
+  .content-section .page button {
+    border: none;
+    padding: 10px 10px;
+    margin: 10px;
+  }
+  /* photo gallery section */
+  .photo-section {
+    margin: 50px;
+  }
+  .photo-section .gradient-color {
+    font-size: 20px;
+  }
+  .photo-section h1 {
+    font-size: 30px;
+  }
+  .update-section h1 {
+    font-size: 20px;
   }
 }
 @media (max-width: 425px) {
