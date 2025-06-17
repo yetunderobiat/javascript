@@ -12,12 +12,17 @@ body.active {
   background-color: white;
 }
 /* navbar section */
+#openSidebarBtn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
 .navbar-section {
   background-color: #1e1e2f;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 5rem;
+  height: 4.9rem;
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -638,7 +643,10 @@ body.active {
     padding: 0 1rem;
     flex-direction: row;
     align-items: center;
-    height: auto;
+    height: 4.2rem;
+  }
+  .navbar-section .logo .gradient-color {
+    font-size: 40px;
   }
   .navbar-section .roll {
     display: none;
@@ -654,9 +662,9 @@ body.active {
     transition: transform 0.3s ease-in-out;
   }
   .hamburger div {
-    width: 33px;
-    height: 3.8px;
-    background-color: #ff0808;
+    width: 30px;
+    height: 3.4px;
+    background-color: #00bfffb0;
     border-radius: 5px;
     transition: all 0.1s ease-in-out;
     transform-origin: center;
@@ -684,7 +692,7 @@ body.active {
   }
   .navbar-section .nav-link:hover a {
     transition: all 0.2s ease-in-out;
-    background-color: #ff0808;
+    background-color: #007bff;
     padding: 5px 50px;
     border-radius: 5px;
   }
@@ -703,6 +711,27 @@ body.active {
     width: 200px;
     height: 300px;
   }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+  }
+  .content h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+  .content .content-link {
+    font-size: 15px;
+  }
+  .content .content-link a:hover {
+    color: #4c4cff;
+  }
   .content-section .about {
     font-size: 25px;
   }
@@ -720,20 +749,18 @@ body.active {
     font-size: 20px;
     font-weight: 900;
   }
-
   .services .right {
     padding: 20px;
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 60px;
   }
-
   .content-section .pic {
     display: flex;
     flex-direction: column;
   }
   .content-section .pic img {
-    margin:20px auto;
+    margin: 20px auto;
     width: 60%;
   }
   .content-section .years {
@@ -742,7 +769,7 @@ body.active {
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    margin:60px 0 ;
+    margin: 60px 0;
     color: #78a0d3;
     font-family: "Croissant One";
   }
@@ -756,7 +783,19 @@ body.active {
   .content-section .page button {
     border: none;
     padding: 10px 10px;
-    margin: 10px ;
+    margin: 10px;
   }
- 
+  /* photo gallery section */
+  .photo-section {
+    margin: 50px;
+  }
+  .photo-section .gradient-color {
+    font-size: 20px;
+  }
+  .photo-section h1 {
+    font-size: 30px;
+  }
+  .update-section h1 {
+    font-size: 20px;
+  }
 }
