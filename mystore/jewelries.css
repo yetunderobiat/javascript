@@ -27,9 +27,9 @@ body.active {
 
 /* open side bar  */
 #openSidebarBtn {
-  position: fixed;
+  /* position: fixed;
   top: 16px;
-  left: 20px;
+  left: 20px; */
   width: 40px;
   height: 40px;
   z-index: 1000;
@@ -737,31 +737,32 @@ h1.info {
 
 @media (max-width: 480px) {
   .navbar-section {
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
-    padding: 0.5rem;
-    height: auto;
+    gap: 0;
+    padding: 0;
+    height: 4.2rem;
+  }
+  .nav-content{
+    margin-left: 40px;
   }
   #openSidebarBtn {
-    top: 20px;
-    left: 20px;
     width: 30px;
     height: 30px;
-    margin: 20px auto;
+    margin: 0;
   }
   .navbar-section .gradient-color {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     padding: 0;
     margin-left: 0;
   }
   #searchIcon {
-    width: 17%;
+    width: 15%;
   }
-  .cart-container {
-    width: 35px;
-    height: 35px;
+  .cart-container img {
+    width: 27px;
+    height: 27px;
   }
   .cart-container #cartCount {
     position: absolute;
@@ -774,7 +775,7 @@ h1.info {
   }
   .hamburger div {
     text-align: center;
-    width: 30px;
+    width: 25px;
     height: 3px;
   }
   .navbar-section .nav-link a {
@@ -782,10 +783,10 @@ h1.info {
     gap: 20px;
   }
   .nav-links.active {
-    width: 50vw;
-    height: 20rem;
+    width: 55vw;
+    height: 25rem;
     right: 0.5rem;
-    top: 120px;
+    top: 80px;
     padding: 1rem;
   }
   .details {
