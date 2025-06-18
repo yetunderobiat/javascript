@@ -3,16 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #2b2b2b;
   height: fit-content;
   width: 100%;
-  transition: background-color 1s;
 }
 body.active {
   background-color: #d3d3d3;
 }
-
 /* NAVBAR */
 /* header  */
 .navbar-section {
@@ -27,9 +26,6 @@ body.active {
 
 /* open side bar  */
 #openSidebarBtn {
-  position: fixed;
-  top: 16px;
-  left: 20px;
   width: 40px;
   height: 40px;
   z-index: 1000;
@@ -455,13 +451,13 @@ mark {
   }
 }
 
-/* ITEMS SECTION  */
+/* Items and Bags Grid */
 .items {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-h1.info {
+h1.info{
   margin-top: 2.8rem;
   margin-bottom: 2rem;
   letter-spacing: 6px;
@@ -483,6 +479,7 @@ h2.label {
   padding: 20px 0;
   text-transform: uppercase;
 }
+
 .kids,
 .adults {
   display: grid;
@@ -503,11 +500,12 @@ h2.label {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(255, 157, 207, 0.4);
   border: 2px solid #e05571;
+
 }
 
 .items img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -579,7 +577,6 @@ h2.label {
 .scroll-container:hover {
   cursor: pointer;
 }
-
 /* Instagram Section */
 .instagram {
   display: flex;
@@ -623,10 +620,12 @@ h2.label {
   font-family: "Croissant One";
   color: #eee;
 }
+
 .footer-logo {
   color: #f1a8b6;
   font-weight: bold;
 }
+
 .footer p {
   margin: 5px 0;
   font-size: 14px;
@@ -760,31 +759,31 @@ h2.label {
 
 @media (max-width: 480px) {
   .navbar-section {
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
-    padding: 0.5rem;
-    height: auto;
+    gap: 0;
+    padding: 0;
+    height: 4.2rem;
+  }
+  .nav-content{
+    margin-left: 40px;
   }
   #openSidebarBtn {
-    top: 20px;
-    left: 20px;
     width: 30px;
     height: 30px;
-    margin: 20px auto;
+    margin: 0;
   }
   .navbar-section .gradient-color {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     padding: 0;
     margin-left: 0;
   }
   #searchIcon {
-    width: 17%;
+    width: 15%;
   }
-  .cart-container {
-    width: 35px;
-    height: 35px;
+  .cart-container img {
+    width: 27px;
+    height: 27px;
   }
   .cart-container #cartCount {
     position: absolute;
@@ -797,7 +796,7 @@ h2.label {
   }
   .hamburger div {
     text-align: center;
-    width: 30px;
+    width: 25px;
     height: 3px;
   }
   .navbar-section .nav-link a {
@@ -805,10 +804,10 @@ h2.label {
     gap: 20px;
   }
   .nav-links.active {
-    width: 50vw;
-    height: 20rem;
+    width: 55vw;
+    height: 25rem;
     right: 0.5rem;
-    top: 120px;
+    top: 80px;
     padding: 1rem;
   }
   .details {

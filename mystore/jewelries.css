@@ -737,7 +737,6 @@ h1.info {
 
 @media (max-width: 480px) {
   .navbar-section {
-    /* flex-direction: column; */
     justify-content: space-around;
     align-items: center;
     gap: 0;
@@ -842,7 +841,7 @@ h1.info {
   }
   .items {
     padding: 1rem;
-  }
+  } 
   .items img {
     height: 200px;
   }
