@@ -48,184 +48,184 @@
   </head>
   <body>
     <!-- navbar section  -->
-   <!-- NAVBAR  -->
-   <header>
-    <nav class="navbar-section">
-      <!-- open side bar  -->
-      <img
-        src="images/opensidebar.png"
-        id="openSidebarBtn"
-        onclick="openSidebar()" />
-
-      <!-- logo  -->
-      <p class="gradient-color">myStore</p>
-      <div class="nav-content">
-        <!-- search section  -->
+    <!-- NAVBAR  -->
+    <header>
+      <nav class="navbar-section">
+        <!-- open side bar  -->
         <img
-          src="images/searchbutton.png"
-          id="searchIcon"
-          onclick="toggleSearch()"
-          alt="Search" />
-        <!-- search input section  -->
-        <div class="search-field" id="searchField">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search..."
-            onkeydown="handleEnter(event)" />
+          src="images/opensidebar.png"
+          id="openSidebarBtn"
+          onclick="openSidebar()" />
+
+        <!-- logo  -->
+        <p class="gradient-color">myStore</p>
+        <div class="nav-content">
+          <!-- search section  -->
+          <img
+            src="images/searchbutton.png"
+            id="searchIcon"
+            onclick="toggleSearch()"
+            alt="Search" />
+          <!-- search input section  -->
+          <div class="search-field" id="searchField">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search..."
+              onkeydown="handleEnter(event)" />
+          </div>
+
+          <!-- cart section  -->
+          <div class="cart-container" onclick="showCart()">
+            <img src="images/cart.png" alt="Cart" />
+            <span id="cartCount">0</span>
+          </div>
+          <!-- cart panel  -->
+          <div id="cartPanel" class="cart-panel">
+            <h2>Your Cart<button onclick="closeCart()">Close</button></h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice">Total: $0</p>
+            <button onclick="window.location.href='checkout.html'">
+              Checkout
+            </button>
+          </div>
+
+          <!-- hamburger section  -->
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <!-- hamburger onclick section  -->
+        <div class="nav-links" id="navbar-links">
+          <div class="nav-link">
+            <a href="bag.html">Bags</a>
+          </div>
+          <div class="nav-link">
+            <a href="cloth.html">Cloths</a>
+          </div>
+          <div class="nav-link">
+            <a href="shoe.html">Shoes</a>
+          </div>
+          <div class="nav-link">
+            <a href="jewelries.html">Jewelries</a>
+          </div>
+          <div class="nav-link">
+            <a href="appliances.html">Home appliances</a>
+          </div>
+          <div class="nav-link">
+            <a href="gadget.html">Gadgets </a>
+          </div>
+          <div class="nav-link">
+            <a href="care.html">Skin care</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+      <!-- sidebar content -->
+      <!-- close sidebar -->
+      <img
+        src="images/closesidebar.png"
+        id="closeSidebarBtn"
+        onclick="closeSidebar()" />
+
+      <!-- home  -->
+      <a href="home.html" id="homepage">
+        <img src="images/pinkhome.png" />
+      </a>
+
+      <!-- slider  -->
+      <button id="toggle" onclick="change()">
+        <span id="slider"></span>
+      </button>
+
+      <!-- sign and login form  -->
+      <div class="details">
+        <div class="signin">
+          <p class="toggle-signin" onclick="toggleForm('signin')">
+            <img src="images/signin.png" alt="" />Sign in
+          </p>
         </div>
 
-        <!-- cart section  -->
-        <div class="cart-container" onclick="showCart()">
-          <img src="images/cart.png" alt="Cart" />
-          <span id="cartCount">0</span>
+        <div class="login">
+          <p class="toggle-login" onclick="toggleForm('login')">
+            <img src="images/login.png" alt="" />Log in
+          </p>
         </div>
-        <!-- cart panel  -->
-        <div id="cartPanel" class="cart-panel">
-          <h2>Your Cart<button onclick="closeCart()">Close</button></h2>
-          <ul id="cartItems"></ul>
-          <p id="totalPrice">Total: $0</p>
-          <button onclick="window.location.href='checkout.html'">
-            Checkout
-          </button>
-        </div>
-
-        <!-- hamburger section  -->
-        <div class="hamburger" onclick="toggleMenu(this)">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <!-- hamburger onclick section  -->
-      <div class="nav-links" id="navbar-links">
-        <div class="nav-link">
-          <a href="bag.html">Bags</a>
-        </div>
-        <div class="nav-link">
-          <a href="cloth.html">Cloths</a>
-        </div>
-        <div class="nav-link">
-          <a href="shoe.html">Shoes</a>
-        </div>
-        <div class="nav-link">
-          <a href="jewelries.html">Jewelries</a>
-        </div>
-        <div class="nav-link">
-          <a href="appliances.html">Home appliances</a>
-        </div>
-        <div class="nav-link">
-          <a href="gadget.html">Gadgets </a>
-        </div>
-        <div class="nav-link">
-          <a href="care.html">Skin care</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- SIDEBAR -->
-  <div class="sidebar" id="sidebar">
-    <!-- sidebar content -->
-    <!-- close sidebar -->
-    <img
-      src="images/closesidebar.png"
-      id="closeSidebarBtn"
-      onclick="closeSidebar()" />
-
-    <!-- home  -->
-    <a href="home.html" id="homepage">
-      <img src="images/pinkhome.png" />
-    </a>
-
-    <!-- slider  -->
-    <button id="toggle" onclick="change()">
-      <span id="slider"></span>
-    </button>
-
-    <!-- sign and login form  -->
-    <div class="details">
-      <div class="signin">
-        <p class="toggle-signin" onclick="toggleForm('signin')">
-          <img src="images/signin.png" alt="" />Sign in
-        </p>
-      </div>
-
-      <div class="login">
-        <p class="toggle-login" onclick="toggleForm('login')">
-          <img src="images/login.png" alt="" />Log in
-        </p>
       </div>
     </div>
-  </div>
 
-  <!-- SIGN IN FORM (Moved out of sidebar) -->
-  <form class="login-form signin-form">
-    <label for="first_name">First Name:</label>
-    <input
-      type="text"
-      id="first_name"
-      name="first_name"
-      placeholder="Robiat" />
+    <!-- SIGN IN FORM (Moved out of sidebar) -->
+    <form class="login-form signin-form">
+      <label for="first_name">First Name:</label>
+      <input
+        type="text"
+        id="first_name"
+        name="first_name"
+        placeholder="Robiat" />
 
-    <label for="last_name">Last Name:</label>
-    <input
-      type="text"
-      id="last_name"
-      name="last_name"
-      placeholder="Ibrahim" />
+      <label for="last_name">Last Name:</label>
+      <input
+        type="text"
+        id="last_name"
+        name="last_name"
+        placeholder="Ibrahim" />
 
-    <label for="user_name">User Name:</label>
-    <input
-      type="text"
-      id="user_name"
-      name="user_name"
-      placeholder="username223" />
+      <label for="user_name">User Name:</label>
+      <input
+        type="text"
+        id="user_name"
+        name="user_name"
+        placeholder="username223" />
 
-    <label for="email">Email:</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="myemail@gmail.com" />
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="myemail@gmail.com" />
 
-    <label for="phonenumber">Phone Number:</label>
-    <input type="number" name="phone" id="phone" placeholder="+234 567 890" />
+      <label for="phonenumber">Phone Number:</label>
+      <input type="number" name="phone" id="phone" placeholder="+234 567 890" />
 
-    <label for="password">Password:</label>
-    <input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="mypassword239!ytu$SS" />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="mypassword239!ytu$SS" />
 
-    <input type="submit" value="submit" />
-  </form>
+      <input type="submit" value="submit" />
+    </form>
 
-  <!-- LOGIN FORM (Moved out of sidebar) -->
-  <form class="login-form login-form-box">
-    <label for="user_name">User Name:</label>
-    <input
-      type="text"
-      id="user_name"
-      name="user_name"
-      placeholder="username223" />
+    <!-- LOGIN FORM (Moved out of sidebar) -->
+    <form class="login-form login-form-box">
+      <label for="user_name">User Name:</label>
+      <input
+        type="text"
+        id="user_name"
+        name="user_name"
+        placeholder="username223" />
 
-    <label for="password">Password:</label>
-    <input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="mypassword239!ytu$SS" />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="mypassword239!ytu$SS" />
 
-    <input type="submit" value="submit" />
-  </form>
+      <input type="submit" value="submit" />
+    </form>
 
-  <!-- button to top  -->
-  <button class="top">↑</button>
-    
+    <!-- button to top  -->
+    <button class="top">↑</button>
+
     <!-- ITEMS SECTION  -->
-    <div class="items"> 
+    <div class="items">
       <h1 class="info">SHOES</h1>
       <!-- kids  -->
       <h2 class="label">kids</h2>
@@ -269,7 +269,7 @@
         <div class="kidbags">
           <img src="images/cloths4.jpg" alt="Sprout Steps" />
           <div class="product-name">Sprout Steps</div>
-          <p class="price">$10,999</p> 
+          <p class="price">$10,999</p>
           <button onclick="addToCart('', 10999)">ADD TO CART</button>
         </div>
         <div class="kidbags">
@@ -321,7 +321,7 @@
           <button onclick="addToCart('', 8999)">ADD TO CART</button>
         </div>
       </div>
-  
+
       <h2 class="label">ADULT</h2>
       <div class="adults">
         <div class="adultbags">
@@ -416,12 +416,15 @@
         </div>
       </div>
     </div>
+    <!-- instgram link  -->
     <div class="instagram">
       <p>Follow us on instagram</p>
       <a href="https://www.instagram.com/" target="_blank"
         ><img src="images/in.png" alt="" />mycollection</a
       >
     </div>
+
+    <!-- Scroll Container for Images  -->
     <div class="image-design">
       <div class="scroll-container" id="scrollRow">
         <a href="images/adult14.jpg" target="_blank"
