@@ -324,8 +324,22 @@ body.active {
 }
 .welcome-section h1 {
   font-size: 70px;
-  margin-bottom: 30px;
+  color: #ff0808;
+    margin-bottom: 30px;
   letter-spacing: 4px;
+  z-index: 1;
+  position: relative;
+  animation: slideIn 1.5s ease-out forwards;
+}
+@keyframes slideIn {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .welcome-section p {
   width: 50%;
@@ -699,6 +713,7 @@ body.active {
     flex-direction: column;
     background-color: #1a1a1a;
     position: absolute;
+    z-index: 999;
     top: 85px;
     right: 5px;
     width: 200px;
