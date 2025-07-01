@@ -358,10 +358,10 @@ body.active {
 }
 .grid-section .logo h1 {
   margin-left: 270px;
-  margin-bottom: 15px;
+  margin: 20px 0;
   font-size: 60px;
   font-family: Oleo Script;
-  background: linear-gradient(to right, #ff0808, #d65252);
+  background: linear-gradient(to right, #c48f8f, #d65252);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -373,6 +373,7 @@ body.active {
   margin-left: 40px;
   font-family: Croissant One;
   font-size: 18px;
+  color: rgb(173, 22, 22);
 }
 .grid-section .grid {
   display: grid;

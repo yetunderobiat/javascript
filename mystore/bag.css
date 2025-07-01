@@ -39,7 +39,7 @@ body.active {
   padding-left: 8rem;
   font-size: 50px;
   font-family: Oleo Script;
-  background: linear-gradient(to right, #f0b9c7, #a076b0);
+  background: linear-gradient(to right, #ccc5c7, #4caf50);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -108,7 +108,7 @@ mark {
   position: absolute;
   top: -5px;
   right: 25px;
-  background-color: #e05571;
+  background-color: #4caf50;
   color: black;
   font-size: 12px;
   font-weight: bold;
@@ -128,7 +128,7 @@ mark {
   transition: right 0.4s ease;
   z-index: 999;
   overflow-y: auto;
-  border-left: 3px solid #ff69b4;
+  border-left: 3px solid #4caf50;
 }
 .cart-panel.show {
   right: 0;
@@ -159,7 +159,7 @@ mark {
 }
 .cart-panel button {
   margin-top: 10px;
-  background-color: #ff69b4;
+  background-color: #4caf50;
   font-family: Croissant One;
   color: #fff;
   border: none;
@@ -188,7 +188,7 @@ mark {
 .hamburger div {
   width: 33px;
   height: 3.5px;
-  background-color: #e05571;
+  background-color: #4caf50;
   border-radius: 5px;
   transition: all 0.1s ease-in-out;
   transform-origin: center;
@@ -216,7 +216,7 @@ mark {
 }
 .navbar-section .nav-link:hover a {
   transition: all 0.2s ease-in-out;
-  background-color: #f1a8b6;
+  background-color: #506b51;
   padding: 5px 50px;
   border-radius: 5px;
 }
@@ -280,7 +280,7 @@ mark {
 #toggle {
   width: 40px;
   height: 17px;
-  background-color: #e05571;
+  background-color:#4caf50 ;
   border: none;
   border-radius: 18px;
 }
@@ -305,7 +305,7 @@ mark {
 }
 .login,
 .signin {
-  background-color: #e05571;
+  background-color: #b0f0b2;
   border-radius: 8px;
   font-size: small;
   padding: 10px 7px;
@@ -368,7 +368,7 @@ mark {
 
 .login-form,
 .signin-form {
-  background-color: #e0b4d3;
+  background-color: #81da84;
   position: absolute;
   top: 85px;
   left: 100px;
@@ -390,7 +390,7 @@ mark {
   border: none;
   border-radius: 8px;
   background-color: #cbbacc;
-  color: #e05571;
+  color: black;
   font-size: 15px;
   font-family: Croissant One;
   transition: background-color 0.3s ease;
@@ -433,7 +433,7 @@ mark {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  background-color: #e05571;
+  background-color: #4caf50;
   color: black;
   border: none;
   border-radius: 50%;
@@ -467,7 +467,7 @@ h1.info {
   font-family: DM Serif Display;
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(to right, #f0b9c7, #a076b0);
+  background: linear-gradient(to right, #e9e5e6, #08f010);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 20px 0;
@@ -771,8 +771,6 @@ h2.label {
       position: absolute;
       top: -3px;
       right: -6px;
-      background-color: #e05571;
-      color: white;
       font-size: 10px;
       padding: 4px 6px;
     }
@@ -866,8 +864,8 @@ h2.label {
       margin: 60px 0;
     }
     .scroll-container img {
-      height: 300px;
-      margin: 20px 40px;
+      height: 150px;
+      margin: 20px;
     }
     .footer p {
       font-size: 12px;
