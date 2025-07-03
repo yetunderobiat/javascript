@@ -16,47 +16,47 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4.3rem;
+  height: 4.7rem;
   width: 100%;
-  /* padding: 0 5rem; */
+  padding: 0 5rem;
+}
+.task{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 /* home  */
-/* #homepage img {
-  width: 50%;
-  margin: 0 15px;
-} */
+.task #homepage img {
+  width: 42%;
+}
 /* slider  */
-.toggle-icon {
+.task .toggle-icon {
   cursor: pointer;
 }
-
-.toggle-icon img {
+.task .toggle-icon img {
   width: 100%;
   height: 100%;
 }
-
 /* signin and login form */
 /* Profile Icon */
-.profile-icon {
-  width: 40px;
-  height: 40px;
+.task .profile-icon {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
-
-.profile-icon img {
+.task .profile-icon img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
 }
-
 /* Popup Login Box */
 .login-popup {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 30px;
-  width: 300px;
-  background-color: #fff;
+  top: 80px;
+  left: 100px;
+  width: 350px;
+  background-color: #1d1d1d;
   border: 1px solid #ddd;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -66,19 +66,17 @@ body {
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 .login-popup.show {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
-
 .login-popup h3 {
   margin-bottom: 15px;
   font-size: 18px;
-  color: #333;
+  color: white;
+  font-family: Croissant One;
 }
-
 .login-popup input[type="text"],
 .login-popup input[type="password"] {
   width: 100%;
@@ -88,35 +86,34 @@ body {
   border-radius: 4px;
   font-size: 14px;
 }
-
 .login-popup .options {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
 }
-
 .login-popup .options label {
   font-size: 14px;
+  font-family: Croissant One;
 }
-
+.login-popup .options .submit{
+  font-size: 16px;
+  font-family: Croissant One;
+  cursor: pointer;
+}
+.login-popup .options .submit:hover {
+  color: #000;
+}
 .login-popup .options a {
   font-size: 14px;
+  font-family: Croissant One;
   text-decoration: none;
-  font-weight: 500;
-  color: #333;
+  color: #fff;
 }
-
 .login-popup .options a:hover {
   color: #000;
 }
 
-/* Responsive */
-@media (max-width: 500px) {
-  .login-popup {
-    right: 10px;
-    width: 90%;
-  }
-}
 
 /* logo  */
 .navbar-section .gradient-color {

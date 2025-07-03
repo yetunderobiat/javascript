@@ -1,6 +1,19 @@
+const popup = document.getElementById('loginPopup');
+const profileIcon = document.querySelector('.profile-icon');
+
+function togglePopup() {
+  popup.classList.toggle('show');
+}
+
+// Close the popup when clicking outside
+window.addEventListener('click', function(e) {
+  if (!popup.contains(e.target) && !profileIcon.contains(e.target)) {
+    popup.classList.remove('show');
+  }
+});
+
 
 let mode = 0;
-
 function toggleBackground() {
   const body = document.getElementById('body');
   if (mode === 0) {
