@@ -151,9 +151,13 @@ body {
   position: relative;
 }
 #searchIcon {
-  width: 29px;
-  height: 29px;
+  width: 27px;
+  height: 27px;
   cursor: pointer;
+}
+#searchIcon img {
+  width: 100%;
+  height: 100%;
 }
 /* search input section  */
 .search-field {
@@ -408,14 +412,12 @@ h2.label {
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .kidbags:hover,
 .adultbags:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgb(116, 42, 42);
-  border: 2px solid  rgb(116, 42, 42);
+  border: 2px solid rgb(158, 60, 60);
 }
-
 .items img {
   width: 100%;
   height: 200px;
@@ -441,7 +443,7 @@ h2.label {
   transition: background-color 0.3s;
 }
 .items button:hover {
-  background-color: #ff85c1;
+  background-color: #9e5757;
   border: none;
 }
 
@@ -595,7 +597,6 @@ h2.label {
   }
   #homepage img {
     width: 35%;
-    margin: 0 25px;
   }
   .login,
   .signin {
@@ -672,34 +673,34 @@ h2.label {
     padding: 0;
     height: 4.2rem;
   }
-  .nav-content {
-    margin-left: 40px;
-  }
-  #openSidebarBtn {
-    width: 30px;
-    height: 30px;
-    margin: 0;
-  }
   .navbar-section .gradient-color {
     font-size: 2.1rem;
     padding: 0;
     margin-left: 0;
   }
-  #searchIcon {
-    width: 15%;
+  .task,
+  .nav-content {
+    gap: 20px;
   }
+  .task #homepage img,
+  .task .toggle-icon,
+  .task .profile-icon,
+  #searchIcon,
   .cart-container img {
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
   }
-  .cart-container #cartCount {
+  #cartCount {
     position: absolute;
-    top: -3px;
-    right: -6px;
-    background-color: #e05571;
-    color: white;
-    font-size: 10px;
-    padding: 4px 6px;
+    top: -10px;
+    left: 15px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    /* padding: 3px 5px; */
+    border-radius: 50%;
   }
   .hamburger div {
     text-align: center;
@@ -715,39 +716,6 @@ h2.label {
     height: 25rem;
     right: 0.5rem;
     top: 80px;
-    padding: 1rem;
-  }
-  .details {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  #closeSidebarBtn {
-    top: 10px;
-    right: 5px;
-    width: 30px;
-    height: 30px;
-  }
-  #homepage {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .login,
-  .signin {
-    padding: 5px 15px;
-  }
-  .login img,
-  .signin img {
-    width: 18px;
-  }
-  .signin p,
-  .login p {
-    font-size: 10px;
-  }
-  .login-form,
-  .signin-form {
-    width: 70vw;
-    left: 5vw;
     padding: 1rem;
   }
   .top {
