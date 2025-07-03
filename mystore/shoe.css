@@ -27,6 +27,10 @@ body {
 /* NAVBAR */
 /* header  */
 .navbar-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   background-color: #1d1d1d;
   display: flex;
   justify-content: space-between;
@@ -75,7 +79,7 @@ body {
   height: 28px;
   cursor: pointer;
 }
-* signin and login form */
+/* signin and login form */
 /* Profile Icon */
 .nav-content .profile-icon {
   width: 28px;
@@ -293,42 +297,13 @@ body {
   height: 400px;
 }
 
-/* Button to Top */
-.top {
-  position: fixed;
-  bottom: 20px;
-  left: 27px;
-  width: 40px;
-  height: 40px;
-  font-size: 30px;
-  background-color: #2196f3;
-  color: black;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2000;
-  animation: bounce 0.8s infinite;
-}
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-in;
-  }
-  50% {
-    transform: translateY(-15px);
-    animation-timing-function: ease-out;
-  }
-}
-
 /* Items and Bags Grid */
 .items {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 h1.info {
-  margin-top: 2.8rem;
+  margin-top: 6rem;
   margin-bottom: 2rem;
   letter-spacing: 6px;
   text-align: left;
@@ -492,89 +467,76 @@ h2.label {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar-section {
-    padding: 1rem 2rem;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
-  }
-  #openSidebarBtn {
-    top: 25px;
-    left: 20px;
-    width: 35px;
-    height: 35px;
+    gap: 0;
+    height: 4.2rem;
   }
   .navbar-section .gradient-color {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
+    padding: 0;
+    margin-left: 0;
   }
-  #searchIcon {
-    width: 18%;
+  .task {
+    gap: 20px;
   }
+  .nav-content {
+    gap: 30px;
+  }
+  .nav-content #homepage img,
+  .task .toggle-icon,
+  .nav-content .profile-icon,
   .cart-container img {
-    width: 37px;
-    height: 37px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
   }
-  .cart-container #cartCount {
+  #cartCount {
     position: absolute;
-    top: -5px;
-    right: -3px;
+    top: -10px;
+    left: 15px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 0;
+    border-radius: 0;
   }
   .hamburger div {
     text-align: center;
-    width: 30px;
-    height: 4px;
+    width: 20px;
+    height: 2px;
+  }
+  .hamburger.active {
+    transform: rotate(270deg);
+  }
+  .hamburger.active div:nth-child(1) {
+    transform: scale(1.1) rotate(45deg) translate(4.5px, 5px);
+  }
+  .hamburger.active div:nth-child(2) {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: scale(1.1) rotate(-45deg) translate(4.5px, -5px);
   }
   .navbar-section .nav-link a {
     font-size: 15px;
-    gap: 20px;
+    gap: 0;
   }
   .nav-links.active {
-    width: 40vw;
-    top: 95px;
-    right: 10px;
-    height: 20rem;
-  }
-  .details {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  #closeSidebarBtn {
-    top: 10px;
-    right: 5px;
-    width: 35px;
-    height: 35px;
-  }
-  #homepage img {
-    width: 35%;
-  }
-  .login,
-  .signin {
-    background-color: #e05571;
-    border-radius: 5px;
-    font-size: 5px;
-    margin: 5px 0;
-    padding: 2px 5px;
-  }
-  .login img,
-  .signin img {
-    width: 18px;
-  }
-  .login-form,
-  .signin-form {
-    width: 55vw;
-    top: 15vw;
-    left: 5vw;
-    padding: 1.5rem;
-  }
-  .top {
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
+    width: 50vw;
+    height: 17rem;
+    right: 0.5rem;
+    top: 80px;
+    padding: 1rem;
   }
   h1.info {
-    font-size: 2.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    padding: 20px ;
+    border-bottom: 2px solid #444;
   }
   h2.label {
     font-size: 1.9rem;
@@ -627,7 +589,7 @@ h2.label {
     padding: 0;
     margin-left: 0;
   }
-  .task{
+  .task {
     gap: 12px;
   }
   .nav-content {
@@ -645,17 +607,30 @@ h2.label {
     position: absolute;
     top: -10px;
     left: 15px;
-    background-color: #000;
+    background-color: transparent;
     color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 3px ;
-    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 0;
+    border-radius: 0;
   }
   .hamburger div {
     text-align: center;
     width: 20px;
     height: 2px;
+  }
+  .hamburger.active {
+    transform: rotate(270deg);
+  }
+  .hamburger.active div:nth-child(1) {
+    transform: scale(1.1) rotate(45deg) translate(4.5px, 5px);
+  }
+  .hamburger.active div:nth-child(2) {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: scale(1.1) rotate(-45deg) translate(4.5px, -5px);
   }
   .navbar-section .nav-link a {
     font-size: 15px;
@@ -668,15 +643,9 @@ h2.label {
     top: 80px;
     padding: 1rem;
   }
-  .top {
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
-    bottom: 20px;
-  }
   h1.info {
     font-size: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
   }
   h2.label {
