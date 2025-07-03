@@ -680,7 +680,7 @@ h2.label {
   }
   .task,
   .nav-content {
-    gap: 20px;
+    gap: 17px;
   }
   .task #homepage img,
   .task .toggle-icon,
@@ -699,21 +699,21 @@ h2.label {
     color: #fff;
     font-size: 12px;
     font-weight: bold;
-    /* padding: 3px 5px; */
+    padding: 3px ;
     border-radius: 50%;
   }
   .hamburger div {
     text-align: center;
-    width: 25px;
-    height: 3px;
+    width: 20px;
+    height: 2px;
   }
   .navbar-section .nav-link a {
     font-size: 15px;
-    gap: 20px;
+    gap: 0;
   }
   .nav-links.active {
-    width: 55vw;
-    height: 25rem;
+    width: 50vw;
+    height: 17rem;
     right: 0.5rem;
     top: 80px;
     padding: 1rem;
