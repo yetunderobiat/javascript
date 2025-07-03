@@ -1,14 +1,23 @@
 
+let mode = 0;
 
-function openSidebar() {
-  document.getElementById("sidebar").classList.add("active");
-  document.getElementById("openSidebarBtn").style.display = "none";
+function toggleBackground() {
+  const body = document.getElementById('body');
+  if (mode === 0) {
+    body.style.backgroundColor = '#ffffff';
+    body.style.color = '#000';
+    mode = 1;
+  } else if (mode === 1) {
+    body.style.backgroundColor = '#fff9c4'; // light yellow
+    body.style.color = '#000';
+    mode = 2;
+  } else {
+    body.style.backgroundColor = 'black'; // dark mode
+    body.style.color = 'white';
+    mode = 0;
+  }
 }
 
-function closeSidebar() {
-  document.getElementById("sidebar").classList.remove("active");
-  document.getElementById("openSidebarBtn").style.display = "block";
-}
 
 function goToCheckout() {
   window.location.href = "checkout.html";
