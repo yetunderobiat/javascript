@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: #2b2b2b;
+  background-color: black;
   height: fit-content;
   width: 100%;
 }
 body.active {
-  background-color: #d3d3d3;
+  background-color: white;
 }
 /* NAVBAR */
 /* header  */
@@ -37,7 +37,7 @@ body.active {
   padding-left: 8rem;
   font-size: 50px;
   font-family: Oleo Script;
-  background: linear-gradient(to right, #f0b9c7, #a076b0);
+  background: linear-gradient(to right, #f0b9c7, #2196f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -104,9 +104,9 @@ mark {
 }
 #cartCount {
   position: absolute;
-  top: -5px;
+  top: -30px;
   right: 25px;
-  background-color: #e05571;
+  background-color: #2196f3;
   color: black;
   font-size: 12px;
   font-weight: bold;
@@ -126,7 +126,7 @@ mark {
   transition: right 0.4s ease;
   z-index: 999;
   overflow-y: auto;
-  border-left: 3px solid #ff69b4;
+  border-left: 3px solid #2196f3;
 }
 .cart-panel.show {
   right: 0;
@@ -157,7 +157,7 @@ mark {
 }
 .cart-panel button {
   margin-top: 10px;
-  background-color: #ff69b4;
+  background-color: #2196f3;
   font-family: Croissant One;
   color: #fff;
   border: none;
@@ -186,7 +186,7 @@ mark {
 .hamburger div {
   width: 33px;
   height: 3.5px;
-  background-color: #e05571;
+  background-color: #2196f3;
   border-radius: 5px;
   transition: all 0.1s ease-in-out;
   transform-origin: center;
@@ -214,7 +214,7 @@ mark {
 }
 .navbar-section .nav-link:hover a {
   transition: all 0.2s ease-in-out;
-  background-color: #f1a8b6;
+  background-color: #2196f3;
   padding: 5px 50px;
   border-radius: 5px;
 }
@@ -461,18 +461,17 @@ h1.info{
   margin-top: 2.8rem;
   margin-bottom: 2rem;
   letter-spacing: 6px;
-  text-align: center;
+  text-align: left;
   font-family: DM Serif Display;
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(to right, #f0b9c7, #a076b0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:#2196f3;
   padding: 20px 0;
   border-bottom: 2px solid #444;
 }
 h2.label {
   margin-top: 1.5rem;
+  text-align: center;
   font-family: Oleo Script;
   font-size: 2rem;
   color: #ff99cc;
@@ -512,20 +511,20 @@ h2.label {
 .product-name {
   font-weight: 600;
   font-size: 1.1rem;
-  color: #ffb6d6;
+  color: white;
   margin: 10px 0 5px;
 }
 
 .price {
   font-size: 1.2rem;
-  color: #ffc4e1;
+  color: white;
   margin: 5px 0 10px;
 }
 
 .items button {
-  background-color: #ff69b4;
-  color: #fff;
-  border: none;
+  border:2px solid  #e05571;
+  color: white;
+  background-color: transparent;
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 0.7rem;
@@ -536,6 +535,7 @@ h2.label {
 
 .items button:hover {
   background-color: #ff85c1;
+  border: none;
 }
 
 /* Scroll Container for Images */
