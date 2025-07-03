@@ -550,17 +550,17 @@ h2.label {
     gap: 0;
   }
   .nav-links.active {
-    width: 50vw;
+    width: 30vw;
     height: 17rem;
     right: 0.5rem;
     top: 80px;
     padding: 1rem;
   }
   h1.info {
-    margin-top: 4rem;
+    margin-top: 8rem;
     margin-bottom: 2rem;
     font-size: 2rem;
-    padding: 20px ;
+    padding: 20px;
     border-bottom: 2px solid #444;
   }
   h2.label {
@@ -648,20 +648,19 @@ h2.label {
     height: 100%;
   }
   .cart-panel ul li {
-  font-size: 15px;
-}
-.cart-panel #totalPrice {
-  font-size: 20px;
-}
-.cart-panel button {
-  padding:6px 10px;
-}
-.remove-btn {
-  font-size: 10px;
-  margin-left: 10px;
-  padding: 4px 8px;
-}
-
+    font-size: 15px;
+  }
+  .cart-panel #totalPrice {
+    font-size: 20px;
+  }
+  .cart-panel button {
+    padding: 6px 10px;
+  }
+  .remove-btn {
+    font-size: 10px;
+    margin-left: 10px;
+    padding: 4px 8px;
+  }
   .hamburger div {
     text-align: center;
     width: 20px;
