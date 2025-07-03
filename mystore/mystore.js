@@ -14,22 +14,23 @@ window.addEventListener('click', function(e) {
 
 
 let mode = 0;
-function toggleBackground() {
-  const body = document.getElementById('body');
+const body = document.getElementById('body');
+
+function toggleMode() {
+  body.classList.remove("dark-mode", "light-mode", "yellow-mode");
+
   if (mode === 0) {
-    body.style.backgroundColor = '#ffffff';
-    body.style.color = '#000';
+    body.classList.add("light-mode");
     mode = 1;
   } else if (mode === 1) {
-    body.style.backgroundColor = '#fff9c4'; // light yellow
-    body.style.color = '#000';
+    body.classList.add("yellow-mode");
     mode = 2;
   } else {
-    body.style.backgroundColor = 'black'; // dark mode
-    body.style.color = 'white';
+    body.classList.add("dark-mode");
     mode = 0;
   }
 }
+
 
 
 function goToCheckout() {
@@ -156,10 +157,10 @@ function handleEnter(event) {
   }
 }
 
-var body = document.body;
-var change = function () {
-  body.classList.toggle("active");
-};
+// var body = document.body;
+// var change = function () {
+//   body.classList.toggle("active");
+// };
 
 function toggleMenu(button) {
   button.classList.toggle("active");
@@ -167,16 +168,6 @@ function toggleMenu(button) {
   navLinks.classList.toggle("active");
 }
 
-function toggleForm(type) {
-  document.querySelector(".signin-form").style.display = "none";
-  document.querySelector(".login-form-box").style.display = "none";
-
-  if (type === "signin") {
-    document.querySelector(".signin-form").style.display = "block";
-  } else if (type === "login") {
-    document.querySelector(".login-form-box").style.display = "block";
-  }
-}
 
 document.addEventListener("DOMContentLoaded", function () {
   const topButton = document.querySelector(".top");
