@@ -52,14 +52,19 @@
     <header>
       <nav class="navbar-section">
         <div class="task">
-          <!-- home  -->
-          <a href="home.html" id="homepage">
-            <img src="images/pinkhome.png" />
-          </a>
           <!-- toggle icon  -->
           <div class="toggle-icon" onclick="toggleMode()">
             <img src="images/toggle.png" alt="Toggle Theme Icon" />
           </div>
+          <!-- logo  -->
+          <p class="gradient-color">myStore</p>
+        </div>
+
+        <div class="nav-content">
+          <!-- home  -->
+          <a href="home.html" id="homepage">
+            <img src="images/pinkhome.png" />
+          </a>
           <!-- signin and login form  -->
           <div class="profile-icon" onclick="togglePopup()">
             <img src="images/signininfo.png" alt="User Icon" />
@@ -76,26 +81,6 @@
               <a href="#">SIGN IN</a>
             </div>
           </div>
-        </div>
-
-        <!-- logo  -->
-        <p class="gradient-color">myStore</p>
-        <div class="nav-content">
-          <!-- search section  -->
-          <img
-            src="images/bluesearch.png"
-            id="searchIcon"
-            onclick="toggleSearch()"
-            alt="Search" />
-          <!-- search input section  -->
-          <div class="search-field" id="searchField">
-            <input
-              type="text"
-              id="searchInput"
-              placeholder="Search..."
-              onkeydown="handleEnter(event)" />
-          </div>
-
           <!-- cart section  -->
           <div class="cart-container" onclick="showCart()">
             <img src="images/bluecart.png" alt="Cart" />
