@@ -494,72 +494,48 @@ h2.label {
   -webkit-text-fill-color: transparent;
 }
 
-.pre-footer-nav {
-  display: inline-block;
-}
-
-.pre-footer-nav a {
-  color: #000;
-  text-decoration: none;
-  margin: 0 10px;
-  position: relative;
-  font-size: 15px;
-}
-
-.pre-footer-nav a::after {
-  content: "|";
-  position: absolute;
-  right: -12px;
-  color: #aaa;
-}
-
-.pre-footer-nav a:last-child::after {
-  content: ""; /* remove the last | */
-}
-
 /* Footer section */
 footer {
   background-color: rgb(116, 42, 42);
   padding: 40px 20px 10px;
 }
-
 .footer-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-
 .footer-column {
-  flex: 1 1 250px;
-  margin: 20px 0;
+  flex: 2 2 150px;
+  margin: 0 60px;
 }
-
 .footer-column h4 {
   margin-bottom: 15px;
-  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:20px;
   text-transform: uppercase;
 }
-
 .footer-column ul {
   list-style: none;
+  font-family: Croissant One;
 }
-
 .footer-column ul li {
   margin-bottom: 10px;
   font-size: 15px;
+  color:#dfa1ae;
+  cursor: pointer;
 }
-
+.footer-column ul li:hover{
+  color:#a14053 ;
+}
 .footer-column ul li a {
-  color: #ccc;
+  color:#dfa1ae;
   text-decoration: none;
 }
-
 .footer-column ul li a:hover {
-  color: #fff;
+  color:#a14053 ;
 }
-
 .newsletter-input {
   width: 100%;
   padding: 10px;
@@ -567,7 +543,6 @@ footer {
   margin-bottom: 10px;
   border-radius: 3px;
 }
-
 .newsletter-button {
   padding: 10px 20px;
   background-color: #fff;
@@ -576,6 +551,9 @@ footer {
   cursor: pointer;
   border-radius: 3px;
   font-weight: bold;
+}
+.newsletter-button:hover{
+  background-color: #a14053;
 }
 
 .social-icons {
