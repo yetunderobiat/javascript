@@ -1,20 +1,28 @@
-const popup = document.getElementById('loginPopup');
-const profileIcon = document.querySelector('.profile-icon');
+function scrollGrid(direction) {
+  const container = document.getElementById("scrollGrid");
+  const scrollAmount = 300;
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth",
+  });
+}
+
+const popup = document.getElementById("loginPopup");
+const profileIcon = document.querySelector(".profile-icon");
 
 function togglePopup() {
-  popup.classList.toggle('show');
+  popup.classList.toggle("show");
 }
 
 // Close the popup when clicking outside
-window.addEventListener('click', function(e) {
+window.addEventListener("click", function (e) {
   if (!popup.contains(e.target) && !profileIcon.contains(e.target)) {
-    popup.classList.remove('show');
+    popup.classList.remove("show");
   }
 });
 
-
 let mode = 0;
-const body = document.getElementById('body');
+const body = document.getElementById("body");
 
 function toggleMode() {
   body.classList.remove("dark-mode", "light-mode", "yellow-mode");
@@ -30,8 +38,6 @@ function toggleMode() {
     mode = 0;
   }
 }
-
-
 
 function goToCheckout() {
   window.location.href = "checkout.html";
@@ -87,7 +93,7 @@ function showCart() {
 
   totalPrice.textContent = `Total: $${total}`;
 }
-    
+
 function closeCart() {
   document.getElementById("cartPanel").classList.remove("show");
 }
@@ -167,7 +173,6 @@ function toggleMenu(button) {
   const navLinks = document.querySelector(".nav-links");
   navLinks.classList.toggle("active");
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const topButton = document.querySelector(".top");
