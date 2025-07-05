@@ -141,22 +141,33 @@
       <h2 class="label">kids</h2>
       <div class="kids">
         <div class="kidbags">
-          <img src="images/cloths9.jpg" alt="Tiny Treads" />
-          <div class="product-name">Tiny Treads</div>
+          <img src="images/shoe1.jpg" alt="White nebula sole" />
+          <div class="product-name">White nebula sole</div>
           <p class="price">$2,999</p>
-          <button onclick="addToCart('', 2999)">ADD TO CART</button>
+          <button onclick="addToCart('White nebula sole', 2999)">
+            ADD TO CART
+          </button>
         </div>
         <div class="kidbags">
-          <img src="images/cloths15.jpg" alt="Rainbow Runners" />
-          <div class="product-name">Rainbow Runners</div>
+          <img src="images/shoe2.jpg" alt="Cute girls' sandal" />
+          <div class="product-name">Cute girls' sandal</div>
           <p class="price">$7,999</p>
-          <button onclick="addToCart('', 7999)">ADD TO CART</button>
+          <button onclick="addToCart('Cute girls sandal', 7999)">
+            ADD TO CART
+          </button>
         </div>
         <div class="kidbags">
-          <img src="images/cloths2.jpg" alt="Bubble Walkers" />
-          <div class="product-name">Bubble Walkers</div>
+          <img
+            src="images/shoe3.jpg"
+            alt="Pearl White Cute Style Shoes With Bowknot" />
+          <div class="product-name">
+            Pearl White Cute Style Shoes With Bowknot
+          </div>
           <p class="price">$5,999</p>
-          <button onclick="addToCart('', 5999)">ADD TO CART</button>
+          <button
+            onclick="addToCart('Pearl White Cute Style Shoes With Bowknot', 5999)">
+            ADD TO CART
+          </button>
         </div>
         <div class="kidbags">
           <img src="images/cloths14.jpg" alt="Star Striders" />
@@ -376,15 +387,57 @@
       </div>
     </div>
     <!-- footer section -->
-    <footer class="footer">
-      <div class="footer-content">
-        <p>
-          &copy; 2025 <span class="footer-logo">myStore</span>. All rights
-          reserved.
-        </p>
-        <p>Empowering girls through code, line at a time.</p>
+    <!-- Top pre-footer section -->
+    <div class="pre-footer">
+      <h2 class="gradient-color">myStore</h2>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <!-- Contact Column -->
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>Email: support@beautybydaz.com</li>
+            <li>Phone: +234 800 000 0000</li>
+            <li>Location: Lagos, Nigeria</li>
+          </ul>
+        </div>
+
+        <!-- Links Column -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email" />
+          <button class="newsletter-button">Subscribe</button>
+
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2025 BeautyByDaz. All Rights Reserved.
       </div>
     </footer>
+
     <script src="mystore.js"></script>
   </body>
 </html>
