@@ -57,35 +57,35 @@
           <!-- toggle icon  -->
           <div class="toggle-icon" onclick="toggleMode()">
             <img src="images/toggle.png" alt="Toggle Theme Icon" />
-            <div class="profile-icon" onclick="togglePopup()">
-              <img src="images/signininfo.png" alt="User Icon" />
-            </div>
+          </div>
+          <div class="profile-icon" onclick="togglePopup()">
+            <img src="images/signininfo.png" alt="User Icon" />
+          </div>
 
-            <!-- Login Form (pops up on click) -->
-            <div class="login-popup" id="loginPopup">
-              <h3>LOGIN</h3>
-              <input type="text" placeholder="Username or email address" />
-              <input type="password" placeholder="Password" />
-              <div class="options">
-                <label><input type="checkbox" /> Remember me</label>
-                <div class="submit">submit</div>
-                <a href="#">SIGN IN</a>
-              </div>
+          <!-- Login Form (pops up on click) -->
+          <div class="login-popup" id="loginPopup">
+            <h3>LOGIN</h3>
+            <input type="text" placeholder="Username or email address" />
+            <input type="password" placeholder="Password" />
+            <div class="options">
+              <label><input type="checkbox" /> Remember me</label>
+              <div class="submit">submit</div>
+              <a href="#">SIGN IN</a>
             </div>
-            <!-- cart section  -->
-            <div class="cart-container" onclick="showCart()">
-              <img src="images/bluecart.png" alt="Cart" />
-              <span id="cartCount">0</span>
-            </div>
-            <!-- cart panel  -->
-            <div id="cartPanel" class="cart-panel">
-              <h2>Your Cart<button onclick="closeCart()">Close</button></h2>
-              <ul id="cartItems"></ul>
-              <p id="totalPrice">Total: $0</p>
-              <button onclick="window.location.href='checkout.html'">
-                Checkout
-              </button>
-            </div>
+          </div>
+          <!-- cart section  -->
+          <div class="cart-container" onclick="showCart()">
+            <img src="images/bluecart.png" alt="Cart" />
+            <span id="cartCount">0</span>
+          </div>
+          <!-- cart panel  -->
+          <div id="cartPanel" class="cart-panel">
+            <h2>Your Cart<button onclick="closeCart()">Close</button></h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice">Total: $0</p>
+            <button onclick="window.location.href='checkout.html'">
+              Checkout
+            </button>
           </div>
         </div>
         <!-- logo  -->
@@ -114,12 +114,11 @@
       </nav>
     </header>
 
-    <!-- welcome section -->
-    <header>
-      <h1>Welcome to Beauty by Daz</h1>
-    </header>
+
     <section class="welcome-section">
-      <h1>Welcome!</h1>
+      <h1>
+        Welcome to myStore!
+      </h1>
       <p>
         We're truly excited to have you here. Explore an ever-growing collection
         of quality products, unbeatable deals, and a smooth, secure shopping
@@ -128,9 +127,6 @@
         for choosing us, and happy shopping with confidence, comfort, and joy!
       </p>
     </section>
-
-    <!-- Simulated spacer before the skin section -->
-    <div class="spacer">Scroll to see skin categories ↓</div>
 
     <!-- Skin Category Section -->
     <section class="category-section" id="skin-section">

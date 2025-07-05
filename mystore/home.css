@@ -292,12 +292,12 @@ body {
 /* hamburger onclick section  */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 .nav-link a {
   text-decoration: none;
   color: #9e3c3c;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   font-family: Croissant One;
   text-transform: capitalize;
@@ -325,18 +325,44 @@ body {
   height: 400px;
 } */
 
-header {
-  background-color: #111;
-  color: #fff;
-  padding: 40px 20px;
+.welcome-section {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(images/little-colourful-packages.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:800px ;
+} 
+.welcome-section h1 {
+  font-size: 80px;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #ee90a8, #9e3c3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 1.5s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.welcome-section p {
+  margin-top: 30px;
+  width:65%;
   text-align: center;
+  line-height: 1.7;
+  font-family: Croissant One;
+  font-size: 22px;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
 /* Fixed Scroll Button */
 .scroll-button {
   position: fixed;
@@ -417,43 +443,6 @@ header h1 {
   letter-spacing: 0.5px;
 }
 
-/* welcome section */
-.welcome-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: url(images/redandwhitebackground.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 35rem;
-}
-.welcome-section h1 {
-  font-size: 70px;
-  color: #ff0808;
-  margin-bottom: 30px;
-  letter-spacing: 4px;
-  z-index: 1;
-  position: relative;
-  animation: slideIn 1.5s ease-out forwards;
-}
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.welcome-section p {
-  width: 50%;
-  line-height: 1.7;
-  font-family: Croissant One;
-  font-size: 22px;
-  margin-bottom: 100px;
-}
 /* grid section */
 .grid-section {
   display: flex;
