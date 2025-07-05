@@ -311,47 +311,98 @@ body.active {
     animation-timing-function: ease-out;
   }
 }
-/* Scroll Container for Images */
-.image-design {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 60vh;
-}
-.image-design h1 {
-}
-.scroll-container {
-  white-space: nowrap;
-  overflow-x: auto;
-  display: flex;
-  align-items: center;
-  height: 200px;
-  scroll-behavior: smooth;
-  cursor: pointer;
-}
+ header {
+      background-color: #111;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
 
-.scroll-container a {
-  display: inline-block;
-  text-decoration: none;
-}
+    /* Fixed Scroll Button */
+    .scroll-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #b67d5b;
+      color: white;
+      padding: 14px 22px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: background 0.3s, transform 0.3s;
+    }
 
-.scroll-container img {
-  height: 150px;
-  margin: 0 20px;
-  border-radius: 12px;
-  transition: transform 1s ease, filter 1s ease;
-  pointer-events: auto;
-}
+    .scroll-button:hover {
+      background-color: #a46742;
+      transform: scale(1.05);
+    }
 
-.scroll-container:hover {
-  cursor: pointer;
-}
+    .spacer {
+      height: 600px;
+      background: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #888;
+    }
+
+    /* Skin Category Section */
+    .category-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .category-section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+      color: #222;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .category-card {
+      background-color: #f8f8f8;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: scale(1.05);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .category-title {
+      padding: 15px 0;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
 /* welcome section */
 .welcome-section {
   display: flex;
