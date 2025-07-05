@@ -310,7 +310,9 @@ body {
   border-bottom: 2px solid #9e3c3c;
   transform: scaleX(1);
 }
-
+#home-nav a {
+  border-bottom: 2px solid #9e3c3c;
+}
 /* .nav-links.active {
   display: flex;
   justify-content: space-between;
@@ -335,8 +337,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height:800px ;
-} 
+  height: 800px;
+}
 .welcome-section h1 {
   font-size: 80px;
   letter-spacing: 3px;
@@ -356,8 +358,9 @@ body {
   }
 }
 .welcome-section p {
+  color: #fff;
   margin-top: 30px;
-  width:65%;
+  width: 65%;
   text-align: center;
   line-height: 1.7;
   font-family: Croissant One;
@@ -379,43 +382,46 @@ body {
   z-index: 1000;
   transition: background 0.3s, transform 0.3s;
 }
-
 .scroll-button:hover {
   background-color: #a46742;
   transform: scale(1.05);
 }
-
-.spacer {
-  height: 600px;
-  background: #f1f1f1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: #888;
-}
-
 /* Skin Category Section */
 .category-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
 }
-
-.category-section h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-  color: #222;
+.category-section .line-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
 }
-
+.category-section .v-line {
+  width: 900px;
+  height: 3px;
+  background-color: #9e3c3c;
+}
+.category-section p {
+  font-size: 50px;
+  font-family: Croissant One;
+  color: #ac5555;
+  letter-spacing: 1px;
+}
+.category-section .quality ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.category-section .quality ul{
+}
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
-
 .category-card {
   background-color: #f8f8f8;
   border-radius: 12px;
