@@ -430,24 +430,47 @@ body {
 }
 .category-card {
   width: 600px;
-  border: 2px solid  black;
-  /* padding: 10px; */
+  border: 2px solid #ac5555;
   border-radius: 10px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
-
+.category-card:hover {
+  box-shadow: 0 10px 25px #c74949;
+  transform: translateY(-5px);
+}
 .category-card img {
-  width: 450px;
+  width: 230px;
   border-radius: 10px;
   height: 300px;
   object-fit: cover;
 }
-
-.category-title {
-  padding: 10px 0;
-  font-weight: bold;
+.category-card a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+  color: #9e3c3c;
   text-transform: uppercase;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Croissant One;
+}
+.category-card .arrow-icon {
+  width: 30px;
+  height: 30px;
+  transform: rotate(-90deg);
+  opacity: 0;
+  animation: rotateIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes rotateIn {
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .scroll-btn {
@@ -477,150 +500,6 @@ body {
   right: 0;
 }
 
-/* .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-.category-card {
-  /* background-color: #f8f8f8; */
-  /* border: 2px solid #ac5555;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.category-card:hover {
-  transform: scale(1.05);
-}
-
-.category-card img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-.category-title {
-  padding: 15px 0;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-} */ */
-
-/* grid section */
-.grid-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 20px;
-}
-.grid-section .logo h1 {
-  margin-left: 270px;
-  margin: 20px 0;
-  font-size: 60px;
-  font-family: Oleo Script;
-  background: linear-gradient(to right, #c48f8f, #d65252);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.grid-section .logo ul {
-  margin-bottom: 40px;
-  display: flex;
-}
-.grid-section .logo li {
-  margin-left: 40px;
-  font-family: Croissant One;
-  font-size: 18px;
-  color: rgb(173, 22, 22);
-}
-.grid-section .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 300px);
-  gap: 10px;
-  width: 100%;
-  max-width: 1000px;
-}
-.grid-section .grid .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.grid-section .grid .a {
-  grid-column: 1/3;
-  grid-row: 1/2;
-  border-radius: 10px;
-  background-image: url("images/bag.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.grid-section .grid .b {
-  grid-column: 3/5;
-  grid-row: 1/2;
-  border-radius: 10px;
-  background-image: url("images/cloths.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.grid-section .grid .c {
-  grid-column: 1/4;
-  grid-row: 2/3;
-  border-radius: 10px;
-  background-image: url("images/shoes.avif");
-  background-size: cover;
-  background-position: center;
-}
-.grid-section .grid .d {
-  grid-column: 4/5;
-  grid-row: 2/3;
-  border-radius: 10px;
-  background-image: url("images/jewelries.avif");
-  background-size: cover;
-  background-position: center;
-}
-.grid-section .grid .e {
-  grid-column: 1/2;
-  grid-row: 3/3;
-  border-radius: 10px;
-  background-image: url("images/appliances.avif");
-  background-size: cover;
-  background-position: center;
-}
-.grid-section .grid .f {
-  grid-column: 2/5;
-  grid-row: 3/4;
-  border-radius: 10px;
-  background-image: url("images/gadgets.avif");
-  background-size: cover;
-  background-position: center;
-}
-.grid-section .grid .box button {
-  padding: 10px 25px;
-  font-family: "Croissant One";
-  font-weight: 600;
-  font-size: 14px;
-  background-color: white;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  color: black;
-  transition: all 1s ease-in-out;
-}
-.grid-section .grid .box button:hover {
-  background: linear-gradient(to right, #ff0808, #d65252);
-  color: white;
-}
-.grid-section .grid .box button a {
-  color: inherit;
-  text-decoration: none;
-}
-.grid-section .grid .box button a:hover {
-  color: inherit;
-}
 .grid-section .pictures {
   display: flex;
   justify-content: center;
