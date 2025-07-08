@@ -131,54 +131,81 @@
         <p>Categories</p>
         <div class="v-line"></div>
       </div>
-      <div class="quality">
-        <ul>
-          <li>Best quality</li>
-          <li>Pleasant prices</li>
-          <li>Budget friendly</li>
-          <li>Return policy</li>
-        </ul>
-      </div>
       <div class="scroll-container">
         <div class="category-grid" id="scrollGrid">
           <button class="scroll-btn left" onclick="scrollGrid(-1)">‹</button>
           <div class="category-card">
             <img src="images/handbag.png" />
             <a href="bag.html" class="category-title"
-              ><img src="images/arrow1.png" alt="arrow" class="arrow-icon" />Bags</a
+              ><img
+                src="images/arrow1.png"
+                alt="arrow"
+                class="arrow-icon" />Bags</a
             >
           </div>
           <div class="category-card">
             <img src="images/fashion-shoes-sneakers.jpg" alt="" />
-            <a href="shoe.html" class="category-title"><img src="images/arrow1.png" alt="arrow" class="arrow-icon" />Shoes</a>
+            <a href="shoe.html" class="category-title"
+              ><img
+                src="images/arrow1.png"
+                alt="arrow"
+                class="arrow-icon" />Shoes</a
+            >
           </div>
           <div class="category-card">
             <img src="images/electric-blender-mixer-juicer-set.jpg" alt="" />
-            <a href="appliances.html" class="category-title"><img src="images/arrow1.png" alt="arrow" class="arrow-icon" />Home appliances</a>
+            <a href="appliances.html" class="category-title"
+              ><img
+                src="images/arrow1.png"
+                alt="arrow"
+                class="arrow-icon" />Home appliances</a
+            >
           </div>
           <div class="category-card">
             <img
               src="images/still-life-aesthetic-golden-elements-wallpaper.jpg"
               alt="" />
-            <a href="jewelries.html" class="category-title"><img src="images/arrow1.png" alt="arrow" class="arrow-icon" />Jewelries</a>
+            <a href="jewelries.html" class="category-title"
+              ><img
+                src="images/arrow1.png"
+                alt="arrow"
+                class="arrow-icon" />Jewelries</a
+            >
           </div>
           <div class="category-card">
             <img
               src="images/modern-apartment-with-luxury-vibe-featuring-spacious-living-room.jpg"
               alt="" />
-            <a href="gadget.html" class="category-title"><img src="images/arrow1.png" alt="arrow" class="arrow-icon" />Gadgets</a>
+            <a href="gadget.html" class="category-title"
+              ><img
+                src="images/arrow1.png"
+                alt="arrow"
+                class="arrow-icon" />Gadgets</a
+            >
           </div>
           <div class="category-card">
             <img
               src="images/still-life-with-classic-shirts-hanger.jpg"
               alt="cloths" />
-            <a href="cloth.html" class="category-title"><img src="images/arrow1.png" alt="arrow" class="arrow-icon" />Cloths</a>
+            <a href="cloth.html" class="category-title"
+              ><img
+                src="images/arrow1.png"
+                alt="arrow"
+                class="arrow-icon" />Cloths</a
+            >
           </div>
         </div>
         <button class="scroll-btn right" onclick="scrollGrid(1)">›</button>
       </div>
     </section>
-
+    <div class="quality">
+      <ul>
+        <li><img src="images/bestquality.png" alt="" />Best quality</li>
+        <li><img src="images/pleasantprices.png" alt="" />Pleasant prices</li>
+        <li><img src="images/budgetfriendly.png" alt="" />Budget friendly</li>
+        <li><img src="images/returnpolicy.png" alt="" />Return policy</li>
+      </ul>
+    </div>
     <!-- Scroll to Skin Button -->
     <button
       class="scroll-button"
@@ -198,14 +225,63 @@
     </section>
 
     <!-- footer section -->
-    <footer class="footer">
-      <div class="footer-content">
-        <p>
-          &copy; 2025 <span class="footer-logo">myStore</span>. All rights
-          reserved.
-        </p>
-        <p>Empowering girls through code, line at a time.</p>
+    <!-- Top pre-footer section -->
+    <div class="pre-footer">
+      <h2 class="gradient-color">myStore</h2>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <!-- Contact Column -->
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>Email: support@mystore.com</li>
+            <li>Phone: +234 8147485339</li>
+            <li>
+              Location: 49, James Kolawole Street, Lekki Phase 1, Lasgos State,
+              Nigeria
+            </li>
+            <li>Time: Open Mondays–Saturdays | 9:00 AM – 6:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Links Column -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-column">
+          <h4>Newsletter</h4>
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email" />
+          <button class="newsletter-button">Subscribe</button>
+
+          <div class="social-icons">
+            <a href="https://web.whatsapp.com/"
+              ><img src="images/whatsapp.png" alt=""
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="images/ig.png" alt=""
+            /></a>
+            <a href="https://www.tiktok.com/foryou?lang=en-GB"
+              ><img src="images/tiktok.png" alt=""
+            /></a>
+          </div>
+        </div>
       </div>
+
+      <div class="footer-bottom">&copy; 2025 mystore. All Rights Reserved.</div>
     </footer>
     <script src="mystore.js"></script>
   </body>

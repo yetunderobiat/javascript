@@ -451,7 +451,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 50px 0;
+  margin: 50px 0;
   color: #9e3c3c;
   text-transform: uppercase;
   font-weight: bold;
@@ -461,15 +461,14 @@ body {
 .category-card .arrow-icon {
   width: 30px;
   height: 30px;
-  transform: rotate(-90deg);
-  opacity: 0;
-  animation: rotateIn 0.5s ease-out forwards;
-  animation-delay: 0.5s;
+  animation: spin 0.7s linear infinite;
 }
-@keyframes rotateIn {
+@keyframes spin {
+  from {
+    transform: rotate(-30deg);
+  }
   to {
-    transform: rotate(0deg);
-    opacity: 1;
+    transform: rotate(20deg);
   }
 }
 
@@ -499,7 +498,9 @@ body {
 .scroll-btn.right {
   right: 0;
 }
-
+.quality{
+  display: flex;
+}
 .grid-section .pictures {
   display: flex;
   justify-content: center;
@@ -532,27 +533,103 @@ body {
   font-family: Croissant One;
   font-size: 2rem;
 }
-/* footer section */
-.footer {
-  width: 100%;
-  background-color: black;
-  padding: 15px 0;
+/* Footer Section */
+.pre-footer {
+  background-color: rgb(116, 42, 42);
+  padding: 30px 20px;
   text-align: center;
-  font-family: "Croissant One";
-  color: #eee;
 }
-.footer-logo {
-  color: red;
+.pre-footer h2 {
+  font-size: 55px;
+  font-family: Oleo Script;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #ee90a8, #9e3c3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Footer section */
+footer {
+  background-color: rgb(116, 42, 42);
+  padding: 40px 20px 10px;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.footer-column {
+  flex: 2 2 150px;
+  margin: 0 60px;
+}
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.footer-column ul {
+  list-style: none;
+  font-family: Croissant One;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #dfa1ae;
+  cursor: pointer;
+}
+.footer-column ul li:hover {
+  color: #a14053;
+}
+.footer-column ul li a {
+  color: #dfa1ae;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  color: #a14053;
+}
+.newsletter-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.newsletter-button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
   font-weight: bold;
 }
-.footer p {
-  margin: 5px 0;
-  font-size: 14px;
+.newsletter-button:hover {
+  background-color: #a14053;
 }
-@media (max-width: 600px) {
-  .footer p {
-    font-size: 13px;
-  }
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+}
+.social-icons img:hover{
+  transform: translateY(-4px);
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 25px;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding:20px 0;
+  border-top:2px solid ;
+  font-size: 14px;
 }
 @media (max-width: 768px) {
   .navbar-section {
