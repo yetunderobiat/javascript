@@ -513,6 +513,7 @@ body {
   padding: 40px;
   border-radius: 15px 40px 40px 15px;
   transition: transform 0.3s ease;
+  font-size: 20px;
 }
 .quality li:hover {
   transform: translateY(-5px);
@@ -522,29 +523,12 @@ body {
   width: 25px;
   height: 25px;
 }
-.grid-section .pictures {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 90px;
-  margin: 80px 0;
-}
-.grid-section .pictures img {
-  width: 25%;
-  animation: roll-infinite 5s linear infinite;
-}
-@keyframes roll-infinite {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
 .grid-section .game {
   padding: 2rem 15rem;
   margin: 5rem 0;
-  background-color: #ff0808;
+  background-color: #ee90a8;
   border: none;
   border-radius: 8px;
 }
