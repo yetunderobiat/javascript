@@ -1,44 +1,44 @@
-const display = document.getElementById('display');
-const clickSound = document.getElementById('clickSound');
+const display = document.getElementById("display");
+const themeToggle = document.getElementById("theme-toggle");
+const clickSound = document.getElementById("click-sound");
 
-function playSound(){
+// Button click sounds
+document.querySelectorAll("button").forEach(button => {
+  button.addEventListener("click", () => {
     clickSound.currentTime = 0;
     clickSound.play();
+  });
+});
+
+function append(value) {
+  display.value += value;
 }
-function append(value){
-    playSound();
-    if(display.textContent === '0') display.textContent = '';
-    display.textContent += value;
+
+function clearDisplay() {
+  display.value = "";
 }
-function clearDisplay(){
-    playSound();
-    display.textContent = '0'
+
+function deleteLast() {
+  display.value = display.value.slice(0, -1);
 }
-function deleteLast(){
-    playSound();
-    if(display.textContent.length > 1){
-        display.textContent = display.textContent.slice(0, -1);
-    } else {
-        clearDisplay();
-    }
+
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
+  }
 }
-function calculate(){
-    playSound();
-    try {
-        display.textContent = eval(display.textContent);
-    } catch {
-        display.textContent = 'Error';
-    }
-}
-document.addEventListener('keydown', (e) => {
-    const key = e.key;
-    if ((/\d|[+\-*%.]/).test(key)){
-        append(key);
-    } else if (key === 'Enter'){
-        calculate();
-    } else if (key === 'Backspace'){
-        deleteLast();
-    } else if (key.toLowerCase() === 'c'){
-        clearDisplay();
-    }
-})
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
+
+  const icon = themeToggle.querySelector("i");
+  if (document.body.classList.contains("dark")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  }
+});
